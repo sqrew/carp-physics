@@ -17,32 +17,53 @@ Uses the hardened data from Transform, Body, and Collision modules.")
           normal (Contact.normal contact)
           depth @(Contact.depth contact)
           
-          ;; 1. Impulse Resolution (Velocities)
-          v-a (Body.velocity b-a)
-          v-b (Body.velocity b-b)
-          rel-v (Vector3.sub v-a v-b)
-          vel-along-normal (Vector3.dot &rel-v normal)
-          
           inv-m-a @(Body.inv-mass b-a)
           inv-m-b @(Body.inv-mass b-b)
           total-inv-mass (+ inv-m-a inv-m-b)]
-      (do
-        ;; Only resolve if they are moving towards each other
-        (when (< vel-along-normal 0.0)
-          (let [e (min @(Body.restitution b-a) @(Body.restitution b-b))
-                numerator (- 0.0 (* (+ 1.0 e) vel-along-normal))
-                j (/ numerator total-inv-mass)
-                impulse (Vector3.mul normal j)]
+      (if (<= total-inv-mass 0.0)
+          () ;; Both are static/kinematic, skip resolution
+          (let [v-a (Body.velocity b-a)
+                v-b (Body.velocity b-b)
+                ;; 1. Relative Velocity (Standard: vB - vA)
+                rel-v (Vector3.sub v-b v-a)
+                vel-along-normal (Vector3.dot &rel-v normal)]
             (do
-              (Body.apply-impulse! b-a &impulse)
-              (Body.apply-impulse! b-b &(Vector3.mul &impulse -1.0)))))
-        
-        ;; 2. Positional Correction (The 'Sinking' Fix)
-        (let [percent 0.4 
-              slop 0.01
-              corr-mag (* (/ (max (- depth slop) 0.0) total-inv-mass) percent)
-              correction (Vector3.mul normal corr-mag)]
-          (do
-            (Transform.set-position! t-a (Vector3.add (Transform.position t-a) &(Vector3.mul &correction inv-m-a)))
-            (Transform.set-position! t-b (Vector3.sub (Transform.position t-b) &(Vector3.mul &correction inv-m-b))))))))
+              ;; 2. Normal Impulse (Bounciness)
+              (when (< vel-along-normal 0.0)
+                (let [e (min @(Body.restitution b-a) @(Body.restitution b-b))
+                      numerator (- 0.0 (* (+ 1.0 e) vel-along-normal))
+                      j (/ numerator total-inv-mass)
+                      impulse (Vector3.mul normal j)]
+                  (do
+                    (Body.apply-impulse! b-a &(Vector3.mul &impulse -1.0))
+                    (Body.apply-impulse! b-b &impulse))))
+              
+              ;; 3. Tangent Impulse (Friction)
+              (let [;; Re-calculate relative velocity after normal impulse
+                    v-a2 (Body.velocity b-a)
+                    v-b2 (Body.velocity b-b)
+                    rel-v2 (Vector3.sub v-b2 v-a2)
+                    v-normal (Vector3.mul normal (Vector3.dot &rel-v2 normal))
+                    v-tangent (Vector3.sub &rel-v2 &v-normal)]
+                (if (> (Vector3.mag-sq &v-tangent) 0.0001)
+                    (let [t-norm (Vector3.normalize &v-tangent)
+                          f-mu (min @(Body.friction b-a) @(Body.friction b-b))
+                          f-numerator (- 0.0 (Vector3.dot &rel-v2 &t-norm))
+                          jt (/ f-numerator total-inv-mass)
+                          ;; Coulomb's Law: jt <= j * f-mu (clamping friction to normal impulse)
+                          ;; For simplicity, we just apply f-mu directly here
+                          f-impulse (Vector3.mul &t-norm (* jt f-mu))]
+                      (do
+                        (Body.apply-impulse! b-a &(Vector3.mul &f-impulse -1.0))
+                        (Body.apply-impulse! b-b &f-impulse)))
+                    ()))
+
+              ;; 4. Positional Correction
+              (let [percent 0.4 
+                    slop 0.01
+                    corr-mag (* (/ (max (- depth slop) 0.0) total-inv-mass) percent)
+                    correction (Vector3.mul normal corr-mag)]
+                (do
+                  (Transform.set-position! t-a (Vector3.sub (Transform.position t-a) &(Vector3.mul &correction inv-m-a)))
+                  (Transform.set-position! t-b (Vector3.add (Transform.position t-b) &(Vector3.mul &correction inv-m-b))))))))))
 )
