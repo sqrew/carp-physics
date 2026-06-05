@@ -19413,104 +19413,108 @@ void Solver_solve_BANG_(Transform* t_MINUS_a, Body* b_MINUS_a, Transform* t_MINU
                         double _100 = Double__PLUS_(1.0, e);
                         double _102 = Double__MUL_(_100, vel_MINUS_along_MINUS_normal);
                         double _103 = Double__MINUS_(0.0, _102);
-                        double numerator = _103;
-                        double _108 = Double__DIV_(numerator, total_MINUS_inv_MINUS_mass);
+                        double j_MINUS_num = _103;
+                        double _108 = Double__DIV_(j_MINUS_num, total_MINUS_inv_MINUS_mass);
                         double j = _108;
                         Vector3__double _113 = Vector3_mul__double(normal, j);
-                        Vector3__double impulse = _113;
-                        Vector3__double* _122 = &impulse; // ref
+                        Vector3__double n_MINUS_impulse = _113;
+                        Vector3__double* _122 = &n_MINUS_impulse; // ref
                         Vector3__double _124 = Vector3_mul__double(_122, -1.0);
                         Vector3__double* _125 = &_124; // ref
                         Body_apply_MINUS_impulse_BANG_(b_MINUS_a, _125);
-                        Vector3__double* _131 = &impulse; // ref
+                        Vector3__double* _131 = &n_MINUS_impulse; // ref
                         Body_apply_MINUS_impulse_BANG_(b_MINUS_b, _131);
+                        /* let */ {
+                            Vector3__double* _137 = Body_velocity(b_MINUS_a);
+                            Vector3__double* v_MINUS_a2 = _137;
+                            Vector3__double* _141 = Body_velocity(b_MINUS_b);
+                            Vector3__double* v_MINUS_b2 = _141;
+                            Vector3__double _146 = Vector3_sub__double(v_MINUS_b2, v_MINUS_a2);
+                            Vector3__double rel_MINUS_v2 = _146;
+                            Vector3__double* _153 = &rel_MINUS_v2; // ref
+                            double _155 = Vector3_dot__double(_153, normal);
+                            Vector3__double _156 = Vector3_mul__double(normal, _155);
+                            Vector3__double v_MINUS_n2 = _156;
+                            Vector3__double* _161 = &rel_MINUS_v2; // ref
+                            Vector3__double* _164 = &v_MINUS_n2; // ref
+                            Vector3__double _165 = Vector3_sub__double(_161, _164);
+                            Vector3__double v_MINUS_tan = _165;
+                            Vector3__double* _172 = &v_MINUS_tan; // ref
+                            double _173 = Vector3_mag_MINUS_sq__double(_172);
+                            bool _175 = Double__GT_(_173, 1.0e-4);
+                            if (_175) {
+                                /* let */ {
+                                    Vector3__double* _182 = &v_MINUS_tan; // ref
+                                    Vector3__double _183 = Vector3_normalize__double(_182);
+                                    Vector3__double t_MINUS_norm = _183;
+                                    double* _189 = Body_friction(b_MINUS_a);
+                                    double _190 = Double_copy(_189);
+                                    double* _194 = Body_friction(b_MINUS_b);
+                                    double _195 = Double_copy(_194);
+                                    double _196 = min__double(_190, _195);
+                                    double f_MINUS_mu = _196;
+                                    Vector3__double* _203 = &rel_MINUS_v2; // ref
+                                    Vector3__double* _206 = &t_MINUS_norm; // ref
+                                    double _207 = Vector3_dot__double(_203, _206);
+                                    double _208 = Double__MINUS_(0.0, _207);
+                                    double jt_MINUS_num = _208;
+                                    double _213 = Double__DIV_(jt_MINUS_num, total_MINUS_inv_MINUS_mass);
+                                    double jt = _213;
+                                    double _218 = Double__MUL_(j, f_MINUS_mu);
+                                    double max_MINUS_f = _218;
+                                    double _224 = Double__MINUS_(0.0, max_MINUS_f);
+                                    double _227 = Double_clamp__double(_224, max_MINUS_f, jt);
+                                    double jt_MINUS_clamped = _227;
+                                    Vector3__double* _232 = &t_MINUS_norm; // ref
+                                    Vector3__double _234 = Vector3_mul__double(_232, jt_MINUS_clamped);
+                                    Vector3__double f_MINUS_impulse = _234;
+                                    Vector3__double* _243 = &f_MINUS_impulse; // ref
+                                    Vector3__double _245 = Vector3_mul__double(_243, -1.0);
+                                    Vector3__double* _246 = &_245; // ref
+                                    Body_apply_MINUS_impulse_BANG_(b_MINUS_a, _246);
+                                    Vector3__double* _252 = &f_MINUS_impulse; // ref
+                                    Body_apply_MINUS_impulse_BANG_(b_MINUS_b, _252);
+                                    Vector3_delete__double(_245);
+                                    Vector3_delete__double(f_MINUS_impulse);
+                                    Vector3_delete__double(t_MINUS_norm);
+                                }
+                            } else {
+                                /* () */
+                            }
+                            Vector3_delete__double(rel_MINUS_v2);
+                            Vector3_delete__double(v_MINUS_n2);
+                            Vector3_delete__double(v_MINUS_tan);
+                        }
                         Vector3_delete__double(_124);
-                        Vector3_delete__double(impulse);
+                        Vector3_delete__double(n_MINUS_impulse);
                     }
                 } else {
                     /* () */
                 }
                 /* let */ {
-                    Vector3__double* _144 = Body_velocity(b_MINUS_a);
-                    Vector3__double* v_MINUS_a2 = _144;
-                    Vector3__double* _148 = Body_velocity(b_MINUS_b);
-                    Vector3__double* v_MINUS_b2 = _148;
-                    Vector3__double _153 = Vector3_sub__double(v_MINUS_b2, v_MINUS_a2);
-                    Vector3__double rel_MINUS_v2 = _153;
-                    Vector3__double* _160 = &rel_MINUS_v2; // ref
-                    double _162 = Vector3_dot__double(_160, normal);
-                    Vector3__double _163 = Vector3_mul__double(normal, _162);
-                    Vector3__double v_MINUS_normal = _163;
-                    Vector3__double* _168 = &rel_MINUS_v2; // ref
-                    Vector3__double* _171 = &v_MINUS_normal; // ref
-                    Vector3__double _172 = Vector3_sub__double(_168, _171);
-                    Vector3__double v_MINUS_tangent = _172;
-                    Vector3__double* _179 = &v_MINUS_tangent; // ref
-                    double _180 = Vector3_mag_MINUS_sq__double(_179);
-                    bool _182 = Double__GT_(_180, 1.0e-4);
-                    if (_182) {
-                        /* let */ {
-                            Vector3__double* _189 = &v_MINUS_tangent; // ref
-                            Vector3__double _190 = Vector3_normalize__double(_189);
-                            Vector3__double t_MINUS_norm = _190;
-                            double* _196 = Body_friction(b_MINUS_a);
-                            double _197 = Double_copy(_196);
-                            double* _201 = Body_friction(b_MINUS_b);
-                            double _202 = Double_copy(_201);
-                            double _203 = min__double(_197, _202);
-                            double f_MINUS_mu = _203;
-                            Vector3__double* _210 = &rel_MINUS_v2; // ref
-                            Vector3__double* _213 = &t_MINUS_norm; // ref
-                            double _214 = Vector3_dot__double(_210, _213);
-                            double _215 = Double__MINUS_(0.0, _214);
-                            double f_MINUS_numerator = _215;
-                            double _220 = Double__DIV_(f_MINUS_numerator, total_MINUS_inv_MINUS_mass);
-                            double jt = _220;
-                            Vector3__double* _225 = &t_MINUS_norm; // ref
-                            double _229 = Double__MUL_(jt, f_MINUS_mu);
-                            Vector3__double _230 = Vector3_mul__double(_225, _229);
-                            Vector3__double f_MINUS_impulse = _230;
-                            Vector3__double* _239 = &f_MINUS_impulse; // ref
-                            Vector3__double _241 = Vector3_mul__double(_239, -1.0);
-                            Vector3__double* _242 = &_241; // ref
-                            Body_apply_MINUS_impulse_BANG_(b_MINUS_a, _242);
-                            Vector3__double* _248 = &f_MINUS_impulse; // ref
-                            Body_apply_MINUS_impulse_BANG_(b_MINUS_b, _248);
-                            Vector3_delete__double(_241);
-                            Vector3_delete__double(f_MINUS_impulse);
-                            Vector3_delete__double(t_MINUS_norm);
-                        }
-                    } else {
-                        /* () */
-                    }
-                    Vector3_delete__double(rel_MINUS_v2);
-                    Vector3_delete__double(v_MINUS_normal);
-                    Vector3_delete__double(v_MINUS_tangent);
-                }
-                /* let */ {
                     double percent = 0.4;
                     double slop = 1.0e-2;
-                    double _270 = Double__MINUS_(depth, slop);
-                    double _272 = max__double(_270, 0.0);
-                    double _274 = Double__DIV_(_272, total_MINUS_inv_MINUS_mass);
-                    double _276 = Double__MUL_(_274, percent);
-                    double corr_MINUS_mag = _276;
-                    Vector3__double _281 = Vector3_mul__double(normal, corr_MINUS_mag);
-                    Vector3__double correction = _281;
-                    Vector3__double* _289 = Transform_position(t_MINUS_a);
-                    Vector3__double* _294 = &correction; // ref
-                    Vector3__double _296 = Vector3_mul__double(_294, inv_MINUS_m_MINUS_a);
-                    Vector3__double* _297 = &_296; // ref
-                    Vector3__double _298 = Vector3_sub__double(_289, _297);
-                    Transform_set_MINUS_position_BANG_(t_MINUS_a, _298);
-                    Vector3__double* _305 = Transform_position(t_MINUS_b);
-                    Vector3__double* _310 = &correction; // ref
-                    Vector3__double _312 = Vector3_mul__double(_310, inv_MINUS_m_MINUS_b);
-                    Vector3__double* _313 = &_312; // ref
-                    Vector3__double _314 = Vector3_add__double(_305, _313);
-                    Transform_set_MINUS_position_BANG_(t_MINUS_b, _314);
-                    Vector3_delete__double(_296);
-                    Vector3_delete__double(_312);
+                    double _281 = Double__MINUS_(depth, slop);
+                    double _283 = max__double(_281, 0.0);
+                    double _285 = Double__DIV_(_283, total_MINUS_inv_MINUS_mass);
+                    double _287 = Double__MUL_(_285, percent);
+                    double corr_MINUS_mag = _287;
+                    Vector3__double _292 = Vector3_mul__double(normal, corr_MINUS_mag);
+                    Vector3__double correction = _292;
+                    Vector3__double* _300 = Transform_position(t_MINUS_a);
+                    Vector3__double* _305 = &correction; // ref
+                    Vector3__double _307 = Vector3_mul__double(_305, inv_MINUS_m_MINUS_a);
+                    Vector3__double* _308 = &_307; // ref
+                    Vector3__double _309 = Vector3_sub__double(_300, _308);
+                    Transform_set_MINUS_position_BANG_(t_MINUS_a, _309);
+                    Vector3__double* _316 = Transform_position(t_MINUS_b);
+                    Vector3__double* _321 = &correction; // ref
+                    Vector3__double _323 = Vector3_mul__double(_321, inv_MINUS_m_MINUS_b);
+                    Vector3__double* _324 = &_323; // ref
+                    Vector3__double _325 = Vector3_add__double(_316, _324);
+                    Transform_set_MINUS_position_BANG_(t_MINUS_b, _325);
+                    Vector3_delete__double(_307);
+                    Vector3_delete__double(_323);
                     Vector3_delete__double(correction);
                 }
                 Vector3_delete__double(rel_MINUS_v);
