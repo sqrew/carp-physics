@@ -1,0 +1,48 @@
+(load "../carp-transform/transform.carp")
+(load "../carp-dynamics/dynamics.carp")
+(load "../carp-collision/collision.carp")
+(load "Vector.carp")
+
+(use Vector3)
+(use Double)
+(use Transform)
+(use Body)
+(use Collision)
+
+(defmodule Solver
+  (doc solve! "resolves a collision between two bodies by applying impulses and positional correction.
+Uses the hardened data from Transform, Body, and Collision modules.")
+  (defn solve! [t-a b-a t-b b-b col]
+    (let [contact (Collision.contact col)
+          normal (Contact.normal contact)
+          depth @(Contact.depth contact)
+          
+          ;; 1. Impulse Resolution (Velocities)
+          v-a (Body.velocity b-a)
+          v-b (Body.velocity b-b)
+          rel-v (Vector3.sub v-a v-b)
+          vel-along-normal (Vector3.dot &rel-v normal)
+          
+          inv-m-a @(Body.inv-mass b-a)
+          inv-m-b @(Body.inv-mass b-b)
+          total-inv-mass (+ inv-m-a inv-m-b)]
+      (do
+        ;; Only resolve if they are moving towards each other
+        (when (< vel-along-normal 0.0)
+          (let [e (min @(Body.restitution b-a) @(Body.restitution b-b))
+                numerator (- 0.0 (* (+ 1.0 e) vel-along-normal))
+                j (/ numerator total-inv-mass)
+                impulse (Vector3.mul normal j)]
+            (do
+              (Body.apply-impulse! b-a &impulse)
+              (Body.apply-impulse! b-b &(Vector3.mul &impulse -1.0)))))
+        
+        ;; 2. Positional Correction (The 'Sinking' Fix)
+        (let [percent 0.4 
+              slop 0.01
+              corr-mag (* (/ (max (- depth slop) 0.0) total-inv-mass) percent)
+              correction (Vector3.mul normal corr-mag)]
+          (do
+            (Transform.set-position! t-a (Vector3.add (Transform.position t-a) &(Vector3.mul &correction inv-m-a)))
+            (Transform.set-position! t-b (Vector3.sub (Transform.position t-b) &(Vector3.mul &correction inv-m-b))))))))
+)

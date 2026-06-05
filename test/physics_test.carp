@@ -1,0 +1,35 @@
+(load "Test.carp")
+(use Test)
+(load "physics.carp")
+(use Solver)
+(use Transform)
+(use Body)
+(use Collision)
+(use Vector3)
+(use Handle)
+
+(deftest physics-test
+  (let [state (Test.State.init 0 0)]
+    (do
+      ;; 1. Simple Bounce Resolution
+      (let [t-a (Transform.identity)
+            b-a (Body.new 1.0 1.0 0.0 1.0)
+            _ (Body.set-velocity! &b-a (Vector3.init 10.0 0.0 0.0))
+            
+            t-b (Transform.identity)
+            b-b (Body.static 1.0 0.0)
+            
+            ;; Fake a collision from the right
+            h-a (Handle.init (Uint64.from-long 0l) (Uint32.from-long 1l))
+            h-b (Handle.init (Uint64.from-long 1l) (Uint32.from-long 1l))
+            cont (Contact.init 0.5 (Vector3.init 0.0 0.0 0.0) (Vector3.init -1.0 0.0 0.0))
+            col (Collision.init h-a h-b cont)]
+        (do
+          (Solver.solve! &t-a &b-a &t-b &b-b &col)
+          ;; Should have bounced back with velocity ~ -10.0
+          (set! state (Test.assert-true &state (< @(Vector3.x (Body.velocity &b-a)) -9.0) "Bounce resolution reverses velocity"))
+          ;; Positional correction should have pushed it along normal (-1, 0, 0)
+          ;; Wait, correction pushes 'a' along normal, so should move in -X direction
+          (set! state (Test.assert-true &state (< @(Vector3.x (Transform.position &t-a)) 0.0) "Positional correction moved transform"))))
+      
+      state)))
