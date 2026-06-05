@@ -14,7 +14,7 @@
 Uses a proper Coulomb friction model and Baumgarte stabilization.")
   (defn solve! [t-a b-a t-b b-b col]
     (let [contact (Collision.contact col)
-          normal (Contact.normal contact)
+          normal (Contact.normal contact) ;; Convention: Points from B to A
           depth @(Contact.depth contact)
           
           inv-m-a @(Body.inv-mass b-a)
@@ -24,23 +24,25 @@ Uses a proper Coulomb friction model and Baumgarte stabilization.")
           () ;; Both are static/kinematic
           (let [v-a (Body.velocity b-a)
                 v-b (Body.velocity b-b)
-                rel-v (Vector3.sub v-b v-a)
+                ;; 1. Relative Velocity (Standard for B->A normal: vA - vB)
+                rel-v (Vector3.sub v-a v-b)
                 vel-along-normal (Vector3.dot &rel-v normal)]
             (do
-              ;; 1. Normal Impulse (J)
+              ;; 2. Normal Impulse (J)
               (if (< vel-along-normal 0.0)
                   (let [e (min @(Body.restitution b-a) @(Body.restitution b-b))
                         j-num (- 0.0 (* (+ 1.0 e) vel-along-normal))
                         j (/ j-num total-inv-mass)
                         n-impulse (Vector3.mul normal j)]
                     (do
-                      (Body.apply-impulse! b-a &(Vector3.mul &n-impulse -1.0))
-                      (Body.apply-impulse! b-b &n-impulse)
+                      ;; A gets +normal impulse, B gets -normal impulse
+                      (Body.apply-impulse! b-a &n-impulse)
+                      (Body.apply-impulse! b-b &(Vector3.mul &n-impulse -1.0))
                       
-                      ;; 2. Tangent Impulse (Friction) via Coulomb's Law
+                      ;; 3. Tangent Impulse (Friction)
                       (let [v-a2 (Body.velocity b-a)
                             v-b2 (Body.velocity b-b)
-                            rel-v2 (Vector3.sub v-b2 v-a2)
+                            rel-v2 (Vector3.sub v-a2 v-b2)
                             v-n2 (Vector3.mul normal (Vector3.dot &rel-v2 normal))
                             v-tan (Vector3.sub &rel-v2 &v-n2)]
                         (if (> (Vector3.mag-sq &v-tan) 0.0001)
@@ -48,22 +50,22 @@ Uses a proper Coulomb friction model and Baumgarte stabilization.")
                                   f-mu (min @(Body.friction b-a) @(Body.friction b-b))
                                   jt-num (- 0.0 (Vector3.dot &rel-v2 &t-norm))
                                   jt (/ jt-num total-inv-mass)
-                                  ;; Clamp friction to Coulomb limit: abs(jt) <= j * mu
+                                  ;; Clamp friction to Coulomb limit
                                   max-f (* j f-mu)
-                                  jt-clamped (Double.clamp (- 0.0 max-f) max-f jt)
+                                  jt-clamped (clamp (- 0.0 max-f) max-f jt)
                                   f-impulse (Vector3.mul &t-norm jt-clamped)]
                               (do
-                                (Body.apply-impulse! b-a &(Vector3.mul &f-impulse -1.0))
-                                (Body.apply-impulse! b-b &f-impulse)))
+                                (Body.apply-impulse! b-a &f-impulse)
+                                (Body.apply-impulse! b-b &(Vector3.mul &f-impulse -1.0))))
                             ()))))
                   ())
 
-              ;; 3. Positional Correction
-              (let [percent 0.4 
+              ;; 4. Positional Correction
+              (let [percent 0.6 ;; Increased to 60% for a more solid, 'hardened' feel
                     slop 0.01
                     corr-mag (* (/ (max (- depth slop) 0.0) total-inv-mass) percent)
                     correction (Vector3.mul normal corr-mag)]
                 (do
-                  (Transform.set-position! t-a (Vector3.sub (Transform.position t-a) &(Vector3.mul &correction inv-m-a)))
-                  (Transform.set-position! t-b (Vector3.add (Transform.position t-b) &(Vector3.mul &correction inv-m-b))))))))))
+                  (Transform.set-position! t-a (Vector3.add (Transform.position t-a) &(Vector3.mul &correction inv-m-a)))
+                  (Transform.set-position! t-b (Vector3.sub (Transform.position t-b) &(Vector3.mul &correction inv-m-b))))))))))
 )
