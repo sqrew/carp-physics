@@ -1,5 +1,6 @@
 (load "../carp-transform/transform.carp")
 (load "../carp-dynamics/dynamics.carp")
+(load "../carp-rigidbody/rigidbody.carp")
 (load "../carp-collision/collision.carp")
 (load "Vector.carp")
 
@@ -7,13 +8,19 @@
 (use Double)
 (use Transform)
 (use Body)
+(use RigidBody)
 (use Collision)
 
 (defmodule Solver
-  (doc solve! "resolves a collision between two bodies by applying impulses and positional correction.
-Uses a proper Coulomb friction model and Baumgarte stabilization.")
-  (defn solve! [t-a b-a t-b b-b col]
-    (let [contact (Collision.contact col)
+  (doc solve! "resolves a collision between two rigid bodies by applying impulses and positional correction.
+Takes two RigidBody pointers and a Collision manifold.")
+  (defn solve! [rb-a rb-b col]
+    (let [t-a (RigidBody.transform rb-a)
+          b-a (RigidBody.body rb-a)
+          t-b (RigidBody.transform rb-b)
+          b-b (RigidBody.body rb-b)
+          
+          contact (Collision.contact col)
           normal (Contact.normal contact) ;; Convention: Points from B to A
           depth @(Contact.depth contact)
           
@@ -61,7 +68,7 @@ Uses a proper Coulomb friction model and Baumgarte stabilization.")
                   ())
 
               ;; 4. Positional Correction
-              (let [percent 0.6 ;; Increased to 60% for a more solid, 'hardened' feel
+              (let [percent 0.6
                     slop 0.01
                     corr-mag (* (/ (max (- depth slop) 0.0) total-inv-mass) percent)
                     correction (Vector3.mul normal corr-mag)]

@@ -2,6 +2,7 @@
 (use Test)
 (load "physics.carp")
 (use Solver)
+(use RigidBody)
 (use Transform)
 (use Body)
 (use Collision)
@@ -11,36 +12,34 @@
 (deftest physics-test
   (let [state (Test.State.init 0 0)]
     (do
-      ;; 1. Simple Bounce Resolution (Verifies relative velocity sign)
-      (let [t-a (Transform.identity)
-            b-a (Body.new 1.0 1.0 0.0 1.0)
-            _ (Body.set-velocity! &b-a (Vector3.init 10.0 0.0 0.0))
+      ;; 1. Simple Bounce Resolution
+      (let [rb-a (RigidBody.new (Vector3.init 0.0 0.0 0.0) (Quaternion.identity) 1.0 1.0 0.0 1.0)
+            _ (Body.set-velocity! (RigidBody.body &rb-a) (Vector3.init 10.0 0.0 0.0))
             
-            t-b (Transform.identity)
-            b-b (Body.static 1.0 0.0)
+            rb-b (RigidBody.static (Vector3.init 1.0 0.0 0.0) (Quaternion.identity) 1.0 0.0)
             
-            ;; Object A (moving +X) hits Static Object B.
-            ;; Normal points from A to B (towards +X).
             h-a (Handle.init (Uint64.from-long 0l) (Uint32.from-long 1l))
             h-b (Handle.init (Uint64.from-long 1l) (Uint32.from-long 1l))
-            cont (Contact.init 0.5 (Vector3.init 0.0 0.0 0.0) (Vector3.init 1.0 0.0 0.0))
+            ;; Normal points from B to A: (0,0,0) - (1,0,0) = (-1,0,0)
+            cont (Contact.init 0.5 (Vector3.init 0.5 0.0 0.0) (Vector3.init -1.0 0.0 0.0))
             col (Collision.init h-a h-b cont)]
         (do
-          (Solver.solve! &t-a &b-a &t-b &b-b &col)
-          ;; Should have bounced back with velocity ~ -10.0
-          (set! state (Test.assert-true &state (< @(Vector3.x (Body.velocity &b-a)) -9.0) "Bounce resolution reverses velocity (+X hits B, bounces -X)"))
-          ;; Positional correction: Object A should be pushed in -X direction
-          (set! state (Test.assert-true &state (< @(Vector3.x (Transform.position &t-a)) 0.0) "Positional correction pushes A back"))))
+          (Solver.solve! &rb-a &rb-b &col)
+          ;; Normal is -X. A is moving +X into B.
+          ;; rel-v = vA - vB = (10,0,0) - (0,0,0) = (10,0,0)
+          ;; dot(rel-v, normal) = 10 * -1 = -10 (Moving towards each other! Resolve!)
+          ;; New velocity should be ~ -10
+          (set! state (Test.assert-true &state (< @(Vector3.x (Body.velocity (RigidBody.body &rb-a))) -9.0) "Bounce reverses velocity"))
+          ;; Positional correction: A moves along +Normal (-1, 0, 0), so X decreases.
+          (set! state (Test.assert-true &state (< @(Vector3.x (Transform.position (RigidBody.transform &rb-a))) 0.0) "Positional correction pushes A back"))))
       
       ;; 2. Static-Static Safety
-      (let [t-s1 (Transform.identity)
-            b-s1 (Body.static 0.0 0.0)
-            t-s2 (Transform.identity)
-            b-s2 (Body.static 0.0 0.0)
+      (let [rb-s1 (RigidBody.static (Vector3.init 0.0 0.0 0.0) (Quaternion.identity) 0.0 0.0)
+            rb-s2 (RigidBody.static (Vector3.init 0.0 0.0 0.0) (Quaternion.identity) 0.0 0.0)
             cont (Contact.init 0.5 (Vector3.init 0.0 0.0 0.0) (Vector3.init 1.0 0.0 0.0))
             col (Collision.init (Handle.init (Uint64.from-long 0l) (Uint32.from-long 1l)) (Handle.init (Uint64.from-long 1l) (Uint32.from-long 1l)) cont)]
         (do
-          (Solver.solve! &t-s1 &b-s1 &t-s2 &b-s2 &col)
-          (set! state (Test.assert-true &state true "Solver handles static-static without division error"))))
+          (Solver.solve! &rb-s1 &rb-s2 &col)
+          (set! state (Test.assert-true &state true "Solver handles static-static without error"))))
       
       state)))
