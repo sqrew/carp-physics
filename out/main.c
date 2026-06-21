@@ -36,9 +36,87 @@
 
 
 //Types:
+typedef struct AABB AABB;
+typedef struct BaseShape BaseShape;
+typedef struct Binary__Lambda_byte_MINUS_converter__ByteOrder_Array__uint8_t_Uint16_29_env_ty Binary__Lambda_byte_MINUS_converter__ByteOrder_Array__uint8_t_Uint16_29_env_ty;
+typedef struct Binary__Lambda_byte_MINUS_converter__ByteOrder_Array__uint8_t_Uint32_29_env_ty Binary__Lambda_byte_MINUS_converter__ByteOrder_Array__uint8_t_Uint32_29_env_ty;
+typedef struct Binary__Lambda_byte_MINUS_converter__ByteOrder_Array__uint8_t_Uint64_29_env_ty Binary__Lambda_byte_MINUS_converter__ByteOrder_Array__uint8_t_Uint64_29_env_ty;
+typedef struct Binary__Lambda_int16_MINUS_seq_MINUS__GT_bytes_16_env_ty Binary__Lambda_int16_MINUS_seq_MINUS__GT_bytes_16_env_ty;
+typedef struct Binary__Lambda_int32_MINUS__GT_bytes_16_env_ty Binary__Lambda_int32_MINUS__GT_bytes_16_env_ty;
+typedef struct Binary__Lambda_int32_MINUS_seq_MINUS__GT_bytes_16_env_ty Binary__Lambda_int32_MINUS_seq_MINUS__GT_bytes_16_env_ty;
+typedef struct Binary__Lambda_int64_MINUS__GT_bytes_16_env_ty Binary__Lambda_int64_MINUS__GT_bytes_16_env_ty;
+typedef struct Binary__Lambda_int64_MINUS_seq_MINUS__GT_bytes_16_env_ty Binary__Lambda_int64_MINUS_seq_MINUS__GT_bytes_16_env_ty;
+typedef struct Binary__Lambda_unsafe_MINUS_bytes_MINUS__GT_int16_MINUS_seq_19_env_ty Binary__Lambda_unsafe_MINUS_bytes_MINUS__GT_int16_MINUS_seq_19_env_ty;
+typedef struct Binary__Lambda_unsafe_MINUS_bytes_MINUS__GT_int32_MINUS_seq_19_env_ty Binary__Lambda_unsafe_MINUS_bytes_MINUS__GT_int32_MINUS_seq_19_env_ty;
+typedef struct Binary__Lambda_unsafe_MINUS_bytes_MINUS__GT_int64_MINUS_seq_19_env_ty Binary__Lambda_unsafe_MINUS_bytes_MINUS__GT_int64_MINUS_seq_19_env_ty;
+typedef struct Body Body;
+typedef struct BodyType BodyType;
+typedef struct Bucket__ColorId_String Bucket__ColorId_String;
+typedef struct Bucket__Lambda_set_MINUS_idx_BANG___ColorId_String_21_env_ty Bucket__Lambda_set_MINUS_idx_BANG___ColorId_String_21_env_ty;
+typedef struct ByteOrder ByteOrder;
+typedef struct CellRange CellRange;
+typedef struct Collidable Collidable;
+typedef struct Collision Collision;
+typedef struct CollisionResult CollisionResult;
+typedef struct ColorId ColorId;
+typedef struct Contact Contact;
+typedef struct ContactSet ContactSet;
+typedef struct Handle__void Handle__void;
+typedef struct LocalCrater LocalCrater;
+typedef struct Map__ColorId_String Map__ColorId_String;
+typedef struct Maybe__CollisionResult Maybe__CollisionResult;
+typedef struct Maybe__Contact Maybe__Contact;
+typedef struct Maybe__ContactSet Maybe__ContactSet;
+typedef struct Maybe__Long Maybe__Long;
+typedef struct Maybe__RayHit Maybe__RayHit;
+typedef struct Maybe__String Maybe__String;
+typedef struct Maybe__Uint16 Maybe__Uint16;
+typedef struct Maybe__Uint32 Maybe__Uint32;
+typedef struct Maybe__Uint64 Maybe__Uint64;
+typedef struct Maybe__bool Maybe__bool;
+typedef struct Maybe__double Maybe__double;
+typedef struct Maybe__float Maybe__float;
+typedef struct Maybe__int Maybe__int;
+typedef struct Maybe__uint8_t Maybe__uint8_t;
+typedef struct Opaque Opaque;
+typedef struct Pair__Array__Uint16_int Pair__Array__Uint16_int;
+typedef struct Pair__Array__Uint32_int Pair__Array__Uint32_int;
+typedef struct Pair__Array__Uint64_int Pair__Array__Uint64_int;
+typedef struct Pair__ColorId_String Pair__ColorId_String;
+typedef struct Pattern__Lambda_global_MINUS_match_MINUS_str_16_env_ty Pattern__Lambda_global_MINUS_match_MINUS_str_16_env_ty;
+typedef struct Plane Plane;
+typedef struct Quaternion Quaternion;
+typedef struct Ray Ray;
+typedef struct RayHit RayHit;
+typedef struct Result__Array__Uint16_int Result__Array__Uint16_int;
+typedef struct Result__Array__Uint32_int Result__Array__Uint32_int;
+typedef struct Result__Array__Uint64_int Result__Array__Uint64_int;
+typedef struct Result__Char_String Result__Char_String;
+typedef struct Result__FILE_MUL__String Result__FILE_MUL__String;
+typedef struct Result__String_String Result__String_String;
+typedef struct Result__Uint16_Array__uint8_t Result__Uint16_Array__uint8_t;
+typedef struct Result__Uint32_Array__uint8_t Result__Uint32_Array__uint8_t;
+typedef struct Result__Uint64_Array__uint8_t Result__Uint64_Array__uint8_t;
+typedef struct Result__bool_String Result__bool_String;
+typedef struct RigidBody RigidBody;
+typedef struct SDF SDF;
+typedef struct Segment Segment;
+typedef struct SpatialGrid__Uint64 SpatialGrid__Uint64;
+typedef struct Sphere Sphere;
+typedef struct TestState TestState;
+typedef struct Transform Transform;
+typedef struct TransformMat4 TransformMat4;
+typedef struct Trigger Trigger;
+typedef struct Vector2__bool Vector2__bool;
+typedef struct Vector3__Lambda_div__double_13_env_ty Vector3__Lambda_div__double_13_env_ty;
+typedef struct Vector3__Lambda_mul__double_13_env_ty Vector3__Lambda_mul__double_13_env_ty;
+typedef struct Vector3__bool Vector3__bool;
+typedef struct Vector3__double Vector3__double;
+typedef struct Volume Volume;
+
 
 // Depth 3
-typedef struct {
+struct Maybe__Long {
     union {
     struct {
         Long member0;
@@ -47,12 +125,12 @@ typedef struct {
     char __dummy;
     } u;
     char _tag;
-} Maybe__Long;
+};
 #define Maybe__Long_Just_tag 0
 #define Maybe__Long_Nothing_tag 1
 
 // Depth 3
-typedef struct {
+struct Maybe__String {
     union {
     struct {
         String member0;
@@ -61,12 +139,12 @@ typedef struct {
     char __dummy;
     } u;
     char _tag;
-} Maybe__String;
+};
 #define Maybe__String_Just_tag 0
 #define Maybe__String_Nothing_tag 1
 
 // Depth 3
-typedef struct {
+struct Maybe__bool {
     union {
     struct {
         bool member0;
@@ -75,12 +153,12 @@ typedef struct {
     char __dummy;
     } u;
     char _tag;
-} Maybe__bool;
+};
 #define Maybe__bool_Just_tag 0
 #define Maybe__bool_Nothing_tag 1
 
 // Depth 3
-typedef struct {
+struct Maybe__double {
     union {
     struct {
         double member0;
@@ -89,12 +167,12 @@ typedef struct {
     char __dummy;
     } u;
     char _tag;
-} Maybe__double;
+};
 #define Maybe__double_Just_tag 0
 #define Maybe__double_Nothing_tag 1
 
 // Depth 3
-typedef struct {
+struct Maybe__float {
     union {
     struct {
         float member0;
@@ -103,12 +181,12 @@ typedef struct {
     char __dummy;
     } u;
     char _tag;
-} Maybe__float;
+};
 #define Maybe__float_Just_tag 0
 #define Maybe__float_Nothing_tag 1
 
 // Depth 3
-typedef struct {
+struct Maybe__int {
     union {
     struct {
         int member0;
@@ -117,12 +195,12 @@ typedef struct {
     char __dummy;
     } u;
     char _tag;
-} Maybe__int;
+};
 #define Maybe__int_Just_tag 0
 #define Maybe__int_Nothing_tag 1
 
 // Depth 3
-typedef struct {
+struct Maybe__uint8_t {
     union {
     struct {
         uint8_t member0;
@@ -131,12 +209,12 @@ typedef struct {
     char __dummy;
     } u;
     char _tag;
-} Maybe__uint8_t;
+};
 #define Maybe__uint8_t_Just_tag 0
 #define Maybe__uint8_t_Nothing_tag 1
 
 // Depth 3
-typedef struct {
+struct Result__Char_String {
     union {
     struct {
         Char member0;
@@ -147,12 +225,12 @@ typedef struct {
     char __dummy;
     } u;
     char _tag;
-} Result__Char_String;
+};
 #define Result__Char_String_Success_tag 0
 #define Result__Char_String_Error_tag 1
 
 // Depth 3
-typedef struct {
+struct Result__String_String {
     union {
     struct {
         String member0;
@@ -163,12 +241,12 @@ typedef struct {
     char __dummy;
     } u;
     char _tag;
-} Result__String_String;
+};
 #define Result__String_String_Success_tag 0
 #define Result__String_String_Error_tag 1
 
 // Depth 3
-typedef struct {
+struct Result__bool_String {
     union {
     struct {
         bool member0;
@@ -179,63 +257,63 @@ typedef struct {
     char __dummy;
     } u;
     char _tag;
-} Result__bool_String;
+};
 #define Result__bool_String_Success_tag 0
 #define Result__bool_String_Error_tag 1
 
 // Depth 3
-typedef struct {
+struct CellRange {
     int min_MINUS_x;
     int max_MINUS_x;
     int min_MINUS_y;
     int max_MINUS_y;
     int min_MINUS_z;
     int max_MINUS_z;
-} CellRange;
+};
 
 // Depth 3
-typedef struct {
+struct Quaternion {
     double x;
     double y;
     double z;
     double w;
-} Quaternion;
+};
 
 // Depth 3
-typedef struct {
+struct Vector2__bool {
     bool x;
     bool y;
-} Vector2__bool;
+};
 
 // Depth 3
-typedef struct {
+struct Vector3__Lambda_div__double_13_env_ty {
     double n;
-} Vector3__Lambda_div__double_13_env_ty;
+};
 
 // Depth 3
-typedef struct {
+struct Vector3__Lambda_mul__double_13_env_ty {
     double n;
-} Vector3__Lambda_mul__double_13_env_ty;
+};
 
 // Depth 3
-typedef struct {
+struct Vector3__bool {
     bool x;
     bool y;
     bool z;
-} Vector3__bool;
+};
 
 // Depth 3
-typedef struct {
+struct Vector3__double {
     double x;
     double y;
     double z;
-} Vector3__double;
+};
 
 // Depth 3
-typedef struct {
+struct TestState {
     int passed;
     int failed;
-} TestState;
+};
 
 // Depth 4
 typedef Array Array__Array__Uint64;
@@ -254,6 +332,12 @@ typedef Array Array__Collidable;
 
 // Depth 4
 typedef Array Array__CollisionResult;
+
+// Depth 4
+typedef Array Array__Contact;
+
+// Depth 4
+typedef Array Array__LocalCrater;
 
 // Depth 4
 typedef Array Array__Pair__ColorId_String;
@@ -281,6 +365,9 @@ typedef Array Array__Uint32;
 
 // Depth 4
 typedef Array Array__Uint64;
+
+// Depth 4
+typedef Array Array__Vector3__double;
 
 // Depth 4
 typedef Array Array__float;
@@ -559,17 +646,17 @@ typedef bool(*Fn__uint8_t_uint8_t_bool)(uint8_t, uint8_t);
 typedef uint8_t(*Fn__uint8_t_uint8_t_uint8_t)(uint8_t, uint8_t);
 
 // Depth 5
-typedef struct {
+struct AABB {
     Vector3__double min;
     Vector3__double max;
-} AABB;
+};
 
 // Depth 5
-typedef struct {
+struct Contact {
     double depth;
     Vector3__double point;
     Vector3__double normal;
-} Contact;
+};
 
 // Depth 5
 typedef int(*Fn__Fn___void_int)(Lambda);
@@ -578,42 +665,48 @@ typedef int(*Fn__Fn___void_int)(Lambda);
 typedef void(*Fn__int_Fn__int_void_void)(int, Lambda);
 
 // Depth 5
-typedef struct {
+struct LocalCrater {
+    Vector3__double pos;
+    double radius;
+};
+
+// Depth 5
+struct Plane {
     Vector3__double normal;
     double d;
-} Plane;
+};
 
 // Depth 5
-typedef struct {
+struct Ray {
     Vector3__double origin;
     Vector3__double direction;
-} Ray;
+};
 
 // Depth 5
-typedef struct {
+struct RayHit {
     double t;
     Vector3__double point;
     Vector3__double normal;
-} RayHit;
+};
 
 // Depth 5
-typedef struct {
+struct Segment {
     Vector3__double start;
     Vector3__double end;
-} Segment;
+};
 
 // Depth 5
-typedef struct {
+struct Sphere {
     Vector3__double center;
     double radius;
-} Sphere;
+};
 
 // Depth 5
-typedef struct {
+struct Transform {
     Vector3__double position;
     Quaternion rotation;
     Vector3__double scale;
-} Transform;
+};
 
 // Depth 6
 typedef String(*Fn__CellRange_MUL__String)(CellRange*);
@@ -652,10 +745,19 @@ typedef String(*Fn__Maybe__String_String_String)(Maybe__String, String);
 typedef Quaternion(*Fn__Quaternion_MUL__Quaternion)(Quaternion*);
 
 // Depth 6
+typedef Quaternion(*Fn__Quaternion_MUL__Quaternion_MUL__Quaternion)(Quaternion*, Quaternion*);
+
+// Depth 6
 typedef String(*Fn__Quaternion_MUL__String)(Quaternion*);
 
 // Depth 6
+typedef Vector3__double(*Fn__Quaternion_MUL__Vector3__double_MUL__Vector3__double)(Quaternion*, Vector3__double*);
+
+// Depth 6
 typedef double*(*Fn__Quaternion_MUL__double_MUL_)(Quaternion*);
+
+// Depth 6
+typedef Quaternion(*Fn__Quaternion_MUL__double_Quaternion)(Quaternion*, double);
 
 // Depth 6
 typedef Quaternion(*Fn__Quaternion_Quaternion)(Quaternion);
@@ -748,12 +850,12 @@ typedef CellRange(*Fn__int_int_int_int_int_int_CellRange)(int, int, int, int, in
 typedef Maybe__uint8_t(*Fn__uint8_t_Maybe__uint8_t)(uint8_t);
 
 // Depth 6
-typedef struct {
+struct TransformMat4 {
     Array__float data;
-} TransformMat4;
+};
 
 // Depth 7
-typedef struct {
+struct Maybe__Contact {
     union {
     struct {
         Contact member0;
@@ -762,12 +864,12 @@ typedef struct {
     char __dummy;
     } u;
     char _tag;
-} Maybe__Contact;
+};
 #define Maybe__Contact_Just_tag 0
 #define Maybe__Contact_Nothing_tag 1
 
 // Depth 7
-typedef struct {
+struct Maybe__RayHit {
     union {
     struct {
         RayHit member0;
@@ -776,18 +878,40 @@ typedef struct {
     char __dummy;
     } u;
     char _tag;
-} Maybe__RayHit;
+};
 #define Maybe__RayHit_Just_tag 0
 #define Maybe__RayHit_Nothing_tag 1
+
+// Depth 7
+struct BaseShape {
+    union {
+    struct {
+        double member0;
+    } Ball;
+    struct {
+        Plane member0;
+    } Surface;
+    struct {
+        Vector3__double member0;
+    } Box;
+    struct {
+        double member0;
+        double member1;
+    } Cylinder;
+    char __dummy;
+    } u;
+    char _tag;
+};
+#define BaseShape_Ball_tag 0
+#define BaseShape_Surface_tag 1
+#define BaseShape_Box_tag 2
+#define BaseShape_Cylinder_tag 3
 
 // Depth 7
 typedef Array__Char(*Fn__Array__Char_Array__Char)(Array__Char);
 
 // Depth 7
 typedef Array__Char(*Fn__Array__Char_Char_Array__Char)(Array__Char, Char);
-
-// Depth 7
-typedef Pattern(*Fn__Array__Char_MUL__Pattern)(Array__Char*);
 
 // Depth 7
 typedef String(*Fn__Array__Char_MUL__String)(Array__Char*);
@@ -818,6 +942,9 @@ typedef String*(*Fn__Array__String_MUL__int_String_MUL_)(Array__String*, int);
 
 // Depth 7
 typedef void(*Fn__Array__String_MUL__int_String_void)(Array__String*, int, String);
+
+// Depth 7
+typedef Array__String(*Fn__Array__String_String_Array__String)(Array__String, String);
 
 // Depth 7
 typedef Array__float(*Fn__Array__float_Array__float)(Array__float);
@@ -889,6 +1016,9 @@ typedef Array__Char(*Fn__String_MUL__Array__Char)(String*);
 typedef Array__String(*Fn__String_MUL__Array__Char_MUL__Array__String)(String*, Array__Char*);
 
 // Depth 7
+typedef int(*Fn__String_MUL__Array__Char_MUL__int_int)(String*, Array__Char*, int);
+
+// Depth 7
 typedef String(*Fn__String_MUL__Array__String_MUL__String)(String*, Array__String*);
 
 // Depth 7
@@ -921,30 +1051,11 @@ typedef Array__Char(*Fn__int_Fn___Char_MUL__Array__Char)(int, Lambda*);
 // Depth 7
 typedef Array__float(*Fn__int_float_MUL__Array__float)(int, float*);
 
-// Depth 7
-typedef struct {
-    union {
-    struct {
-        AABB member0;
-    } Box;
-    struct {
-        Sphere member0;
-    } Ball;
-    char __dummy;
-    } u;
-    char _tag;
-} Volume;
-#define Volume_Box_tag 0
-#define Volume_Ball_tag 1
-
 // Depth 8
 typedef String(*Fn__AABB_MUL__String)(AABB*);
 
 // Depth 8
 typedef Vector3__double*(*Fn__AABB_MUL__Vector3__double_MUL_)(AABB*);
-
-// Depth 8
-typedef Contact(*Fn__Contact_Contact)(Contact);
 
 // Depth 8
 typedef Contact(*Fn__Contact_MUL__Contact)(Contact*);
@@ -959,10 +1070,22 @@ typedef Vector3__double*(*Fn__Contact_MUL__Vector3__double_MUL_)(Contact*);
 typedef double*(*Fn__Contact_MUL__double_MUL_)(Contact*);
 
 // Depth 8
+typedef String(*Fn__LocalCrater_MUL__String)(LocalCrater*);
+
+// Depth 8
+typedef Vector3__double*(*Fn__LocalCrater_MUL__Vector3__double_MUL_)(LocalCrater*);
+
+// Depth 8
+typedef double*(*Fn__LocalCrater_MUL__double_MUL_)(LocalCrater*);
+
+// Depth 8
 typedef String(*Fn__Plane_MUL__String)(Plane*);
 
 // Depth 8
 typedef Vector3__double*(*Fn__Plane_MUL__Vector3__double_MUL_)(Plane*);
+
+// Depth 8
+typedef Vector3__double(*Fn__Plane_MUL__Vector3__double_MUL__Vector3__double)(Plane*, Vector3__double*);
 
 // Depth 8
 typedef double(*Fn__Plane_MUL__Vector3__double_MUL__double)(Plane*, Vector3__double*);
@@ -1022,6 +1145,9 @@ typedef Vector3__double*(*Fn__Transform_MUL__Vector3__double_MUL_)(Transform*);
 typedef void(*Fn__Transform_MUL__Vector3__double_void)(Transform*, Vector3__double);
 
 // Depth 8
+typedef Transform(*Fn__Transform_Quaternion_Transform)(Transform, Quaternion);
+
+// Depth 8
 typedef Transform(*Fn__Transform_Transform)(Transform);
 
 // Depth 8
@@ -1043,6 +1169,9 @@ typedef Contact(*Fn__double_Vector3__double_Vector3__double_Contact)(double, Vec
 typedef RayHit(*Fn__double_Vector3__double_Vector3__double_RayHit)(double, Vector3__double, Vector3__double);
 
 // Depth 9
+typedef void(*Fn__Array__Vector3__double_MUL__Vector3__double_void)(Array__Vector3__double*, Vector3__double);
+
+// Depth 9
 typedef TransformMat4(*Fn__Array__float_TransformMat4)(Array__float);
 
 // Depth 9
@@ -1060,11 +1189,11 @@ typedef TransformMat4(*Fn__Transform_MUL__TransformMat4)(Transform*);
 // Depth 9
 typedef TransformMat4(*Fn__Vector3__double_MUL__Quaternion_MUL__Vector3__double_MUL__TransformMat4)(Vector3__double*, Quaternion*, Vector3__double*);
 
-// Depth 10
-typedef Maybe__Contact(*Fn__AABB_MUL__AABB_MUL__Maybe__Contact)(AABB*, AABB*);
+// Depth 9
+typedef Array__Vector3__double(*Fn__int_Array__Vector3__double)(int);
 
 // Depth 10
-typedef Volume(*Fn__AABB_Volume)(AABB);
+typedef Maybe__Contact(*Fn__AABB_MUL__AABB_MUL__Maybe__Contact)(AABB*, AABB*);
 
 // Depth 10
 typedef Array__Array__uint8_t(*Fn__Array__Array__uint8_t_Array__uint8_t_Array__Array__uint8_t)(Array__Array__uint8_t, Array__uint8_t);
@@ -1082,10 +1211,22 @@ typedef void(*Fn__Array__Array__uint8_t_MUL__int_Array__uint8_t_void)(Array__Arr
 typedef Array__Array__uint8_t(*Fn__Array__uint8_t_MUL__int_Array__Array__uint8_t)(Array__uint8_t*, int);
 
 // Depth 10
+typedef BaseShape(*Fn__BaseShape_BaseShape)(BaseShape);
+
+// Depth 10
+typedef BaseShape(*Fn__BaseShape_MUL__BaseShape)(BaseShape*);
+
+// Depth 10
+typedef String(*Fn__BaseShape_MUL__String)(BaseShape*);
+
+// Depth 10
 typedef Maybe__Contact(*Fn__Contact_Maybe__Contact)(Contact);
 
 // Depth 10
 typedef Array__int(*Fn__Fn__Array__uint8_t_MUL__int_MUL__Array__Array__uint8_t_MUL__Array__int)(Lambda*, Array__Array__uint8_t*);
+
+// Depth 10
+typedef BaseShape(*Fn__Plane_BaseShape)(Plane);
 
 // Depth 10
 typedef Maybe__RayHit(*Fn__RayHit_Maybe__RayHit)(RayHit);
@@ -1103,22 +1244,7 @@ typedef Maybe__Contact(*Fn__Sphere_MUL__AABB_MUL__Maybe__Contact)(Sphere*, AABB*
 typedef Maybe__Contact(*Fn__Sphere_MUL__Sphere_MUL__Maybe__Contact)(Sphere*, Sphere*);
 
 // Depth 10
-typedef Volume(*Fn__Sphere_Volume)(Sphere);
-
-// Depth 10
-typedef AABB(*Fn__Volume_MUL__AABB)(Volume*);
-
-// Depth 10
-typedef String(*Fn__Volume_MUL__String)(Volume*);
-
-// Depth 10
-typedef Volume(*Fn__Volume_MUL__Volume)(Volume*);
-
-// Depth 10
-typedef Maybe__Contact(*Fn__Volume_MUL__Volume_MUL__Maybe__Contact)(Volume*, Volume*);
-
-// Depth 10
-typedef Volume(*Fn__Volume_Volume)(Volume);
+typedef BaseShape(*Fn__Vector3__double_BaseShape)(Vector3__double);
 
 // Depth 10
 typedef Maybe__Contact(*Fn___Maybe__Contact)();
@@ -1127,10 +1253,132 @@ typedef Maybe__Contact(*Fn___Maybe__Contact)();
 typedef Maybe__RayHit(*Fn___Maybe__RayHit)();
 
 // Depth 10
+typedef BaseShape(*Fn__double_BaseShape)(double);
+
+// Depth 10
+typedef BaseShape(*Fn__double_double_BaseShape)(double, double);
+
+// Depth 10
 typedef Array__Array__uint8_t(*Fn__int_Array__Array__uint8_t)(int);
 
+// Depth 10
+struct SDF {
+    BaseShape base;
+    Array__LocalCrater craters;
+    Vector3__double position;
+    Quaternion rotation;
+};
+
+// Depth 11
+typedef Array__Contact(*Fn__Array__Contact_Array__Contact)(Array__Contact);
+
+// Depth 11
+typedef void(*Fn__Array__Contact_MUL__Contact_void)(Array__Contact*, Contact);
+
+// Depth 11
+typedef String(*Fn__Array__Contact_MUL__String)(Array__Contact*);
+
+// Depth 11
+typedef int(*Fn__Array__Contact_MUL__int)(Array__Contact*);
+
+// Depth 11
+typedef Contact*(*Fn__Array__Contact_MUL__int_Contact_MUL_)(Array__Contact*, int);
+
+// Depth 11
+typedef Array__LocalCrater(*Fn__Array__LocalCrater_Array__LocalCrater)(Array__LocalCrater);
+
+// Depth 11
+typedef void(*Fn__Array__LocalCrater_MUL__LocalCrater_void)(Array__LocalCrater*, LocalCrater);
+
+// Depth 11
+typedef String(*Fn__Array__LocalCrater_MUL__String)(Array__LocalCrater*);
+
+// Depth 11
+typedef int(*Fn__Array__LocalCrater_MUL__int)(Array__LocalCrater*);
+
+// Depth 11
+typedef LocalCrater*(*Fn__Array__LocalCrater_MUL__int_LocalCrater_MUL_)(Array__LocalCrater*, int);
+
+// Depth 12
+struct Volume {
+    union {
+    struct {
+        AABB member0;
+    } Box;
+    struct {
+        Sphere member0;
+    } Ball;
+    struct {
+        Plane member0;
+    } Surface;
+    struct {
+        SDF member0;
+    } Sdf;
+    char __dummy;
+    } u;
+    char _tag;
+};
+#define Volume_Box_tag 0
+#define Volume_Ball_tag 1
+#define Volume_Surface_tag 2
+#define Volume_Sdf_tag 3
+
+// Depth 13
+typedef SDF(*Fn__BaseShape_Array__LocalCrater_Vector3__double_Quaternion_SDF)(BaseShape, Array__LocalCrater, Vector3__double, Quaternion);
+
+// Depth 13
+typedef Array__LocalCrater*(*Fn__SDF_MUL__Array__LocalCrater_MUL_)(SDF*);
+
+// Depth 13
+typedef BaseShape*(*Fn__SDF_MUL__BaseShape_MUL_)(SDF*);
+
+// Depth 13
+typedef Quaternion*(*Fn__SDF_MUL__Quaternion_MUL_)(SDF*);
+
+// Depth 13
+typedef String(*Fn__SDF_MUL__String)(SDF*);
+
+// Depth 13
+typedef Vector3__double*(*Fn__SDF_MUL__Vector3__double_MUL_)(SDF*);
+
+// Depth 13
+typedef Vector3__double(*Fn__SDF_MUL__Vector3__double_MUL__Vector3__double)(SDF*, Vector3__double*);
+
+// Depth 13
+typedef double(*Fn__SDF_MUL__Vector3__double_MUL__double)(SDF*, Vector3__double*);
+
+// Depth 13
+typedef double(*Fn__SDF_MUL__Vector3__double_MUL__double_double)(SDF*, Vector3__double*, double);
+
+// Depth 13
+typedef Maybe__Contact(*Fn__Sphere_MUL__SDF_MUL__Maybe__Contact)(Sphere*, SDF*);
+
+// Depth 15
+typedef Volume(*Fn__AABB_Volume)(AABB);
+
+// Depth 15
+typedef Volume(*Fn__Plane_Volume)(Plane);
+
+// Depth 15
+typedef Volume(*Fn__SDF_Volume)(SDF);
+
+// Depth 15
+typedef Volume(*Fn__Sphere_Volume)(Sphere);
+
+// Depth 15
+typedef AABB(*Fn__Volume_MUL__AABB)(Volume*);
+
+// Depth 15
+typedef String(*Fn__Volume_MUL__String)(Volume*);
+
+// Depth 15
+typedef Volume(*Fn__Volume_MUL__Volume)(Volume*);
+
+// Depth 15
+typedef Volume(*Fn__Volume_Volume)(Volume);
+
 // Depth 101
-typedef struct {
+struct BodyType {
     union {
     // Dynamic
     // Kinematic
@@ -1138,33 +1386,33 @@ typedef struct {
     char __dummy;
     } u;
     char _tag;
-} BodyType;
+};
 #define BodyType_Dynamic_tag 0
 #define BodyType_Kinematic_tag 1
 #define BodyType_Static_tag 2
 
 // Depth 101
-typedef struct {
+struct ByteOrder {
     union {
     // LittleEndian
     // BigEndian
     char __dummy;
     } u;
     char _tag;
-} ByteOrder;
+};
 #define ByteOrder_LittleEndian_tag 0
 #define ByteOrder_BigEndian_tag 1
 
 // Depth 101
-typedef struct {
+struct Opaque {
     union {
     char __dummy;
     } u;
     char _tag;
-} Opaque;
+};
 
 // Depth 101
-typedef struct {
+struct ColorId {
     union {
     // Black
     // Red
@@ -1192,7 +1440,7 @@ typedef struct {
     char __dummy;
     } u;
     char _tag;
-} ColorId;
+};
 #define ColorId_Black_tag 0
 #define ColorId_Red_tag 1
 #define ColorId_Green_tag 2
@@ -1218,7 +1466,7 @@ typedef struct {
 #define ColorId_BgWhite_tag 22
 
 // Depth 103
-typedef struct {
+struct Maybe__Uint16 {
     union {
     struct {
         Uint16 member0;
@@ -1227,12 +1475,12 @@ typedef struct {
     char __dummy;
     } u;
     char _tag;
-} Maybe__Uint16;
+};
 #define Maybe__Uint16_Just_tag 0
 #define Maybe__Uint16_Nothing_tag 1
 
 // Depth 103
-typedef struct {
+struct Maybe__Uint32 {
     union {
     struct {
         Uint32 member0;
@@ -1241,12 +1489,12 @@ typedef struct {
     char __dummy;
     } u;
     char _tag;
-} Maybe__Uint32;
+};
 #define Maybe__Uint32_Just_tag 0
 #define Maybe__Uint32_Nothing_tag 1
 
 // Depth 103
-typedef struct {
+struct Maybe__Uint64 {
     union {
     struct {
         Uint64 member0;
@@ -1255,12 +1503,12 @@ typedef struct {
     char __dummy;
     } u;
     char _tag;
-} Maybe__Uint64;
+};
 #define Maybe__Uint64_Just_tag 0
 #define Maybe__Uint64_Nothing_tag 1
 
 // Depth 103
-typedef struct {
+struct Result__FILE_MUL__String {
     union {
     struct {
         FILE* member0;
@@ -1271,12 +1519,12 @@ typedef struct {
     char __dummy;
     } u;
     char _tag;
-} Result__FILE_MUL__String;
+};
 #define Result__FILE_MUL__String_Success_tag 0
 #define Result__FILE_MUL__String_Error_tag 1
 
 // Depth 103
-typedef struct {
+struct Result__Uint16_Array__uint8_t {
     union {
     struct {
         Uint16 member0;
@@ -1287,12 +1535,12 @@ typedef struct {
     char __dummy;
     } u;
     char _tag;
-} Result__Uint16_Array__uint8_t;
+};
 #define Result__Uint16_Array__uint8_t_Success_tag 0
 #define Result__Uint16_Array__uint8_t_Error_tag 1
 
 // Depth 103
-typedef struct {
+struct Result__Uint32_Array__uint8_t {
     union {
     struct {
         Uint32 member0;
@@ -1303,12 +1551,12 @@ typedef struct {
     char __dummy;
     } u;
     char _tag;
-} Result__Uint32_Array__uint8_t;
+};
 #define Result__Uint32_Array__uint8_t_Success_tag 0
 #define Result__Uint32_Array__uint8_t_Error_tag 1
 
 // Depth 103
-typedef struct {
+struct Result__Uint64_Array__uint8_t {
     union {
     struct {
         Uint64 member0;
@@ -1319,78 +1567,83 @@ typedef struct {
     char __dummy;
     } u;
     char _tag;
-} Result__Uint64_Array__uint8_t;
+};
 #define Result__Uint64_Array__uint8_t_Success_tag 0
 #define Result__Uint64_Array__uint8_t_Error_tag 1
 
 // Depth 103
-typedef struct {
+struct Binary__Lambda_int16_MINUS_seq_MINUS__GT_bytes_16_env_ty {
     ByteOrder order;
-} Binary__Lambda_int16_MINUS_seq_MINUS__GT_bytes_16_env_ty;
+};
 
 // Depth 103
-typedef struct {
+struct Binary__Lambda_int32_MINUS__GT_bytes_16_env_ty {
     Uint32 i;
-} Binary__Lambda_int32_MINUS__GT_bytes_16_env_ty;
+};
 
 // Depth 103
-typedef struct {
+struct Binary__Lambda_int32_MINUS_seq_MINUS__GT_bytes_16_env_ty {
     ByteOrder order;
-} Binary__Lambda_int32_MINUS_seq_MINUS__GT_bytes_16_env_ty;
+};
 
 // Depth 103
-typedef struct {
+struct Binary__Lambda_int64_MINUS__GT_bytes_16_env_ty {
     Uint64 i;
-} Binary__Lambda_int64_MINUS__GT_bytes_16_env_ty;
+};
 
 // Depth 103
-typedef struct {
+struct Binary__Lambda_int64_MINUS_seq_MINUS__GT_bytes_16_env_ty {
     ByteOrder order;
-} Binary__Lambda_int64_MINUS_seq_MINUS__GT_bytes_16_env_ty;
+};
 
 // Depth 103
-typedef struct {
+struct Binary__Lambda_unsafe_MINUS_bytes_MINUS__GT_int16_MINUS_seq_19_env_ty {
     ByteOrder order;
-} Binary__Lambda_unsafe_MINUS_bytes_MINUS__GT_int16_MINUS_seq_19_env_ty;
+};
 
 // Depth 103
-typedef struct {
+struct Binary__Lambda_unsafe_MINUS_bytes_MINUS__GT_int32_MINUS_seq_19_env_ty {
     ByteOrder order;
-} Binary__Lambda_unsafe_MINUS_bytes_MINUS__GT_int32_MINUS_seq_19_env_ty;
+};
 
 // Depth 103
-typedef struct {
+struct Binary__Lambda_unsafe_MINUS_bytes_MINUS__GT_int64_MINUS_seq_19_env_ty {
     ByteOrder order;
-} Binary__Lambda_unsafe_MINUS_bytes_MINUS__GT_int64_MINUS_seq_19_env_ty;
+};
 
 // Depth 103
-typedef struct {
+struct Body {
     Vector3__double velocity;
+    Vector3__double angular_MINUS_velocity;
     Vector3__double force;
+    Vector3__double torque;
     double mass;
     double inv_MINUS_mass;
+    double inv_MINUS_inertia;
     double restitution;
     double friction;
     double damping;
+    double angular_MINUS_damping;
     bool is_MINUS_sleeping;
     BodyType body_MINUS_type;
-} Body;
+};
 
 // Depth 103
-typedef struct {
+struct Handle__void {
     Uint64 index_MINUS_raw;
     Uint32 generation_MINUS_raw;
-} Handle__void;
+};
 
 // Depth 103
-typedef struct {
+struct SpatialGrid__Uint64 {
     double cell_MINUS_size;
     int cols;
     int rows;
     int layers;
     Array__Array__Uint64 buckets;
     Array__Uint64 overflow;
-} SpatialGrid__Uint64;
+    Vector3__double origin;
+};
 
 // Depth 104
 typedef Uint16(*Fn__Array__uint8_t_MUL__Uint16)(Array__uint8_t*);
@@ -1636,35 +1889,35 @@ typedef Uint32(*Fn__uint8_t_uint8_t_uint8_t_uint8_t_Uint32)(uint8_t, uint8_t, ui
 typedef Uint64(*Fn__uint8_t_uint8_t_uint8_t_uint8_t_uint8_t_uint8_t_uint8_t_uint8_t_Uint64)(uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t);
 
 // Depth 105
-typedef struct {
+struct Collidable {
     Handle__void handle;
     Volume volume;
     Uint32 layer;
     Uint32 mask;
     bool is_MINUS_trigger;
-} Collidable;
+};
 
 // Depth 105
-typedef struct {
+struct ContactSet {
     Handle__void a;
     Handle__void b;
-    Contact contact;
-} Collision;
+    Array__Contact contacts;
+};
 
 // Depth 105
-typedef struct {
+struct RigidBody {
     Transform transform;
     Body body;
-} RigidBody;
+};
 
 // Depth 105
-typedef struct {
+struct Trigger {
     Handle__void a;
     Handle__void b;
-} Trigger;
+};
 
 // Depth 106
-typedef struct {
+struct Result__Array__Uint16_int {
     union {
     struct {
         Array__Uint16 member0;
@@ -1675,12 +1928,12 @@ typedef struct {
     char __dummy;
     } u;
     char _tag;
-} Result__Array__Uint16_int;
+};
 #define Result__Array__Uint16_int_Success_tag 0
 #define Result__Array__Uint16_int_Error_tag 1
 
 // Depth 106
-typedef struct {
+struct Result__Array__Uint32_int {
     union {
     struct {
         Array__Uint32 member0;
@@ -1691,12 +1944,12 @@ typedef struct {
     char __dummy;
     } u;
     char _tag;
-} Result__Array__Uint32_int;
+};
 #define Result__Array__Uint32_int_Success_tag 0
 #define Result__Array__Uint32_int_Error_tag 1
 
 // Depth 106
-typedef struct {
+struct Result__Array__Uint64_int {
     union {
     struct {
         Array__Uint64 member0;
@@ -1707,7 +1960,7 @@ typedef struct {
     char __dummy;
     } u;
     char _tag;
-} Result__Array__Uint64_int;
+};
 #define Result__Array__Uint64_int_Success_tag 0
 #define Result__Array__Uint64_int_Error_tag 1
 
@@ -1850,25 +2103,13 @@ typedef bool(*Fn__Result__Uint64_Array__uint8_t_MUL__bool)(Result__Uint64_Array_
 typedef Uint64(*Fn__Result__Uint64_Array__uint8_t_Uint64)(Result__Uint64_Array__uint8_t);
 
 // Depth 106
-typedef CellRange(*Fn__SpatialGrid__Uint64_MUL__AABB_MUL__CellRange)(SpatialGrid__Uint64*, AABB*);
-
-// Depth 106
-typedef Vector3__double(*Fn__SpatialGrid__Uint64_MUL__Vector3__double_MUL__Vector3__double)(SpatialGrid__Uint64*, Vector3__double*);
-
-// Depth 106
-typedef double*(*Fn__SpatialGrid__Uint64_MUL__double_MUL_)(SpatialGrid__Uint64*);
-
-// Depth 106
-typedef int*(*Fn__SpatialGrid__Uint64_MUL__int_MUL_)(SpatialGrid__Uint64*);
-
-// Depth 106
 typedef Result__FILE_MUL__String(*Fn__String_MUL__String_MUL__Result__FILE_MUL__String)(String*, String*);
 
 // Depth 106
 typedef Result__FILE_MUL__String(*Fn__String_Result__FILE_MUL__String)(String);
 
 // Depth 106
-typedef void(*Fn__Transform_MUL__Body_MUL__Vector3__double_MUL__double_void)(Transform*, Body*, Vector3__double*, double);
+typedef void(*Fn__Transform_MUL__Body_MUL__Vector3__double_MUL__Vector3__double_MUL__double_void)(Transform*, Body*, Vector3__double*, Vector3__double*, double);
 
 // Depth 106
 typedef void(*Fn__Transform_MUL__Body_MUL__double_double_void)(Transform*, Body*, double, double);
@@ -1898,7 +2139,7 @@ typedef Result__Uint64_Array__uint8_t(*Fn__Uint64_Result__Uint64_Array__uint8_t)
 typedef Handle__void(*Fn__Uint64_Uint32_Handle__void)(Uint64, Uint32);
 
 // Depth 106
-typedef Body(*Fn__Vector3__double_Vector3__double_double_double_double_double_double_bool_BodyType_Body)(Vector3__double, Vector3__double, double, double, double, double, double, bool, BodyType);
+typedef Body(*Fn__Vector3__double_Vector3__double_Vector3__double_Vector3__double_double_double_double_double_double_double_double_bool_BodyType_Body)(Vector3__double, Vector3__double, Vector3__double, Vector3__double, double, double, double, double, double, double, double, bool, BodyType);
 
 // Depth 106
 typedef Maybe__Uint16(*Fn___Maybe__Uint16)();
@@ -1913,41 +2154,44 @@ typedef Maybe__Uint64(*Fn___Maybe__Uint64)();
 typedef Body(*Fn__double_double_Body)(double, double);
 
 // Depth 106
-typedef Body(*Fn__double_double_double_double_Body)(double, double, double, double);
+typedef Body(*Fn__double_double_double_double_double_double_Body)(double, double, double, double, double, double);
 
 // Depth 106
-typedef struct {
+struct Pair__Array__Uint16_int {
     Array__Uint16 a;
     int b;
-} Pair__Array__Uint16_int;
+};
 
 // Depth 106
-typedef struct {
+struct Pair__Array__Uint32_int {
     Array__Uint32 a;
     int b;
-} Pair__Array__Uint32_int;
+};
 
 // Depth 106
-typedef struct {
+struct Pair__Array__Uint64_int {
     Array__Uint64 a;
     int b;
-} Pair__Array__Uint64_int;
+};
 
 // Depth 107
-typedef struct {
+struct Maybe__ContactSet {
     union {
     struct {
-        Collision member0;
-    } Physical;
-    struct {
-        Trigger member0;
-    } Triggered;
+        ContactSet member0;
+    } Just;
+    // Nothing
     char __dummy;
     } u;
     char _tag;
-} CollisionResult;
-#define CollisionResult_Physical_tag 0
-#define CollisionResult_Triggered_tag 1
+};
+#define Maybe__ContactSet_Just_tag 0
+#define Maybe__ContactSet_Nothing_tag 1
+
+// Depth 107
+struct Collision {
+    ContactSet contact_MINUS_set;
+};
 
 // Depth 107
 typedef Array__Uint16(*Fn__Array__Uint16_MUL__Array__Uint16)(Array__Uint16*);
@@ -2031,12 +2275,6 @@ typedef Array__Array__uint8_t(*Fn__Fn__Uint64_MUL__Array__uint8_t_MUL__Array__Ui
 typedef Array__uint8_t(*Fn__Fn__Uint64_MUL__uint8_t_MUL__Array__Uint64_MUL__Array__uint8_t)(Lambda*, Array__Uint64*);
 
 // Depth 107
-typedef Array__Uint64(*Fn__SpatialGrid__Uint64_MUL__AABB_MUL__Array__Uint64)(SpatialGrid__Uint64*, AABB*);
-
-// Depth 107
-typedef Array__Uint64*(*Fn__SpatialGrid__Uint64_MUL__Array__Uint64_MUL_)(SpatialGrid__Uint64*);
-
-// Depth 107
 typedef Array__Uint16(*Fn__int_Array__Uint16)(int);
 
 // Depth 107
@@ -2061,16 +2299,22 @@ typedef Volume*(*Fn__Collidable_MUL__Volume_MUL_)(Collidable*);
 typedef bool*(*Fn__Collidable_MUL__bool_MUL_)(Collidable*);
 
 // Depth 108
-typedef Contact*(*Fn__Collision_MUL__Contact_MUL_)(Collision*);
+typedef ContactSet(*Fn__ContactSet_ContactSet)(ContactSet);
 
 // Depth 108
-typedef Handle__void*(*Fn__Collision_MUL__Handle__void_MUL_)(Collision*);
+typedef Array__Contact*(*Fn__ContactSet_MUL__Array__Contact_MUL_)(ContactSet*);
 
 // Depth 108
-typedef String(*Fn__Collision_MUL__String)(Collision*);
+typedef ContactSet(*Fn__ContactSet_MUL__ContactSet)(ContactSet*);
 
 // Depth 108
-typedef Collision(*Fn__Handle__void_Handle__void_Contact_Collision)(Handle__void, Handle__void, Contact);
+typedef Handle__void*(*Fn__ContactSet_MUL__Handle__void_MUL_)(ContactSet*);
+
+// Depth 108
+typedef String(*Fn__ContactSet_MUL__String)(ContactSet*);
+
+// Depth 108
+typedef ContactSet(*Fn__Handle__void_Handle__void_Array__Contact_ContactSet)(Handle__void, Handle__void, Array__Contact);
 
 // Depth 108
 typedef Trigger(*Fn__Handle__void_Handle__void_Trigger)(Handle__void, Handle__void);
@@ -2079,7 +2323,7 @@ typedef Trigger(*Fn__Handle__void_Handle__void_Trigger)(Handle__void, Handle__vo
 typedef Body*(*Fn__RigidBody_MUL__Body_MUL_)(RigidBody*);
 
 // Depth 108
-typedef void(*Fn__RigidBody_MUL__RigidBody_MUL__Collision_MUL__void)(RigidBody*, RigidBody*, Collision*);
+typedef void(*Fn__RigidBody_MUL__RigidBody_MUL__ContactSet_MUL__void)(RigidBody*, RigidBody*, ContactSet*);
 
 // Depth 108
 typedef String(*Fn__RigidBody_MUL__String)(RigidBody*);
@@ -2100,21 +2344,23 @@ typedef String(*Fn__Trigger_MUL__String)(Trigger*);
 typedef RigidBody(*Fn__Vector3__double_Quaternion_double_double_RigidBody)(Vector3__double, Quaternion, double, double);
 
 // Depth 108
-typedef RigidBody(*Fn__Vector3__double_Quaternion_double_double_double_double_RigidBody)(Vector3__double, Quaternion, double, double, double, double);
+typedef RigidBody(*Fn__Vector3__double_Quaternion_double_double_double_double_double_double_RigidBody)(Vector3__double, Quaternion, double, double, double, double, double, double);
 
 // Depth 109
-typedef struct {
+struct CollisionResult {
     union {
     struct {
-        CollisionResult member0;
-    } Just;
-    // Nothing
+        Collision member0;
+    } Physical;
+    struct {
+        Trigger member0;
+    } Triggered;
     char __dummy;
     } u;
     char _tag;
-} Maybe__CollisionResult;
-#define Maybe__CollisionResult_Just_tag 0
-#define Maybe__CollisionResult_Nothing_tag 1
+};
+#define CollisionResult_Physical_tag 0
+#define CollisionResult_Triggered_tag 1
 
 // Depth 109
 typedef Array__Result__Uint16_Array__uint8_t(*Fn__Array__Result__Uint16_Array__uint8_t_MUL__Array__Result__Uint16_Array__uint8_t)(Array__Result__Uint16_Array__uint8_t*);
@@ -2273,19 +2519,51 @@ typedef Result__Array__Uint64_int(*Fn__int_Result__Array__Uint64_int)(int);
 typedef Array__Uint64*(*Fn__Array__Array__Uint64_MUL__int_Array__Uint64_MUL_)(Array__Array__Uint64*, int);
 
 // Depth 110
-typedef CollisionResult(*Fn__CollisionResult_MUL__CollisionResult)(CollisionResult*);
+typedef ContactSet*(*Fn__Collision_MUL__ContactSet_MUL_)(Collision*);
 
 // Depth 110
-typedef String(*Fn__CollisionResult_MUL__String)(CollisionResult*);
+typedef Handle__void*(*Fn__Collision_MUL__Handle__void_MUL_)(Collision*);
 
 // Depth 110
-typedef CollisionResult(*Fn__Collision_CollisionResult)(Collision);
+typedef String(*Fn__Collision_MUL__String)(Collision*);
 
 // Depth 110
-typedef Array__Array__Uint64*(*Fn__SpatialGrid__Uint64_MUL__Array__Array__Uint64_MUL_)(SpatialGrid__Uint64*);
+typedef Collision(*Fn__ContactSet_Collision)(ContactSet);
 
 // Depth 110
-typedef CollisionResult(*Fn__Trigger_CollisionResult)(Trigger);
+typedef Maybe__ContactSet(*Fn__ContactSet_Maybe__ContactSet)(ContactSet);
+
+// Depth 110
+typedef Maybe__ContactSet(*Fn__Handle__void_MUL__AABB_MUL__Handle__void_MUL__SDF_MUL__Maybe__ContactSet)(Handle__void*, AABB*, Handle__void*, SDF*);
+
+// Depth 110
+typedef Maybe__ContactSet(*Fn__Handle__void_MUL__SDF_MUL__Handle__void_MUL__Plane_MUL__Maybe__ContactSet)(Handle__void*, SDF*, Handle__void*, Plane*);
+
+// Depth 110
+typedef Maybe__ContactSet(*Fn__Handle__void_MUL__SDF_MUL__Handle__void_MUL__SDF_MUL__Maybe__ContactSet)(Handle__void*, SDF*, Handle__void*, SDF*);
+
+// Depth 110
+typedef Maybe__ContactSet(*Fn__Handle__void_MUL__Volume_MUL__Handle__void_MUL__Volume_MUL__Maybe__ContactSet)(Handle__void*, Volume*, Handle__void*, Volume*);
+
+// Depth 110
+typedef Maybe__ContactSet(*Fn__Handle__void_MUL__Volume_MUL__Vector3__double_MUL__double_Handle__void_MUL__Volume_MUL__Maybe__ContactSet)(Handle__void*, Volume*, Vector3__double*, double, Handle__void*, Volume*);
+
+// Depth 110
+typedef Maybe__ContactSet(*Fn___Maybe__ContactSet)();
+
+// Depth 111
+struct Maybe__CollisionResult {
+    union {
+    struct {
+        CollisionResult member0;
+    } Just;
+    // Nothing
+    char __dummy;
+    } u;
+    char _tag;
+};
+#define Maybe__CollisionResult_Just_tag 0
+#define Maybe__CollisionResult_Nothing_tag 1
 
 // Depth 111
 typedef int(*Fn__Array__Collidable_MUL__int)(Array__Collidable*);
@@ -2294,65 +2572,101 @@ typedef int(*Fn__Array__Collidable_MUL__int)(Array__Collidable*);
 typedef Collidable*(*Fn__Array__Collidable_MUL__int_Collidable_MUL_)(Array__Collidable*, int);
 
 // Depth 112
+typedef CollisionResult(*Fn__CollisionResult_MUL__CollisionResult)(CollisionResult*);
+
+// Depth 112
+typedef String(*Fn__CollisionResult_MUL__String)(CollisionResult*);
+
+// Depth 112
+typedef CollisionResult(*Fn__Collision_CollisionResult)(Collision);
+
+// Depth 112
+typedef Array__Uint64(*Fn__SpatialGrid__Uint64_MUL__AABB_MUL__Array__Uint64)(SpatialGrid__Uint64*, AABB*);
+
+// Depth 112
+typedef CellRange(*Fn__SpatialGrid__Uint64_MUL__AABB_MUL__CellRange)(SpatialGrid__Uint64*, AABB*);
+
+// Depth 112
+typedef Array__Array__Uint64*(*Fn__SpatialGrid__Uint64_MUL__Array__Array__Uint64_MUL_)(SpatialGrid__Uint64*);
+
+// Depth 112
+typedef Array__Uint64*(*Fn__SpatialGrid__Uint64_MUL__Array__Uint64_MUL_)(SpatialGrid__Uint64*);
+
+// Depth 112
+typedef Vector3__double*(*Fn__SpatialGrid__Uint64_MUL__Vector3__double_MUL_)(SpatialGrid__Uint64*);
+
+// Depth 112
+typedef Vector3__double(*Fn__SpatialGrid__Uint64_MUL__Vector3__double_MUL__Vector3__double)(SpatialGrid__Uint64*, Vector3__double*);
+
+// Depth 112
+typedef double*(*Fn__SpatialGrid__Uint64_MUL__double_MUL_)(SpatialGrid__Uint64*);
+
+// Depth 112
+typedef int*(*Fn__SpatialGrid__Uint64_MUL__int_MUL_)(SpatialGrid__Uint64*);
+
+// Depth 112
+typedef CollisionResult(*Fn__Trigger_CollisionResult)(Trigger);
+
+// Depth 114
 typedef Maybe__CollisionResult(*Fn__Collidable_MUL__Collidable_MUL__Maybe__CollisionResult)(Collidable*, Collidable*);
 
-// Depth 112
+// Depth 114
 typedef Maybe__CollisionResult(*Fn__CollisionResult_Maybe__CollisionResult)(CollisionResult);
 
-// Depth 112
+// Depth 114
 typedef Maybe__CollisionResult(*Fn___Maybe__CollisionResult)();
 
-// Depth 113
+// Depth 115
 typedef void(*Fn__Array__CollisionResult_MUL__CollisionResult_void)(Array__CollisionResult*, CollisionResult);
 
-// Depth 113
+// Depth 115
 typedef void(*Fn__SpatialGrid__Uint64_MUL__Collidable_MUL__Array__Collidable_MUL__Array__CollisionResult_MUL__bool_void)(SpatialGrid__Uint64*, Collidable*, Array__Collidable*, Array__CollisionResult*, bool);
 
 // Depth 504
-typedef struct {
+struct Bucket__ColorId_String {
     Array__Pair__ColorId_String entries;
-} Bucket__ColorId_String;
+};
 
 // Depth 504
-typedef struct {
+struct Bucket__Lambda_set_MINUS_idx_BANG___ColorId_String_21_env_ty {
     String* val;
-} Bucket__Lambda_set_MINUS_idx_BANG___ColorId_String_21_env_ty;
+};
 
 // Depth 504
-typedef struct {
+struct Map__ColorId_String {
     int len;
     int n_MINUS_buckets;
     Array__Bucket__ColorId_String buckets;
-} Map__ColorId_String;
+};
 
 // Depth 504
-typedef struct {
+struct Pair__ColorId_String {
     ColorId a;
     String b;
-} Pair__ColorId_String;
+};
 
 // Depth 504
-typedef struct {
+struct Pattern__Lambda_global_MINUS_match_MINUS_str_16_env_ty {
     String* data;
-} Pattern__Lambda_global_MINUS_match_MINUS_str_16_env_ty;
+};
 
 // Depth 505
-typedef struct {
+struct Binary__Lambda_byte_MINUS_converter__ByteOrder_Array__uint8_t_Uint16_29_env_ty {
     Lambda* f;
     ByteOrder order;
-} Binary__Lambda_byte_MINUS_converter__ByteOrder_Array__uint8_t_Uint16_29_env_ty;
+};
 
 // Depth 505
-typedef struct {
+struct Binary__Lambda_byte_MINUS_converter__ByteOrder_Array__uint8_t_Uint32_29_env_ty {
     Lambda* f;
     ByteOrder order;
-} Binary__Lambda_byte_MINUS_converter__ByteOrder_Array__uint8_t_Uint32_29_env_ty;
+};
 
 // Depth 505
-typedef struct {
+struct Binary__Lambda_byte_MINUS_converter__ByteOrder_Array__uint8_t_Uint64_29_env_ty {
     Lambda* f;
     ByteOrder order;
-} Binary__Lambda_byte_MINUS_converter__ByteOrder_Array__uint8_t_Uint64_29_env_ty;
+};
 
 // Depth 505
 typedef CChar*(*Fn__CChar_MUL__CChar_MUL_)(CChar*);
@@ -2400,7 +2714,16 @@ typedef void(*Fn__ColorId_String_MUL__void)(ColorId, String*);
 typedef void(*Fn__ColorId_void)(ColorId);
 
 // Depth 505
+typedef Array__Contact(*Fn__LambdaEnv_Array__Contact_Array__Contact)(LambdaEnv, Array__Contact);
+
+// Depth 505
+typedef Array__LocalCrater(*Fn__LambdaEnv_Array__LocalCrater_Array__LocalCrater)(LambdaEnv, Array__LocalCrater);
+
+// Depth 505
 typedef Array__float(*Fn__LambdaEnv_Array__float_Array__float)(LambdaEnv, Array__float);
+
+// Depth 505
+typedef BaseShape(*Fn__LambdaEnv_BaseShape_BaseShape)(LambdaEnv, BaseShape);
 
 // Depth 505
 typedef BodyType(*Fn__LambdaEnv_BodyType_BodyType)(LambdaEnv, BodyType);
@@ -2409,7 +2732,7 @@ typedef BodyType(*Fn__LambdaEnv_BodyType_BodyType)(LambdaEnv, BodyType);
 typedef Body(*Fn__LambdaEnv_Body_Body)(LambdaEnv, Body);
 
 // Depth 505
-typedef Contact(*Fn__LambdaEnv_Contact_Contact)(LambdaEnv, Contact);
+typedef ContactSet(*Fn__LambdaEnv_ContactSet_ContactSet)(LambdaEnv, ContactSet);
 
 // Depth 505
 typedef Handle__void(*Fn__LambdaEnv_Handle__void_Handle__void)(LambdaEnv, Handle__void);
@@ -2520,40 +2843,10 @@ typedef CChar*(*Fn__int_CChar_MUL_)(int);
 typedef TestState(*Fn__int_int_TestState)(int, int);
 
 // Depth 507
-typedef String(*Fn__Bucket__ColorId_String_MUL__ColorId_MUL__String_MUL__String)(Bucket__ColorId_String*, ColorId*, String*);
-
-// Depth 507
-typedef void(*Fn__Bucket__ColorId_String_MUL__ColorId_MUL__String_MUL__void)(Bucket__ColorId_String*, ColorId*, String*);
-
-// Depth 507
-typedef int(*Fn__Bucket__ColorId_String_MUL__ColorId_MUL__int)(Bucket__ColorId_String*, ColorId*);
-
-// Depth 507
-typedef String(*Fn__Bucket__ColorId_String_MUL__int_String)(Bucket__ColorId_String*, int);
-
-// Depth 507
-typedef void(*Fn__Bucket__ColorId_String_MUL__int_String_MUL__void)(Bucket__ColorId_String*, int, String*);
-
-// Depth 507
 typedef Pair__ColorId_String(*Fn__ColorId_MUL__String_MUL__Pair__ColorId_String)(ColorId*, String*);
 
 // Depth 507
 typedef Pair__ColorId_String(*Fn__ColorId_String_Pair__ColorId_String)(ColorId, String);
-
-// Depth 507
-typedef String(*Fn__Map__ColorId_String_MUL__ColorId_MUL__String)(Map__ColorId_String*, ColorId*);
-
-// Depth 507
-typedef String(*Fn__Map__ColorId_String_MUL__ColorId_MUL__String_MUL__String)(Map__ColorId_String*, ColorId*, String*);
-
-// Depth 507
-typedef void(*Fn__Map__ColorId_String_MUL__ColorId_MUL__String_MUL__void)(Map__ColorId_String*, ColorId*, String*);
-
-// Depth 507
-typedef int*(*Fn__Map__ColorId_String_MUL__int_MUL_)(Map__ColorId_String*);
-
-// Depth 507
-typedef void(*Fn__Map__ColorId_String_MUL__int_void)(Map__ColorId_String*, int);
 
 // Depth 507
 typedef ColorId*(*Fn__Pair__ColorId_String_MUL__ColorId_MUL_)(Pair__ColorId_String*);
@@ -2566,12 +2859,6 @@ typedef Pair__ColorId_String(*Fn__Pair__ColorId_String_Pair__ColorId_String)(Pai
 
 // Depth 507
 typedef Pair__ColorId_String(*Fn__Pair__ColorId_String_String_Pair__ColorId_String)(Pair__ColorId_String, String);
-
-// Depth 507
-typedef Bucket__ColorId_String(*Fn___Bucket__ColorId_String)();
-
-// Depth 507
-typedef Map__ColorId_String(*Fn___Map__ColorId_String)();
 
 // Depth 508
 typedef int(*Fn__Array__PatternMatchResult_MUL__int)(Array__PatternMatchResult*);
@@ -2592,15 +2879,6 @@ typedef Array__int(*Fn__Fn__PatternMatchResult_MUL__int_MUL__Array__PatternMatch
 typedef Array__PatternMatchResult(*Fn__Pattern_MUL__String_MUL__Array__PatternMatchResult)(Pattern*, String*);
 
 // Depth 510
-typedef Bucket__ColorId_String*(*Fn__Array__Bucket__ColorId_String_MUL__int_Bucket__ColorId_String_MUL_)(Array__Bucket__ColorId_String*, int);
-
-// Depth 510
-typedef void(*Fn__Array__Bucket__ColorId_String_MUL__int_Bucket__ColorId_String_void)(Array__Bucket__ColorId_String*, int, Bucket__ColorId_String);
-
-// Depth 510
-typedef Bucket__ColorId_String(*Fn__Array__Pair__ColorId_String_Bucket__ColorId_String)(Array__Pair__ColorId_String);
-
-// Depth 510
 typedef void(*Fn__Array__Pair__ColorId_String_MUL__Pair__ColorId_String_void)(Array__Pair__ColorId_String*, Pair__ColorId_String);
 
 // Depth 510
@@ -2618,22 +2896,67 @@ typedef Pair__ColorId_String*(*Fn__Array__Pair__ColorId_String_MUL__int_Pair__Co
 // Depth 510
 typedef void(*Fn__Array__Pair__ColorId_String_MUL__int_Pair__ColorId_String_void)(Array__Pair__ColorId_String*, int, Pair__ColorId_String);
 
-// Depth 510
-typedef Map__ColorId_String(*Fn__Array__Pair__ColorId_String_Map__ColorId_String)(Array__Pair__ColorId_String);
+// Depth 512
+typedef Bucket__ColorId_String(*Fn__Array__Pair__ColorId_String_Bucket__ColorId_String)(Array__Pair__ColorId_String);
 
-// Depth 510
+// Depth 512
 typedef Array__Pair__ColorId_String*(*Fn__Bucket__ColorId_String_MUL__Array__Pair__ColorId_String_MUL_)(Bucket__ColorId_String*);
 
-// Depth 510
-typedef Array__Bucket__ColorId_String*(*Fn__Map__ColorId_String_MUL__Array__Bucket__ColorId_String_MUL_)(Map__ColorId_String*);
+// Depth 512
+typedef String(*Fn__Bucket__ColorId_String_MUL__ColorId_MUL__String_MUL__String)(Bucket__ColorId_String*, ColorId*, String*);
 
-// Depth 510
+// Depth 512
+typedef void(*Fn__Bucket__ColorId_String_MUL__ColorId_MUL__String_MUL__void)(Bucket__ColorId_String*, ColorId*, String*);
+
+// Depth 512
+typedef int(*Fn__Bucket__ColorId_String_MUL__ColorId_MUL__int)(Bucket__ColorId_String*, ColorId*);
+
+// Depth 512
+typedef String(*Fn__Bucket__ColorId_String_MUL__int_String)(Bucket__ColorId_String*, int);
+
+// Depth 512
+typedef void(*Fn__Bucket__ColorId_String_MUL__int_String_MUL__void)(Bucket__ColorId_String*, int, String*);
+
+// Depth 512
+typedef Bucket__ColorId_String(*Fn___Bucket__ColorId_String)();
+
+// Depth 515
+typedef Bucket__ColorId_String*(*Fn__Array__Bucket__ColorId_String_MUL__int_Bucket__ColorId_String_MUL_)(Array__Bucket__ColorId_String*, int);
+
+// Depth 515
+typedef void(*Fn__Array__Bucket__ColorId_String_MUL__int_Bucket__ColorId_String_void)(Array__Bucket__ColorId_String*, int, Bucket__ColorId_String);
+
+// Depth 515
 typedef Array__Bucket__ColorId_String(*Fn__int_Array__Bucket__ColorId_String)(int);
 
-// Depth 510
+// Depth 515
 typedef Array__Bucket__ColorId_String(*Fn__int_Fn___Bucket__ColorId_String_MUL__Array__Bucket__ColorId_String)(int, Lambda*);
 
-// Depth 510
+// Depth 517
+typedef Map__ColorId_String(*Fn__Array__Pair__ColorId_String_Map__ColorId_String)(Array__Pair__ColorId_String);
+
+// Depth 517
+typedef Array__Bucket__ColorId_String*(*Fn__Map__ColorId_String_MUL__Array__Bucket__ColorId_String_MUL_)(Map__ColorId_String*);
+
+// Depth 517
+typedef String(*Fn__Map__ColorId_String_MUL__ColorId_MUL__String)(Map__ColorId_String*, ColorId*);
+
+// Depth 517
+typedef String(*Fn__Map__ColorId_String_MUL__ColorId_MUL__String_MUL__String)(Map__ColorId_String*, ColorId*, String*);
+
+// Depth 517
+typedef void(*Fn__Map__ColorId_String_MUL__ColorId_MUL__String_MUL__void)(Map__ColorId_String*, ColorId*, String*);
+
+// Depth 517
+typedef int*(*Fn__Map__ColorId_String_MUL__int_MUL_)(Map__ColorId_String*);
+
+// Depth 517
+typedef void(*Fn__Map__ColorId_String_MUL__int_void)(Map__ColorId_String*, int);
+
+// Depth 517
+typedef Map__ColorId_String(*Fn___Map__ColorId_String)();
+
+// Depth 517
 typedef Map__ColorId_String(*Fn__int_int_Array__Bucket__ColorId_String_Map__ColorId_String)(int, int, Array__Bucket__ColorId_String);
 
 
@@ -2995,6 +3318,12 @@ Array__uint8_t Array_copy_MINUS_map__Uint64_uint8_t(Lambda* f, Array__Uint64* a)
 Array__String Array_copy_MINUS_map__uint8_t_String(Lambda* f, Array__uint8_t* a);
 
 // Depth 500
+Array Array_copy__Contact (Array* a);
+
+// Depth 500
+Array Array_copy__LocalCrater (Array* a);
+
+// Depth 500
 Array Array_copy__Result__Uint16_Array__uint8_t (Array* a);
 
 // Depth 500
@@ -3034,6 +3363,12 @@ void Array_delete__Collidable (Array a);
 void Array_delete__CollisionResult (Array a);
 
 // Depth 500
+void Array_delete__Contact (Array a);
+
+// Depth 500
+void Array_delete__LocalCrater (Array a);
+
+// Depth 500
 void Array_delete__Pair__ColorId_String (Array a);
 
 // Depth 500
@@ -3059,6 +3394,9 @@ void Array_delete__Uint32 (Array a);
 
 // Depth 500
 void Array_delete__Uint64 (Array a);
+
+// Depth 500
+void Array_delete__Vector3__double (Array a);
 
 // Depth 500
 void Array_delete__float (Array a);
@@ -3092,6 +3430,12 @@ int Array_length__Char (Array *a);
 
 // Depth 500
 int Array_length__Collidable (Array *a);
+
+// Depth 500
+int Array_length__Contact (Array *a);
+
+// Depth 500
+int Array_length__LocalCrater (Array *a);
 
 // Depth 500
 int Array_length__Pair__ColorId_String (Array *a);
@@ -3136,16 +3480,31 @@ Array__Array__uint8_t Array_partition__uint8_t(Array__uint8_t* arr, int n);
 Array__Char Array_prefix__Array__Char(Array__Char* xs, int end_MINUS_index);
 
 // Depth 500
+String Array_prn__Contact(Array__Contact* x);
+
+// Depth 500
+String Array_prn__LocalCrater(Array__LocalCrater* x);
+
+// Depth 500
 String Array_prn__float(Array__float* x);
 
 // Depth 500
 void Array_push_MINUS_back_BANG___CollisionResult(Array *aRef, CollisionResult value);
 
 // Depth 500
+void Array_push_MINUS_back_BANG___Contact(Array *aRef, Contact value);
+
+// Depth 500
+void Array_push_MINUS_back_BANG___LocalCrater(Array *aRef, LocalCrater value);
+
+// Depth 500
 void Array_push_MINUS_back_BANG___Pair__ColorId_String(Array *aRef, Pair__ColorId_String value);
 
 // Depth 500
 void Array_push_MINUS_back_BANG___Uint64(Array *aRef, Uint64 value);
+
+// Depth 500
+void Array_push_MINUS_back_BANG___Vector3__double(Array *aRef, Vector3__double value);
 
 // Depth 500
 Array Array_push_MINUS_back__Array__uint8_t(Array a, Array__uint8_t value);
@@ -3155,6 +3514,9 @@ Array Array_push_MINUS_back__Char(Array a, Char value);
 
 // Depth 500
 Array Array_push_MINUS_back__PatternMatchResult(Array a, PatternMatchResult value);
+
+// Depth 500
+Array Array_push_MINUS_back__String(Array a, String value);
 
 // Depth 500
 Array Array_push_MINUS_back__uint8_t(Array a, uint8_t value);
@@ -3184,6 +3546,12 @@ Array__Char Array_slice__Char(Array__Char* xs, int start_MINUS_index, int end_MI
 Array__uint8_t Array_slice__uint8_t(Array__uint8_t* xs, int start_MINUS_index, int end_MINUS_index);
 
 // Depth 500
+String Array_str__Contact (Array* a);
+
+// Depth 500
+String Array_str__LocalCrater (Array* a);
+
+// Depth 500
 String Array_str__float (Array* a);
 
 // Depth 500
@@ -3206,6 +3574,12 @@ Char* Array_unsafe_MINUS_nth__Char (Array *aRef, int n);
 
 // Depth 500
 Collidable* Array_unsafe_MINUS_nth__Collidable (Array *aRef, int n);
+
+// Depth 500
+Contact* Array_unsafe_MINUS_nth__Contact (Array *aRef, int n);
+
+// Depth 500
+LocalCrater* Array_unsafe_MINUS_nth__LocalCrater (Array *aRef, int n);
 
 // Depth 500
 Pair__ColorId_String* Array_unsafe_MINUS_nth__Pair__ColorId_String (Array *aRef, int n);
@@ -3245,6 +3619,35 @@ uint8_t* Array_unsafe_MINUS_nth__uint8_t (Array *aRef, int n);
 
 // Depth 500
 Array__uint8_t Array_zero__uint8_t();
+
+// Depth 1000
+
+// Depth 500
+BaseShape BaseShape_Ball(double member0);
+
+// Depth 500
+BaseShape BaseShape_Box(Vector3__double member0);
+
+// Depth 500
+BaseShape BaseShape_Cylinder(double member0, double member1);
+
+// Depth 500
+BaseShape BaseShape_Surface(Plane member0);
+
+// Depth 500
+BaseShape BaseShape_copy(BaseShape* pRef);
+
+// Depth 500
+void BaseShape_delete(BaseShape p);
+
+// Depth 500
+int BaseShape_get_MINUS_tag(BaseShape *p);
+
+// Depth 500
+String BaseShape_prn(BaseShape *p);
+
+// Depth 500
+String BaseShape_str(BaseShape *p);
 
 // Depth 1000
 
@@ -3416,10 +3819,22 @@ Uint64 Binary_unwrap_MINUS_success__Uint64_Array__uint8_t(Result__Uint64_Array__
 // Depth 1000
 
 // Depth 500
+double* Body_angular_MINUS_damping(Body* p);
+
+// Depth 500
+Vector3__double* Body_angular_MINUS_velocity(Body* p);
+
+// Depth 500
+void Body_apply_MINUS_angular_MINUS_impulse_BANG_(Body* b, Vector3__double* impulse);
+
+// Depth 500
 void Body_apply_MINUS_force_BANG_(Body* b, Vector3__double* f);
 
 // Depth 500
 void Body_apply_MINUS_impulse_BANG_(Body* b, Vector3__double* impulse);
+
+// Depth 500
+void Body_apply_MINUS_torque_BANG_(Body* b, Vector3__double* t);
 
 // Depth 500
 BodyType* Body_body_MINUS_type(Body* p);
@@ -3440,7 +3855,10 @@ Vector3__double* Body_force(Body* p);
 double* Body_friction(Body* p);
 
 // Depth 500
-Body Body_init(Vector3__double velocity, Vector3__double force, double mass, double inv_MINUS_mass, double restitution, double friction, double damping, bool is_MINUS_sleeping, BodyType body_MINUS_type);
+Body Body_init(Vector3__double velocity, Vector3__double angular_MINUS_velocity, Vector3__double force, Vector3__double torque, double mass, double inv_MINUS_mass, double inv_MINUS_inertia, double restitution, double friction, double damping, double angular_MINUS_damping, bool is_MINUS_sleeping, BodyType body_MINUS_type);
+
+// Depth 500
+double* Body_inv_MINUS_inertia(Body* p);
 
 // Depth 500
 double* Body_inv_MINUS_mass(Body* p);
@@ -3455,13 +3873,25 @@ Body Body_kinematic(double restitution, double friction);
 double* Body_mass(Body* p);
 
 // Depth 500
-Body Body_new(double mass, double restitution, double friction, double damping);
+Body Body_new(double mass, double restitution, double friction, double damping, double ang_MINUS_damping, double inertia);
 
 // Depth 500
 String Body_prn(Body *p);
 
 // Depth 500
 double* Body_restitution(Body* p);
+
+// Depth 500
+Body Body_set_MINUS_angular_MINUS_damping(Body p, double newValue);
+
+// Depth 500
+void Body_set_MINUS_angular_MINUS_damping_BANG_(Body* pRef, double newValue);
+
+// Depth 500
+Body Body_set_MINUS_angular_MINUS_velocity(Body p, Vector3__double newValue);
+
+// Depth 500
+void Body_set_MINUS_angular_MINUS_velocity_BANG_(Body* pRef, Vector3__double newValue);
 
 // Depth 500
 Body Body_set_MINUS_body_MINUS_type(Body p, BodyType newValue);
@@ -3488,6 +3918,12 @@ Body Body_set_MINUS_friction(Body p, double newValue);
 void Body_set_MINUS_friction_BANG_(Body* pRef, double newValue);
 
 // Depth 500
+Body Body_set_MINUS_inv_MINUS_inertia(Body p, double newValue);
+
+// Depth 500
+void Body_set_MINUS_inv_MINUS_inertia_BANG_(Body* pRef, double newValue);
+
+// Depth 500
 Body Body_set_MINUS_inv_MINUS_mass(Body p, double newValue);
 
 // Depth 500
@@ -3512,6 +3948,12 @@ Body Body_set_MINUS_restitution(Body p, double newValue);
 void Body_set_MINUS_restitution_BANG_(Body* pRef, double newValue);
 
 // Depth 500
+Body Body_set_MINUS_torque(Body p, Vector3__double newValue);
+
+// Depth 500
+void Body_set_MINUS_torque_BANG_(Body* pRef, Vector3__double newValue);
+
+// Depth 500
 Body Body_set_MINUS_velocity(Body p, Vector3__double newValue);
 
 // Depth 500
@@ -3522,6 +3964,15 @@ Body Body__STATIC_(double restitution, double friction);
 
 // Depth 500
 String Body_str(Body *p);
+
+// Depth 500
+Vector3__double* Body_torque(Body* p);
+
+// Depth 500
+Body Body_update_MINUS_angular_MINUS_damping(Body p, Lambda *updater);
+
+// Depth 500
+Body Body_update_MINUS_angular_MINUS_velocity(Body p, Lambda *updater);
 
 // Depth 500
 Body Body_update_MINUS_body_MINUS_type(Body p, Lambda *updater);
@@ -3536,6 +3987,9 @@ Body Body_update_MINUS_force(Body p, Lambda *updater);
 Body Body_update_MINUS_friction(Body p, Lambda *updater);
 
 // Depth 500
+Body Body_update_MINUS_inv_MINUS_inertia(Body p, Lambda *updater);
+
+// Depth 500
 Body Body_update_MINUS_inv_MINUS_mass(Body p, Lambda *updater);
 
 // Depth 500
@@ -3546,6 +4000,9 @@ Body Body_update_MINUS_mass(Body p, Lambda *updater);
 
 // Depth 500
 Body Body_update_MINUS_restitution(Body p, Lambda *updater);
+
+// Depth 500
+Body Body_update_MINUS_torque(Body p, Lambda *updater);
 
 // Depth 500
 Body Body_update_MINUS_velocity(Body p, Lambda *updater);
@@ -3935,16 +4392,28 @@ Volume* Collidable_volume(Collidable* p);
 // Depth 1000
 
 // Depth 500
-Handle__void* Collision_a(Collision* p);
+Handle__void* Collision_a(Collision* c);
 
 // Depth 500
-Handle__void* Collision_b(Collision* p);
+Handle__void* Collision_b(Collision* c);
 
 // Depth 500
-Maybe__Contact Collision_collide(Volume* v1, Volume* v2);
+Maybe__ContactSet Collision_collide(Handle__void* h1, Volume* v1, Handle__void* h2, Volume* v2);
 
 // Depth 500
-Contact* Collision_contact(Collision* p);
+Maybe__ContactSet Collision_collide_MINUS_box_MINUS_sdf(Handle__void* h_MINUS_box, AABB* box, Handle__void* h_MINUS_sdf, SDF* sdf);
+
+// Depth 500
+Maybe__ContactSet Collision_collide_MINUS_sdf_MINUS_plane(Handle__void* h_MINUS_sdf, SDF* sdf, Handle__void* h_MINUS_plane, Plane* plane);
+
+// Depth 500
+Maybe__ContactSet Collision_collide_MINUS_sdf_MINUS_sdf(Handle__void* h1, SDF* sdf1, Handle__void* h2, SDF* sdf2);
+
+// Depth 500
+Maybe__ContactSet Collision_collide_MINUS_swept(Handle__void* h1, Volume* v1, Vector3__double* vel, double dt, Handle__void* h2, Volume* v2);
+
+// Depth 500
+ContactSet* Collision_contact_MINUS_set(Collision* p);
 
 // Depth 500
 Collision Collision_copy(Collision* pRef);
@@ -3956,45 +4425,33 @@ void Collision_delete(Collision p);
 AABB Collision_get_MINUS_aabb(Volume* v);
 
 // Depth 500
-Collision Collision_init(Handle__void a, Handle__void b, Contact contact);
+AABB Collision_get_MINUS_swept_MINUS_aabb(Volume* v, Vector3__double* vel, double dt);
+
+// Depth 500
+Collision Collision_init(ContactSet contact_MINUS_set);
 
 // Depth 500
 String Collision_prn(Collision *p);
 
 // Depth 500
-Collision Collision_set_MINUS_a(Collision p, Handle__void newValue);
+Collision Collision_set_MINUS_contact_MINUS_set(Collision p, ContactSet newValue);
 
 // Depth 500
-void Collision_set_MINUS_a_BANG_(Collision* pRef, Handle__void newValue);
-
-// Depth 500
-Collision Collision_set_MINUS_b(Collision p, Handle__void newValue);
-
-// Depth 500
-void Collision_set_MINUS_b_BANG_(Collision* pRef, Handle__void newValue);
-
-// Depth 500
-Collision Collision_set_MINUS_contact(Collision p, Contact newValue);
-
-// Depth 500
-void Collision_set_MINUS_contact_BANG_(Collision* pRef, Contact newValue);
+void Collision_set_MINUS_contact_MINUS_set_BANG_(Collision* pRef, ContactSet newValue);
 
 // Depth 500
 String Collision_str(Collision *p);
 
 // Depth 500
-Collision Collision_update_MINUS_a(Collision p, Lambda *updater);
-
-// Depth 500
-Collision Collision_update_MINUS_b(Collision p, Lambda *updater);
-
-// Depth 500
-Collision Collision_update_MINUS_contact(Collision p, Lambda *updater);
+Collision Collision_update_MINUS_contact_MINUS_set(Collision p, Lambda *updater);
 
 // Depth 1000
 
 // Depth 500
 Maybe__CollisionResult CollisionChecker_check_MINUS_pair(Collidable* c1, Collidable* c2);
+
+// Depth 500
+Maybe__CollisionResult CollisionChecker_check_MINUS_pair_MINUS_swept(Collidable* c1, Vector3__double* vel, double dt, Collidable* c2);
 
 // Depth 500
 Array__CollisionResult CollisionChecker_query_MINUS_and_MINUS_check(SpatialGrid__Uint64* grid, Collidable* self, Array__Collidable* others, bool symmetric);
@@ -4193,6 +4650,65 @@ Contact Contact_update_MINUS_point(Contact p, Lambda *updater);
 // Depth 1000
 
 // Depth 500
+Handle__void* ContactSet_a(ContactSet* p);
+
+// Depth 500
+Handle__void* ContactSet_b(ContactSet* p);
+
+// Depth 500
+Array__Contact* ContactSet_contacts(ContactSet* p);
+
+// Depth 500
+ContactSet ContactSet_copy(ContactSet* pRef);
+
+// Depth 500
+void ContactSet_delete(ContactSet p);
+
+// Depth 500
+ContactSet ContactSet_init(Handle__void a, Handle__void b, Array__Contact contacts);
+
+// Depth 500
+ContactSet ContactSet_new(Handle__void a, Handle__void b, Array__Contact contacts);
+
+// Depth 500
+String ContactSet_prn(ContactSet *p);
+
+// Depth 500
+ContactSet ContactSet_reverse(ContactSet* cs);
+
+// Depth 500
+ContactSet ContactSet_set_MINUS_a(ContactSet p, Handle__void newValue);
+
+// Depth 500
+void ContactSet_set_MINUS_a_BANG_(ContactSet* pRef, Handle__void newValue);
+
+// Depth 500
+ContactSet ContactSet_set_MINUS_b(ContactSet p, Handle__void newValue);
+
+// Depth 500
+void ContactSet_set_MINUS_b_BANG_(ContactSet* pRef, Handle__void newValue);
+
+// Depth 500
+ContactSet ContactSet_set_MINUS_contacts(ContactSet p, Array__Contact newValue);
+
+// Depth 500
+void ContactSet_set_MINUS_contacts_BANG_(ContactSet* pRef, Array__Contact newValue);
+
+// Depth 500
+String ContactSet_str(ContactSet *p);
+
+// Depth 500
+ContactSet ContactSet_update_MINUS_a(ContactSet p, Lambda *updater);
+
+// Depth 500
+ContactSet ContactSet_update_MINUS_b(ContactSet p, Lambda *updater);
+
+// Depth 500
+ContactSet ContactSet_update_MINUS_contacts(ContactSet p, Lambda *updater);
+
+// Depth 1000
+
+// Depth 500
 double Double_add_MINUS_ref(double* x, double* y);
 
 // Depth 500
@@ -4217,7 +4733,13 @@ int Double_hash(double* k);
 double Double_inc(double x);
 
 // Depth 500
+bool Double_negative_QMARK_(double a);
+
+// Depth 500
 double Double_pi;
+
+// Depth 500
+bool Double_positive_QMARK_(double a);
 
 // Depth 500
 String Double_prn(double x);
@@ -4227,6 +4749,9 @@ double Double_random();
 
 // Depth 500
 double Double_random_MINUS_between(double lower, double upper);
+
+// Depth 500
+double Double_sign(double x);
 
 // Depth 500
 double Double_zero();
@@ -4272,7 +4797,13 @@ int Float_hash(float* k);
 float Float_inc(float x);
 
 // Depth 500
+bool Float_negative_QMARK_(float a);
+
+// Depth 500
 float Float_pi;
+
+// Depth 500
+bool Float_positive_QMARK_(float a);
 
 // Depth 500
 String Float_prn(float x);
@@ -4282,6 +4813,9 @@ float Float_random();
 
 // Depth 500
 float Float_random_MINUS_between(float lower, float upper);
+
+// Depth 500
+float Float_sign(float x);
 
 // Depth 500
 float Float_zero();
@@ -4399,15 +4933,13 @@ bool Geometry_AABB_contains_QMARK_(AABB* a, Vector3__double* p);
 // Depth 1000
 
 // Depth 500
-double Geometry_Plane_distance_MINUS_to_MINUS_point(Plane* plane, Vector3__double* p);
-
-// Depth 500
-Vector3__double Geometry_Plane_project_MINUS_point(Plane* plane, Vector3__double* p);
-
-// Depth 1000
-
-// Depth 500
 Vector3__double Geometry_Ray_at(Ray* r, double t);
+
+// Depth 500
+Array__Vector3__double Geometry_Ray_fibonacci_MINUS_samples;
+
+// Depth 500
+Array__Vector3__double Geometry_Ray_fibonacci_MINUS_sphere(int samples);
 
 // Depth 500
 Maybe__RayHit Geometry_Ray_intersect_MINUS_aabb(Ray* ray, AABB* aabb);
@@ -4424,6 +4956,9 @@ Vector3__double Geometry_Segment_direction(Segment* s);
 Maybe__RayHit Geometry_Segment_intersect_MINUS_aabb(Segment* s, AABB* aabb);
 
 // Depth 500
+Maybe__RayHit Geometry_Segment_intersect_MINUS_sdf(Segment* s, SDF* sdf);
+
+// Depth 500
 Maybe__RayHit Geometry_Segment_intersect_MINUS_sphere(Segment* s, Sphere* sphere);
 
 // Depth 500
@@ -4433,6 +4968,9 @@ double Geometry_Segment_length(Segment* s);
 
 // Depth 500
 Maybe__Contact Geometry_Sphere_collide_MINUS_aabb(Sphere* sphere, AABB* aabb);
+
+// Depth 500
+Maybe__Contact Geometry_Sphere_collide_MINUS_sdf(Sphere* sphere, SDF* sdf);
 
 // Depth 500
 Maybe__Contact Geometry_Sphere_collide_MINUS_sphere(Sphere* s1, Sphere* s2);
@@ -4553,10 +5091,16 @@ Maybe__int Int_from_MINUS_string(String* s);
 int Int_hash(int* k);
 
 // Depth 500
+bool Int_negative_QMARK_(int a);
+
+// Depth 500
 bool Int_odd_QMARK_(int a);
 
 // Depth 500
 int Int_positive_MINUS_mod(int k, int n);
+
+// Depth 500
+bool Int_positive_QMARK_(int a);
 
 // Depth 500
 int Int_pow(int x, int y);
@@ -4569,6 +5113,9 @@ int Int_random();
 
 // Depth 500
 int Int_random_MINUS_between(int lower, int upper);
+
+// Depth 500
+int Int_sign(int n);
 
 // Depth 500
 int Int_to_MINUS_int(int a);
@@ -4699,7 +5246,7 @@ String IntRef_str(int* x);
 // Depth 1000
 
 // Depth 500
-void Integrator_integrate_BANG_(Transform* t, Body* b, Vector3__double* accel, double dt);
+void Integrator_integrate_BANG_(Transform* t, Body* b, Vector3__double* accel, Vector3__double* ang_MINUS_accel, double dt);
 
 // Depth 500
 void Integrator_step_BANG_(Transform* t, Body* b, double dt);
@@ -4708,6 +5255,50 @@ void Integrator_step_BANG_(Transform* t, Body* b, double dt);
 void Integrator_step_MINUS_custom_BANG_(Transform* t, Body* b, double dt, double sub_MINUS_step_MINUS_size);
 
 // Depth 1000
+
+// Depth 500
+LocalCrater LocalCrater_copy(LocalCrater* pRef);
+
+// Depth 500
+void LocalCrater_delete(LocalCrater p);
+
+// Depth 500
+LocalCrater LocalCrater_init(Vector3__double pos, double radius);
+
+// Depth 500
+Vector3__double* LocalCrater_pos(LocalCrater* p);
+
+// Depth 500
+String LocalCrater_prn(LocalCrater *p);
+
+// Depth 500
+double* LocalCrater_radius(LocalCrater* p);
+
+// Depth 500
+LocalCrater LocalCrater_set_MINUS_pos(LocalCrater p, Vector3__double newValue);
+
+// Depth 500
+void LocalCrater_set_MINUS_pos_BANG_(LocalCrater* pRef, Vector3__double newValue);
+
+// Depth 500
+LocalCrater LocalCrater_set_MINUS_radius(LocalCrater p, double newValue);
+
+// Depth 500
+void LocalCrater_set_MINUS_radius_BANG_(LocalCrater* pRef, double newValue);
+
+// Depth 500
+String LocalCrater_str(LocalCrater *p);
+
+// Depth 500
+LocalCrater LocalCrater_update_MINUS_pos(LocalCrater p, Lambda *updater);
+
+// Depth 500
+LocalCrater LocalCrater_update_MINUS_radius(LocalCrater p, Lambda *updater);
+
+// Depth 1000
+
+// Depth 500
+Long Long_add_MINUS_ref(Long* x, Long* y);
 
 // Depth 500
 Long Long_blit(Long x);
@@ -4722,7 +5313,13 @@ Maybe__Long Long_from_MINUS_string(String* s);
 int Long_hash(Long* k);
 
 // Depth 500
+bool Long_negative_QMARK_(Long a);
+
+// Depth 500
 bool Long_odd_QMARK_(Long a);
+
+// Depth 500
+bool Long_positive_QMARK_(Long a);
 
 // Depth 500
 String Long_prn(Long x);
@@ -4732,6 +5329,9 @@ Long Long_random();
 
 // Depth 500
 Long Long_random_MINUS_between(Long lower, Long upper);
+
+// Depth 500
+Long Long_sign(Long n);
 
 // Depth 500
 Long Long_zero();
@@ -4812,6 +5412,9 @@ Maybe__CollisionResult Maybe_Just__CollisionResult(CollisionResult member0);
 Maybe__Contact Maybe_Just__Contact(Contact member0);
 
 // Depth 500
+Maybe__ContactSet Maybe_Just__ContactSet(ContactSet member0);
+
+// Depth 500
 Maybe__Long Maybe_Just__Long(Long member0);
 
 // Depth 500
@@ -4848,6 +5451,9 @@ Maybe__CollisionResult Maybe_Nothing__CollisionResult();
 Maybe__Contact Maybe_Nothing__Contact();
 
 // Depth 500
+Maybe__ContactSet Maybe_Nothing__ContactSet();
+
+// Depth 500
 Maybe__Long Maybe_Nothing__Long();
 
 // Depth 500
@@ -4882,6 +5488,9 @@ void Maybe_delete__CollisionResult(Maybe__CollisionResult p);
 
 // Depth 500
 void Maybe_delete__Contact(Maybe__Contact p);
+
+// Depth 500
+void Maybe_delete__ContactSet(Maybe__ContactSet p);
 
 // Depth 500
 void Maybe_delete__Long(Maybe__Long p);
@@ -5086,6 +5695,9 @@ double* Plane_d(Plane* p);
 void Plane_delete(Plane p);
 
 // Depth 500
+double Plane_distance_MINUS_to_MINUS_point(Plane* plane, Vector3__double* p);
+
+// Depth 500
 Plane Plane_init(Vector3__double normal, double d);
 
 // Depth 500
@@ -5093,6 +5705,9 @@ Vector3__double* Plane_normal(Plane* p);
 
 // Depth 500
 String Plane_prn(Plane *p);
+
+// Depth 500
+Vector3__double Plane_project_MINUS_point(Plane* plane, Vector3__double* p);
 
 // Depth 500
 Plane Plane_set_MINUS_d(Plane p, double newValue);
@@ -5129,6 +5744,9 @@ bool Pointer_eq__FILE(FILE *p1, FILE *p2);
 // Depth 1000
 
 // Depth 500
+Quaternion Quaternion_add(Quaternion* a, Quaternion* b);
+
+// Depth 500
 Quaternion Quaternion_conjugate(Quaternion* q);
 
 // Depth 500
@@ -5138,7 +5756,7 @@ Quaternion Quaternion_copy(Quaternion* pRef);
 void Quaternion_delete(Quaternion p);
 
 // Depth 500
-Quaternion Quaternion_from_MINUS_axis_MINUS_angle(Vector3__double* axis, double angle);
+Quaternion Quaternion_from_MINUS_axis_MINUS_angle(Vector3__double axis, double angle);
 
 // Depth 500
 Quaternion Quaternion_from_MINUS_euler(double yaw, double pitch, double roll);
@@ -5150,7 +5768,13 @@ Quaternion Quaternion_identity();
 Quaternion Quaternion_init(double x, double y, double z, double w);
 
 // Depth 500
+Quaternion Quaternion_inverse(Quaternion* q);
+
+// Depth 500
 Quaternion Quaternion_mul(Quaternion* a, Quaternion* b);
+
+// Depth 500
+Quaternion Quaternion_mul_MINUS_raw(Quaternion* a, Quaternion* b);
 
 // Depth 500
 Quaternion Quaternion_new(double x, double y, double z, double w);
@@ -5160,6 +5784,12 @@ Quaternion Quaternion_normalize(Quaternion* q);
 
 // Depth 500
 String Quaternion_prn(Quaternion *p);
+
+// Depth 500
+Vector3__double Quaternion_rotate(Quaternion* q, Vector3__double* v);
+
+// Depth 500
+Quaternion Quaternion_scale(Quaternion* q, double s);
 
 // Depth 500
 Quaternion Quaternion_set_MINUS_w(Quaternion p, double newValue);
@@ -5187,6 +5817,9 @@ void Quaternion_set_MINUS_z_BANG_(Quaternion* pRef, double newValue);
 
 // Depth 500
 String Quaternion_str(Quaternion *p);
+
+// Depth 500
+Vector3__double Quaternion_to_MINUS_euler(Quaternion* q);
 
 // Depth 500
 Quaternion Quaternion_update_MINUS_w(Quaternion p, Lambda *updater);
@@ -5489,10 +6122,16 @@ Uint64 Result_unwrap_MINUS_or_MINUS_zero__Uint64_Array__uint8_t(Result__Uint64_A
 // Depth 1000
 
 // Depth 500
+void RigidBody_apply_MINUS_angular_MINUS_impulse_BANG_(RigidBody* rb, Vector3__double* impulse);
+
+// Depth 500
 void RigidBody_apply_MINUS_force_BANG_(RigidBody* rb, Vector3__double* f);
 
 // Depth 500
 void RigidBody_apply_MINUS_impulse_BANG_(RigidBody* rb, Vector3__double* impulse);
+
+// Depth 500
+void RigidBody_apply_MINUS_torque_BANG_(RigidBody* rb, Vector3__double* t);
 
 // Depth 500
 Body* RigidBody_body(RigidBody* p);
@@ -5510,7 +6149,7 @@ RigidBody RigidBody_init(Transform transform, Body body);
 RigidBody RigidBody_kinematic(Vector3__double pos, Quaternion rot, double restitution, double friction);
 
 // Depth 500
-RigidBody RigidBody_new(Vector3__double pos, Quaternion rot, double mass, double restitution, double friction, double damping);
+RigidBody RigidBody_new(Vector3__double pos, Quaternion rot, double mass, double restitution, double friction, double damping, double ang_MINUS_damping, double inertia);
 
 // Depth 500
 Vector3__double* RigidBody_position(RigidBody* rb);
@@ -5559,6 +6198,107 @@ RigidBody RigidBody_update_MINUS_body(RigidBody p, Lambda *updater);
 
 // Depth 500
 RigidBody RigidBody_update_MINUS_transform(RigidBody p, Lambda *updater);
+
+// Depth 1000
+
+// Depth 500
+void SDF_add_MINUS_crater_BANG_(SDF* sdf, LocalCrater c);
+
+// Depth 500
+double SDF_apply_MINUS_craters(SDF* sdf, Vector3__double* p, double base_MINUS_d);
+
+// Depth 500
+BaseShape* SDF_base(SDF* p);
+
+// Depth 500
+SDF SDF_copy(SDF* pRef);
+
+// Depth 500
+Array__LocalCrater* SDF_craters(SDF* p);
+
+// Depth 500
+void SDF_delete(SDF p);
+
+// Depth 500
+double SDF_distance(SDF* sdf, Vector3__double* p_MINUS_world);
+
+// Depth 500
+double SDF_distance_MINUS_local(SDF* sdf, Vector3__double* p);
+
+// Depth 500
+double SDF_distance_MINUS_world(SDF* sdf, Vector3__double* p_MINUS_world);
+
+// Depth 500
+SDF SDF_init(BaseShape base, Array__LocalCrater craters, Vector3__double position, Quaternion rotation);
+
+// Depth 500
+SDF SDF_init_MINUS_box(Vector3__double e, Vector3__double pos, Quaternion rot);
+
+// Depth 500
+SDF SDF_init_MINUS_cylinder(double r, double h, Vector3__double pos, Quaternion rot);
+
+// Depth 500
+SDF SDF_init_MINUS_plane(Plane pl, Vector3__double pos, Quaternion rot);
+
+// Depth 500
+SDF SDF_init_MINUS_sphere(double r, Vector3__double pos, Quaternion rot);
+
+// Depth 500
+Vector3__double SDF_normal_MINUS_at(SDF* sdf, Vector3__double* p_MINUS_world);
+
+// Depth 500
+Vector3__double SDF_normal_MINUS_local(SDF* sdf, Vector3__double* p);
+
+// Depth 500
+Vector3__double SDF_normal_MINUS_world(SDF* sdf, Vector3__double* p_MINUS_world);
+
+// Depth 500
+Vector3__double* SDF_position(SDF* p);
+
+// Depth 500
+String SDF_prn(SDF *p);
+
+// Depth 500
+Quaternion* SDF_rotation(SDF* p);
+
+// Depth 500
+SDF SDF_set_MINUS_base(SDF p, BaseShape newValue);
+
+// Depth 500
+void SDF_set_MINUS_base_BANG_(SDF* pRef, BaseShape newValue);
+
+// Depth 500
+SDF SDF_set_MINUS_craters(SDF p, Array__LocalCrater newValue);
+
+// Depth 500
+void SDF_set_MINUS_craters_BANG_(SDF* pRef, Array__LocalCrater newValue);
+
+// Depth 500
+SDF SDF_set_MINUS_position(SDF p, Vector3__double newValue);
+
+// Depth 500
+void SDF_set_MINUS_position_BANG_(SDF* pRef, Vector3__double newValue);
+
+// Depth 500
+SDF SDF_set_MINUS_rotation(SDF p, Quaternion newValue);
+
+// Depth 500
+void SDF_set_MINUS_rotation_BANG_(SDF* pRef, Quaternion newValue);
+
+// Depth 500
+String SDF_str(SDF *p);
+
+// Depth 500
+SDF SDF_update_MINUS_base(SDF p, Lambda *updater);
+
+// Depth 500
+SDF SDF_update_MINUS_craters(SDF p, Lambda *updater);
+
+// Depth 500
+SDF SDF_update_MINUS_position(SDF p, Lambda *updater);
+
+// Depth 500
+SDF SDF_update_MINUS_rotation(SDF p, Lambda *updater);
 
 // Depth 1000
 
@@ -5615,7 +6355,7 @@ int Set_min_MINUS_load;
 // Depth 1000
 
 // Depth 500
-void Solver_solve_BANG_(RigidBody* rb_MINUS_a, RigidBody* rb_MINUS_b, Collision* col);
+void Solver_solve_BANG_(RigidBody* rb_MINUS_a, RigidBody* rb_MINUS_b, ContactSet* contact_MINUS_set);
 
 // Depth 1000
 
@@ -5633,6 +6373,9 @@ CellRange SpatialGrid_get_MINUS_range__Uint64(SpatialGrid__Uint64* grid, AABB* a
 
 // Depth 500
 int* SpatialGrid_layers__Uint64(SpatialGrid__Uint64* p);
+
+// Depth 500
+Vector3__double* SpatialGrid_origin__Uint64(SpatialGrid__Uint64* p);
 
 // Depth 500
 Array__Uint64* SpatialGrid_overflow__Uint64(SpatialGrid__Uint64* p);
@@ -5754,6 +6497,12 @@ bool String_hex_QMARK_(String* s);
 
 // Depth 500
 bool String_in_QMARK_(String* s, String* sub);
+
+// Depth 500
+int String_index_MINUS_of(String* s, Char c);
+
+// Depth 500
+int String_index_MINUS_of_MINUS_from(String* s, Char c, int i);
 
 // Depth 500
 String String_join(String* sep, Array__String* strings);
@@ -5931,6 +6680,9 @@ void Transform_delete(Transform p);
 Vector3__double Transform_forward(Transform* t);
 
 // Depth 500
+Vector3__double Transform_forward_MINUS_quat(Quaternion* q);
+
+// Depth 500
 Transform Transform_identity();
 
 // Depth 500
@@ -5947,6 +6699,9 @@ String Transform_prn(Transform *p);
 
 // Depth 500
 Vector3__double Transform_right(Transform* t);
+
+// Depth 500
+Vector3__double Transform_right_MINUS_quat(Quaternion* q);
 
 // Depth 500
 Quaternion* Transform_rotation(Transform* p);
@@ -5967,6 +6722,9 @@ Transform Transform_set_MINUS_rotation(Transform p, Quaternion newValue);
 void Transform_set_MINUS_rotation_BANG_(Transform* pRef, Quaternion newValue);
 
 // Depth 500
+Transform Transform_set_MINUS_rotation_MINUS_val_BANG_(Transform t, Quaternion r);
+
+// Depth 500
 Transform Transform_set_MINUS_scale(Transform p, Vector3__double newValue);
 
 // Depth 500
@@ -5983,6 +6741,9 @@ TransformMat4 Transform_to_MINUS_matrix(Transform* t);
 
 // Depth 500
 Vector3__double Transform_up(Transform* t);
+
+// Depth 500
+Vector3__double Transform_up_MINUS_quat(Quaternion* q);
 
 // Depth 500
 Transform Transform_update_MINUS_position(Transform p, Lambda *updater);
@@ -6226,6 +6987,9 @@ Vector3__double Vector3_add__double(Vector3__double* a, Vector3__double* b);
 Vector3__double Vector3_copy__double(Vector3__double* pRef);
 
 // Depth 500
+Vector3__double Vector3_cross__double(Vector3__double* a, Vector3__double* b);
+
+// Depth 500
 void Vector3_delete__bool(Vector3__bool p);
 
 // Depth 500
@@ -6301,6 +7065,12 @@ Volume Volume_Ball(Sphere member0);
 
 // Depth 500
 Volume Volume_Box(AABB member0);
+
+// Depth 500
+Volume Volume_Sdf(SDF member0);
+
+// Depth 500
+Volume Volume_Surface(Plane member0);
 
 // Depth 500
 Volume Volume_copy(Volume* pRef);
@@ -6400,6 +7170,12 @@ void carp_init_globals(int argc, char** argv) {
         Random_seed();
         bool _6 = true;
         Random__ = _6;
+    }
+
+    // Depth 3
+    {
+        Array__Vector3__double _4 = Geometry_Ray_fibonacci_MINUS_sphere(32);
+        Geometry_Ray_fibonacci_MINUS_samples = _4;
     }
 
     // Depth 8
@@ -6672,21 +7448,19 @@ String AABB_prn(AABB *p) {
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
-  sprintf(bufferPtr, "(%s ", "AABB");
-  bufferPtr += strlen("AABB") + 2;
-
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "AABB");
   temp = Vector3_prn__double(&p->min);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Vector3_prn__double(&p->max);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   bufferPtr--;
-  sprintf(bufferPtr, ")");
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   return buffer;
 }
 
@@ -6734,21 +7508,19 @@ String AABB_str(AABB *p) {
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
-  sprintf(bufferPtr, "(%s ", "AABB");
-  bufferPtr += strlen("AABB") + 2;
-
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "AABB");
   temp = Vector3_prn__double(&p->min);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Vector3_prn__double(&p->max);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   bufferPtr--;
-  sprintf(bufferPtr, ")");
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   return buffer;
 }
 
@@ -6997,9 +7769,9 @@ bool Array_contains_QMARK___Uint64(Array__Uint64* arr, Uint64* el) {
         /* let */ {
             int i = 0;
             int _19 = Array_length__Uint64(arr);
-            bool _20 = Int__LT_(i, _19);
-            bool _50 = _20;
-            while (_50) {
+            bool _1000008 = Int__LT_(i, _19);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 Uint64* _28 = Array_unsafe_MINUS_nth__Uint64(arr, i);
                 bool _29 = Uint64Extra__EQ_(el, _28);
                 if (_29) {
@@ -7009,11 +7781,11 @@ bool Array_contains_QMARK___Uint64(Array__Uint64* arr, Uint64* el) {
                 } else {
                     /* () */
                 }
-                int _47 = Int__PLUS_(i, 1);
-                i = _47;  // Int = Int
+                int _1000018 = Int__PLUS_(i, 1);
+                i = _1000018;  // Int = Int
                 int _19 = Array_length__Uint64(arr);
-                bool _20 = Int__LT_(i, _19);
-                _50 = _20;
+                bool _1000008 = Int__LT_(i, _19);
+                _1000006 = _1000008;
             }
         }
         bool _53 = result;
@@ -7049,18 +7821,18 @@ Array__Result__Uint16_Array__uint8_t Array_copy_MINUS_map__Array__uint8_t_Result
         /* let */ {
             int i = 0;
             int _23 = Array_length__Array__uint8_t(a);
-            bool _24 = Int__LT_(i, _23);
-            bool _48 = _24;
-            while (_48) {
+            bool _1000008 = Int__LT_(i, _23);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 Array__Result__Uint16_Array__uint8_t* _29 = &na; // ref
                 Array__uint8_t* _37 = Array_unsafe_MINUS_nth__Array__uint8_t(a, i);
                 Result__Uint16_Array__uint8_t _38 = (*f).env ? ((Result__Uint16_Array__uint8_t(*)(LambdaEnv, Array__uint8_t*))(*f).callback)((*f).env, _37) : ((Result__Uint16_Array__uint8_t(*)(Array__uint8_t*))(*f).callback)(_37);
                 Array_aset_MINUS_uninitialized_BANG___Result__Uint16_Array__uint8_t(_29, i, _38);
-                int _45 = Int__PLUS_(i, 1);
-                i = _45;  // Int = Int
+                int _1000013 = Int__PLUS_(i, 1);
+                i = _1000013;  // Int = Int
                 int _23 = Array_length__Array__uint8_t(a);
-                bool _24 = Int__LT_(i, _23);
-                _48 = _24;
+                bool _1000008 = Int__LT_(i, _23);
+                _1000006 = _1000008;
             }
         }
         Array__Result__Uint16_Array__uint8_t _51 = na;
@@ -7078,18 +7850,18 @@ Array__Result__Uint32_Array__uint8_t Array_copy_MINUS_map__Array__uint8_t_Result
         /* let */ {
             int i = 0;
             int _23 = Array_length__Array__uint8_t(a);
-            bool _24 = Int__LT_(i, _23);
-            bool _48 = _24;
-            while (_48) {
+            bool _1000008 = Int__LT_(i, _23);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 Array__Result__Uint32_Array__uint8_t* _29 = &na; // ref
                 Array__uint8_t* _37 = Array_unsafe_MINUS_nth__Array__uint8_t(a, i);
                 Result__Uint32_Array__uint8_t _38 = (*f).env ? ((Result__Uint32_Array__uint8_t(*)(LambdaEnv, Array__uint8_t*))(*f).callback)((*f).env, _37) : ((Result__Uint32_Array__uint8_t(*)(Array__uint8_t*))(*f).callback)(_37);
                 Array_aset_MINUS_uninitialized_BANG___Result__Uint32_Array__uint8_t(_29, i, _38);
-                int _45 = Int__PLUS_(i, 1);
-                i = _45;  // Int = Int
+                int _1000013 = Int__PLUS_(i, 1);
+                i = _1000013;  // Int = Int
                 int _23 = Array_length__Array__uint8_t(a);
-                bool _24 = Int__LT_(i, _23);
-                _48 = _24;
+                bool _1000008 = Int__LT_(i, _23);
+                _1000006 = _1000008;
             }
         }
         Array__Result__Uint32_Array__uint8_t _51 = na;
@@ -7107,18 +7879,18 @@ Array__Result__Uint64_Array__uint8_t Array_copy_MINUS_map__Array__uint8_t_Result
         /* let */ {
             int i = 0;
             int _23 = Array_length__Array__uint8_t(a);
-            bool _24 = Int__LT_(i, _23);
-            bool _48 = _24;
-            while (_48) {
+            bool _1000008 = Int__LT_(i, _23);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 Array__Result__Uint64_Array__uint8_t* _29 = &na; // ref
                 Array__uint8_t* _37 = Array_unsafe_MINUS_nth__Array__uint8_t(a, i);
                 Result__Uint64_Array__uint8_t _38 = (*f).env ? ((Result__Uint64_Array__uint8_t(*)(LambdaEnv, Array__uint8_t*))(*f).callback)((*f).env, _37) : ((Result__Uint64_Array__uint8_t(*)(Array__uint8_t*))(*f).callback)(_37);
                 Array_aset_MINUS_uninitialized_BANG___Result__Uint64_Array__uint8_t(_29, i, _38);
-                int _45 = Int__PLUS_(i, 1);
-                i = _45;  // Int = Int
+                int _1000013 = Int__PLUS_(i, 1);
+                i = _1000013;  // Int = Int
                 int _23 = Array_length__Array__uint8_t(a);
-                bool _24 = Int__LT_(i, _23);
-                _48 = _24;
+                bool _1000008 = Int__LT_(i, _23);
+                _1000006 = _1000008;
             }
         }
         Array__Result__Uint64_Array__uint8_t _51 = na;
@@ -7136,18 +7908,18 @@ Array__Uint16 Array_copy_MINUS_map__Array__uint8_t_Uint16(Lambda* f, Array__Arra
         /* let */ {
             int i = 0;
             int _23 = Array_length__Array__uint8_t(a);
-            bool _24 = Int__LT_(i, _23);
-            bool _48 = _24;
-            while (_48) {
+            bool _1000008 = Int__LT_(i, _23);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 Array__Uint16* _29 = &na; // ref
                 Array__uint8_t* _37 = Array_unsafe_MINUS_nth__Array__uint8_t(a, i);
                 Uint16 _38 = (*f).env ? ((Uint16(*)(LambdaEnv, Array__uint8_t*))(*f).callback)((*f).env, _37) : ((Uint16(*)(Array__uint8_t*))(*f).callback)(_37);
                 Array_aset_MINUS_uninitialized_BANG___Uint16(_29, i, _38);
-                int _45 = Int__PLUS_(i, 1);
-                i = _45;  // Int = Int
+                int _1000013 = Int__PLUS_(i, 1);
+                i = _1000013;  // Int = Int
                 int _23 = Array_length__Array__uint8_t(a);
-                bool _24 = Int__LT_(i, _23);
-                _48 = _24;
+                bool _1000008 = Int__LT_(i, _23);
+                _1000006 = _1000008;
             }
         }
         Array__Uint16 _51 = na;
@@ -7165,18 +7937,18 @@ Array__Uint32 Array_copy_MINUS_map__Array__uint8_t_Uint32(Lambda* f, Array__Arra
         /* let */ {
             int i = 0;
             int _23 = Array_length__Array__uint8_t(a);
-            bool _24 = Int__LT_(i, _23);
-            bool _48 = _24;
-            while (_48) {
+            bool _1000008 = Int__LT_(i, _23);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 Array__Uint32* _29 = &na; // ref
                 Array__uint8_t* _37 = Array_unsafe_MINUS_nth__Array__uint8_t(a, i);
                 Uint32 _38 = (*f).env ? ((Uint32(*)(LambdaEnv, Array__uint8_t*))(*f).callback)((*f).env, _37) : ((Uint32(*)(Array__uint8_t*))(*f).callback)(_37);
                 Array_aset_MINUS_uninitialized_BANG___Uint32(_29, i, _38);
-                int _45 = Int__PLUS_(i, 1);
-                i = _45;  // Int = Int
+                int _1000013 = Int__PLUS_(i, 1);
+                i = _1000013;  // Int = Int
                 int _23 = Array_length__Array__uint8_t(a);
-                bool _24 = Int__LT_(i, _23);
-                _48 = _24;
+                bool _1000008 = Int__LT_(i, _23);
+                _1000006 = _1000008;
             }
         }
         Array__Uint32 _51 = na;
@@ -7194,18 +7966,18 @@ Array__Uint64 Array_copy_MINUS_map__Array__uint8_t_Uint64(Lambda* f, Array__Arra
         /* let */ {
             int i = 0;
             int _23 = Array_length__Array__uint8_t(a);
-            bool _24 = Int__LT_(i, _23);
-            bool _48 = _24;
-            while (_48) {
+            bool _1000008 = Int__LT_(i, _23);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 Array__Uint64* _29 = &na; // ref
                 Array__uint8_t* _37 = Array_unsafe_MINUS_nth__Array__uint8_t(a, i);
                 Uint64 _38 = (*f).env ? ((Uint64(*)(LambdaEnv, Array__uint8_t*))(*f).callback)((*f).env, _37) : ((Uint64(*)(Array__uint8_t*))(*f).callback)(_37);
                 Array_aset_MINUS_uninitialized_BANG___Uint64(_29, i, _38);
-                int _45 = Int__PLUS_(i, 1);
-                i = _45;  // Int = Int
+                int _1000013 = Int__PLUS_(i, 1);
+                i = _1000013;  // Int = Int
                 int _23 = Array_length__Array__uint8_t(a);
-                bool _24 = Int__LT_(i, _23);
-                _48 = _24;
+                bool _1000008 = Int__LT_(i, _23);
+                _1000006 = _1000008;
             }
         }
         Array__Uint64 _51 = na;
@@ -7223,18 +7995,18 @@ Array__int Array_copy_MINUS_map__Array__uint8_t_int(Lambda* f, Array__Array__uin
         /* let */ {
             int i = 0;
             int _23 = Array_length__Array__uint8_t(a);
-            bool _24 = Int__LT_(i, _23);
-            bool _48 = _24;
-            while (_48) {
+            bool _1000008 = Int__LT_(i, _23);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 Array__int* _29 = &na; // ref
                 Array__uint8_t* _37 = Array_unsafe_MINUS_nth__Array__uint8_t(a, i);
                 int _38 = (*f).env ? ((int(*)(LambdaEnv, Array__uint8_t*))(*f).callback)((*f).env, _37) : ((int(*)(Array__uint8_t*))(*f).callback)(_37);
                 Array_aset_MINUS_uninitialized_BANG___int(_29, i, _38);
-                int _45 = Int__PLUS_(i, 1);
-                i = _45;  // Int = Int
+                int _1000013 = Int__PLUS_(i, 1);
+                i = _1000013;  // Int = Int
                 int _23 = Array_length__Array__uint8_t(a);
-                bool _24 = Int__LT_(i, _23);
-                _48 = _24;
+                bool _1000008 = Int__LT_(i, _23);
+                _1000006 = _1000008;
             }
         }
         Array__int _51 = na;
@@ -7252,18 +8024,18 @@ Array__String Array_copy_MINUS_map__PatternMatchResult_String(Lambda* f, Array__
         /* let */ {
             int i = 0;
             int _23 = Array_length__PatternMatchResult(a);
-            bool _24 = Int__LT_(i, _23);
-            bool _48 = _24;
-            while (_48) {
+            bool _1000008 = Int__LT_(i, _23);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 Array__String* _29 = &na; // ref
                 PatternMatchResult* _37 = Array_unsafe_MINUS_nth__PatternMatchResult(a, i);
                 String _38 = (*f).env ? ((String(*)(LambdaEnv, PatternMatchResult*))(*f).callback)((*f).env, _37) : ((String(*)(PatternMatchResult*))(*f).callback)(_37);
                 Array_aset_MINUS_uninitialized_BANG___String(_29, i, _38);
-                int _45 = Int__PLUS_(i, 1);
-                i = _45;  // Int = Int
+                int _1000013 = Int__PLUS_(i, 1);
+                i = _1000013;  // Int = Int
                 int _23 = Array_length__PatternMatchResult(a);
-                bool _24 = Int__LT_(i, _23);
-                _48 = _24;
+                bool _1000008 = Int__LT_(i, _23);
+                _1000006 = _1000008;
             }
         }
         Array__String _51 = na;
@@ -7281,18 +8053,18 @@ Array__int Array_copy_MINUS_map__PatternMatchResult_int(Lambda* f, Array__Patter
         /* let */ {
             int i = 0;
             int _23 = Array_length__PatternMatchResult(a);
-            bool _24 = Int__LT_(i, _23);
-            bool _48 = _24;
-            while (_48) {
+            bool _1000008 = Int__LT_(i, _23);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 Array__int* _29 = &na; // ref
                 PatternMatchResult* _37 = Array_unsafe_MINUS_nth__PatternMatchResult(a, i);
                 int _38 = (*f).env ? ((int(*)(LambdaEnv, PatternMatchResult*))(*f).callback)((*f).env, _37) : ((int(*)(PatternMatchResult*))(*f).callback)(_37);
                 Array_aset_MINUS_uninitialized_BANG___int(_29, i, _38);
-                int _45 = Int__PLUS_(i, 1);
-                i = _45;  // Int = Int
+                int _1000013 = Int__PLUS_(i, 1);
+                i = _1000013;  // Int = Int
                 int _23 = Array_length__PatternMatchResult(a);
-                bool _24 = Int__LT_(i, _23);
-                _48 = _24;
+                bool _1000008 = Int__LT_(i, _23);
+                _1000006 = _1000008;
             }
         }
         Array__int _51 = na;
@@ -7310,18 +8082,18 @@ Array__Array__uint8_t Array_copy_MINUS_map__Result__Uint16_Array__uint8_t_Array_
         /* let */ {
             int i = 0;
             int _23 = Array_length__Result__Uint16_Array__uint8_t(a);
-            bool _24 = Int__LT_(i, _23);
-            bool _48 = _24;
-            while (_48) {
+            bool _1000008 = Int__LT_(i, _23);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 Array__Array__uint8_t* _29 = &na; // ref
                 Result__Uint16_Array__uint8_t* _37 = Array_unsafe_MINUS_nth__Result__Uint16_Array__uint8_t(a, i);
                 Array__uint8_t _38 = (*f).env ? ((Array__uint8_t(*)(LambdaEnv, Result__Uint16_Array__uint8_t*))(*f).callback)((*f).env, _37) : ((Array__uint8_t(*)(Result__Uint16_Array__uint8_t*))(*f).callback)(_37);
                 Array_aset_MINUS_uninitialized_BANG___Array__uint8_t(_29, i, _38);
-                int _45 = Int__PLUS_(i, 1);
-                i = _45;  // Int = Int
+                int _1000013 = Int__PLUS_(i, 1);
+                i = _1000013;  // Int = Int
                 int _23 = Array_length__Result__Uint16_Array__uint8_t(a);
-                bool _24 = Int__LT_(i, _23);
-                _48 = _24;
+                bool _1000008 = Int__LT_(i, _23);
+                _1000006 = _1000008;
             }
         }
         Array__Array__uint8_t _51 = na;
@@ -7339,18 +8111,18 @@ Array__Uint16 Array_copy_MINUS_map__Result__Uint16_Array__uint8_t_Uint16(Lambda*
         /* let */ {
             int i = 0;
             int _23 = Array_length__Result__Uint16_Array__uint8_t(a);
-            bool _24 = Int__LT_(i, _23);
-            bool _48 = _24;
-            while (_48) {
+            bool _1000008 = Int__LT_(i, _23);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 Array__Uint16* _29 = &na; // ref
                 Result__Uint16_Array__uint8_t* _37 = Array_unsafe_MINUS_nth__Result__Uint16_Array__uint8_t(a, i);
                 Uint16 _38 = (*f).env ? ((Uint16(*)(LambdaEnv, Result__Uint16_Array__uint8_t*))(*f).callback)((*f).env, _37) : ((Uint16(*)(Result__Uint16_Array__uint8_t*))(*f).callback)(_37);
                 Array_aset_MINUS_uninitialized_BANG___Uint16(_29, i, _38);
-                int _45 = Int__PLUS_(i, 1);
-                i = _45;  // Int = Int
+                int _1000013 = Int__PLUS_(i, 1);
+                i = _1000013;  // Int = Int
                 int _23 = Array_length__Result__Uint16_Array__uint8_t(a);
-                bool _24 = Int__LT_(i, _23);
-                _48 = _24;
+                bool _1000008 = Int__LT_(i, _23);
+                _1000006 = _1000008;
             }
         }
         Array__Uint16 _51 = na;
@@ -7368,18 +8140,18 @@ Array__Array__uint8_t Array_copy_MINUS_map__Result__Uint32_Array__uint8_t_Array_
         /* let */ {
             int i = 0;
             int _23 = Array_length__Result__Uint32_Array__uint8_t(a);
-            bool _24 = Int__LT_(i, _23);
-            bool _48 = _24;
-            while (_48) {
+            bool _1000008 = Int__LT_(i, _23);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 Array__Array__uint8_t* _29 = &na; // ref
                 Result__Uint32_Array__uint8_t* _37 = Array_unsafe_MINUS_nth__Result__Uint32_Array__uint8_t(a, i);
                 Array__uint8_t _38 = (*f).env ? ((Array__uint8_t(*)(LambdaEnv, Result__Uint32_Array__uint8_t*))(*f).callback)((*f).env, _37) : ((Array__uint8_t(*)(Result__Uint32_Array__uint8_t*))(*f).callback)(_37);
                 Array_aset_MINUS_uninitialized_BANG___Array__uint8_t(_29, i, _38);
-                int _45 = Int__PLUS_(i, 1);
-                i = _45;  // Int = Int
+                int _1000013 = Int__PLUS_(i, 1);
+                i = _1000013;  // Int = Int
                 int _23 = Array_length__Result__Uint32_Array__uint8_t(a);
-                bool _24 = Int__LT_(i, _23);
-                _48 = _24;
+                bool _1000008 = Int__LT_(i, _23);
+                _1000006 = _1000008;
             }
         }
         Array__Array__uint8_t _51 = na;
@@ -7397,18 +8169,18 @@ Array__Uint32 Array_copy_MINUS_map__Result__Uint32_Array__uint8_t_Uint32(Lambda*
         /* let */ {
             int i = 0;
             int _23 = Array_length__Result__Uint32_Array__uint8_t(a);
-            bool _24 = Int__LT_(i, _23);
-            bool _48 = _24;
-            while (_48) {
+            bool _1000008 = Int__LT_(i, _23);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 Array__Uint32* _29 = &na; // ref
                 Result__Uint32_Array__uint8_t* _37 = Array_unsafe_MINUS_nth__Result__Uint32_Array__uint8_t(a, i);
                 Uint32 _38 = (*f).env ? ((Uint32(*)(LambdaEnv, Result__Uint32_Array__uint8_t*))(*f).callback)((*f).env, _37) : ((Uint32(*)(Result__Uint32_Array__uint8_t*))(*f).callback)(_37);
                 Array_aset_MINUS_uninitialized_BANG___Uint32(_29, i, _38);
-                int _45 = Int__PLUS_(i, 1);
-                i = _45;  // Int = Int
+                int _1000013 = Int__PLUS_(i, 1);
+                i = _1000013;  // Int = Int
                 int _23 = Array_length__Result__Uint32_Array__uint8_t(a);
-                bool _24 = Int__LT_(i, _23);
-                _48 = _24;
+                bool _1000008 = Int__LT_(i, _23);
+                _1000006 = _1000008;
             }
         }
         Array__Uint32 _51 = na;
@@ -7426,18 +8198,18 @@ Array__Array__uint8_t Array_copy_MINUS_map__Result__Uint64_Array__uint8_t_Array_
         /* let */ {
             int i = 0;
             int _23 = Array_length__Result__Uint64_Array__uint8_t(a);
-            bool _24 = Int__LT_(i, _23);
-            bool _48 = _24;
-            while (_48) {
+            bool _1000008 = Int__LT_(i, _23);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 Array__Array__uint8_t* _29 = &na; // ref
                 Result__Uint64_Array__uint8_t* _37 = Array_unsafe_MINUS_nth__Result__Uint64_Array__uint8_t(a, i);
                 Array__uint8_t _38 = (*f).env ? ((Array__uint8_t(*)(LambdaEnv, Result__Uint64_Array__uint8_t*))(*f).callback)((*f).env, _37) : ((Array__uint8_t(*)(Result__Uint64_Array__uint8_t*))(*f).callback)(_37);
                 Array_aset_MINUS_uninitialized_BANG___Array__uint8_t(_29, i, _38);
-                int _45 = Int__PLUS_(i, 1);
-                i = _45;  // Int = Int
+                int _1000013 = Int__PLUS_(i, 1);
+                i = _1000013;  // Int = Int
                 int _23 = Array_length__Result__Uint64_Array__uint8_t(a);
-                bool _24 = Int__LT_(i, _23);
-                _48 = _24;
+                bool _1000008 = Int__LT_(i, _23);
+                _1000006 = _1000008;
             }
         }
         Array__Array__uint8_t _51 = na;
@@ -7455,18 +8227,18 @@ Array__Uint64 Array_copy_MINUS_map__Result__Uint64_Array__uint8_t_Uint64(Lambda*
         /* let */ {
             int i = 0;
             int _23 = Array_length__Result__Uint64_Array__uint8_t(a);
-            bool _24 = Int__LT_(i, _23);
-            bool _48 = _24;
-            while (_48) {
+            bool _1000008 = Int__LT_(i, _23);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 Array__Uint64* _29 = &na; // ref
                 Result__Uint64_Array__uint8_t* _37 = Array_unsafe_MINUS_nth__Result__Uint64_Array__uint8_t(a, i);
                 Uint64 _38 = (*f).env ? ((Uint64(*)(LambdaEnv, Result__Uint64_Array__uint8_t*))(*f).callback)((*f).env, _37) : ((Uint64(*)(Result__Uint64_Array__uint8_t*))(*f).callback)(_37);
                 Array_aset_MINUS_uninitialized_BANG___Uint64(_29, i, _38);
-                int _45 = Int__PLUS_(i, 1);
-                i = _45;  // Int = Int
+                int _1000013 = Int__PLUS_(i, 1);
+                i = _1000013;  // Int = Int
                 int _23 = Array_length__Result__Uint64_Array__uint8_t(a);
-                bool _24 = Int__LT_(i, _23);
-                _48 = _24;
+                bool _1000008 = Int__LT_(i, _23);
+                _1000006 = _1000008;
             }
         }
         Array__Uint64 _51 = na;
@@ -7484,18 +8256,18 @@ Array__Array__uint8_t Array_copy_MINUS_map__Uint16_Array__uint8_t(Lambda* f, Arr
         /* let */ {
             int i = 0;
             int _23 = Array_length__Uint16(a);
-            bool _24 = Int__LT_(i, _23);
-            bool _48 = _24;
-            while (_48) {
+            bool _1000008 = Int__LT_(i, _23);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 Array__Array__uint8_t* _29 = &na; // ref
                 Uint16* _37 = Array_unsafe_MINUS_nth__Uint16(a, i);
                 Array__uint8_t _38 = (*f).env ? ((Array__uint8_t(*)(LambdaEnv, Uint16*))(*f).callback)((*f).env, _37) : ((Array__uint8_t(*)(Uint16*))(*f).callback)(_37);
                 Array_aset_MINUS_uninitialized_BANG___Array__uint8_t(_29, i, _38);
-                int _45 = Int__PLUS_(i, 1);
-                i = _45;  // Int = Int
+                int _1000013 = Int__PLUS_(i, 1);
+                i = _1000013;  // Int = Int
                 int _23 = Array_length__Uint16(a);
-                bool _24 = Int__LT_(i, _23);
-                _48 = _24;
+                bool _1000008 = Int__LT_(i, _23);
+                _1000006 = _1000008;
             }
         }
         Array__Array__uint8_t _51 = na;
@@ -7513,18 +8285,18 @@ Array__uint8_t Array_copy_MINUS_map__Uint16_uint8_t(Lambda* f, Array__Uint16* a)
         /* let */ {
             int i = 0;
             int _23 = Array_length__Uint16(a);
-            bool _24 = Int__LT_(i, _23);
-            bool _48 = _24;
-            while (_48) {
+            bool _1000008 = Int__LT_(i, _23);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 Array__uint8_t* _29 = &na; // ref
                 Uint16* _37 = Array_unsafe_MINUS_nth__Uint16(a, i);
                 uint8_t _38 = (*f).env ? ((uint8_t(*)(LambdaEnv, Uint16*))(*f).callback)((*f).env, _37) : ((uint8_t(*)(Uint16*))(*f).callback)(_37);
                 Array_aset_MINUS_uninitialized_BANG___uint8_t(_29, i, _38);
-                int _45 = Int__PLUS_(i, 1);
-                i = _45;  // Int = Int
+                int _1000013 = Int__PLUS_(i, 1);
+                i = _1000013;  // Int = Int
                 int _23 = Array_length__Uint16(a);
-                bool _24 = Int__LT_(i, _23);
-                _48 = _24;
+                bool _1000008 = Int__LT_(i, _23);
+                _1000006 = _1000008;
             }
         }
         Array__uint8_t _51 = na;
@@ -7542,18 +8314,18 @@ Array__Array__uint8_t Array_copy_MINUS_map__Uint32_Array__uint8_t(Lambda* f, Arr
         /* let */ {
             int i = 0;
             int _23 = Array_length__Uint32(a);
-            bool _24 = Int__LT_(i, _23);
-            bool _48 = _24;
-            while (_48) {
+            bool _1000008 = Int__LT_(i, _23);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 Array__Array__uint8_t* _29 = &na; // ref
                 Uint32* _37 = Array_unsafe_MINUS_nth__Uint32(a, i);
                 Array__uint8_t _38 = (*f).env ? ((Array__uint8_t(*)(LambdaEnv, Uint32*))(*f).callback)((*f).env, _37) : ((Array__uint8_t(*)(Uint32*))(*f).callback)(_37);
                 Array_aset_MINUS_uninitialized_BANG___Array__uint8_t(_29, i, _38);
-                int _45 = Int__PLUS_(i, 1);
-                i = _45;  // Int = Int
+                int _1000013 = Int__PLUS_(i, 1);
+                i = _1000013;  // Int = Int
                 int _23 = Array_length__Uint32(a);
-                bool _24 = Int__LT_(i, _23);
-                _48 = _24;
+                bool _1000008 = Int__LT_(i, _23);
+                _1000006 = _1000008;
             }
         }
         Array__Array__uint8_t _51 = na;
@@ -7571,18 +8343,18 @@ Array__uint8_t Array_copy_MINUS_map__Uint32_uint8_t(Lambda* f, Array__Uint32* a)
         /* let */ {
             int i = 0;
             int _23 = Array_length__Uint32(a);
-            bool _24 = Int__LT_(i, _23);
-            bool _48 = _24;
-            while (_48) {
+            bool _1000008 = Int__LT_(i, _23);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 Array__uint8_t* _29 = &na; // ref
                 Uint32* _37 = Array_unsafe_MINUS_nth__Uint32(a, i);
                 uint8_t _38 = (*f).env ? ((uint8_t(*)(LambdaEnv, Uint32*))(*f).callback)((*f).env, _37) : ((uint8_t(*)(Uint32*))(*f).callback)(_37);
                 Array_aset_MINUS_uninitialized_BANG___uint8_t(_29, i, _38);
-                int _45 = Int__PLUS_(i, 1);
-                i = _45;  // Int = Int
+                int _1000013 = Int__PLUS_(i, 1);
+                i = _1000013;  // Int = Int
                 int _23 = Array_length__Uint32(a);
-                bool _24 = Int__LT_(i, _23);
-                _48 = _24;
+                bool _1000008 = Int__LT_(i, _23);
+                _1000006 = _1000008;
             }
         }
         Array__uint8_t _51 = na;
@@ -7600,18 +8372,18 @@ Array__Array__uint8_t Array_copy_MINUS_map__Uint64_Array__uint8_t(Lambda* f, Arr
         /* let */ {
             int i = 0;
             int _23 = Array_length__Uint64(a);
-            bool _24 = Int__LT_(i, _23);
-            bool _48 = _24;
-            while (_48) {
+            bool _1000008 = Int__LT_(i, _23);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 Array__Array__uint8_t* _29 = &na; // ref
                 Uint64* _37 = Array_unsafe_MINUS_nth__Uint64(a, i);
                 Array__uint8_t _38 = (*f).env ? ((Array__uint8_t(*)(LambdaEnv, Uint64*))(*f).callback)((*f).env, _37) : ((Array__uint8_t(*)(Uint64*))(*f).callback)(_37);
                 Array_aset_MINUS_uninitialized_BANG___Array__uint8_t(_29, i, _38);
-                int _45 = Int__PLUS_(i, 1);
-                i = _45;  // Int = Int
+                int _1000013 = Int__PLUS_(i, 1);
+                i = _1000013;  // Int = Int
                 int _23 = Array_length__Uint64(a);
-                bool _24 = Int__LT_(i, _23);
-                _48 = _24;
+                bool _1000008 = Int__LT_(i, _23);
+                _1000006 = _1000008;
             }
         }
         Array__Array__uint8_t _51 = na;
@@ -7629,18 +8401,18 @@ Array__uint8_t Array_copy_MINUS_map__Uint64_uint8_t(Lambda* f, Array__Uint64* a)
         /* let */ {
             int i = 0;
             int _23 = Array_length__Uint64(a);
-            bool _24 = Int__LT_(i, _23);
-            bool _48 = _24;
-            while (_48) {
+            bool _1000008 = Int__LT_(i, _23);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 Array__uint8_t* _29 = &na; // ref
                 Uint64* _37 = Array_unsafe_MINUS_nth__Uint64(a, i);
                 uint8_t _38 = (*f).env ? ((uint8_t(*)(LambdaEnv, Uint64*))(*f).callback)((*f).env, _37) : ((uint8_t(*)(Uint64*))(*f).callback)(_37);
                 Array_aset_MINUS_uninitialized_BANG___uint8_t(_29, i, _38);
-                int _45 = Int__PLUS_(i, 1);
-                i = _45;  // Int = Int
+                int _1000013 = Int__PLUS_(i, 1);
+                i = _1000013;  // Int = Int
                 int _23 = Array_length__Uint64(a);
-                bool _24 = Int__LT_(i, _23);
-                _48 = _24;
+                bool _1000008 = Int__LT_(i, _23);
+                _1000006 = _1000008;
             }
         }
         Array__uint8_t _51 = na;
@@ -7658,24 +8430,46 @@ Array__String Array_copy_MINUS_map__uint8_t_String(Lambda* f, Array__uint8_t* a)
         /* let */ {
             int i = 0;
             int _23 = Array_length__uint8_t(a);
-            bool _24 = Int__LT_(i, _23);
-            bool _48 = _24;
-            while (_48) {
+            bool _1000008 = Int__LT_(i, _23);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 Array__String* _29 = &na; // ref
                 uint8_t* _37 = Array_unsafe_MINUS_nth__uint8_t(a, i);
                 String _38 = (*f).env ? ((String(*)(LambdaEnv, uint8_t*))(*f).callback)((*f).env, _37) : ((String(*)(uint8_t*))(*f).callback)(_37);
                 Array_aset_MINUS_uninitialized_BANG___String(_29, i, _38);
-                int _45 = Int__PLUS_(i, 1);
-                i = _45;  // Int = Int
+                int _1000013 = Int__PLUS_(i, 1);
+                i = _1000013;  // Int = Int
                 int _23 = Array_length__uint8_t(a);
-                bool _24 = Int__LT_(i, _23);
-                _48 = _24;
+                bool _1000008 = Int__LT_(i, _23);
+                _1000006 = _1000008;
             }
         }
         Array__String _51 = na;
         _52 = _51;
     }
     return _52;
+}
+
+Array Array_copy__Contact (Array* a){
+    Array copy;
+    copy.len = a->len;
+    copy.capacity = a->capacity;
+    copy.data = CARP_MALLOC(sizeof(Contact) * a->capacity);
+    for(int i = 0; i < a->len; i++) {
+        ((Contact*)(copy.data))[i] = Contact_copy(&(((Contact*)a->data)[i]));
+    }
+    return copy;
+}
+
+Array Array_copy__LocalCrater (Array* a){
+    Array copy;
+    copy.len = a->len;
+    copy.capacity = a->capacity;
+    copy.data = CARP_MALLOC(sizeof(LocalCrater) * a->capacity);
+    for(int i = 0; i < a->len; i++) {
+        ((LocalCrater*)(copy.data))[i] = LocalCrater_copy(&(((LocalCrater*)a->data)[i]));
+    }
+    return copy;
 }
 
 Array Array_copy__Result__Uint16_Array__uint8_t (Array* a){
@@ -7791,6 +8585,20 @@ void Array_delete__CollisionResult (Array a){
     CARP_FREE(a.data);
 }
 
+void Array_delete__Contact (Array a){
+    for(int i = 0; i < a.len; i++) {
+        Contact_delete(((Contact*)a.data)[i]);
+    }
+    CARP_FREE(a.data);
+}
+
+void Array_delete__LocalCrater (Array a){
+    for(int i = 0; i < a.len; i++) {
+        LocalCrater_delete(((LocalCrater*)a.data)[i]);
+    }
+    CARP_FREE(a.data);
+}
+
 void Array_delete__Pair__ColorId_String (Array a){
     for(int i = 0; i < a.len; i++) {
         Pair_delete__ColorId_String(((Pair__ColorId_String*)a.data)[i]);
@@ -7850,6 +8658,13 @@ void Array_delete__Uint32 (Array a){
 void Array_delete__Uint64 (Array a){
     for(int i = 0; i < a.len; i++) {
         /* Ignore non-managed type inside Array: 'Uint64' */
+    }
+    CARP_FREE(a.data);
+}
+
+void Array_delete__Vector3__double (Array a){
+    for(int i = 0; i < a.len; i++) {
+        Vector3_delete__double(((Vector3__double*)a.data)[i]);
     }
     CARP_FREE(a.data);
 }
@@ -7961,6 +8776,8 @@ Array Array_endo_MINUS_map__uint8_t(Lambda *f, Array a) {
 int Array_length__Array__uint8_t (Array *a) { return (*a).len; }
 int Array_length__Char (Array *a) { return (*a).len; }
 int Array_length__Collidable (Array *a) { return (*a).len; }
+int Array_length__Contact (Array *a) { return (*a).len; }
+int Array_length__LocalCrater (Array *a) { return (*a).len; }
 int Array_length__Pair__ColorId_String (Array *a) { return (*a).len; }
 int Array_length__PatternMatchResult (Array *a) { return (*a).len; }
 int Array_length__Result__Uint16_Array__uint8_t (Array *a) { return (*a).len; }
@@ -8039,6 +8856,16 @@ Array__Char Array_prefix__Array__Char(Array__Char* xs, int end_MINUS_index) {
     return _9;
 }
 
+String Array_prn__Contact(Array__Contact* x) {
+    String _6 = Array_str__Contact(x);
+    return _6;
+}
+
+String Array_prn__LocalCrater(Array__LocalCrater* x) {
+    String _6 = Array_str__LocalCrater(x);
+    return _6;
+}
+
 String Array_prn__float(Array__float* x) {
     String _6 = Array_str__float(x);
     return _6;
@@ -8051,6 +8878,24 @@ void Array_push_MINUS_back_BANG___CollisionResult(Array *aRef, CollisionResult v
         aRef->data = CARP_REALLOC(aRef->data, sizeof(CollisionResult) * aRef->capacity);
     }
     ((CollisionResult*)aRef->data)[aRef->len - 1] = value;
+}
+
+void Array_push_MINUS_back_BANG___Contact(Array *aRef, Contact value) { 
+    aRef->len++;
+    if(aRef->len > aRef->capacity) {
+        aRef->capacity = aRef->len * 2;
+        aRef->data = CARP_REALLOC(aRef->data, sizeof(Contact) * aRef->capacity);
+    }
+    ((Contact*)aRef->data)[aRef->len - 1] = value;
+}
+
+void Array_push_MINUS_back_BANG___LocalCrater(Array *aRef, LocalCrater value) { 
+    aRef->len++;
+    if(aRef->len > aRef->capacity) {
+        aRef->capacity = aRef->len * 2;
+        aRef->data = CARP_REALLOC(aRef->data, sizeof(LocalCrater) * aRef->capacity);
+    }
+    ((LocalCrater*)aRef->data)[aRef->len - 1] = value;
 }
 
 void Array_push_MINUS_back_BANG___Pair__ColorId_String(Array *aRef, Pair__ColorId_String value) { 
@@ -8069,6 +8914,15 @@ void Array_push_MINUS_back_BANG___Uint64(Array *aRef, Uint64 value) {
         aRef->data = CARP_REALLOC(aRef->data, sizeof(Uint64) * aRef->capacity);
     }
     ((Uint64*)aRef->data)[aRef->len - 1] = value;
+}
+
+void Array_push_MINUS_back_BANG___Vector3__double(Array *aRef, Vector3__double value) { 
+    aRef->len++;
+    if(aRef->len > aRef->capacity) {
+        aRef->capacity = aRef->len * 2;
+        aRef->data = CARP_REALLOC(aRef->data, sizeof(Vector3__double) * aRef->capacity);
+    }
+    ((Vector3__double*)aRef->data)[aRef->len - 1] = value;
 }
 
 Array Array_push_MINUS_back__Array__uint8_t(Array a, Array__uint8_t value) { 
@@ -8101,6 +8955,16 @@ Array Array_push_MINUS_back__PatternMatchResult(Array a, PatternMatchResult valu
     return a;
 }
 
+Array Array_push_MINUS_back__String(Array a, String value) { 
+    a.len++;
+    if(a.len > a.capacity) {
+        a.capacity = a.len * 2;
+        a.data = CARP_REALLOC(a.data, sizeof(String) * a.capacity);
+    }
+    ((String*)a.data)[a.len - 1] = value;
+    return a;
+}
+
 Array Array_push_MINUS_back__uint8_t(Array a, uint8_t value) { 
     a.len++;
     if(a.len > a.capacity) {
@@ -8118,17 +8982,17 @@ int Array_reduce__int_int(Lambda* f, int x, Array__int* xs) {
         /* let */ {
             int i = 0;
             int _20 = Array_length__int(xs);
-            bool _21 = Int__LT_(i, _20);
-            bool _43 = _21;
-            while (_43) {
+            bool _1000008 = Int__LT_(i, _20);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 int* _32 = Array_unsafe_MINUS_nth__int(xs, i);
                 int _33 = (*f).env ? ((int(*)(LambdaEnv, int, int*))(*f).callback)((*f).env, total, _32) : ((int(*)(int, int*))(*f).callback)(total, _32);
                 total = _33;  // Int = Int
-                int _40 = Int__PLUS_(i, 1);
-                i = _40;  // Int = Int
+                int _1000014 = Int__PLUS_(i, 1);
+                i = _1000014;  // Int = Int
                 int _20 = Array_length__int(xs);
-                bool _21 = Int__LT_(i, _20);
-                _43 = _21;
+                bool _1000008 = Int__LT_(i, _20);
+                _1000006 = _1000008;
             }
         }
         int _46 = total;
@@ -8144,16 +9008,16 @@ Array__Bucket__ColorId_String Array_repeat__Bucket__ColorId_String(int n, Lambda
         Array__Bucket__ColorId_String a = _9;
         /* let */ {
             int i = 0;
-            bool _20 = Int__LT_(i, n);
-            bool _40 = _20;
-            while (_40) {
+            bool _1000008 = Int__LT_(i, n);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 Array__Bucket__ColorId_String* _25 = &a; // ref
                 Bucket__ColorId_String _30 = (*f).env ? ((Bucket__ColorId_String(*)(LambdaEnv))(*f).callback)((*f).env) : ((Bucket__ColorId_String(*)())(*f).callback)();
                 Array_aset_MINUS_uninitialized_BANG___Bucket__ColorId_String(_25, i, _30);
-                int _37 = Int__PLUS_(i, 1);
-                i = _37;  // Int = Int
-                bool _20 = Int__LT_(i, n);
-                _40 = _20;
+                int _1000013 = Int__PLUS_(i, 1);
+                i = _1000013;  // Int = Int
+                bool _1000008 = Int__LT_(i, n);
+                _1000006 = _1000008;
             }
         }
         Array__Bucket__ColorId_String _43 = a;
@@ -8169,16 +9033,16 @@ Array__Char Array_repeat__Char(int n, Lambda* f) {
         Array__Char a = _9;
         /* let */ {
             int i = 0;
-            bool _20 = Int__LT_(i, n);
-            bool _40 = _20;
-            while (_40) {
+            bool _1000008 = Int__LT_(i, n);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 Array__Char* _25 = &a; // ref
                 Char _30 = (*f).env ? ((Char(*)(LambdaEnv))(*f).callback)((*f).env) : ((Char(*)())(*f).callback)();
                 Array_aset_MINUS_uninitialized_BANG___Char(_25, i, _30);
-                int _37 = Int__PLUS_(i, 1);
-                i = _37;  // Int = Int
-                bool _20 = Int__LT_(i, n);
-                _40 = _20;
+                int _1000013 = Int__PLUS_(i, 1);
+                i = _1000013;  // Int = Int
+                bool _1000008 = Int__LT_(i, n);
+                _1000006 = _1000008;
             }
         }
         Array__Char _43 = a;
@@ -8194,16 +9058,16 @@ Array__Char Array_replicate__Char(int n, Char* e) {
         Array__Char a = _9;
         /* let */ {
             int i = 0;
-            bool _20 = Int__LT_(i, n);
-            bool _39 = _20;
-            while (_39) {
+            bool _1000008 = Int__LT_(i, n);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 Array__Char* _25 = &a; // ref
                 Char _29 = Char_copy(e);
                 Array_aset_MINUS_uninitialized_BANG___Char(_25, i, _29);
-                int _36 = Int__PLUS_(i, 1);
-                i = _36;  // Int = Int
-                bool _20 = Int__LT_(i, n);
-                _39 = _20;
+                int _1000013 = Int__PLUS_(i, 1);
+                i = _1000013;  // Int = Int
+                bool _1000008 = Int__LT_(i, n);
+                _1000006 = _1000008;
             }
         }
         Array__Char _42 = a;
@@ -8219,16 +9083,16 @@ Array__float Array_replicate__float(int n, float* e) {
         Array__float a = _9;
         /* let */ {
             int i = 0;
-            bool _20 = Int__LT_(i, n);
-            bool _39 = _20;
-            while (_39) {
+            bool _1000008 = Int__LT_(i, n);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 Array__float* _25 = &a; // ref
                 float _29 = Float_copy(e);
                 Array_aset_MINUS_uninitialized_BANG___float(_25, i, _29);
-                int _36 = Int__PLUS_(i, 1);
-                i = _36;  // Int = Int
-                bool _20 = Int__LT_(i, n);
-                _39 = _20;
+                int _1000013 = Int__PLUS_(i, 1);
+                i = _1000013;  // Int = Int
+                bool _1000008 = Int__LT_(i, n);
+                _1000006 = _1000008;
             }
         }
         Array__float _42 = a;
@@ -8281,17 +9145,17 @@ Array__Char Array_slice__Char(Array__Char* xs, int start_MINUS_index, int end_MI
         Array__Char result = _8;
         /* let */ {
             int i = start_MINUS_index;
-            bool _19 = Int__LT_(i, end_MINUS_index);
-            bool _41 = _19;
-            while (_41) {
+            bool _1000008 = Int__LT_(i, end_MINUS_index);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 Char* _29 = Array_unsafe_MINUS_nth__Char(xs, i);
                 Char _30 = Char_copy(_29);
                 Array__Char _31 = Array_push_MINUS_back__Char(result, _30);
                 result = _31;  // (Array Char) = (Array Char)
-                int _38 = Int__PLUS_(i, 1);
-                i = _38;  // Int = Int
-                bool _19 = Int__LT_(i, end_MINUS_index);
-                _41 = _19;
+                int _1000014 = Int__PLUS_(i, 1);
+                i = _1000014;  // Int = Int
+                bool _1000008 = Int__LT_(i, end_MINUS_index);
+                _1000006 = _1000008;
             }
         }
         Array__Char _44 = result;
@@ -8307,17 +9171,17 @@ Array__uint8_t Array_slice__uint8_t(Array__uint8_t* xs, int start_MINUS_index, i
         Array__uint8_t result = _8;
         /* let */ {
             int i = start_MINUS_index;
-            bool _19 = Int__LT_(i, end_MINUS_index);
-            bool _41 = _19;
-            while (_41) {
+            bool _1000008 = Int__LT_(i, end_MINUS_index);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 uint8_t* _29 = Array_unsafe_MINUS_nth__uint8_t(xs, i);
                 uint8_t _30 = Byte_copy(_29);
                 Array__uint8_t _31 = Array_push_MINUS_back__uint8_t(result, _30);
                 result = _31;  // (Array Byte) = (Array Byte)
-                int _38 = Int__PLUS_(i, 1);
-                i = _38;  // Int = Int
-                bool _19 = Int__LT_(i, end_MINUS_index);
-                _41 = _19;
+                int _1000014 = Int__PLUS_(i, 1);
+                i = _1000014;  // Int = Int
+                bool _1000008 = Int__LT_(i, end_MINUS_index);
+                _1000006 = _1000008;
             }
         }
         Array__uint8_t _44 = result;
@@ -8326,8 +9190,80 @@ Array__uint8_t Array_slice__uint8_t(Array__uint8_t* xs, int start_MINUS_index, i
     return _45;
 }
 
+String Array_str__Contact (Array* a) {
+  String temp = NULL;
+  int tempsize = 0;
+  (void)tempsize;
+  int size = 3; // opening and closing brackets and terminator
+  for(int i = 0; i < a->len; i++) {
+    temp = Contact_prn(&((Contact*)a->data)[i]);
+    size += snprintf(NULL, 0, "%s ", temp);
+    if(temp) {
+      CARP_FREE(temp);
+      temp = NULL;
+    }
+  }
+
+  String buffer = CARP_MALLOC(size);
+  String bufferPtr = buffer;
+
+  snprintf(buffer, size, "[");
+  bufferPtr += 1;
+
+  for(int i = 0; i < a->len; i++) {
+    temp = Contact_prn(&((Contact*)a->data)[i]);
+    tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+    bufferPtr += tempsize;
+    if(temp) {
+      CARP_FREE(temp);
+      temp = NULL;
+    }
+  }
+
+  if(a->len > 0) { bufferPtr -= 1; }
+  snprintf(bufferPtr, size - (bufferPtr - buffer), "]");
+  return buffer;
+}
+
+String Array_str__LocalCrater (Array* a) {
+  String temp = NULL;
+  int tempsize = 0;
+  (void)tempsize;
+  int size = 3; // opening and closing brackets and terminator
+  for(int i = 0; i < a->len; i++) {
+    temp = LocalCrater_prn(&((LocalCrater*)a->data)[i]);
+    size += snprintf(NULL, 0, "%s ", temp);
+    if(temp) {
+      CARP_FREE(temp);
+      temp = NULL;
+    }
+  }
+
+  String buffer = CARP_MALLOC(size);
+  String bufferPtr = buffer;
+
+  snprintf(buffer, size, "[");
+  bufferPtr += 1;
+
+  for(int i = 0; i < a->len; i++) {
+    temp = LocalCrater_prn(&((LocalCrater*)a->data)[i]);
+    tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+    bufferPtr += tempsize;
+    if(temp) {
+      CARP_FREE(temp);
+      temp = NULL;
+    }
+  }
+
+  if(a->len > 0) { bufferPtr -= 1; }
+  snprintf(bufferPtr, size - (bufferPtr - buffer), "]");
+  return buffer;
+}
+
 String Array_str__float (Array* a) {
   String temp = NULL;
+  int tempsize = 0;
+  (void)tempsize;
   int size = 3; // opening and closing brackets and terminator
   for(int i = 0; i < a->len; i++) {
     temp = Float_prn(((float*)a->data)[i]);
@@ -8341,13 +9277,13 @@ String Array_str__float (Array* a) {
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
-  sprintf(buffer, "[");
+  snprintf(buffer, size, "[");
   bufferPtr += 1;
 
   for(int i = 0; i < a->len; i++) {
     temp = Float_prn(((float*)a->data)[i]);
-    sprintf(bufferPtr, "%s ", temp);
-    bufferPtr += strlen(temp) + 1;
+    tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+    bufferPtr += tempsize;
     if(temp) {
       CARP_FREE(temp);
       temp = NULL;
@@ -8355,7 +9291,7 @@ String Array_str__float (Array* a) {
   }
 
   if(a->len > 0) { bufferPtr -= 1; }
-  sprintf(bufferPtr, "]");
+  snprintf(bufferPtr, size - (bufferPtr - buffer), "]");
   return buffer;
 }
 
@@ -8399,6 +9335,20 @@ Collidable* Array_unsafe_MINUS_nth__Collidable (Array *aRef, int n) {
     assert(n >= 0);
     assert(n < a.len);
     return &(((Collidable*)a.data)[n]);
+}
+
+Contact* Array_unsafe_MINUS_nth__Contact (Array *aRef, int n) {
+    Array a = *aRef;
+    assert(n >= 0);
+    assert(n < a.len);
+    return &(((Contact*)a.data)[n]);
+}
+
+LocalCrater* Array_unsafe_MINUS_nth__LocalCrater (Array *aRef, int n) {
+    Array a = *aRef;
+    assert(n >= 0);
+    assert(n < a.len);
+    return &(((LocalCrater*)a.data)[n]);
 }
 
 Pair__ColorId_String* Array_unsafe_MINUS_nth__Pair__ColorId_String (Array *aRef, int n) {
@@ -8488,6 +9438,257 @@ uint8_t* Array_unsafe_MINUS_nth__uint8_t (Array *aRef, int n) {
 Array__uint8_t Array_zero__uint8_t() {
     Array _3 = { .len = 0, .capacity = 0, .data = CARP_MALLOC(sizeof(uint8_t) * 0) };
     return _3;
+}
+
+BaseShape BaseShape_Ball(double member0) {
+  BaseShape instance;
+    instance.u.Ball.member0 = member0;
+    instance._tag = BaseShape_Ball_tag;
+    return instance;
+}
+
+BaseShape BaseShape_Box(Vector3__double member0) {
+  BaseShape instance;
+    instance.u.Box.member0 = member0;
+    instance._tag = BaseShape_Box_tag;
+    return instance;
+}
+
+BaseShape BaseShape_Cylinder(double member0, double member1) {
+  BaseShape instance;
+    instance.u.Cylinder.member0 = member0;
+    instance.u.Cylinder.member1 = member1;
+    instance._tag = BaseShape_Cylinder_tag;
+    return instance;
+}
+
+BaseShape BaseShape_Surface(Plane member0) {
+  BaseShape instance;
+    instance.u.Surface.member0 = member0;
+    instance._tag = BaseShape_Surface_tag;
+    return instance;
+}
+
+BaseShape BaseShape_copy(BaseShape* pRef) {
+    BaseShape copy = *pRef;
+    if(pRef->_tag == BaseShape_Ball_tag) {
+    /* Ignore non-managed member 'u.Ball.member0' : Double */
+    }
+
+    else if(pRef->_tag == BaseShape_Surface_tag) {
+    copy.u.Surface.member0 = Plane_copy(&(pRef->u.Surface.member0));
+    }
+
+    else if(pRef->_tag == BaseShape_Box_tag) {
+    copy.u.Box.member0 = Vector3_copy__double(&(pRef->u.Box.member0));
+    }
+
+    else if(pRef->_tag == BaseShape_Cylinder_tag) {
+    /* Ignore non-managed member 'u.Cylinder.member0' : Double */
+    /* Ignore non-managed member 'u.Cylinder.member1' : Double */
+    }
+
+    return copy;
+}
+
+void BaseShape_delete(BaseShape p) {
+  if(p._tag == BaseShape_Ball_tag) {
+    /* Ignore non-managed member 'u.Ball.member0' : Double */
+  }
+  else if(p._tag == BaseShape_Surface_tag) {
+    Plane_delete(p.u.Surface.member0);
+  }
+  else if(p._tag == BaseShape_Box_tag) {
+    Vector3_delete__double(p.u.Box.member0);
+  }
+  else if(p._tag == BaseShape_Cylinder_tag) {
+    /* Ignore non-managed member 'u.Cylinder.member0' : Double */
+    /* Ignore non-managed member 'u.Cylinder.member1' : Double */
+  }
+
+}
+
+int BaseShape_get_MINUS_tag(BaseShape *p) { return p->_tag; }
+String BaseShape_prn(BaseShape *p) {
+  // convert members to String here:
+  String temp = NULL;
+  int tempsize = 0;
+  (void)tempsize; // that way we remove the occasional unused warning 
+  int size = 1;
+  if(p->_tag == BaseShape_Ball_tag) {
+    size += snprintf(NULL, 0, "(%s ", "Ball");
+  temp = Double_prn(p->u.Ball.member0); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  }
+  if(p->_tag == BaseShape_Surface_tag) {
+    size += snprintf(NULL, 0, "(%s ", "Surface");
+  temp = Plane_prn(&p->u.Surface.member0); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  }
+  if(p->_tag == BaseShape_Box_tag) {
+    size += snprintf(NULL, 0, "(%s ", "Box");
+  temp = Vector3_prn__double(&p->u.Box.member0); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  }
+  if(p->_tag == BaseShape_Cylinder_tag) {
+    size += snprintf(NULL, 0, "(%s ", "Cylinder");
+  temp = Double_prn(p->u.Cylinder.member0); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Double_prn(p->u.Cylinder.member1); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  }
+
+  String buffer = CARP_MALLOC(size);
+  String bufferPtr = buffer;
+
+  if(p->_tag == BaseShape_Ball_tag) {
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Ball");
+  temp = Double_prn(p->u.Ball.member0);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+    bufferPtr--;
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
+  }
+  if(p->_tag == BaseShape_Surface_tag) {
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Surface");
+  temp = Plane_prn(&p->u.Surface.member0);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+    bufferPtr--;
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
+  }
+  if(p->_tag == BaseShape_Box_tag) {
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Box");
+  temp = Vector3_prn__double(&p->u.Box.member0);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+    bufferPtr--;
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
+  }
+  if(p->_tag == BaseShape_Cylinder_tag) {
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Cylinder");
+  temp = Double_prn(p->u.Cylinder.member0);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Double_prn(p->u.Cylinder.member1);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+    bufferPtr--;
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
+  }
+
+  return buffer;
+}
+
+String BaseShape_str(BaseShape *p) {
+  // convert members to String here:
+  String temp = NULL;
+  int tempsize = 0;
+  (void)tempsize; // that way we remove the occasional unused warning 
+  int size = 1;
+  if(p->_tag == BaseShape_Ball_tag) {
+    size += snprintf(NULL, 0, "(%s ", "Ball");
+  temp = Double_prn(p->u.Ball.member0); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  }
+  if(p->_tag == BaseShape_Surface_tag) {
+    size += snprintf(NULL, 0, "(%s ", "Surface");
+  temp = Plane_prn(&p->u.Surface.member0); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  }
+  if(p->_tag == BaseShape_Box_tag) {
+    size += snprintf(NULL, 0, "(%s ", "Box");
+  temp = Vector3_prn__double(&p->u.Box.member0); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  }
+  if(p->_tag == BaseShape_Cylinder_tag) {
+    size += snprintf(NULL, 0, "(%s ", "Cylinder");
+  temp = Double_prn(p->u.Cylinder.member0); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Double_prn(p->u.Cylinder.member1); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  }
+
+  String buffer = CARP_MALLOC(size);
+  String bufferPtr = buffer;
+
+  if(p->_tag == BaseShape_Ball_tag) {
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Ball");
+  temp = Double_prn(p->u.Ball.member0);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+    bufferPtr--;
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
+  }
+  if(p->_tag == BaseShape_Surface_tag) {
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Surface");
+  temp = Plane_prn(&p->u.Surface.member0);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+    bufferPtr--;
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
+  }
+  if(p->_tag == BaseShape_Box_tag) {
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Box");
+  temp = Vector3_prn__double(&p->u.Box.member0);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+    bufferPtr--;
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
+  }
+  if(p->_tag == BaseShape_Cylinder_tag) {
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Cylinder");
+  temp = Double_prn(p->u.Cylinder.member0);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Double_prn(p->u.Cylinder.member1);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+    bufferPtr--;
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
+  }
+
+  return buffer;
 }
 
 Result__Uint16_Array__uint8_t Binary__Lambda_byte_MINUS_converter__ByteOrder_Array__uint8_t_Uint16_29_env(Binary__Lambda_byte_MINUS_converter__ByteOrder_Array__uint8_t_Uint16_29_env_ty* _env, Array__uint8_t* bs) {
@@ -8700,24 +9901,24 @@ Maybe__Uint16 Binary_bytes_MINUS__GT_int16(ByteOrder order, Array__uint8_t* byte
         ByteOrder _6_temp = order;
         // Case expr:
         Maybe__uint8_t _13 = Array_nth__uint8_t(bytes, 0);
-        Maybe__Uint16 _44;
+        Maybe__Uint16 _1000003;
         if(_13._tag == Maybe__uint8_t_Nothing_tag) {
             Maybe__uint8_t _13_temp = _13;
             // Case expr:
-            Maybe__Uint16 _17 = Maybe_Nothing__Uint16();
-            _44 = _17;
+            Maybe__Uint16 _1000006 = Maybe_Nothing__Uint16();
+            _1000003 = _1000006;
         }
         else if(_13._tag == Maybe__uint8_t_Just_tag) {
             Maybe__uint8_t _13_temp = _13;
             uint8_t zip1009 = _13_temp.u.Just.member0;
             // Case expr:
             Maybe__uint8_t _25 = Array_nth__uint8_t(bytes, 1);
-            Maybe__Uint16 _43;
+            Maybe__Uint16 _1000008;
             if(_25._tag == Maybe__uint8_t_Nothing_tag) {
                 Maybe__uint8_t _25_temp = _25;
                 // Case expr:
-                Maybe__Uint16 _29 = Maybe_Nothing__Uint16();
-                _43 = _29;
+                Maybe__Uint16 _1000011 = Maybe_Nothing__Uint16();
+                _1000008 = _1000011;
             }
             else if(_25._tag == Maybe__uint8_t_Just_tag) {
                 Maybe__uint8_t _25_temp = _25;
@@ -8725,38 +9926,38 @@ Maybe__Uint16 Binary_bytes_MINUS__GT_int16(ByteOrder order, Array__uint8_t* byte
                 // Case expr:
                 Lambda _36 = { .callback = (void*)Binary_to_MINUS_int16, .env = NULL, .delete = NULL, .copy = NULL }; //Sym Binary.to-int16 (LookupGlobal ExternalCode AFunction)
                 Lambda* _37 = &_36; // ref
-                Uint16 _41 = (*_37).env ? ((Uint16(*)(LambdaEnv, uint8_t, uint8_t))(*_37).callback)((*_37).env, zip1009, zip1010) : ((Uint16(*)(uint8_t, uint8_t))(*_37).callback)(zip1009, zip1010);
-                Maybe__Uint16 _42 = Maybe_Just__Uint16(_41);
-                _43 = _42;
+                Uint16 _1000014 = (*_37).env ? ((Uint16(*)(LambdaEnv, uint8_t, uint8_t))(*_37).callback)((*_37).env, zip1009, zip1010) : ((Uint16(*)(uint8_t, uint8_t))(*_37).callback)(zip1009, zip1010);
+                Maybe__Uint16 _1000013 = Maybe_Just__Uint16(_1000014);
+                _1000008 = _1000013;
             }
-            else UNHANDLED("dummy-file", 0);
-            _44 = _43;
+            else UNHANDLED("Binary.carp", 112);
+            _1000003 = _1000008;
         }
-        else UNHANDLED("dummy-file", 0);
-        _83 = _44;
+        else UNHANDLED("Binary.carp", 112);
+        _83 = _1000003;
     }
     else if(order._tag == ByteOrder_BigEndian_tag) {
         ByteOrder _6_temp = order;
         // Case expr:
         Maybe__uint8_t _51 = Array_nth__uint8_t(bytes, 1);
-        Maybe__Uint16 _82;
+        Maybe__Uint16 _1000016;
         if(_51._tag == Maybe__uint8_t_Nothing_tag) {
             Maybe__uint8_t _51_temp = _51;
             // Case expr:
-            Maybe__Uint16 _55 = Maybe_Nothing__Uint16();
-            _82 = _55;
+            Maybe__Uint16 _1000019 = Maybe_Nothing__Uint16();
+            _1000016 = _1000019;
         }
         else if(_51._tag == Maybe__uint8_t_Just_tag) {
             Maybe__uint8_t _51_temp = _51;
             uint8_t zip1011 = _51_temp.u.Just.member0;
             // Case expr:
             Maybe__uint8_t _63 = Array_nth__uint8_t(bytes, 0);
-            Maybe__Uint16 _81;
+            Maybe__Uint16 _1000021;
             if(_63._tag == Maybe__uint8_t_Nothing_tag) {
                 Maybe__uint8_t _63_temp = _63;
                 // Case expr:
-                Maybe__Uint16 _67 = Maybe_Nothing__Uint16();
-                _81 = _67;
+                Maybe__Uint16 _1000024 = Maybe_Nothing__Uint16();
+                _1000021 = _1000024;
             }
             else if(_63._tag == Maybe__uint8_t_Just_tag) {
                 Maybe__uint8_t _63_temp = _63;
@@ -8764,15 +9965,15 @@ Maybe__Uint16 Binary_bytes_MINUS__GT_int16(ByteOrder order, Array__uint8_t* byte
                 // Case expr:
                 Lambda _74 = { .callback = (void*)Binary_to_MINUS_int16, .env = NULL, .delete = NULL, .copy = NULL }; //Sym Binary.to-int16 (LookupGlobal ExternalCode AFunction)
                 Lambda* _75 = &_74; // ref
-                Uint16 _79 = (*_75).env ? ((Uint16(*)(LambdaEnv, uint8_t, uint8_t))(*_75).callback)((*_75).env, zip1011, zip1012) : ((Uint16(*)(uint8_t, uint8_t))(*_75).callback)(zip1011, zip1012);
-                Maybe__Uint16 _80 = Maybe_Just__Uint16(_79);
-                _81 = _80;
+                Uint16 _1000027 = (*_75).env ? ((Uint16(*)(LambdaEnv, uint8_t, uint8_t))(*_75).callback)((*_75).env, zip1011, zip1012) : ((Uint16(*)(uint8_t, uint8_t))(*_75).callback)(zip1011, zip1012);
+                Maybe__Uint16 _1000026 = Maybe_Just__Uint16(_1000027);
+                _1000021 = _1000026;
             }
-            else UNHANDLED("dummy-file", 0);
-            _82 = _81;
+            else UNHANDLED("Binary.carp", 112);
+            _1000016 = _1000021;
         }
-        else UNHANDLED("dummy-file", 0);
-        _83 = _82;
+        else UNHANDLED("Binary.carp", 112);
+        _83 = _1000016;
     }
     else UNHANDLED("Binary.carp", 112);
     return _83;
@@ -8845,48 +10046,48 @@ Maybe__Uint32 Binary_bytes_MINUS__GT_int32(ByteOrder order, Array__uint8_t* bs) 
         ByteOrder _6_temp = order;
         // Case expr:
         Maybe__uint8_t _13 = Array_nth__uint8_t(bs, 0);
-        Maybe__Uint32 _72;
+        Maybe__Uint32 _1000003;
         if(_13._tag == Maybe__uint8_t_Nothing_tag) {
             Maybe__uint8_t _13_temp = _13;
             // Case expr:
-            Maybe__Uint32 _17 = Maybe_Nothing__Uint32();
-            _72 = _17;
+            Maybe__Uint32 _1000006 = Maybe_Nothing__Uint32();
+            _1000003 = _1000006;
         }
         else if(_13._tag == Maybe__uint8_t_Just_tag) {
             Maybe__uint8_t _13_temp = _13;
             uint8_t zip1013 = _13_temp.u.Just.member0;
             // Case expr:
             Maybe__uint8_t _25 = Array_nth__uint8_t(bs, 1);
-            Maybe__Uint32 _71;
+            Maybe__Uint32 _1000008;
             if(_25._tag == Maybe__uint8_t_Nothing_tag) {
                 Maybe__uint8_t _25_temp = _25;
                 // Case expr:
-                Maybe__Uint32 _29 = Maybe_Nothing__Uint32();
-                _71 = _29;
+                Maybe__Uint32 _1000011 = Maybe_Nothing__Uint32();
+                _1000008 = _1000011;
             }
             else if(_25._tag == Maybe__uint8_t_Just_tag) {
                 Maybe__uint8_t _25_temp = _25;
                 uint8_t zip1014 = _25_temp.u.Just.member0;
                 // Case expr:
                 Maybe__uint8_t _37 = Array_nth__uint8_t(bs, 2);
-                Maybe__Uint32 _70;
+                Maybe__Uint32 _1000013;
                 if(_37._tag == Maybe__uint8_t_Nothing_tag) {
                     Maybe__uint8_t _37_temp = _37;
                     // Case expr:
-                    Maybe__Uint32 _41 = Maybe_Nothing__Uint32();
-                    _70 = _41;
+                    Maybe__Uint32 _1000016 = Maybe_Nothing__Uint32();
+                    _1000013 = _1000016;
                 }
                 else if(_37._tag == Maybe__uint8_t_Just_tag) {
                     Maybe__uint8_t _37_temp = _37;
                     uint8_t zip1015 = _37_temp.u.Just.member0;
                     // Case expr:
                     Maybe__uint8_t _49 = Array_nth__uint8_t(bs, 3);
-                    Maybe__Uint32 _69;
+                    Maybe__Uint32 _1000018;
                     if(_49._tag == Maybe__uint8_t_Nothing_tag) {
                         Maybe__uint8_t _49_temp = _49;
                         // Case expr:
-                        Maybe__Uint32 _53 = Maybe_Nothing__Uint32();
-                        _69 = _53;
+                        Maybe__Uint32 _1000021 = Maybe_Nothing__Uint32();
+                        _1000018 = _1000021;
                     }
                     else if(_49._tag == Maybe__uint8_t_Just_tag) {
                         Maybe__uint8_t _49_temp = _49;
@@ -8894,68 +10095,68 @@ Maybe__Uint32 Binary_bytes_MINUS__GT_int32(ByteOrder order, Array__uint8_t* bs) 
                         // Case expr:
                         Lambda _60 = { .callback = (void*)Binary_to_MINUS_int32, .env = NULL, .delete = NULL, .copy = NULL }; //Sym Binary.to-int32 (LookupGlobal ExternalCode AFunction)
                         Lambda* _61 = &_60; // ref
-                        Uint32 _67 = (*_61).env ? ((Uint32(*)(LambdaEnv, uint8_t, uint8_t, uint8_t, uint8_t))(*_61).callback)((*_61).env, zip1013, zip1014, zip1015, zip1016) : ((Uint32(*)(uint8_t, uint8_t, uint8_t, uint8_t))(*_61).callback)(zip1013, zip1014, zip1015, zip1016);
-                        Maybe__Uint32 _68 = Maybe_Just__Uint32(_67);
-                        _69 = _68;
+                        Uint32 _1000024 = (*_61).env ? ((Uint32(*)(LambdaEnv, uint8_t, uint8_t, uint8_t, uint8_t))(*_61).callback)((*_61).env, zip1013, zip1014, zip1015, zip1016) : ((Uint32(*)(uint8_t, uint8_t, uint8_t, uint8_t))(*_61).callback)(zip1013, zip1014, zip1015, zip1016);
+                        Maybe__Uint32 _1000023 = Maybe_Just__Uint32(_1000024);
+                        _1000018 = _1000023;
                     }
-                    else UNHANDLED("dummy-file", 0);
-                    _70 = _69;
+                    else UNHANDLED("Binary.carp", 186);
+                    _1000013 = _1000018;
                 }
-                else UNHANDLED("dummy-file", 0);
-                _71 = _70;
+                else UNHANDLED("Binary.carp", 186);
+                _1000008 = _1000013;
             }
-            else UNHANDLED("dummy-file", 0);
-            _72 = _71;
+            else UNHANDLED("Binary.carp", 186);
+            _1000003 = _1000008;
         }
-        else UNHANDLED("dummy-file", 0);
-        _139 = _72;
+        else UNHANDLED("Binary.carp", 186);
+        _139 = _1000003;
     }
     else if(order._tag == ByteOrder_BigEndian_tag) {
         ByteOrder _6_temp = order;
         // Case expr:
         Maybe__uint8_t _79 = Array_nth__uint8_t(bs, 3);
-        Maybe__Uint32 _138;
+        Maybe__Uint32 _1000026;
         if(_79._tag == Maybe__uint8_t_Nothing_tag) {
             Maybe__uint8_t _79_temp = _79;
             // Case expr:
-            Maybe__Uint32 _83 = Maybe_Nothing__Uint32();
-            _138 = _83;
+            Maybe__Uint32 _1000029 = Maybe_Nothing__Uint32();
+            _1000026 = _1000029;
         }
         else if(_79._tag == Maybe__uint8_t_Just_tag) {
             Maybe__uint8_t _79_temp = _79;
             uint8_t zip1017 = _79_temp.u.Just.member0;
             // Case expr:
             Maybe__uint8_t _91 = Array_nth__uint8_t(bs, 2);
-            Maybe__Uint32 _137;
+            Maybe__Uint32 _1000031;
             if(_91._tag == Maybe__uint8_t_Nothing_tag) {
                 Maybe__uint8_t _91_temp = _91;
                 // Case expr:
-                Maybe__Uint32 _95 = Maybe_Nothing__Uint32();
-                _137 = _95;
+                Maybe__Uint32 _1000034 = Maybe_Nothing__Uint32();
+                _1000031 = _1000034;
             }
             else if(_91._tag == Maybe__uint8_t_Just_tag) {
                 Maybe__uint8_t _91_temp = _91;
                 uint8_t zip1018 = _91_temp.u.Just.member0;
                 // Case expr:
                 Maybe__uint8_t _103 = Array_nth__uint8_t(bs, 1);
-                Maybe__Uint32 _136;
+                Maybe__Uint32 _1000036;
                 if(_103._tag == Maybe__uint8_t_Nothing_tag) {
                     Maybe__uint8_t _103_temp = _103;
                     // Case expr:
-                    Maybe__Uint32 _107 = Maybe_Nothing__Uint32();
-                    _136 = _107;
+                    Maybe__Uint32 _1000039 = Maybe_Nothing__Uint32();
+                    _1000036 = _1000039;
                 }
                 else if(_103._tag == Maybe__uint8_t_Just_tag) {
                     Maybe__uint8_t _103_temp = _103;
                     uint8_t zip1019 = _103_temp.u.Just.member0;
                     // Case expr:
                     Maybe__uint8_t _115 = Array_nth__uint8_t(bs, 0);
-                    Maybe__Uint32 _135;
+                    Maybe__Uint32 _1000041;
                     if(_115._tag == Maybe__uint8_t_Nothing_tag) {
                         Maybe__uint8_t _115_temp = _115;
                         // Case expr:
-                        Maybe__Uint32 _119 = Maybe_Nothing__Uint32();
-                        _135 = _119;
+                        Maybe__Uint32 _1000044 = Maybe_Nothing__Uint32();
+                        _1000041 = _1000044;
                     }
                     else if(_115._tag == Maybe__uint8_t_Just_tag) {
                         Maybe__uint8_t _115_temp = _115;
@@ -8963,21 +10164,21 @@ Maybe__Uint32 Binary_bytes_MINUS__GT_int32(ByteOrder order, Array__uint8_t* bs) 
                         // Case expr:
                         Lambda _126 = { .callback = (void*)Binary_to_MINUS_int32, .env = NULL, .delete = NULL, .copy = NULL }; //Sym Binary.to-int32 (LookupGlobal ExternalCode AFunction)
                         Lambda* _127 = &_126; // ref
-                        Uint32 _133 = (*_127).env ? ((Uint32(*)(LambdaEnv, uint8_t, uint8_t, uint8_t, uint8_t))(*_127).callback)((*_127).env, zip1017, zip1018, zip1019, zip1020) : ((Uint32(*)(uint8_t, uint8_t, uint8_t, uint8_t))(*_127).callback)(zip1017, zip1018, zip1019, zip1020);
-                        Maybe__Uint32 _134 = Maybe_Just__Uint32(_133);
-                        _135 = _134;
+                        Uint32 _1000047 = (*_127).env ? ((Uint32(*)(LambdaEnv, uint8_t, uint8_t, uint8_t, uint8_t))(*_127).callback)((*_127).env, zip1017, zip1018, zip1019, zip1020) : ((Uint32(*)(uint8_t, uint8_t, uint8_t, uint8_t))(*_127).callback)(zip1017, zip1018, zip1019, zip1020);
+                        Maybe__Uint32 _1000046 = Maybe_Just__Uint32(_1000047);
+                        _1000041 = _1000046;
                     }
-                    else UNHANDLED("dummy-file", 0);
-                    _136 = _135;
+                    else UNHANDLED("Binary.carp", 186);
+                    _1000036 = _1000041;
                 }
-                else UNHANDLED("dummy-file", 0);
-                _137 = _136;
+                else UNHANDLED("Binary.carp", 186);
+                _1000031 = _1000036;
             }
-            else UNHANDLED("dummy-file", 0);
-            _138 = _137;
+            else UNHANDLED("Binary.carp", 186);
+            _1000026 = _1000031;
         }
-        else UNHANDLED("dummy-file", 0);
-        _139 = _138;
+        else UNHANDLED("Binary.carp", 186);
+        _139 = _1000026;
     }
     else UNHANDLED("Binary.carp", 186);
     return _139;
@@ -9050,96 +10251,96 @@ Maybe__Uint64 Binary_bytes_MINUS__GT_int64(ByteOrder order, Array__uint8_t* bs) 
         ByteOrder _6_temp = order;
         // Case expr:
         Maybe__uint8_t _13 = Array_nth__uint8_t(bs, 0);
-        Maybe__Uint64 _128;
+        Maybe__Uint64 _1000003;
         if(_13._tag == Maybe__uint8_t_Nothing_tag) {
             Maybe__uint8_t _13_temp = _13;
             // Case expr:
-            Maybe__Uint64 _17 = Maybe_Nothing__Uint64();
-            _128 = _17;
+            Maybe__Uint64 _1000006 = Maybe_Nothing__Uint64();
+            _1000003 = _1000006;
         }
         else if(_13._tag == Maybe__uint8_t_Just_tag) {
             Maybe__uint8_t _13_temp = _13;
             uint8_t zip1021 = _13_temp.u.Just.member0;
             // Case expr:
             Maybe__uint8_t _25 = Array_nth__uint8_t(bs, 1);
-            Maybe__Uint64 _127;
+            Maybe__Uint64 _1000008;
             if(_25._tag == Maybe__uint8_t_Nothing_tag) {
                 Maybe__uint8_t _25_temp = _25;
                 // Case expr:
-                Maybe__Uint64 _29 = Maybe_Nothing__Uint64();
-                _127 = _29;
+                Maybe__Uint64 _1000011 = Maybe_Nothing__Uint64();
+                _1000008 = _1000011;
             }
             else if(_25._tag == Maybe__uint8_t_Just_tag) {
                 Maybe__uint8_t _25_temp = _25;
                 uint8_t zip1022 = _25_temp.u.Just.member0;
                 // Case expr:
                 Maybe__uint8_t _37 = Array_nth__uint8_t(bs, 2);
-                Maybe__Uint64 _126;
+                Maybe__Uint64 _1000013;
                 if(_37._tag == Maybe__uint8_t_Nothing_tag) {
                     Maybe__uint8_t _37_temp = _37;
                     // Case expr:
-                    Maybe__Uint64 _41 = Maybe_Nothing__Uint64();
-                    _126 = _41;
+                    Maybe__Uint64 _1000016 = Maybe_Nothing__Uint64();
+                    _1000013 = _1000016;
                 }
                 else if(_37._tag == Maybe__uint8_t_Just_tag) {
                     Maybe__uint8_t _37_temp = _37;
                     uint8_t zip1023 = _37_temp.u.Just.member0;
                     // Case expr:
                     Maybe__uint8_t _49 = Array_nth__uint8_t(bs, 3);
-                    Maybe__Uint64 _125;
+                    Maybe__Uint64 _1000018;
                     if(_49._tag == Maybe__uint8_t_Nothing_tag) {
                         Maybe__uint8_t _49_temp = _49;
                         // Case expr:
-                        Maybe__Uint64 _53 = Maybe_Nothing__Uint64();
-                        _125 = _53;
+                        Maybe__Uint64 _1000021 = Maybe_Nothing__Uint64();
+                        _1000018 = _1000021;
                     }
                     else if(_49._tag == Maybe__uint8_t_Just_tag) {
                         Maybe__uint8_t _49_temp = _49;
                         uint8_t zip1024 = _49_temp.u.Just.member0;
                         // Case expr:
                         Maybe__uint8_t _61 = Array_nth__uint8_t(bs, 4);
-                        Maybe__Uint64 _124;
+                        Maybe__Uint64 _1000023;
                         if(_61._tag == Maybe__uint8_t_Nothing_tag) {
                             Maybe__uint8_t _61_temp = _61;
                             // Case expr:
-                            Maybe__Uint64 _65 = Maybe_Nothing__Uint64();
-                            _124 = _65;
+                            Maybe__Uint64 _1000026 = Maybe_Nothing__Uint64();
+                            _1000023 = _1000026;
                         }
                         else if(_61._tag == Maybe__uint8_t_Just_tag) {
                             Maybe__uint8_t _61_temp = _61;
                             uint8_t zip1025 = _61_temp.u.Just.member0;
                             // Case expr:
                             Maybe__uint8_t _73 = Array_nth__uint8_t(bs, 5);
-                            Maybe__Uint64 _123;
+                            Maybe__Uint64 _1000028;
                             if(_73._tag == Maybe__uint8_t_Nothing_tag) {
                                 Maybe__uint8_t _73_temp = _73;
                                 // Case expr:
-                                Maybe__Uint64 _77 = Maybe_Nothing__Uint64();
-                                _123 = _77;
+                                Maybe__Uint64 _1000031 = Maybe_Nothing__Uint64();
+                                _1000028 = _1000031;
                             }
                             else if(_73._tag == Maybe__uint8_t_Just_tag) {
                                 Maybe__uint8_t _73_temp = _73;
                                 uint8_t zip1026 = _73_temp.u.Just.member0;
                                 // Case expr:
                                 Maybe__uint8_t _85 = Array_nth__uint8_t(bs, 6);
-                                Maybe__Uint64 _122;
+                                Maybe__Uint64 _1000033;
                                 if(_85._tag == Maybe__uint8_t_Nothing_tag) {
                                     Maybe__uint8_t _85_temp = _85;
                                     // Case expr:
-                                    Maybe__Uint64 _89 = Maybe_Nothing__Uint64();
-                                    _122 = _89;
+                                    Maybe__Uint64 _1000036 = Maybe_Nothing__Uint64();
+                                    _1000033 = _1000036;
                                 }
                                 else if(_85._tag == Maybe__uint8_t_Just_tag) {
                                     Maybe__uint8_t _85_temp = _85;
                                     uint8_t zip1027 = _85_temp.u.Just.member0;
                                     // Case expr:
                                     Maybe__uint8_t _97 = Array_nth__uint8_t(bs, 7);
-                                    Maybe__Uint64 _121;
+                                    Maybe__Uint64 _1000038;
                                     if(_97._tag == Maybe__uint8_t_Nothing_tag) {
                                         Maybe__uint8_t _97_temp = _97;
                                         // Case expr:
-                                        Maybe__Uint64 _101 = Maybe_Nothing__Uint64();
-                                        _121 = _101;
+                                        Maybe__Uint64 _1000041 = Maybe_Nothing__Uint64();
+                                        _1000038 = _1000041;
                                     }
                                     else if(_97._tag == Maybe__uint8_t_Just_tag) {
                                         Maybe__uint8_t _97_temp = _97;
@@ -9147,128 +10348,128 @@ Maybe__Uint64 Binary_bytes_MINUS__GT_int64(ByteOrder order, Array__uint8_t* bs) 
                                         // Case expr:
                                         Lambda _108 = { .callback = (void*)Binary_to_MINUS_int64, .env = NULL, .delete = NULL, .copy = NULL }; //Sym Binary.to-int64 (LookupGlobal ExternalCode AFunction)
                                         Lambda* _109 = &_108; // ref
-                                        Uint64 _119 = (*_109).env ? ((Uint64(*)(LambdaEnv, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t))(*_109).callback)((*_109).env, zip1021, zip1022, zip1023, zip1024, zip1025, zip1026, zip1027, zip1028) : ((Uint64(*)(uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t))(*_109).callback)(zip1021, zip1022, zip1023, zip1024, zip1025, zip1026, zip1027, zip1028);
-                                        Maybe__Uint64 _120 = Maybe_Just__Uint64(_119);
-                                        _121 = _120;
+                                        Uint64 _1000044 = (*_109).env ? ((Uint64(*)(LambdaEnv, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t))(*_109).callback)((*_109).env, zip1021, zip1022, zip1023, zip1024, zip1025, zip1026, zip1027, zip1028) : ((Uint64(*)(uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t))(*_109).callback)(zip1021, zip1022, zip1023, zip1024, zip1025, zip1026, zip1027, zip1028);
+                                        Maybe__Uint64 _1000043 = Maybe_Just__Uint64(_1000044);
+                                        _1000038 = _1000043;
                                     }
-                                    else UNHANDLED("dummy-file", 0);
-                                    _122 = _121;
+                                    else UNHANDLED("Binary.carp", 269);
+                                    _1000033 = _1000038;
                                 }
-                                else UNHANDLED("dummy-file", 0);
-                                _123 = _122;
+                                else UNHANDLED("Binary.carp", 269);
+                                _1000028 = _1000033;
                             }
-                            else UNHANDLED("dummy-file", 0);
-                            _124 = _123;
+                            else UNHANDLED("Binary.carp", 269);
+                            _1000023 = _1000028;
                         }
-                        else UNHANDLED("dummy-file", 0);
-                        _125 = _124;
+                        else UNHANDLED("Binary.carp", 269);
+                        _1000018 = _1000023;
                     }
-                    else UNHANDLED("dummy-file", 0);
-                    _126 = _125;
+                    else UNHANDLED("Binary.carp", 269);
+                    _1000013 = _1000018;
                 }
-                else UNHANDLED("dummy-file", 0);
-                _127 = _126;
+                else UNHANDLED("Binary.carp", 269);
+                _1000008 = _1000013;
             }
-            else UNHANDLED("dummy-file", 0);
-            _128 = _127;
+            else UNHANDLED("Binary.carp", 269);
+            _1000003 = _1000008;
         }
-        else UNHANDLED("dummy-file", 0);
-        _251 = _128;
+        else UNHANDLED("Binary.carp", 269);
+        _251 = _1000003;
     }
     else if(order._tag == ByteOrder_BigEndian_tag) {
         ByteOrder _6_temp = order;
         // Case expr:
         Maybe__uint8_t _135 = Array_nth__uint8_t(bs, 7);
-        Maybe__Uint64 _250;
+        Maybe__Uint64 _1000046;
         if(_135._tag == Maybe__uint8_t_Nothing_tag) {
             Maybe__uint8_t _135_temp = _135;
             // Case expr:
-            Maybe__Uint64 _139 = Maybe_Nothing__Uint64();
-            _250 = _139;
+            Maybe__Uint64 _1000049 = Maybe_Nothing__Uint64();
+            _1000046 = _1000049;
         }
         else if(_135._tag == Maybe__uint8_t_Just_tag) {
             Maybe__uint8_t _135_temp = _135;
             uint8_t zip1029 = _135_temp.u.Just.member0;
             // Case expr:
             Maybe__uint8_t _147 = Array_nth__uint8_t(bs, 6);
-            Maybe__Uint64 _249;
+            Maybe__Uint64 _1000051;
             if(_147._tag == Maybe__uint8_t_Nothing_tag) {
                 Maybe__uint8_t _147_temp = _147;
                 // Case expr:
-                Maybe__Uint64 _151 = Maybe_Nothing__Uint64();
-                _249 = _151;
+                Maybe__Uint64 _1000054 = Maybe_Nothing__Uint64();
+                _1000051 = _1000054;
             }
             else if(_147._tag == Maybe__uint8_t_Just_tag) {
                 Maybe__uint8_t _147_temp = _147;
                 uint8_t zip1030 = _147_temp.u.Just.member0;
                 // Case expr:
                 Maybe__uint8_t _159 = Array_nth__uint8_t(bs, 5);
-                Maybe__Uint64 _248;
+                Maybe__Uint64 _1000056;
                 if(_159._tag == Maybe__uint8_t_Nothing_tag) {
                     Maybe__uint8_t _159_temp = _159;
                     // Case expr:
-                    Maybe__Uint64 _163 = Maybe_Nothing__Uint64();
-                    _248 = _163;
+                    Maybe__Uint64 _1000059 = Maybe_Nothing__Uint64();
+                    _1000056 = _1000059;
                 }
                 else if(_159._tag == Maybe__uint8_t_Just_tag) {
                     Maybe__uint8_t _159_temp = _159;
                     uint8_t zip1031 = _159_temp.u.Just.member0;
                     // Case expr:
                     Maybe__uint8_t _171 = Array_nth__uint8_t(bs, 4);
-                    Maybe__Uint64 _247;
+                    Maybe__Uint64 _1000061;
                     if(_171._tag == Maybe__uint8_t_Nothing_tag) {
                         Maybe__uint8_t _171_temp = _171;
                         // Case expr:
-                        Maybe__Uint64 _175 = Maybe_Nothing__Uint64();
-                        _247 = _175;
+                        Maybe__Uint64 _1000064 = Maybe_Nothing__Uint64();
+                        _1000061 = _1000064;
                     }
                     else if(_171._tag == Maybe__uint8_t_Just_tag) {
                         Maybe__uint8_t _171_temp = _171;
                         uint8_t zip1032 = _171_temp.u.Just.member0;
                         // Case expr:
                         Maybe__uint8_t _183 = Array_nth__uint8_t(bs, 3);
-                        Maybe__Uint64 _246;
+                        Maybe__Uint64 _1000066;
                         if(_183._tag == Maybe__uint8_t_Nothing_tag) {
                             Maybe__uint8_t _183_temp = _183;
                             // Case expr:
-                            Maybe__Uint64 _187 = Maybe_Nothing__Uint64();
-                            _246 = _187;
+                            Maybe__Uint64 _1000069 = Maybe_Nothing__Uint64();
+                            _1000066 = _1000069;
                         }
                         else if(_183._tag == Maybe__uint8_t_Just_tag) {
                             Maybe__uint8_t _183_temp = _183;
                             uint8_t zip1033 = _183_temp.u.Just.member0;
                             // Case expr:
                             Maybe__uint8_t _195 = Array_nth__uint8_t(bs, 2);
-                            Maybe__Uint64 _245;
+                            Maybe__Uint64 _1000071;
                             if(_195._tag == Maybe__uint8_t_Nothing_tag) {
                                 Maybe__uint8_t _195_temp = _195;
                                 // Case expr:
-                                Maybe__Uint64 _199 = Maybe_Nothing__Uint64();
-                                _245 = _199;
+                                Maybe__Uint64 _1000074 = Maybe_Nothing__Uint64();
+                                _1000071 = _1000074;
                             }
                             else if(_195._tag == Maybe__uint8_t_Just_tag) {
                                 Maybe__uint8_t _195_temp = _195;
                                 uint8_t zip1034 = _195_temp.u.Just.member0;
                                 // Case expr:
                                 Maybe__uint8_t _207 = Array_nth__uint8_t(bs, 1);
-                                Maybe__Uint64 _244;
+                                Maybe__Uint64 _1000076;
                                 if(_207._tag == Maybe__uint8_t_Nothing_tag) {
                                     Maybe__uint8_t _207_temp = _207;
                                     // Case expr:
-                                    Maybe__Uint64 _211 = Maybe_Nothing__Uint64();
-                                    _244 = _211;
+                                    Maybe__Uint64 _1000079 = Maybe_Nothing__Uint64();
+                                    _1000076 = _1000079;
                                 }
                                 else if(_207._tag == Maybe__uint8_t_Just_tag) {
                                     Maybe__uint8_t _207_temp = _207;
                                     uint8_t zip1035 = _207_temp.u.Just.member0;
                                     // Case expr:
                                     Maybe__uint8_t _219 = Array_nth__uint8_t(bs, 0);
-                                    Maybe__Uint64 _243;
+                                    Maybe__Uint64 _1000081;
                                     if(_219._tag == Maybe__uint8_t_Nothing_tag) {
                                         Maybe__uint8_t _219_temp = _219;
                                         // Case expr:
-                                        Maybe__Uint64 _223 = Maybe_Nothing__Uint64();
-                                        _243 = _223;
+                                        Maybe__Uint64 _1000084 = Maybe_Nothing__Uint64();
+                                        _1000081 = _1000084;
                                     }
                                     else if(_219._tag == Maybe__uint8_t_Just_tag) {
                                         Maybe__uint8_t _219_temp = _219;
@@ -9276,33 +10477,33 @@ Maybe__Uint64 Binary_bytes_MINUS__GT_int64(ByteOrder order, Array__uint8_t* bs) 
                                         // Case expr:
                                         Lambda _230 = { .callback = (void*)Binary_to_MINUS_int64, .env = NULL, .delete = NULL, .copy = NULL }; //Sym Binary.to-int64 (LookupGlobal ExternalCode AFunction)
                                         Lambda* _231 = &_230; // ref
-                                        Uint64 _241 = (*_231).env ? ((Uint64(*)(LambdaEnv, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t))(*_231).callback)((*_231).env, zip1029, zip1030, zip1031, zip1032, zip1033, zip1034, zip1035, zip1036) : ((Uint64(*)(uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t))(*_231).callback)(zip1029, zip1030, zip1031, zip1032, zip1033, zip1034, zip1035, zip1036);
-                                        Maybe__Uint64 _242 = Maybe_Just__Uint64(_241);
-                                        _243 = _242;
+                                        Uint64 _1000087 = (*_231).env ? ((Uint64(*)(LambdaEnv, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t))(*_231).callback)((*_231).env, zip1029, zip1030, zip1031, zip1032, zip1033, zip1034, zip1035, zip1036) : ((Uint64(*)(uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t, uint8_t))(*_231).callback)(zip1029, zip1030, zip1031, zip1032, zip1033, zip1034, zip1035, zip1036);
+                                        Maybe__Uint64 _1000086 = Maybe_Just__Uint64(_1000087);
+                                        _1000081 = _1000086;
                                     }
-                                    else UNHANDLED("dummy-file", 0);
-                                    _244 = _243;
+                                    else UNHANDLED("Binary.carp", 269);
+                                    _1000076 = _1000081;
                                 }
-                                else UNHANDLED("dummy-file", 0);
-                                _245 = _244;
+                                else UNHANDLED("Binary.carp", 269);
+                                _1000071 = _1000076;
                             }
-                            else UNHANDLED("dummy-file", 0);
-                            _246 = _245;
+                            else UNHANDLED("Binary.carp", 269);
+                            _1000066 = _1000071;
                         }
-                        else UNHANDLED("dummy-file", 0);
-                        _247 = _246;
+                        else UNHANDLED("Binary.carp", 269);
+                        _1000061 = _1000066;
                     }
-                    else UNHANDLED("dummy-file", 0);
-                    _248 = _247;
+                    else UNHANDLED("Binary.carp", 269);
+                    _1000056 = _1000061;
                 }
-                else UNHANDLED("dummy-file", 0);
-                _249 = _248;
+                else UNHANDLED("Binary.carp", 269);
+                _1000051 = _1000056;
             }
-            else UNHANDLED("dummy-file", 0);
-            _250 = _249;
+            else UNHANDLED("Binary.carp", 269);
+            _1000046 = _1000051;
         }
-        else UNHANDLED("dummy-file", 0);
-        _251 = _250;
+        else UNHANDLED("Binary.carp", 269);
+        _251 = _1000046;
     }
     else UNHANDLED("Binary.carp", 269);
     return _251;
@@ -10418,39 +11619,39 @@ Uint64 Binary_unwrap_MINUS_success__Uint64_Array__uint8_t(Result__Uint64_Array__
 Binary__Lambda_byte_MINUS_converter__ByteOrder_Array__uint8_t_Uint16_29_env_ty* Binary__Lambda_byte_MINUS_converter__ByteOrder_Array__uint8_t_Uint16_29_env_ty_copy(Binary__Lambda_byte_MINUS_converter__ByteOrder_Array__uint8_t_Uint16_29_env_ty* pRef) {
     Binary__Lambda_byte_MINUS_converter__ByteOrder_Array__uint8_t_Uint16_29_env_ty* copy = CARP_MALLOC(sizeof(*pRef));
     *copy = *pRef;
-    /* Ignore non-managed member 'f' : (Ref (Fn [ByteOrder, (Ref (Array Byte) <c>)] (Maybe Uint16)) <StaticLifetime>) */
+    /* Ignore non-managed member 'f' : (Ref (Fn [ByteOrder, (Ref (Array Byte) <c>)] (Maybe Uint16)) StaticLifetime) */
     /* Ignore non-managed member 'order' : ByteOrder */
     return copy;
 }
 
 void Binary__Lambda_byte_MINUS_converter__ByteOrder_Array__uint8_t_Uint16_29_env_ty_delete(Binary__Lambda_byte_MINUS_converter__ByteOrder_Array__uint8_t_Uint16_29_env_ty* p) {
-    /* Ignore non-managed member 'f' : (Ref (Fn [ByteOrder, (Ref (Array Byte) <c>)] (Maybe Uint16)) <StaticLifetime>) */
+    /* Ignore non-managed member 'f' : (Ref (Fn [ByteOrder, (Ref (Array Byte) <c>)] (Maybe Uint16)) StaticLifetime) */
     /* Ignore non-managed member 'order' : ByteOrder */
 }
 
 Binary__Lambda_byte_MINUS_converter__ByteOrder_Array__uint8_t_Uint32_29_env_ty* Binary__Lambda_byte_MINUS_converter__ByteOrder_Array__uint8_t_Uint32_29_env_ty_copy(Binary__Lambda_byte_MINUS_converter__ByteOrder_Array__uint8_t_Uint32_29_env_ty* pRef) {
     Binary__Lambda_byte_MINUS_converter__ByteOrder_Array__uint8_t_Uint32_29_env_ty* copy = CARP_MALLOC(sizeof(*pRef));
     *copy = *pRef;
-    /* Ignore non-managed member 'f' : (Ref (Fn [ByteOrder, (Ref (Array Byte) <c>)] (Maybe Uint32)) <StaticLifetime>) */
+    /* Ignore non-managed member 'f' : (Ref (Fn [ByteOrder, (Ref (Array Byte) <c>)] (Maybe Uint32)) StaticLifetime) */
     /* Ignore non-managed member 'order' : ByteOrder */
     return copy;
 }
 
 void Binary__Lambda_byte_MINUS_converter__ByteOrder_Array__uint8_t_Uint32_29_env_ty_delete(Binary__Lambda_byte_MINUS_converter__ByteOrder_Array__uint8_t_Uint32_29_env_ty* p) {
-    /* Ignore non-managed member 'f' : (Ref (Fn [ByteOrder, (Ref (Array Byte) <c>)] (Maybe Uint32)) <StaticLifetime>) */
+    /* Ignore non-managed member 'f' : (Ref (Fn [ByteOrder, (Ref (Array Byte) <c>)] (Maybe Uint32)) StaticLifetime) */
     /* Ignore non-managed member 'order' : ByteOrder */
 }
 
 Binary__Lambda_byte_MINUS_converter__ByteOrder_Array__uint8_t_Uint64_29_env_ty* Binary__Lambda_byte_MINUS_converter__ByteOrder_Array__uint8_t_Uint64_29_env_ty_copy(Binary__Lambda_byte_MINUS_converter__ByteOrder_Array__uint8_t_Uint64_29_env_ty* pRef) {
     Binary__Lambda_byte_MINUS_converter__ByteOrder_Array__uint8_t_Uint64_29_env_ty* copy = CARP_MALLOC(sizeof(*pRef));
     *copy = *pRef;
-    /* Ignore non-managed member 'f' : (Ref (Fn [ByteOrder, (Ref (Array Byte) <c>)] (Maybe Uint64)) <StaticLifetime>) */
+    /* Ignore non-managed member 'f' : (Ref (Fn [ByteOrder, (Ref (Array Byte) <c>)] (Maybe Uint64)) StaticLifetime) */
     /* Ignore non-managed member 'order' : ByteOrder */
     return copy;
 }
 
 void Binary__Lambda_byte_MINUS_converter__ByteOrder_Array__uint8_t_Uint64_29_env_ty_delete(Binary__Lambda_byte_MINUS_converter__ByteOrder_Array__uint8_t_Uint64_29_env_ty* p) {
-    /* Ignore non-managed member 'f' : (Ref (Fn [ByteOrder, (Ref (Array Byte) <c>)] (Maybe Uint64)) <StaticLifetime>) */
+    /* Ignore non-managed member 'f' : (Ref (Fn [ByteOrder, (Ref (Array Byte) <c>)] (Maybe Uint64)) StaticLifetime) */
     /* Ignore non-managed member 'order' : ByteOrder */
 }
 
@@ -10542,6 +11743,36 @@ void Binary__Lambda_unsafe_MINUS_bytes_MINUS__GT_int64_MINUS_seq_19_env_ty_delet
     /* Ignore non-managed member 'order' : ByteOrder */
 }
 
+double* Body_angular_MINUS_damping(Body* p) { return (&(p->angular_MINUS_damping)); }
+
+Vector3__double* Body_angular_MINUS_velocity(Body* p) { return (&(p->angular_MINUS_velocity)); }
+
+void Body_apply_MINUS_angular_MINUS_impulse_BANG_(Body* b, Vector3__double* impulse) {
+    BodyType* _8 = Body_body_MINUS_type(b);
+    if(_8->_tag == BodyType_Dynamic_tag) {
+        BodyType* _8_temp = _8;
+        // Case expr:
+        /* let */ {
+            double* _18 = Body_inv_MINUS_inertia(b);
+            double _19 = Double_copy(_18);
+            Vector3__double _20 = Vector3_mul__double(impulse, _19);
+            Vector3__double dw = _20;
+            Vector3__double* _28 = Body_angular_MINUS_velocity(b);
+            Vector3__double* _31 = &dw; // ref
+            Vector3__double _32 = Vector3_add__double(_28, _31);
+            Body_set_MINUS_angular_MINUS_velocity_BANG_(b, _32);
+            Body_set_MINUS_is_MINUS_sleeping_BANG_(b, false);
+            Vector3_delete__double(dw);
+        }
+    }
+    else if(true) {
+        BodyType* _8_temp = _8;
+        BodyType* wildcard_40 = _8_temp;
+        /* () */
+    }
+    else UNHANDLED("dynamics.carp", 88);
+}
+
 void Body_apply_MINUS_force_BANG_(Body* b, Vector3__double* f) {
     BodyType* _8 = Body_body_MINUS_type(b);
     if(_8->_tag == BodyType_Dynamic_tag) {
@@ -10557,7 +11788,7 @@ void Body_apply_MINUS_force_BANG_(Body* b, Vector3__double* f) {
         BodyType* wildcard_26 = _8_temp;
         /* () */
     }
-    else UNHANDLED("dynamics.carp", 52);
+    else UNHANDLED("dynamics.carp", 63);
 }
 
 void Body_apply_MINUS_impulse_BANG_(Body* b, Vector3__double* impulse) {
@@ -10583,7 +11814,25 @@ void Body_apply_MINUS_impulse_BANG_(Body* b, Vector3__double* impulse) {
         BodyType* wildcard_40 = _8_temp;
         /* () */
     }
-    else UNHANDLED("dynamics.carp", 60);
+    else UNHANDLED("dynamics.carp", 79);
+}
+
+void Body_apply_MINUS_torque_BANG_(Body* b, Vector3__double* t) {
+    BodyType* _8 = Body_body_MINUS_type(b);
+    if(_8->_tag == BodyType_Dynamic_tag) {
+        BodyType* _8_temp = _8;
+        // Case expr:
+        Vector3__double* _17 = Body_torque(b);
+        Vector3__double _19 = Vector3_add__double(_17, t);
+        Body_set_MINUS_torque_BANG_(b, _19);
+        Body_set_MINUS_is_MINUS_sleeping_BANG_(b, false);
+    }
+    else if(true) {
+        BodyType* _8_temp = _8;
+        BodyType* wildcard_26 = _8_temp;
+        /* () */
+    }
+    else UNHANDLED("dynamics.carp", 71);
 }
 
 BodyType* Body_body_MINUS_type(Body* p) { return (&(p->body_MINUS_type)); }
@@ -10591,12 +11840,16 @@ BodyType* Body_body_MINUS_type(Body* p) { return (&(p->body_MINUS_type)); }
 Body Body_copy(Body* pRef) {
     Body copy = *pRef;
     copy.velocity = Vector3_copy__double(&(pRef->velocity));
+    copy.angular_MINUS_velocity = Vector3_copy__double(&(pRef->angular_MINUS_velocity));
     copy.force = Vector3_copy__double(&(pRef->force));
+    copy.torque = Vector3_copy__double(&(pRef->torque));
     /* Ignore non-managed member 'mass' : Double */
     /* Ignore non-managed member 'inv_MINUS_mass' : Double */
+    /* Ignore non-managed member 'inv_MINUS_inertia' : Double */
     /* Ignore non-managed member 'restitution' : Double */
     /* Ignore non-managed member 'friction' : Double */
     /* Ignore non-managed member 'damping' : Double */
+    /* Ignore non-managed member 'angular_MINUS_damping' : Double */
     /* Ignore non-managed member 'is_MINUS_sleeping' : Bool */
     copy.body_MINUS_type = BodyType_copy(&(pRef->body_MINUS_type));
     return copy;
@@ -10606,12 +11859,16 @@ double* Body_damping(Body* p) { return (&(p->damping)); }
 
 void Body_delete(Body p) {
     Vector3_delete__double(p.velocity);
+    Vector3_delete__double(p.angular_MINUS_velocity);
     Vector3_delete__double(p.force);
+    Vector3_delete__double(p.torque);
     /* Ignore non-managed member 'mass' : Double */
     /* Ignore non-managed member 'inv_MINUS_mass' : Double */
+    /* Ignore non-managed member 'inv_MINUS_inertia' : Double */
     /* Ignore non-managed member 'restitution' : Double */
     /* Ignore non-managed member 'friction' : Double */
     /* Ignore non-managed member 'damping' : Double */
+    /* Ignore non-managed member 'angular_MINUS_damping' : Double */
     /* Ignore non-managed member 'is_MINUS_sleeping' : Bool */
     BodyType_delete(p.body_MINUS_type);
 }
@@ -10620,19 +11877,25 @@ Vector3__double* Body_force(Body* p) { return (&(p->force)); }
 
 double* Body_friction(Body* p) { return (&(p->friction)); }
 
-Body Body_init(Vector3__double velocity, Vector3__double force, double mass, double inv_MINUS_mass, double restitution, double friction, double damping, bool is_MINUS_sleeping, BodyType body_MINUS_type) {
+Body Body_init(Vector3__double velocity, Vector3__double angular_MINUS_velocity, Vector3__double force, Vector3__double torque, double mass, double inv_MINUS_mass, double inv_MINUS_inertia, double restitution, double friction, double damping, double angular_MINUS_damping, bool is_MINUS_sleeping, BodyType body_MINUS_type) {
     Body instance;
     instance.velocity = velocity;
+    instance.angular_MINUS_velocity = angular_MINUS_velocity;
     instance.force = force;
+    instance.torque = torque;
     instance.mass = mass;
     instance.inv_MINUS_mass = inv_MINUS_mass;
+    instance.inv_MINUS_inertia = inv_MINUS_inertia;
     instance.restitution = restitution;
     instance.friction = friction;
     instance.damping = damping;
+    instance.angular_MINUS_damping = angular_MINUS_damping;
     instance.is_MINUS_sleeping = is_MINUS_sleeping;
     instance.body_MINUS_type = body_MINUS_type;
     return instance;
 }
+
+double* Body_inv_MINUS_inertia(Body* p) { return (&(p->inv_MINUS_inertia)); }
 
 double* Body_inv_MINUS_mass(Body* p) { return (&(p->inv_MINUS_mass)); }
 
@@ -10641,28 +11904,37 @@ bool* Body_is_MINUS_sleeping(Body* p) { return (&(p->is_MINUS_sleeping)); }
 Body Body_kinematic(double restitution, double friction) {
     Vector3__double _10 = Vector3_init__double(0.0, 0.0, 0.0);
     Vector3__double _15 = Vector3_init__double(0.0, 0.0, 0.0);
-    BodyType _23 = BodyType_Kinematic();
-    Body _24 = Body_init(_10, _15, 0.0, 0.0, restitution, friction, 1.0, false, _23);
-    return _24;
+    Vector3__double _20 = Vector3_init__double(0.0, 0.0, 0.0);
+    Vector3__double _25 = Vector3_init__double(0.0, 0.0, 0.0);
+    BodyType _35 = BodyType_Kinematic();
+    Body _36 = Body_init(_10, _15, _20, _25, 0.0, 0.0, 0.0, restitution, friction, 1.0, 1.0, false, _35);
+    return _36;
 }
 
 double* Body_mass(Body* p) { return (&(p->mass)); }
 
-Body Body_new(double mass, double restitution, double friction, double damping) {
-    Body _43;
+Body Body_new(double mass, double restitution, double friction, double damping, double ang_MINUS_damping, double inertia) {
+    Body _71;
     /* let */ {
-        double _12 = max__double(mass, 1.0e-4);
-        double safe_MINUS_mass = _12;
-        double _18 = Double_clamp__double(0.0, 1.0, damping);
-        double d = _18;
-        Vector3__double _25 = Vector3_init__double(0.0, 0.0, 0.0);
-        Vector3__double _30 = Vector3_init__double(0.0, 0.0, 0.0);
-        double _35 = Double__DIV_(1.0, safe_MINUS_mass);
-        BodyType _41 = BodyType_Dynamic();
-        Body _42 = Body_init(_25, _30, safe_MINUS_mass, _35, restitution, friction, d, false, _41);
-        _43 = _42;
+        double _14 = max__double(mass, 1.0e-4);
+        double safe_MINUS_mass = _14;
+        double _19 = max__double(inertia, 1.0e-4);
+        double safe_MINUS_inertia = _19;
+        double _25 = Double_clamp__double(0.0, 1.0, damping);
+        double d = _25;
+        double _31 = Double_clamp__double(0.0, 1.0, ang_MINUS_damping);
+        double ad = _31;
+        Vector3__double _38 = Vector3_init__double(0.0, 0.0, 0.0);
+        Vector3__double _43 = Vector3_init__double(0.0, 0.0, 0.0);
+        Vector3__double _48 = Vector3_init__double(0.0, 0.0, 0.0);
+        Vector3__double _53 = Vector3_init__double(0.0, 0.0, 0.0);
+        double _58 = Double__DIV_(1.0, safe_MINUS_mass);
+        double _62 = Double__DIV_(1.0, safe_MINUS_inertia);
+        BodyType _69 = BodyType_Dynamic();
+        Body _70 = Body_init(_38, _43, _48, _53, safe_MINUS_mass, _58, _62, restitution, friction, d, ad, false, _69);
+        _71 = _70;
     }
-    return _43;
+    return _71;
 }
 
 String Body_prn(Body *p) {
@@ -10675,7 +11947,15 @@ String Body_prn(Body *p) {
   size += snprintf(NULL, 0, "%s ", temp);
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
+  temp = Vector3_prn__double(&p->angular_MINUS_velocity); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
   temp = Vector3_prn__double(&p->force); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Vector3_prn__double(&p->torque); 
   size += snprintf(NULL, 0, "%s ", temp);
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
@@ -10684,6 +11964,10 @@ String Body_prn(Body *p) {
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Double_prn(p->inv_MINUS_mass); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Double_prn(p->inv_MINUS_inertia); 
   size += snprintf(NULL, 0, "%s ", temp);
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
@@ -10699,6 +11983,10 @@ String Body_prn(Body *p) {
   size += snprintf(NULL, 0, "%s ", temp);
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
+  temp = Double_prn(p->angular_MINUS_damping); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
   temp = Bool_prn(p->is_MINUS_sleeping); 
   size += snprintf(NULL, 0, "%s ", temp);
   if(temp) { CARP_FREE(temp); temp = NULL; }
@@ -10711,60 +11999,104 @@ String Body_prn(Body *p) {
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
-  sprintf(bufferPtr, "(%s ", "Body");
-  bufferPtr += strlen("Body") + 2;
-
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Body");
   temp = Vector3_prn__double(&p->velocity);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Vector3_prn__double(&p->angular_MINUS_velocity);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Vector3_prn__double(&p->force);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Vector3_prn__double(&p->torque);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Double_prn(p->mass);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Double_prn(p->inv_MINUS_mass);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Double_prn(p->inv_MINUS_inertia);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Double_prn(p->restitution);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Double_prn(p->friction);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Double_prn(p->damping);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Double_prn(p->angular_MINUS_damping);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Bool_prn(p->is_MINUS_sleeping);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = BodyType_prn(&p->body_MINUS_type);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   bufferPtr--;
-  sprintf(bufferPtr, ")");
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   return buffer;
 }
 
 double* Body_restitution(Body* p) { return (&(p->restitution)); }
+
+Body Body_set_MINUS_angular_MINUS_damping(Body p, double newValue) {
+    /* Ignore non-managed member 'angular_MINUS_damping' : Double */
+    p.angular_MINUS_damping = newValue;
+    return p;
+}
+
+
+void Body_set_MINUS_angular_MINUS_damping_BANG_(Body* pRef, double newValue) {
+    /* Ignore non-managed member 'angular_MINUS_damping' : Double */
+    pRef->angular_MINUS_damping = newValue;
+}
+
+
+Body Body_set_MINUS_angular_MINUS_velocity(Body p, Vector3__double newValue) {
+    Vector3_delete__double(p.angular_MINUS_velocity);
+    p.angular_MINUS_velocity = newValue;
+    return p;
+}
+
+
+void Body_set_MINUS_angular_MINUS_velocity_BANG_(Body* pRef, Vector3__double newValue) {
+    Vector3_delete__double(pRef->angular_MINUS_velocity);
+    pRef->angular_MINUS_velocity = newValue;
+}
+
 
 Body Body_set_MINUS_body_MINUS_type(Body p, BodyType newValue) {
     BodyType_delete(p.body_MINUS_type);
@@ -10815,6 +12147,19 @@ Body Body_set_MINUS_friction(Body p, double newValue) {
 void Body_set_MINUS_friction_BANG_(Body* pRef, double newValue) {
     /* Ignore non-managed member 'friction' : Double */
     pRef->friction = newValue;
+}
+
+
+Body Body_set_MINUS_inv_MINUS_inertia(Body p, double newValue) {
+    /* Ignore non-managed member 'inv_MINUS_inertia' : Double */
+    p.inv_MINUS_inertia = newValue;
+    return p;
+}
+
+
+void Body_set_MINUS_inv_MINUS_inertia_BANG_(Body* pRef, double newValue) {
+    /* Ignore non-managed member 'inv_MINUS_inertia' : Double */
+    pRef->inv_MINUS_inertia = newValue;
 }
 
 
@@ -10870,6 +12215,19 @@ void Body_set_MINUS_restitution_BANG_(Body* pRef, double newValue) {
 }
 
 
+Body Body_set_MINUS_torque(Body p, Vector3__double newValue) {
+    Vector3_delete__double(p.torque);
+    p.torque = newValue;
+    return p;
+}
+
+
+void Body_set_MINUS_torque_BANG_(Body* pRef, Vector3__double newValue) {
+    Vector3_delete__double(pRef->torque);
+    pRef->torque = newValue;
+}
+
+
 Body Body_set_MINUS_velocity(Body p, Vector3__double newValue) {
     Vector3_delete__double(p.velocity);
     p.velocity = newValue;
@@ -10886,9 +12244,11 @@ void Body_set_MINUS_velocity_BANG_(Body* pRef, Vector3__double newValue) {
 Body Body__STATIC_(double restitution, double friction) {
     Vector3__double _10 = Vector3_init__double(0.0, 0.0, 0.0);
     Vector3__double _15 = Vector3_init__double(0.0, 0.0, 0.0);
-    BodyType _23 = BodyType_Static();
-    Body _24 = Body_init(_10, _15, 0.0, 0.0, restitution, friction, 1.0, false, _23);
-    return _24;
+    Vector3__double _20 = Vector3_init__double(0.0, 0.0, 0.0);
+    Vector3__double _25 = Vector3_init__double(0.0, 0.0, 0.0);
+    BodyType _35 = BodyType_Static();
+    Body _36 = Body_init(_10, _15, _20, _25, 0.0, 0.0, 0.0, restitution, friction, 1.0, 1.0, false, _35);
+    return _36;
 }
 
 String Body_str(Body *p) {
@@ -10901,7 +12261,15 @@ String Body_str(Body *p) {
   size += snprintf(NULL, 0, "%s ", temp);
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
+  temp = Vector3_prn__double(&p->angular_MINUS_velocity); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
   temp = Vector3_prn__double(&p->force); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Vector3_prn__double(&p->torque); 
   size += snprintf(NULL, 0, "%s ", temp);
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
@@ -10910,6 +12278,10 @@ String Body_str(Body *p) {
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Double_prn(p->inv_MINUS_mass); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Double_prn(p->inv_MINUS_inertia); 
   size += snprintf(NULL, 0, "%s ", temp);
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
@@ -10925,6 +12297,10 @@ String Body_str(Body *p) {
   size += snprintf(NULL, 0, "%s ", temp);
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
+  temp = Double_prn(p->angular_MINUS_damping); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
   temp = Bool_prn(p->is_MINUS_sleeping); 
   size += snprintf(NULL, 0, "%s ", temp);
   if(temp) { CARP_FREE(temp); temp = NULL; }
@@ -10937,58 +12313,90 @@ String Body_str(Body *p) {
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
-  sprintf(bufferPtr, "(%s ", "Body");
-  bufferPtr += strlen("Body") + 2;
-
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Body");
   temp = Vector3_prn__double(&p->velocity);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Vector3_prn__double(&p->angular_MINUS_velocity);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Vector3_prn__double(&p->force);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Vector3_prn__double(&p->torque);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Double_prn(p->mass);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Double_prn(p->inv_MINUS_mass);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Double_prn(p->inv_MINUS_inertia);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Double_prn(p->restitution);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Double_prn(p->friction);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Double_prn(p->damping);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Double_prn(p->angular_MINUS_damping);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Bool_prn(p->is_MINUS_sleeping);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = BodyType_prn(&p->body_MINUS_type);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   bufferPtr--;
-  sprintf(bufferPtr, ")");
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   return buffer;
 }
+
+Vector3__double* Body_torque(Body* p) { return (&(p->torque)); }
+
+Body Body_update_MINUS_angular_MINUS_damping(Body p, Lambda *updater) {
+    p.angular_MINUS_damping = (*updater).env ? ((Fn__LambdaEnv_double_double)(*updater).callback)((*updater).env, p.angular_MINUS_damping) : ((Fn__double_double)(*updater).callback)(p.angular_MINUS_damping);
+    return p;
+}
+
+
+Body Body_update_MINUS_angular_MINUS_velocity(Body p, Lambda *updater) {
+    p.angular_MINUS_velocity = (*updater).env ? ((Fn__LambdaEnv_Vector3__double_Vector3__double)(*updater).callback)((*updater).env, p.angular_MINUS_velocity) : ((Fn__Vector3__double_Vector3__double)(*updater).callback)(p.angular_MINUS_velocity);
+    return p;
+}
+
 
 Body Body_update_MINUS_body_MINUS_type(Body p, Lambda *updater) {
     p.body_MINUS_type = (*updater).env ? ((Fn__LambdaEnv_BodyType_BodyType)(*updater).callback)((*updater).env, p.body_MINUS_type) : ((Fn__BodyType_BodyType)(*updater).callback)(p.body_MINUS_type);
@@ -11014,6 +12422,12 @@ Body Body_update_MINUS_friction(Body p, Lambda *updater) {
 }
 
 
+Body Body_update_MINUS_inv_MINUS_inertia(Body p, Lambda *updater) {
+    p.inv_MINUS_inertia = (*updater).env ? ((Fn__LambdaEnv_double_double)(*updater).callback)((*updater).env, p.inv_MINUS_inertia) : ((Fn__double_double)(*updater).callback)(p.inv_MINUS_inertia);
+    return p;
+}
+
+
 Body Body_update_MINUS_inv_MINUS_mass(Body p, Lambda *updater) {
     p.inv_MINUS_mass = (*updater).env ? ((Fn__LambdaEnv_double_double)(*updater).callback)((*updater).env, p.inv_MINUS_mass) : ((Fn__double_double)(*updater).callback)(p.inv_MINUS_mass);
     return p;
@@ -11034,6 +12448,12 @@ Body Body_update_MINUS_mass(Body p, Lambda *updater) {
 
 Body Body_update_MINUS_restitution(Body p, Lambda *updater) {
     p.restitution = (*updater).env ? ((Fn__LambdaEnv_double_double)(*updater).callback)((*updater).env, p.restitution) : ((Fn__double_double)(*updater).callback)(p.restitution);
+    return p;
+}
+
+
+Body Body_update_MINUS_torque(Body p, Lambda *updater) {
+    p.torque = (*updater).env ? ((Fn__LambdaEnv_Vector3__double_Vector3__double)(*updater).callback)((*updater).env, p.torque) : ((Fn__Vector3__double_Vector3__double)(*updater).callback)(p.torque);
     return p;
 }
 
@@ -11121,28 +12541,22 @@ String BodyType_prn(BodyType *p) {
   String bufferPtr = buffer;
 
   if(p->_tag == BodyType_Dynamic_tag) {
-    sprintf(bufferPtr, "(%s ", "Dynamic");
-    bufferPtr += strlen("Dynamic") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Dynamic");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == BodyType_Kinematic_tag) {
-    sprintf(bufferPtr, "(%s ", "Kinematic");
-    bufferPtr += strlen("Kinematic") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Kinematic");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == BodyType_Static_tag) {
-    sprintf(bufferPtr, "(%s ", "Static");
-    bufferPtr += strlen("Static") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Static");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
 
   return buffer;
@@ -11171,28 +12585,22 @@ String BodyType_str(BodyType *p) {
   String bufferPtr = buffer;
 
   if(p->_tag == BodyType_Dynamic_tag) {
-    sprintf(bufferPtr, "(%s ", "Dynamic");
-    bufferPtr += strlen("Dynamic") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Dynamic");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == BodyType_Kinematic_tag) {
-    sprintf(bufferPtr, "(%s ", "Kinematic");
-    bufferPtr += strlen("Kinematic") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Kinematic");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == BodyType_Static_tag) {
-    sprintf(bufferPtr, "(%s ", "Static");
-    bufferPtr += strlen("Static") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Static");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
 
   return buffer;
@@ -11273,9 +12681,9 @@ int Bucket_find__ColorId_String(Bucket__ColorId_String* b, ColorId* k) {
         Array__Pair__ColorId_String* es = _17;
         /* let */ {
             int i = 0;
-            bool _28 = Int__LT_(i, l);
-            bool _60 = _28;
-            while (_60) {
+            bool _1000008 = Int__LT_(i, l);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 Pair__ColorId_String* _36 = Array_unsafe_MINUS_nth__Pair__ColorId_String(es, i);
                 ColorId* _37 = Pair_a__ColorId_String(_36);
                 bool _39 = Color__EQ___ColorId(_37, k);
@@ -11286,10 +12694,10 @@ int Bucket_find__ColorId_String(Bucket__ColorId_String* b, ColorId* k) {
                 } else {
                     /* () */
                 }
-                int _57 = Int__PLUS_(i, 1);
-                i = _57;  // Int = Int
-                bool _28 = Int__LT_(i, l);
-                _60 = _28;
+                int _1000018 = Int__PLUS_(i, 1);
+                i = _1000018;  // Int = Int
+                bool _1000008 = Int__LT_(i, l);
+                _1000006 = _1000008;
             }
         }
         int _63 = ret;
@@ -11544,20 +12952,16 @@ String ByteOrder_prn(ByteOrder *p) {
   String bufferPtr = buffer;
 
   if(p->_tag == ByteOrder_LittleEndian_tag) {
-    sprintf(bufferPtr, "(%s ", "LittleEndian");
-    bufferPtr += strlen("LittleEndian") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "LittleEndian");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ByteOrder_BigEndian_tag) {
-    sprintf(bufferPtr, "(%s ", "BigEndian");
-    bufferPtr += strlen("BigEndian") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "BigEndian");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
 
   return buffer;
@@ -11582,20 +12986,16 @@ String ByteOrder_str(ByteOrder *p) {
   String bufferPtr = buffer;
 
   if(p->_tag == ByteOrder_LittleEndian_tag) {
-    sprintf(bufferPtr, "(%s ", "LittleEndian");
-    bufferPtr += strlen("LittleEndian") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "LittleEndian");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ByteOrder_BigEndian_tag) {
-    sprintf(bufferPtr, "(%s ", "BigEndian");
-    bufferPtr += strlen("BigEndian") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "BigEndian");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
 
   return buffer;
@@ -11717,41 +13117,39 @@ String CellRange_prn(CellRange *p) {
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
-  sprintf(bufferPtr, "(%s ", "CellRange");
-  bufferPtr += strlen("CellRange") + 2;
-
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "CellRange");
   temp = Int_prn(p->min_MINUS_x);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Int_prn(p->max_MINUS_x);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Int_prn(p->min_MINUS_y);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Int_prn(p->max_MINUS_y);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Int_prn(p->min_MINUS_z);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Int_prn(p->max_MINUS_z);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   bufferPtr--;
-  sprintf(bufferPtr, ")");
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   return buffer;
 }
 
@@ -11867,41 +13265,39 @@ String CellRange_str(CellRange *p) {
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
-  sprintf(bufferPtr, "(%s ", "CellRange");
-  bufferPtr += strlen("CellRange") + 2;
-
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "CellRange");
   temp = Int_prn(p->min_MINUS_x);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Int_prn(p->max_MINUS_x);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Int_prn(p->min_MINUS_y);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Int_prn(p->max_MINUS_y);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Int_prn(p->min_MINUS_z);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Int_prn(p->max_MINUS_z);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   bufferPtr--;
-  sprintf(bufferPtr, ")");
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   return buffer;
 }
 
@@ -12235,36 +13631,34 @@ String Collidable_prn(Collidable *p) {
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
-  sprintf(bufferPtr, "(%s ", "Collidable");
-  bufferPtr += strlen("Collidable") + 2;
-
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Collidable");
   temp = Handle_prn__void(&p->handle);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Volume_prn(&p->volume);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Uint32_prn(p->layer);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Uint32_prn(p->mask);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Bool_prn(p->is_MINUS_trigger);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   bufferPtr--;
-  sprintf(bufferPtr, ")");
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   return buffer;
 }
 
@@ -12363,36 +13757,34 @@ String Collidable_str(Collidable *p) {
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
-  sprintf(bufferPtr, "(%s ", "Collidable");
-  bufferPtr += strlen("Collidable") + 2;
-
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Collidable");
   temp = Handle_prn__void(&p->handle);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Volume_prn(&p->volume);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Uint32_prn(p->layer);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Uint32_prn(p->mask);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Bool_prn(p->is_MINUS_trigger);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   bufferPtr--;
-  sprintf(bufferPtr, ")");
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   return buffer;
 }
 
@@ -12428,119 +13820,1027 @@ Collidable Collidable_update_MINUS_volume(Collidable p, Lambda *updater) {
 
 Volume* Collidable_volume(Collidable* p) { return (&(p->volume)); }
 
-Handle__void* Collision_a(Collision* p) { return (&(p->a)); }
-
-Handle__void* Collision_b(Collision* p) { return (&(p->b)); }
-
-Maybe__Contact Collision_collide(Volume* v1, Volume* v2) {
-    Volume _8 = Volume_copy(v1);
-    Maybe__Contact _85;
-    if(_8._tag == Volume_Box_tag) {
-        Volume _8_temp = _8;
-        AABB b1 = _8_temp.u.Box.member0;
-        // Case expr:
-        Volume _15 = Volume_copy(v2);
-        Maybe__Contact _54;
-        if(_15._tag == Volume_Box_tag) {
-            Volume _15_temp = _15;
-            AABB b2 = _15_temp.u.Box.member0;
-            // Case expr:
-            AABB* _22 = &b1; // ref
-            AABB* _25 = &b2; // ref
-            Maybe__Contact _26 = Geometry_AABB_collide_MINUS_aabb(_22, _25);
-            _54 = _26;
-            AABB_delete(b2);
-        }
-        else if(_15._tag == Volume_Ball_tag) {
-            Volume _15_temp = _15;
-            Sphere s2 = _15_temp.u.Ball.member0;
-            // Case expr:
-            Sphere* _34 = &s2; // ref
-            AABB* _37 = &b1; // ref
-            Maybe__Contact _38 = Geometry_Sphere_collide_MINUS_aabb(_34, _37);
-            Maybe__Contact _53;
-            if(_38._tag == Maybe__Contact_Just_tag) {
-                Maybe__Contact _38_temp = _38;
-                Contact c = _38_temp.u.Just.member0;
-                // Case expr:
-                Contact* _46 = &c; // ref
-                Contact _47 = Contact_reverse(_46);
-                Maybe__Contact _48 = Maybe_Just__Contact(_47);
-                _53 = _48;
-                Contact_delete(c);
-            }
-            else if(_38._tag == Maybe__Contact_Nothing_tag) {
-                Maybe__Contact _38_temp = _38;
-                // Case expr:
-                Maybe__Contact _52 = Maybe_Nothing__Contact();
-                _53 = _52;
-            }
-            else UNHANDLED("collision.carp", 72);
-            _54 = _53;
-            Sphere_delete(s2);
-        }
-        else UNHANDLED("collision.carp", 70);
-        _85 = _54;
-        AABB_delete(b1);
-    }
-    else if(_8._tag == Volume_Ball_tag) {
-        Volume _8_temp = _8;
-        Sphere s1 = _8_temp.u.Ball.member0;
-        // Case expr:
-        Volume _61 = Volume_copy(v2);
-        Maybe__Contact _84;
-        if(_61._tag == Volume_Box_tag) {
-            Volume _61_temp = _61;
-            AABB b2 = _61_temp.u.Box.member0;
-            // Case expr:
-            Sphere* _68 = &s1; // ref
-            AABB* _71 = &b2; // ref
-            Maybe__Contact _72 = Geometry_Sphere_collide_MINUS_aabb(_68, _71);
-            _84 = _72;
-            AABB_delete(b2);
-        }
-        else if(_61._tag == Volume_Ball_tag) {
-            Volume _61_temp = _61;
-            Sphere s2 = _61_temp.u.Ball.member0;
-            // Case expr:
-            Sphere* _79 = &s1; // ref
-            Sphere* _82 = &s2; // ref
-            Maybe__Contact _83 = Geometry_Sphere_collide_MINUS_sphere(_79, _82);
-            _84 = _83;
-            Sphere_delete(s2);
-        }
-        else UNHANDLED("collision.carp", 76);
-        _85 = _84;
-        Sphere_delete(s1);
-    }
-    else UNHANDLED("collision.carp", 68);
-    return _85;
+Handle__void* Collision_a(Collision* c) {
+    ContactSet* _7 = Collision_contact_MINUS_set(c);
+    Handle__void* _8 = ContactSet_a(_7);
+    return _8;
 }
 
-Contact* Collision_contact(Collision* p) { return (&(p->contact)); }
+Handle__void* Collision_b(Collision* c) {
+    ContactSet* _7 = Collision_contact_MINUS_set(c);
+    Handle__void* _8 = ContactSet_b(_7);
+    return _8;
+}
+
+Maybe__ContactSet Collision_collide(Handle__void* h1, Volume* v1, Handle__void* h2, Volume* v2) {
+    Maybe__ContactSet _408;
+    if(v1->_tag == Volume_Box_tag) {
+        Volume* _8_temp = v1;
+        AABB* b1 = &_8_temp->u.Box.member0;
+        // Case expr:
+        Maybe__ContactSet _98;
+        if(v2->_tag == Volume_Box_tag) {
+            Volume* _13_temp = v2;
+            AABB* b2 = &_13_temp->u.Box.member0;
+            // Case expr:
+            Maybe__Contact _21 = Geometry_AABB_collide_MINUS_aabb(b1, b2);
+            Maybe__ContactSet _41;
+            if(_21._tag == Maybe__Contact_Just_tag) {
+                Maybe__Contact _21_temp = _21;
+                Contact c = _21_temp.u.Just.member0;
+                // Case expr:
+                Handle__void _29 = Handle_copy__void(h1);
+                Handle__void _32 = Handle_copy__void(h2);
+                Array _34 = { .len = 1, .capacity = 1, .data = CARP_MALLOC(sizeof(Contact) * 1) };
+                ((Contact*)_34.data)[0] = c;
+                ContactSet _35 = ContactSet_init(_29, _32, _34);
+                Maybe__ContactSet _36 = Maybe_Just__ContactSet(_35);
+                _41 = _36;
+            }
+            else if(_21._tag == Maybe__Contact_Nothing_tag) {
+                Maybe__Contact _21_temp = _21;
+                // Case expr:
+                Maybe__ContactSet _40 = Maybe_Nothing__ContactSet();
+                _41 = _40;
+            }
+            else UNHANDLED("collision.carp", 164);
+            _98 = _41;
+        }
+        else if(v2->_tag == Volume_Ball_tag) {
+            Volume* _13_temp = v2;
+            Sphere* s2 = &_13_temp->u.Ball.member0;
+            // Case expr:
+            Maybe__Contact _49 = Geometry_Sphere_collide_MINUS_aabb(s2, b1);
+            Maybe__ContactSet _73;
+            if(_49._tag == Maybe__Contact_Just_tag) {
+                Maybe__Contact _49_temp = _49;
+                Contact c = _49_temp.u.Just.member0;
+                // Case expr:
+                Handle__void _59 = Handle_copy__void(h2);
+                Handle__void _62 = Handle_copy__void(h1);
+                Array _64 = { .len = 1, .capacity = 1, .data = CARP_MALLOC(sizeof(Contact) * 1) };
+                ((Contact*)_64.data)[0] = c;
+                ContactSet _65 = ContactSet_init(_59, _62, _64);
+                ContactSet* _66 = &_65; // ref
+                ContactSet _67 = ContactSet_reverse(_66);
+                Maybe__ContactSet _68 = Maybe_Just__ContactSet(_67);
+                _73 = _68;
+                ContactSet_delete(_65);
+            }
+            else if(_49._tag == Maybe__Contact_Nothing_tag) {
+                Maybe__Contact _49_temp = _49;
+                // Case expr:
+                Maybe__ContactSet _72 = Maybe_Nothing__ContactSet();
+                _73 = _72;
+            }
+            else UNHANDLED("collision.carp", 168);
+            _98 = _73;
+        }
+        else if(v2->_tag == Volume_Sdf_tag) {
+            Volume* _13_temp = v2;
+            SDF* sdf2 = &_13_temp->u.Sdf.member0;
+            // Case expr:
+            Maybe__ContactSet _83 = Collision_collide_MINUS_box_MINUS_sdf(h1, b1, h2, sdf2);
+            Maybe__ContactSet _94;
+            if(_83._tag == Maybe__ContactSet_Just_tag) {
+                Maybe__ContactSet _83_temp = _83;
+                ContactSet cs = _83_temp.u.Just.member0;
+                // Case expr:
+                Maybe__ContactSet _89 = Maybe_Just__ContactSet(cs);
+                _94 = _89;
+            }
+            else if(_83._tag == Maybe__ContactSet_Nothing_tag) {
+                Maybe__ContactSet _83_temp = _83;
+                // Case expr:
+                Maybe__ContactSet _93 = Maybe_Nothing__ContactSet();
+                _94 = _93;
+            }
+            else UNHANDLED("collision.carp", 172);
+            _98 = _94;
+        }
+        else if(true) {
+            Volume* _13_temp = v2;
+            Volume* wildcard_95 = _13_temp;
+            Maybe__ContactSet _97 = Maybe_Nothing__ContactSet();
+            _98 = _97;
+        }
+        else UNHANDLED("collision.carp", 162);
+        _408 = _98;
+    }
+    else if(v1->_tag == Volume_Ball_tag) {
+        Volume* _8_temp = v1;
+        Sphere* s1 = &_8_temp->u.Ball.member0;
+        // Case expr:
+        Maybe__ContactSet _247;
+        if(v2->_tag == Volume_Box_tag) {
+            Volume* _103_temp = v2;
+            AABB* b2 = &_103_temp->u.Box.member0;
+            // Case expr:
+            Maybe__Contact _111 = Geometry_Sphere_collide_MINUS_aabb(s1, b2);
+            Maybe__ContactSet _131;
+            if(_111._tag == Maybe__Contact_Just_tag) {
+                Maybe__Contact _111_temp = _111;
+                Contact c = _111_temp.u.Just.member0;
+                // Case expr:
+                Handle__void _119 = Handle_copy__void(h1);
+                Handle__void _122 = Handle_copy__void(h2);
+                Array _124 = { .len = 1, .capacity = 1, .data = CARP_MALLOC(sizeof(Contact) * 1) };
+                ((Contact*)_124.data)[0] = c;
+                ContactSet _125 = ContactSet_init(_119, _122, _124);
+                Maybe__ContactSet _126 = Maybe_Just__ContactSet(_125);
+                _131 = _126;
+            }
+            else if(_111._tag == Maybe__Contact_Nothing_tag) {
+                Maybe__Contact _111_temp = _111;
+                // Case expr:
+                Maybe__ContactSet _130 = Maybe_Nothing__ContactSet();
+                _131 = _130;
+            }
+            else UNHANDLED("collision.carp", 179);
+            _247 = _131;
+        }
+        else if(v2->_tag == Volume_Ball_tag) {
+            Volume* _103_temp = v2;
+            Sphere* s2 = &_103_temp->u.Ball.member0;
+            // Case expr:
+            Maybe__Contact _139 = Geometry_Sphere_collide_MINUS_sphere(s1, s2);
+            Maybe__ContactSet _159;
+            if(_139._tag == Maybe__Contact_Just_tag) {
+                Maybe__Contact _139_temp = _139;
+                Contact c = _139_temp.u.Just.member0;
+                // Case expr:
+                Handle__void _147 = Handle_copy__void(h1);
+                Handle__void _150 = Handle_copy__void(h2);
+                Array _152 = { .len = 1, .capacity = 1, .data = CARP_MALLOC(sizeof(Contact) * 1) };
+                ((Contact*)_152.data)[0] = c;
+                ContactSet _153 = ContactSet_init(_147, _150, _152);
+                Maybe__ContactSet _154 = Maybe_Just__ContactSet(_153);
+                _159 = _154;
+            }
+            else if(_139._tag == Maybe__Contact_Nothing_tag) {
+                Maybe__Contact _139_temp = _139;
+                // Case expr:
+                Maybe__ContactSet _158 = Maybe_Nothing__ContactSet();
+                _159 = _158;
+            }
+            else UNHANDLED("collision.carp", 183);
+            _247 = _159;
+        }
+        else if(v2->_tag == Volume_Surface_tag) {
+            Volume* _103_temp = v2;
+            Plane* p2 = &_103_temp->u.Surface.member0;
+            // Case expr:
+            Maybe__ContactSet _218;
+            /* let */ {
+                Vector3__double* _169 = Sphere_center(s1);
+                double _170 = Plane_distance_MINUS_to_MINUS_point(p2, _169);
+                double dist = _170;
+                double* _175 = Sphere_radius(s1);
+                double _176 = Double_copy(_175);
+                double r = _176;
+                Maybe__ContactSet _217;
+                bool _182 = _LT__EQ___double(dist, r);
+                if (_182) {
+                    Handle__void _188 = Handle_copy__void(h1);
+                    Handle__void _191 = Handle_copy__void(h2);
+                    Array _209 = { .len = 1, .capacity = 1, .data = CARP_MALLOC(sizeof(Contact) * 1) };
+                    double _196 = Double__MINUS_(r, dist);
+                    Vector3__double* _201 = Sphere_center(s1);
+                    Vector3__double _202 = Plane_project_MINUS_point(p2, _201);
+                    Vector3__double* _206 = Plane_normal(p2);
+                    Vector3__double _207 = Vector3_copy__double(_206);
+                    Contact _208 = Contact_init(_196, _202, _207);
+                    ((Contact*)_209.data)[0] = _208;
+                    ContactSet _210 = ContactSet_init(_188, _191, _209);
+                    Maybe__ContactSet _211 = Maybe_Just__ContactSet(_210);
+                    Maybe__ContactSet _212 = _211;
+                    _217 = _212;
+                } else {
+                    Maybe__ContactSet _215 = Maybe_Nothing__ContactSet();
+                    Maybe__ContactSet _216 = _215;
+                    _217 = _216;
+                }
+                _218 = _217;
+            }
+            _247 = _218;
+        }
+        else if(v2->_tag == Volume_Sdf_tag) {
+            Volume* _103_temp = v2;
+            SDF* sdf = &_103_temp->u.Sdf.member0;
+            // Case expr:
+            Maybe__Contact _226 = Geometry_Sphere_collide_MINUS_sdf(s1, sdf);
+            Maybe__ContactSet _246;
+            if(_226._tag == Maybe__Contact_Just_tag) {
+                Maybe__Contact _226_temp = _226;
+                Contact c = _226_temp.u.Just.member0;
+                // Case expr:
+                Handle__void _234 = Handle_copy__void(h1);
+                Handle__void _237 = Handle_copy__void(h2);
+                Array _239 = { .len = 1, .capacity = 1, .data = CARP_MALLOC(sizeof(Contact) * 1) };
+                ((Contact*)_239.data)[0] = c;
+                ContactSet _240 = ContactSet_init(_234, _237, _239);
+                Maybe__ContactSet _241 = Maybe_Just__ContactSet(_240);
+                _246 = _241;
+            }
+            else if(_226._tag == Maybe__Contact_Nothing_tag) {
+                Maybe__Contact _226_temp = _226;
+                // Case expr:
+                Maybe__ContactSet _245 = Maybe_Nothing__ContactSet();
+                _246 = _245;
+            }
+            else UNHANDLED("collision.carp", 196);
+            _247 = _246;
+        }
+        else UNHANDLED("collision.carp", 177);
+        _408 = _247;
+    }
+    else if(v1->_tag == Volume_Surface_tag) {
+        Volume* _8_temp = v1;
+        Plane* p1 = &_8_temp->u.Surface.member0;
+        // Case expr:
+        Maybe__ContactSet _306;
+        if(v2->_tag == Volume_Ball_tag) {
+            Volume* _252_temp = v2;
+            Sphere* s2 = &_252_temp->u.Ball.member0;
+            // Case expr:
+            Lambda _257 = { .callback = (void*)Collision_collide, .env = NULL, .delete = NULL, .copy = NULL }; //Sym Collision.collide LookupRecursive
+            Maybe__ContactSet _262 = _257.env ? ((Maybe__ContactSet(*)(LambdaEnv, Handle__void*, Volume*, Handle__void*, Volume*))_257.callback)(_257.env, h2, v2, h1, v1) : ((Maybe__ContactSet(*)(Handle__void*, Volume*, Handle__void*, Volume*))_257.callback)(h2, v2, h1, v1);
+            Maybe__ContactSet _277;
+            if(_262._tag == Maybe__ContactSet_Just_tag) {
+                Maybe__ContactSet _262_temp = _262;
+                ContactSet cs = _262_temp.u.Just.member0;
+                // Case expr:
+                ContactSet* _270 = &cs; // ref
+                ContactSet _271 = ContactSet_reverse(_270);
+                Maybe__ContactSet _272 = Maybe_Just__ContactSet(_271);
+                _277 = _272;
+                ContactSet_delete(cs);
+            }
+            else if(_262._tag == Maybe__ContactSet_Nothing_tag) {
+                Maybe__ContactSet _262_temp = _262;
+                // Case expr:
+                Maybe__ContactSet _276 = Maybe_Nothing__ContactSet();
+                _277 = _276;
+            }
+            else UNHANDLED("collision.carp", 202);
+            _306 = _277;
+        }
+        else if(v2->_tag == Volume_Sdf_tag) {
+            Volume* _252_temp = v2;
+            SDF* sdf2 = &_252_temp->u.Sdf.member0;
+            // Case expr:
+            Maybe__ContactSet _287 = Collision_collide_MINUS_sdf_MINUS_plane(h2, sdf2, h1, p1);
+            Maybe__ContactSet _302;
+            if(_287._tag == Maybe__ContactSet_Just_tag) {
+                Maybe__ContactSet _287_temp = _287;
+                ContactSet cs = _287_temp.u.Just.member0;
+                // Case expr:
+                ContactSet* _295 = &cs; // ref
+                ContactSet _296 = ContactSet_reverse(_295);
+                Maybe__ContactSet _297 = Maybe_Just__ContactSet(_296);
+                _302 = _297;
+                ContactSet_delete(cs);
+            }
+            else if(_287._tag == Maybe__ContactSet_Nothing_tag) {
+                Maybe__ContactSet _287_temp = _287;
+                // Case expr:
+                Maybe__ContactSet _301 = Maybe_Nothing__ContactSet();
+                _302 = _301;
+            }
+            else UNHANDLED("collision.carp", 206);
+            _306 = _302;
+        }
+        else if(true) {
+            Volume* _252_temp = v2;
+            Volume* wildcard_303 = _252_temp;
+            Maybe__ContactSet _305 = Maybe_Nothing__ContactSet();
+            _306 = _305;
+        }
+        else UNHANDLED("collision.carp", 200);
+        _408 = _306;
+    }
+    else if(v1->_tag == Volume_Sdf_tag) {
+        Volume* _8_temp = v1;
+        SDF* sdf = &_8_temp->u.Sdf.member0;
+        // Case expr:
+        Maybe__ContactSet _407;
+        if(v2->_tag == Volume_Box_tag) {
+            Volume* _311_temp = v2;
+            AABB* b2 = &_311_temp->u.Box.member0;
+            // Case expr:
+            Maybe__ContactSet _321 = Collision_collide_MINUS_box_MINUS_sdf(h2, b2, h1, sdf);
+            Maybe__ContactSet _336;
+            if(_321._tag == Maybe__ContactSet_Just_tag) {
+                Maybe__ContactSet _321_temp = _321;
+                ContactSet cs = _321_temp.u.Just.member0;
+                // Case expr:
+                ContactSet* _329 = &cs; // ref
+                ContactSet _330 = ContactSet_reverse(_329);
+                Maybe__ContactSet _331 = Maybe_Just__ContactSet(_330);
+                _336 = _331;
+                ContactSet_delete(cs);
+            }
+            else if(_321._tag == Maybe__ContactSet_Nothing_tag) {
+                Maybe__ContactSet _321_temp = _321;
+                // Case expr:
+                Maybe__ContactSet _335 = Maybe_Nothing__ContactSet();
+                _336 = _335;
+            }
+            else UNHANDLED("collision.carp", 213);
+            _407 = _336;
+        }
+        else if(v2->_tag == Volume_Ball_tag) {
+            Volume* _311_temp = v2;
+            Sphere* s2 = &_311_temp->u.Ball.member0;
+            // Case expr:
+            Lambda _341 = { .callback = (void*)Collision_collide, .env = NULL, .delete = NULL, .copy = NULL }; //Sym Collision.collide LookupRecursive
+            Maybe__ContactSet _346 = _341.env ? ((Maybe__ContactSet(*)(LambdaEnv, Handle__void*, Volume*, Handle__void*, Volume*))_341.callback)(_341.env, h2, v2, h1, v1) : ((Maybe__ContactSet(*)(Handle__void*, Volume*, Handle__void*, Volume*))_341.callback)(h2, v2, h1, v1);
+            Maybe__ContactSet _361;
+            if(_346._tag == Maybe__ContactSet_Just_tag) {
+                Maybe__ContactSet _346_temp = _346;
+                ContactSet cs = _346_temp.u.Just.member0;
+                // Case expr:
+                ContactSet* _354 = &cs; // ref
+                ContactSet _355 = ContactSet_reverse(_354);
+                Maybe__ContactSet _356 = Maybe_Just__ContactSet(_355);
+                _361 = _356;
+                ContactSet_delete(cs);
+            }
+            else if(_346._tag == Maybe__ContactSet_Nothing_tag) {
+                Maybe__ContactSet _346_temp = _346;
+                // Case expr:
+                Maybe__ContactSet _360 = Maybe_Nothing__ContactSet();
+                _361 = _360;
+            }
+            else UNHANDLED("collision.carp", 217);
+            _407 = _361;
+        }
+        else if(v2->_tag == Volume_Surface_tag) {
+            Volume* _311_temp = v2;
+            Plane* p2 = &_311_temp->u.Surface.member0;
+            // Case expr:
+            Maybe__ContactSet _371 = Collision_collide_MINUS_sdf_MINUS_plane(h1, sdf, h2, p2);
+            Maybe__ContactSet _382;
+            if(_371._tag == Maybe__ContactSet_Just_tag) {
+                Maybe__ContactSet _371_temp = _371;
+                ContactSet cs = _371_temp.u.Just.member0;
+                // Case expr:
+                Maybe__ContactSet _377 = Maybe_Just__ContactSet(cs);
+                _382 = _377;
+            }
+            else if(_371._tag == Maybe__ContactSet_Nothing_tag) {
+                Maybe__ContactSet _371_temp = _371;
+                // Case expr:
+                Maybe__ContactSet _381 = Maybe_Nothing__ContactSet();
+                _382 = _381;
+            }
+            else UNHANDLED("collision.carp", 221);
+            _407 = _382;
+        }
+        else if(v2->_tag == Volume_Sdf_tag) {
+            Volume* _311_temp = v2;
+            SDF* sdf2 = &_311_temp->u.Sdf.member0;
+            // Case expr:
+            Maybe__ContactSet _392 = Collision_collide_MINUS_sdf_MINUS_sdf(h1, sdf, h2, sdf2);
+            Maybe__ContactSet _403;
+            if(_392._tag == Maybe__ContactSet_Just_tag) {
+                Maybe__ContactSet _392_temp = _392;
+                ContactSet cs = _392_temp.u.Just.member0;
+                // Case expr:
+                Maybe__ContactSet _398 = Maybe_Just__ContactSet(cs);
+                _403 = _398;
+            }
+            else if(_392._tag == Maybe__ContactSet_Nothing_tag) {
+                Maybe__ContactSet _392_temp = _392;
+                // Case expr:
+                Maybe__ContactSet _402 = Maybe_Nothing__ContactSet();
+                _403 = _402;
+            }
+            else UNHANDLED("collision.carp", 225);
+            _407 = _403;
+        }
+        else if(true) {
+            Volume* _311_temp = v2;
+            Volume* wildcard_404 = _311_temp;
+            Maybe__ContactSet _406 = Maybe_Nothing__ContactSet();
+            _407 = _406;
+        }
+        else UNHANDLED("collision.carp", 211);
+        _408 = _407;
+    }
+    else UNHANDLED("collision.carp", 160);
+    return _408;
+}
+
+Maybe__ContactSet Collision_collide_MINUS_box_MINUS_sdf(Handle__void* h_MINUS_box, AABB* box, Handle__void* h_MINUS_sdf, SDF* sdf) {
+    Maybe__ContactSet _333;
+    /* let */ {
+        Vector3__double* _11 = AABB_min(box);
+        Vector3__double* min_MINUS_pt = _11;
+        Vector3__double* _15 = AABB_max(box);
+        Vector3__double* max_MINUS_pt = _15;
+        Vector3__double _22 = Vector3_add__double(min_MINUS_pt, max_MINUS_pt);
+        Vector3__double* _23 = &_22; // ref
+        Vector3__double _25 = Vector3_mul__double(_23, 0.5);
+        Vector3__double center = _25;
+        Vector3__double _32 = Vector3_sub__double(max_MINUS_pt, min_MINUS_pt);
+        Vector3__double* _33 = &_32; // ref
+        Vector3__double _35 = Vector3_mul__double(_33, 0.5);
+        Vector3__double e = _35;
+        Vector3__double* _41 = &center; // ref
+        Vector3__double _42 = SDF_normal_MINUS_world(sdf, _41);
+        Vector3__double n = _42;
+        Vector3__double* _50 = &e; // ref
+        double* _51 = Vector3_x__double(_50);
+        double _52 = Double_copy(_51);
+        Vector3__double* _58 = &n; // ref
+        double* _59 = Vector3_x__double(_58);
+        double _60 = Double_copy(_59);
+        double _61 = Double_abs(_60);
+        double _62 = Double__MUL_(_52, _61);
+        Vector3__double* _69 = &e; // ref
+        double* _70 = Vector3_y__double(_69);
+        double _71 = Double_copy(_70);
+        Vector3__double* _77 = &n; // ref
+        double* _78 = Vector3_y__double(_77);
+        double _79 = Double_copy(_78);
+        double _80 = Double_abs(_79);
+        double _81 = Double__MUL_(_71, _80);
+        Vector3__double* _87 = &e; // ref
+        double* _88 = Vector3_z__double(_87);
+        double _89 = Double_copy(_88);
+        Vector3__double* _95 = &n; // ref
+        double* _96 = Vector3_z__double(_95);
+        double _97 = Double_copy(_96);
+        double _98 = Double_abs(_97);
+        double _99 = Double__MUL_(_89, _98);
+        double _100 = Double__PLUS_(_81, _99);
+        double _101 = Double__PLUS_(_62, _100);
+        double r = _101;
+        Vector3__double* _106 = &center; // ref
+        Vector3__double* _111 = &n; // ref
+        Vector3__double _113 = Vector3_mul__double(_111, r);
+        Vector3__double* _114 = &_113; // ref
+        Vector3__double _115 = Vector3_sub__double(_106, _114);
+        Vector3__double p = _115;
+        /* let */ {
+            int iter = 0;
+            bool _1000008 = Int__LT_(iter, 3);
+            bool _1000006 = _1000008;
+            while (_1000006) {
+                /* let */ {
+                    Vector3__double* _134 = &p; // ref
+                    double _135 = SDF_distance_MINUS_world(sdf, _134);
+                    double d = _135;
+                    Vector3__double* _141 = &p; // ref
+                    Vector3__double _142 = SDF_normal_MINUS_world(sdf, _141);
+                    Vector3__double curr_MINUS_n = _142;
+                    Vector3__double* _149 = &p; // ref
+                    Vector3__double* _154 = &curr_MINUS_n; // ref
+                    Vector3__double _156 = Vector3_mul__double(_154, d);
+                    Vector3__double* _157 = &_156; // ref
+                    Vector3__double _158 = Vector3_sub__double(_149, _157);
+                    Vector3_delete__double(p);
+                    p = _158;  // (Vector3 Double) = (Vector3 Double)
+                    Vector3_delete__double(_156);
+                    Vector3_delete__double(curr_MINUS_n);
+                }
+                int _1000015 = Int__PLUS_(iter, 1);
+                iter = _1000015;  // Int = Int
+                bool _1000008 = Int__LT_(iter, 3);
+                _1000006 = _1000008;
+            }
+        }
+        Maybe__ContactSet _331;
+        /* let */ {
+            Vector3__double* _179 = &p; // ref
+            double* _180 = Vector3_x__double(_179);
+            double _181 = Double_copy(_180);
+            Vector3__double* _186 = &center; // ref
+            double* _187 = Vector3_x__double(_186);
+            double _188 = Double_copy(_187);
+            double _189 = Double__MINUS_(_181, _188);
+            double _190 = Double_abs(_189);
+            double dx = _190;
+            Vector3__double* _198 = &p; // ref
+            double* _199 = Vector3_y__double(_198);
+            double _200 = Double_copy(_199);
+            Vector3__double* _205 = &center; // ref
+            double* _206 = Vector3_y__double(_205);
+            double _207 = Double_copy(_206);
+            double _208 = Double__MINUS_(_200, _207);
+            double _209 = Double_abs(_208);
+            double dy = _209;
+            Vector3__double* _217 = &p; // ref
+            double* _218 = Vector3_z__double(_217);
+            double _219 = Double_copy(_218);
+            Vector3__double* _224 = &center; // ref
+            double* _225 = Vector3_z__double(_224);
+            double _226 = Double_copy(_225);
+            double _227 = Double__MINUS_(_219, _226);
+            double _228 = Double_abs(_227);
+            double dz = _228;
+            Vector3__double* _234 = &e; // ref
+            double* _235 = Vector3_x__double(_234);
+            double _236 = Double_copy(_235);
+            double ex = _236;
+            Vector3__double* _242 = &e; // ref
+            double* _243 = Vector3_y__double(_242);
+            double _244 = Double_copy(_243);
+            double ey = _244;
+            Vector3__double* _250 = &e; // ref
+            double* _251 = Vector3_z__double(_250);
+            double _252 = Double_copy(_251);
+            double ez = _252;
+            Maybe__ContactSet _330;
+            bool _280;
+            bool _259 = Double__LT_(dx, ex);
+            if (_259) {
+                bool _275;
+                bool _265 = Double__LT_(dy, ey);
+                if (_265) {
+                    bool _270 = Double__LT_(dz, ez);
+                    bool _271 = _270;
+                    _275 = _271;
+                } else {
+                    bool _274 = false;
+                    _275 = _274;
+                }
+                bool _276 = _275;
+                _280 = _276;
+            } else {
+                bool _279 = false;
+                _280 = _279;
+            }
+            if (_280) {
+                Maybe__ContactSet _324;
+                /* let */ {
+                    double _288 = Double__MINUS_(ex, dx);
+                    double _293 = Double__MINUS_(ey, dy);
+                    double _297 = Double__MINUS_(ez, dz);
+                    double _298 = min__double(_293, _297);
+                    double _299 = min__double(_288, _298);
+                    double depth = _299;
+                    Vector3__double* _305 = &p; // ref
+                    Vector3__double _306 = SDF_normal_MINUS_world(sdf, _305);
+                    Vector3__double norm = _306;
+                    Handle__void _312 = Handle_copy__void(h_MINUS_box);
+                    Handle__void _315 = Handle_copy__void(h_MINUS_sdf);
+                    Array _321 = { .len = 1, .capacity = 1, .data = CARP_MALLOC(sizeof(Contact) * 1) };
+                    Contact _320 = Contact_init(depth, p, norm);
+                    ((Contact*)_321.data)[0] = _320;
+                    ContactSet _322 = ContactSet_init(_312, _315, _321);
+                    Maybe__ContactSet _323 = Maybe_Just__ContactSet(_322);
+                    _324 = _323;
+                }
+                Maybe__ContactSet _325 = _324;
+                _330 = _325;
+            } else {
+                Maybe__ContactSet _328 = Maybe_Nothing__ContactSet();
+                Maybe__ContactSet _329 = _328;
+                Vector3_delete__double(p);
+                _330 = _329;
+            }
+            _331 = _330;
+        }
+        Maybe__ContactSet _332 = _331;
+        _333 = _332;
+        Vector3_delete__double(_113);
+        Vector3_delete__double(_22);
+        Vector3_delete__double(_32);
+        Vector3_delete__double(center);
+        Vector3_delete__double(e);
+        Vector3_delete__double(n);
+    }
+    return _333;
+}
+
+Maybe__ContactSet Collision_collide_MINUS_sdf_MINUS_plane(Handle__void* h_MINUS_sdf, SDF* sdf, Handle__void* h_MINUS_plane, Plane* plane) {
+    BaseShape* _11 = SDF_base(sdf);
+    BaseShape _12 = BaseShape_copy(_11);
+    Maybe__ContactSet _139;
+    if(_12._tag == BaseShape_Ball_tag) {
+        BaseShape _12_temp = _12;
+        double r = _12_temp.u.Ball.member0;
+        // Case expr:
+        Maybe__ContactSet _135;
+        /* let */ {
+            Vector3__double* _20 = SDF_position(sdf);
+            Vector3__double* pos = _20;
+            Vector3__double* _25 = Plane_normal(plane);
+            Vector3__double _26 = Vector3_copy__double(_25);
+            Vector3__double plane_MINUS_norm = _26;
+            Vector3__double* _34 = &plane_MINUS_norm; // ref
+            Vector3__double _36 = Vector3_mul__double(_34, r);
+            Vector3__double* _37 = &_36; // ref
+            Vector3__double _38 = Vector3_sub__double(pos, _37);
+            Vector3__double p = _38;
+            /* let */ {
+                int iter = 0;
+                bool _1000009 = Int__LT_(iter, 5);
+                bool _1000007 = _1000009;
+                while (_1000007) {
+                    /* let */ {
+                        Vector3__double* _57 = &p; // ref
+                        double _58 = SDF_distance_MINUS_world(sdf, _57);
+                        double d = _58;
+                        Vector3__double* _64 = &p; // ref
+                        Vector3__double _65 = SDF_normal_MINUS_world(sdf, _64);
+                        Vector3__double n = _65;
+                        Vector3__double* _72 = &p; // ref
+                        Vector3__double* _77 = &n; // ref
+                        Vector3__double _79 = Vector3_mul__double(_77, d);
+                        Vector3__double* _80 = &_79; // ref
+                        Vector3__double _81 = Vector3_sub__double(_72, _80);
+                        Vector3_delete__double(p);
+                        p = _81;  // (Vector3 Double) = (Vector3 Double)
+                        Vector3_delete__double(_79);
+                        Vector3_delete__double(n);
+                    }
+                    int _1000016 = Int__PLUS_(iter, 1);
+                    iter = _1000016;  // Int = Int
+                    bool _1000009 = Int__LT_(iter, 5);
+                    _1000007 = _1000009;
+                }
+            }
+            Maybe__ContactSet _133;
+            /* let */ {
+                Vector3__double* _100 = &p; // ref
+                double _101 = Plane_distance_MINUS_to_MINUS_point(plane, _100);
+                double plane_MINUS_dist = _101;
+                Maybe__ContactSet _132;
+                bool _107 = Double__LT_(plane_MINUS_dist, 0.0);
+                if (_107) {
+                    Handle__void _113 = Handle_copy__void(h_MINUS_sdf);
+                    Handle__void _116 = Handle_copy__void(h_MINUS_plane);
+                    Array _124 = { .len = 1, .capacity = 1, .data = CARP_MALLOC(sizeof(Contact) * 1) };
+                    double _120 = Double_neg(plane_MINUS_dist);
+                    Contact _123 = Contact_init(_120, p, plane_MINUS_norm);
+                    ((Contact*)_124.data)[0] = _123;
+                    ContactSet _125 = ContactSet_init(_113, _116, _124);
+                    Maybe__ContactSet _126 = Maybe_Just__ContactSet(_125);
+                    Maybe__ContactSet _127 = _126;
+                    _132 = _127;
+                } else {
+                    Maybe__ContactSet _130 = Maybe_Nothing__ContactSet();
+                    Maybe__ContactSet _131 = _130;
+                    Vector3_delete__double(p);
+                    Vector3_delete__double(plane_MINUS_norm);
+                    _132 = _131;
+                }
+                _133 = _132;
+            }
+            Maybe__ContactSet _134 = _133;
+            _135 = _134;
+            Vector3_delete__double(_36);
+        }
+        _139 = _135;
+    }
+    else if(true) {
+        BaseShape _12_temp = _12;
+        BaseShape wildcard_136 = _12_temp;
+        Maybe__ContactSet _138 = Maybe_Nothing__ContactSet();
+        _139 = _138;
+        BaseShape_delete(wildcard_136);
+    }
+    else UNHANDLED("collision.carp", 76);
+    return _139;
+}
+
+Maybe__ContactSet Collision_collide_MINUS_sdf_MINUS_sdf(Handle__void* h1, SDF* sdf1, Handle__void* h2, SDF* sdf2) {
+    BaseShape* _11 = SDF_base(sdf1);
+    BaseShape _12 = BaseShape_copy(_11);
+    Maybe__ContactSet _308;
+    if(_12._tag == BaseShape_Ball_tag) {
+        BaseShape _12_temp = _12;
+        double r1 = _12_temp.u.Ball.member0;
+        // Case expr:
+        BaseShape* _20 = SDF_base(sdf2);
+        BaseShape _21 = BaseShape_copy(_20);
+        Maybe__ContactSet _264;
+        if(_21._tag == BaseShape_Ball_tag) {
+            BaseShape _21_temp = _21;
+            double r2 = _21_temp.u.Ball.member0;
+            // Case expr:
+            Maybe__ContactSet _249;
+            /* let */ {
+                Vector3__double* _29 = SDF_position(sdf1);
+                Vector3__double* pos1 = _29;
+                Vector3__double* _33 = SDF_position(sdf2);
+                Vector3__double* pos2 = _33;
+                Vector3__double _38 = Vector3_sub__double(pos2, pos1);
+                Vector3__double diff = _38;
+                Vector3__double* _43 = &diff; // ref
+                double _44 = Vector3_mag__double(_43);
+                double dist = _44;
+                Vector3__double _65;
+                bool _50 = Double__LT_(dist, 1.0e-4);
+                if (_50) {
+                    Vector3__double _56 = Vector3_init__double(0.0, 1.0, 0.0);
+                    Vector3__double _57 = _56;
+                    _65 = _57;
+                } else {
+                    Vector3__double* _62 = &diff; // ref
+                    Vector3__double _63 = Vector3_normalize__double(_62);
+                    Vector3__double _64 = _63;
+                    _65 = _64;
+                }
+                Vector3__double dir = _65;
+                Vector3__double* _73 = &dir; // ref
+                double _80 = Double__MINUS_(r1, r2);
+                double _82 = Double__PLUS_(_80, dist);
+                double _83 = Double__MUL_(0.5, _82);
+                Vector3__double _84 = Vector3_mul__double(_73, _83);
+                Vector3__double* _85 = &_84; // ref
+                Vector3__double _86 = Vector3_add__double(pos1, _85);
+                Vector3__double p = _86;
+                /* let */ {
+                    int iter = 0;
+                    bool _1000013 = Int__LT_(iter, 5);
+                    bool _1000011 = _1000013;
+                    while (_1000011) {
+                        /* let */ {
+                            Vector3__double* _105 = &p; // ref
+                            double _106 = SDF_distance_MINUS_world(sdf1, _105);
+                            double d1 = _106;
+                            Vector3__double* _112 = &p; // ref
+                            double _113 = SDF_distance_MINUS_world(sdf2, _112);
+                            double d2 = _113;
+                            Vector3__double* _119 = &p; // ref
+                            Vector3__double _120 = SDF_normal_MINUS_world(sdf1, _119);
+                            Vector3__double n1 = _120;
+                            Vector3__double* _126 = &p; // ref
+                            Vector3__double _127 = SDF_normal_MINUS_world(sdf2, _126);
+                            Vector3__double n2 = _127;
+                            Vector3__double* _134 = &n1; // ref
+                            Vector3__double _136 = Vector3_mul__double(_134, d1);
+                            Vector3__double* _137 = &_136; // ref
+                            Vector3__double* _142 = &n2; // ref
+                            Vector3__double _144 = Vector3_mul__double(_142, d2);
+                            Vector3__double* _145 = &_144; // ref
+                            Vector3__double _146 = Vector3_add__double(_137, _145);
+                            Vector3__double step = _146;
+                            Vector3__double* _153 = &p; // ref
+                            Vector3__double* _158 = &step; // ref
+                            Vector3__double _160 = Vector3_mul__double(_158, 0.5);
+                            Vector3__double* _161 = &_160; // ref
+                            Vector3__double _162 = Vector3_sub__double(_153, _161);
+                            Vector3_delete__double(p);
+                            p = _162;  // (Vector3 Double) = (Vector3 Double)
+                            Vector3_delete__double(_136);
+                            Vector3_delete__double(_144);
+                            Vector3_delete__double(_160);
+                            Vector3_delete__double(n1);
+                            Vector3_delete__double(n2);
+                            Vector3_delete__double(step);
+                        }
+                        int _1000020 = Int__PLUS_(iter, 1);
+                        iter = _1000020;  // Int = Int
+                        bool _1000013 = Int__LT_(iter, 5);
+                        _1000011 = _1000013;
+                    }
+                }
+                Maybe__ContactSet _247;
+                /* let */ {
+                    Vector3__double* _181 = &p; // ref
+                    double _182 = SDF_distance_MINUS_world(sdf1, _181);
+                    double d1 = _182;
+                    Vector3__double* _188 = &p; // ref
+                    double _189 = SDF_distance_MINUS_world(sdf2, _188);
+                    double d2 = _189;
+                    Maybe__ContactSet _246;
+                    bool _206;
+                    bool _196 = Double__LT_(d1, 0.0);
+                    if (_196) {
+                        bool _201 = Double__LT_(d2, 0.0);
+                        bool _202 = _201;
+                        _206 = _202;
+                    } else {
+                        bool _205 = false;
+                        _206 = _205;
+                    }
+                    if (_206) {
+                        Maybe__ContactSet _240;
+                        /* let */ {
+                            double _214 = Double__PLUS_(d1, d2);
+                            double _215 = Double_neg(_214);
+                            double depth = _215;
+                            Vector3__double* _221 = &p; // ref
+                            Vector3__double _222 = SDF_normal_MINUS_world(sdf2, _221);
+                            Vector3__double norm = _222;
+                            Handle__void _228 = Handle_copy__void(h1);
+                            Handle__void _231 = Handle_copy__void(h2);
+                            Array _237 = { .len = 1, .capacity = 1, .data = CARP_MALLOC(sizeof(Contact) * 1) };
+                            Contact _236 = Contact_init(depth, p, norm);
+                            ((Contact*)_237.data)[0] = _236;
+                            ContactSet _238 = ContactSet_init(_228, _231, _237);
+                            Maybe__ContactSet _239 = Maybe_Just__ContactSet(_238);
+                            _240 = _239;
+                        }
+                        Maybe__ContactSet _241 = _240;
+                        _246 = _241;
+                    } else {
+                        Maybe__ContactSet _244 = Maybe_Nothing__ContactSet();
+                        Maybe__ContactSet _245 = _244;
+                        Vector3_delete__double(p);
+                        _246 = _245;
+                    }
+                    _247 = _246;
+                }
+                Maybe__ContactSet _248 = _247;
+                _249 = _248;
+                Vector3_delete__double(_84);
+                Vector3_delete__double(diff);
+                Vector3_delete__double(dir);
+            }
+            _264 = _249;
+        }
+        else if(_21._tag == BaseShape_Surface_tag) {
+            BaseShape _21_temp = _21;
+            Plane plane2 = _21_temp.u.Surface.member0;
+            // Case expr:
+            Plane* _259 = &plane2; // ref
+            Maybe__ContactSet _260 = Collision_collide_MINUS_sdf_MINUS_plane(h1, sdf1, h2, _259);
+            _264 = _260;
+            Plane_delete(plane2);
+        }
+        else if(true) {
+            BaseShape _21_temp = _21;
+            BaseShape wildcard_261 = _21_temp;
+            Maybe__ContactSet _263 = Maybe_Nothing__ContactSet();
+            _264 = _263;
+            BaseShape_delete(wildcard_261);
+        }
+        else UNHANDLED("collision.carp", 95);
+        _308 = _264;
+    }
+    else if(_12._tag == BaseShape_Surface_tag) {
+        BaseShape _12_temp = _12;
+        Plane plane1 = _12_temp.u.Surface.member0;
+        // Case expr:
+        BaseShape* _272 = SDF_base(sdf2);
+        BaseShape _273 = BaseShape_copy(_272);
+        Maybe__ContactSet _304;
+        if(_273._tag == BaseShape_Ball_tag) {
+            BaseShape _273_temp = _273;
+            double r2 = _273_temp.u.Ball.member0;
+            // Case expr:
+            Plane* _284 = &plane1; // ref
+            Maybe__ContactSet _285 = Collision_collide_MINUS_sdf_MINUS_plane(h2, sdf2, h1, _284);
+            Maybe__ContactSet _300;
+            if(_285._tag == Maybe__ContactSet_Just_tag) {
+                Maybe__ContactSet _285_temp = _285;
+                ContactSet cs = _285_temp.u.Just.member0;
+                // Case expr:
+                ContactSet* _293 = &cs; // ref
+                ContactSet _294 = ContactSet_reverse(_293);
+                Maybe__ContactSet _295 = Maybe_Just__ContactSet(_294);
+                _300 = _295;
+                ContactSet_delete(cs);
+            }
+            else if(_285._tag == Maybe__ContactSet_Nothing_tag) {
+                Maybe__ContactSet _285_temp = _285;
+                // Case expr:
+                Maybe__ContactSet _299 = Maybe_Nothing__ContactSet();
+                _300 = _299;
+            }
+            else UNHANDLED("collision.carp", 126);
+            _304 = _300;
+        }
+        else if(true) {
+            BaseShape _273_temp = _273;
+            BaseShape wildcard_301 = _273_temp;
+            Maybe__ContactSet _303 = Maybe_Nothing__ContactSet();
+            _304 = _303;
+            BaseShape_delete(wildcard_301);
+        }
+        else UNHANDLED("collision.carp", 124);
+        _308 = _304;
+        Plane_delete(plane1);
+    }
+    else if(true) {
+        BaseShape _12_temp = _12;
+        BaseShape wildcard_305 = _12_temp;
+        Maybe__ContactSet _307 = Maybe_Nothing__ContactSet();
+        _308 = _307;
+        BaseShape_delete(wildcard_305);
+    }
+    else UNHANDLED("collision.carp", 93);
+    return _308;
+}
+
+Maybe__ContactSet Collision_collide_MINUS_swept(Handle__void* h1, Volume* v1, Vector3__double* vel, double dt, Handle__void* h2, Volume* v2) {
+    Maybe__ContactSet _134;
+    if(v1->_tag == Volume_Ball_tag) {
+        Volume* _10_temp = v1;
+        Sphere* s1 = &_10_temp->u.Ball.member0;
+        // Case expr:
+        Maybe__ContactSet _126;
+        if(v2->_tag == Volume_Surface_tag) {
+            Volume* _15_temp = v2;
+            Plane* p2 = &_15_temp->u.Surface.member0;
+            // Case expr:
+            Maybe__ContactSet _118;
+            /* let */ {
+                Vector3__double* _24 = Sphere_center(s1);
+                Vector3__double _25 = Vector3_copy__double(_24);
+                Vector3__double start = _25;
+                Vector3__double* _30 = &start; // ref
+                Vector3__double _35 = Vector3_mul__double(vel, dt);
+                Vector3__double* _36 = &_35; // ref
+                Vector3__double _37 = Vector3_add__double(_30, _36);
+                Vector3__double end = _37;
+                Vector3__double* _43 = &start; // ref
+                double _44 = Plane_distance_MINUS_to_MINUS_point(p2, _43);
+                double dist_MINUS_start = _44;
+                Vector3__double* _50 = &end; // ref
+                double _51 = Plane_distance_MINUS_to_MINUS_point(p2, _50);
+                double dist_MINUS_end = _51;
+                double* _56 = Sphere_radius(s1);
+                double _57 = Double_copy(_56);
+                double r = _57;
+                Maybe__ContactSet _117;
+                bool _74;
+                bool _64 = Double__GT_(dist_MINUS_start, r);
+                if (_64) {
+                    bool _69 = _LT__EQ___double(dist_MINUS_end, r);
+                    bool _70 = _69;
+                    _74 = _70;
+                } else {
+                    bool _73 = false;
+                    _74 = _73;
+                }
+                if (_74) {
+                    Maybe__ContactSet _107;
+                    /* let */ {
+                        double _81 = Double__MINUS_(r, dist_MINUS_end);
+                        double depth = _81;
+                        Vector3__double* _86 = Plane_normal(p2);
+                        Vector3__double _87 = Vector3_copy__double(_86);
+                        Vector3__double norm = _87;
+                        Contact _93 = Contact_init(depth, end, norm);
+                        Contact c = _93;
+                        Handle__void _99 = Handle_copy__void(h1);
+                        Handle__void _102 = Handle_copy__void(h2);
+                        Array _104 = { .len = 1, .capacity = 1, .data = CARP_MALLOC(sizeof(Contact) * 1) };
+                        ((Contact*)_104.data)[0] = c;
+                        ContactSet _105 = ContactSet_init(_99, _102, _104);
+                        Maybe__ContactSet _106 = Maybe_Just__ContactSet(_105);
+                        _107 = _106;
+                    }
+                    Maybe__ContactSet _108 = _107;
+                    _117 = _108;
+                } else {
+                    Maybe__ContactSet _115 = Collision_collide(h1, v1, h2, v2);
+                    Maybe__ContactSet _116 = _115;
+                    Vector3_delete__double(end);
+                    _117 = _116;
+                }
+                _118 = _117;
+                Vector3_delete__double(_35);
+                Vector3_delete__double(start);
+            }
+            _126 = _118;
+        }
+        else if(true) {
+            Volume* _15_temp = v2;
+            Volume* wildcard_119 = _15_temp;
+            Maybe__ContactSet _125 = Collision_collide(h1, v1, h2, v2);
+            _126 = _125;
+        }
+        else UNHANDLED("collision.carp", 234);
+        _134 = _126;
+    }
+    else if(true) {
+        Volume* _10_temp = v1;
+        Volume* wildcard_127 = _10_temp;
+        Maybe__ContactSet _133 = Collision_collide(h1, v1, h2, v2);
+        _134 = _133;
+    }
+    else UNHANDLED("collision.carp", 232);
+    return _134;
+}
+
+ContactSet* Collision_contact_MINUS_set(Collision* p) { return (&(p->contact_MINUS_set)); }
 
 Collision Collision_copy(Collision* pRef) {
     Collision copy = *pRef;
-    copy.a = Handle_copy__void(&(pRef->a));
-    copy.b = Handle_copy__void(&(pRef->b));
-    copy.contact = Contact_copy(&(pRef->contact));
+    copy.contact_MINUS_set = ContactSet_copy(&(pRef->contact_MINUS_set));
     return copy;
 }
 
 void Collision_delete(Collision p) {
-    Handle_delete__void(p.a);
-    Handle_delete__void(p.b);
-    Contact_delete(p.contact);
+    ContactSet_delete(p.contact_MINUS_set);
 }
 
 AABB Collision_get_MINUS_aabb(Volume* v) {
     Volume _7 = Volume_copy(v);
-    AABB _54;
+    AABB _234;
     if(_7._tag == Volume_Box_tag) {
         Volume _7_temp = _7;
         AABB b = _7_temp.u.Box.member0;
         // Case expr:
-        _54 = b;
+        _234 = b;
     }
     else if(_7._tag == Volume_Ball_tag) {
         Volume _7_temp = _7;
@@ -12566,18 +14866,207 @@ AABB Collision_get_MINUS_aabb(Volume* v) {
             Vector3_delete__double(_39);
             Vector3_delete__double(_49);
         }
-        _54 = _53;
+        _234 = _53;
         Sphere_delete(s);
     }
-    else UNHANDLED("collision.carp", 58);
-    return _54;
+    else if(_7._tag == Volume_Surface_tag) {
+        Volume _7_temp = _7;
+        Plane p = _7_temp.u.Surface.member0;
+        // Case expr:
+        Vector3__double _62 = Vector3_init__double(-1000.0, -1000.0, -1000.0);
+        Vector3__double _67 = Vector3_init__double(1000.0, 1000.0, 1000.0);
+        AABB _68 = AABB_init(_62, _67);
+        _234 = _68;
+        Plane_delete(p);
+    }
+    else if(_7._tag == Volume_Sdf_tag) {
+        Volume _7_temp = _7;
+        SDF sdf = _7_temp.u.Sdf.member0;
+        // Case expr:
+        SDF* _76 = &sdf; // ref
+        BaseShape* _77 = SDF_base(_76);
+        AABB _233;
+        if(_77->_tag == BaseShape_Ball_tag) {
+            BaseShape* _77_temp = _77;
+            double* r = &_77_temp->u.Ball.member0;
+            // Case expr:
+            AABB _123;
+            /* let */ {
+                SDF* _86 = &sdf; // ref
+                Vector3__double* _87 = SDF_position(_86);
+                Vector3__double* pos = _87;
+                double _96 = Double_copy(r);
+                double _99 = Double_copy(r);
+                double _102 = Double_copy(r);
+                Vector3__double _103 = Vector3_init__double(_96, _99, _102);
+                Vector3__double* _104 = &_103; // ref
+                Vector3__double _105 = Vector3_sub__double(pos, _104);
+                double _112 = Double_copy(r);
+                double _115 = Double_copy(r);
+                double _118 = Double_copy(r);
+                Vector3__double _119 = Vector3_init__double(_112, _115, _118);
+                Vector3__double* _120 = &_119; // ref
+                Vector3__double _121 = Vector3_add__double(pos, _120);
+                AABB _122 = AABB_init(_105, _121);
+                _123 = _122;
+                Vector3_delete__double(_103);
+                Vector3_delete__double(_119);
+            }
+            _233 = _123;
+        }
+        else if(_77->_tag == BaseShape_Surface_tag) {
+            BaseShape* _77_temp = _77;
+            Plane* pl = &_77_temp->u.Surface.member0;
+            // Case expr:
+            Vector3__double _132 = Vector3_init__double(-1000.0, -1000.0, -1000.0);
+            Vector3__double _137 = Vector3_init__double(1000.0, 1000.0, 1000.0);
+            AABB _138 = AABB_init(_132, _137);
+            _233 = _138;
+        }
+        else if(_77->_tag == BaseShape_Box_tag) {
+            BaseShape* _77_temp = _77;
+            Vector3__double* e = &_77_temp->u.Box.member0;
+            // Case expr:
+            AABB _176;
+            /* let */ {
+                SDF* _147 = &sdf; // ref
+                Vector3__double* _148 = SDF_position(_147);
+                Vector3__double* pos = _148;
+                double _152 = Vector3_mag__double(e);
+                double r = _152;
+                Vector3__double _162 = Vector3_init__double(r, r, r);
+                Vector3__double* _163 = &_162; // ref
+                Vector3__double _164 = Vector3_sub__double(pos, _163);
+                Vector3__double _172 = Vector3_init__double(r, r, r);
+                Vector3__double* _173 = &_172; // ref
+                Vector3__double _174 = Vector3_add__double(pos, _173);
+                AABB _175 = AABB_init(_164, _174);
+                _176 = _175;
+                Vector3_delete__double(_162);
+                Vector3_delete__double(_172);
+            }
+            _233 = _176;
+        }
+        else if(_77->_tag == BaseShape_Cylinder_tag) {
+            BaseShape* _77_temp = _77;
+            double* rad = &_77_temp->u.Cylinder.member0;
+            double* hh = &_77_temp->u.Cylinder.member1;
+            // Case expr:
+            AABB _232;
+            /* let */ {
+                SDF* _186 = &sdf; // ref
+                Vector3__double* _187 = SDF_position(_186);
+                Vector3__double* pos = _187;
+                double _194 = Double_copy(rad);
+                double _197 = Double_copy(rad);
+                double _198 = Double__MUL_(_194, _197);
+                double _202 = Double_copy(hh);
+                double _205 = Double_copy(hh);
+                double _206 = Double__MUL_(_202, _205);
+                double _207 = Double__PLUS_(_198, _206);
+                double _208 = Double_sqrt(_207);
+                double r = _208;
+                Vector3__double _218 = Vector3_init__double(r, r, r);
+                Vector3__double* _219 = &_218; // ref
+                Vector3__double _220 = Vector3_sub__double(pos, _219);
+                Vector3__double _228 = Vector3_init__double(r, r, r);
+                Vector3__double* _229 = &_228; // ref
+                Vector3__double _230 = Vector3_add__double(pos, _229);
+                AABB _231 = AABB_init(_220, _230);
+                _232 = _231;
+                Vector3_delete__double(_218);
+                Vector3_delete__double(_228);
+            }
+            _233 = _232;
+        }
+        else UNHANDLED("collision.carp", 38);
+        _234 = _233;
+        SDF_delete(sdf);
+    }
+    else UNHANDLED("collision.carp", 26);
+    return _234;
 }
 
-Collision Collision_init(Handle__void a, Handle__void b, Contact contact) {
+AABB Collision_get_MINUS_swept_MINUS_aabb(Volume* v, Vector3__double* vel, double dt) {
+    AABB _161;
+    /* let */ {
+        AABB _10 = Collision_get_MINUS_aabb(v);
+        AABB aabb = _10;
+        AABB* _15 = &aabb; // ref
+        Vector3__double* _16 = AABB_min(_15);
+        Vector3__double* min_MINUS_pt = _16;
+        AABB* _21 = &aabb; // ref
+        Vector3__double* _22 = AABB_max(_21);
+        Vector3__double* max_MINUS_pt = _22;
+        Vector3__double _27 = Vector3_mul__double(vel, dt);
+        Vector3__double delta = _27;
+        double* _35 = Vector3_x__double(min_MINUS_pt);
+        double _36 = Double_copy(_35);
+        double* _41 = Vector3_x__double(min_MINUS_pt);
+        double _42 = Double_copy(_41);
+        Vector3__double* _47 = &delta; // ref
+        double* _48 = Vector3_x__double(_47);
+        double _49 = Double_copy(_48);
+        double _50 = Double__PLUS_(_42, _49);
+        double _51 = min__double(_36, _50);
+        double* _56 = Vector3_y__double(min_MINUS_pt);
+        double _57 = Double_copy(_56);
+        double* _62 = Vector3_y__double(min_MINUS_pt);
+        double _63 = Double_copy(_62);
+        Vector3__double* _68 = &delta; // ref
+        double* _69 = Vector3_y__double(_68);
+        double _70 = Double_copy(_69);
+        double _71 = Double__PLUS_(_63, _70);
+        double _72 = min__double(_57, _71);
+        double* _77 = Vector3_z__double(min_MINUS_pt);
+        double _78 = Double_copy(_77);
+        double* _83 = Vector3_z__double(min_MINUS_pt);
+        double _84 = Double_copy(_83);
+        Vector3__double* _89 = &delta; // ref
+        double* _90 = Vector3_z__double(_89);
+        double _91 = Double_copy(_90);
+        double _92 = Double__PLUS_(_84, _91);
+        double _93 = min__double(_78, _92);
+        Vector3__double _94 = Vector3_init__double(_51, _72, _93);
+        double* _100 = Vector3_x__double(max_MINUS_pt);
+        double _101 = Double_copy(_100);
+        double* _106 = Vector3_x__double(max_MINUS_pt);
+        double _107 = Double_copy(_106);
+        Vector3__double* _112 = &delta; // ref
+        double* _113 = Vector3_x__double(_112);
+        double _114 = Double_copy(_113);
+        double _115 = Double__PLUS_(_107, _114);
+        double _116 = max__double(_101, _115);
+        double* _121 = Vector3_y__double(max_MINUS_pt);
+        double _122 = Double_copy(_121);
+        double* _127 = Vector3_y__double(max_MINUS_pt);
+        double _128 = Double_copy(_127);
+        Vector3__double* _133 = &delta; // ref
+        double* _134 = Vector3_y__double(_133);
+        double _135 = Double_copy(_134);
+        double _136 = Double__PLUS_(_128, _135);
+        double _137 = max__double(_122, _136);
+        double* _142 = Vector3_z__double(max_MINUS_pt);
+        double _143 = Double_copy(_142);
+        double* _148 = Vector3_z__double(max_MINUS_pt);
+        double _149 = Double_copy(_148);
+        Vector3__double* _154 = &delta; // ref
+        double* _155 = Vector3_z__double(_154);
+        double _156 = Double_copy(_155);
+        double _157 = Double__PLUS_(_149, _156);
+        double _158 = max__double(_143, _157);
+        Vector3__double _159 = Vector3_init__double(_116, _137, _158);
+        AABB _160 = AABB_init(_94, _159);
+        _161 = _160;
+        AABB_delete(aabb);
+        Vector3_delete__double(delta);
+    }
+    return _161;
+}
+
+Collision Collision_init(ContactSet contact_MINUS_set) {
     Collision instance;
-    instance.a = a;
-    instance.b = b;
-    instance.contact = contact;
+    instance.contact_MINUS_set = contact_MINUS_set;
     return instance;
 }
 
@@ -12587,15 +15076,7 @@ String Collision_prn(Collision *p) {
   int tempsize = 0;
   (void)tempsize; // that way we remove the occasional unused warning 
   int size = snprintf(NULL, 0, "(%s )", "Collision");
-  temp = Handle_prn__void(&p->a); 
-  size += snprintf(NULL, 0, "%s ", temp);
-  if(temp) { CARP_FREE(temp); temp = NULL; }
-
-  temp = Handle_prn__void(&p->b); 
-  size += snprintf(NULL, 0, "%s ", temp);
-  if(temp) { CARP_FREE(temp); temp = NULL; }
-
-  temp = Contact_prn(&p->contact); 
+  temp = ContactSet_prn(&p->contact_MINUS_set); 
   size += snprintf(NULL, 0, "%s ", temp);
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
@@ -12603,65 +15084,27 @@ String Collision_prn(Collision *p) {
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
-  sprintf(bufferPtr, "(%s ", "Collision");
-  bufferPtr += strlen("Collision") + 2;
-
-  temp = Handle_prn__void(&p->a);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
-  if(temp) { CARP_FREE(temp); temp = NULL; }
-
-  temp = Handle_prn__void(&p->b);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
-  if(temp) { CARP_FREE(temp); temp = NULL; }
-
-  temp = Contact_prn(&p->contact);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Collision");
+  temp = ContactSet_prn(&p->contact_MINUS_set);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   bufferPtr--;
-  sprintf(bufferPtr, ")");
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   return buffer;
 }
 
-Collision Collision_set_MINUS_a(Collision p, Handle__void newValue) {
-    Handle_delete__void(p.a);
-    p.a = newValue;
+Collision Collision_set_MINUS_contact_MINUS_set(Collision p, ContactSet newValue) {
+    ContactSet_delete(p.contact_MINUS_set);
+    p.contact_MINUS_set = newValue;
     return p;
 }
 
 
-void Collision_set_MINUS_a_BANG_(Collision* pRef, Handle__void newValue) {
-    Handle_delete__void(pRef->a);
-    pRef->a = newValue;
-}
-
-
-Collision Collision_set_MINUS_b(Collision p, Handle__void newValue) {
-    Handle_delete__void(p.b);
-    p.b = newValue;
-    return p;
-}
-
-
-void Collision_set_MINUS_b_BANG_(Collision* pRef, Handle__void newValue) {
-    Handle_delete__void(pRef->b);
-    pRef->b = newValue;
-}
-
-
-Collision Collision_set_MINUS_contact(Collision p, Contact newValue) {
-    Contact_delete(p.contact);
-    p.contact = newValue;
-    return p;
-}
-
-
-void Collision_set_MINUS_contact_BANG_(Collision* pRef, Contact newValue) {
-    Contact_delete(pRef->contact);
-    pRef->contact = newValue;
+void Collision_set_MINUS_contact_MINUS_set_BANG_(Collision* pRef, ContactSet newValue) {
+    ContactSet_delete(pRef->contact_MINUS_set);
+    pRef->contact_MINUS_set = newValue;
 }
 
 
@@ -12671,15 +15114,7 @@ String Collision_str(Collision *p) {
   int tempsize = 0;
   (void)tempsize; // that way we remove the occasional unused warning 
   int size = snprintf(NULL, 0, "(%s )", "Collision");
-  temp = Handle_prn__void(&p->a); 
-  size += snprintf(NULL, 0, "%s ", temp);
-  if(temp) { CARP_FREE(temp); temp = NULL; }
-
-  temp = Handle_prn__void(&p->b); 
-  size += snprintf(NULL, 0, "%s ", temp);
-  if(temp) { CARP_FREE(temp); temp = NULL; }
-
-  temp = Contact_prn(&p->contact); 
+  temp = ContactSet_prn(&p->contact_MINUS_set); 
   size += snprintf(NULL, 0, "%s ", temp);
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
@@ -12687,55 +15122,31 @@ String Collision_str(Collision *p) {
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
-  sprintf(bufferPtr, "(%s ", "Collision");
-  bufferPtr += strlen("Collision") + 2;
-
-  temp = Handle_prn__void(&p->a);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
-  if(temp) { CARP_FREE(temp); temp = NULL; }
-
-  temp = Handle_prn__void(&p->b);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
-  if(temp) { CARP_FREE(temp); temp = NULL; }
-
-  temp = Contact_prn(&p->contact);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Collision");
+  temp = ContactSet_prn(&p->contact_MINUS_set);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   bufferPtr--;
-  sprintf(bufferPtr, ")");
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   return buffer;
 }
 
-Collision Collision_update_MINUS_a(Collision p, Lambda *updater) {
-    p.a = (*updater).env ? ((Fn__LambdaEnv_Handle__void_Handle__void)(*updater).callback)((*updater).env, p.a) : ((Fn__Handle__void_Handle__void)(*updater).callback)(p.a);
-    return p;
-}
-
-
-Collision Collision_update_MINUS_b(Collision p, Lambda *updater) {
-    p.b = (*updater).env ? ((Fn__LambdaEnv_Handle__void_Handle__void)(*updater).callback)((*updater).env, p.b) : ((Fn__Handle__void_Handle__void)(*updater).callback)(p.b);
-    return p;
-}
-
-
-Collision Collision_update_MINUS_contact(Collision p, Lambda *updater) {
-    p.contact = (*updater).env ? ((Fn__LambdaEnv_Contact_Contact)(*updater).callback)((*updater).env, p.contact) : ((Fn__Contact_Contact)(*updater).callback)(p.contact);
+Collision Collision_update_MINUS_contact_MINUS_set(Collision p, Lambda *updater) {
+    p.contact_MINUS_set = (*updater).env ? ((Fn__LambdaEnv_ContactSet_ContactSet)(*updater).callback)((*updater).env, p.contact_MINUS_set) : ((Fn__ContactSet_ContactSet)(*updater).callback)(p.contact_MINUS_set);
     return p;
 }
 
 
 Maybe__CollisionResult CollisionChecker_check_MINUS_pair(Collidable* c1, Collidable* c2) {
-    Maybe__CollisionResult _144;
+    Maybe__CollisionResult _140;
     /* let */ {
         Handle__void* _9 = Collidable_handle(c1);
         Handle__void* h1 = _9;
         Handle__void* _13 = Collidable_handle(c2);
         Handle__void* h2 = _13;
-        Maybe__CollisionResult _143;
+        Maybe__CollisionResult _139;
         bool _71;
         bool _20 = Handle_equal_QMARK___void_void(h1, h2);
         if (_20) {
@@ -12772,48 +15183,146 @@ Maybe__CollisionResult CollisionChecker_check_MINUS_pair(Collidable* c1, Collida
         if (_71) {
             Maybe__CollisionResult _74 = Maybe_Nothing__CollisionResult();
             Maybe__CollisionResult _75 = _74;
-            _143 = _75;
+            _139 = _75;
         } else {
-            Volume* _81 = Collidable_volume(c1);
-            Volume* _84 = Collidable_volume(c2);
-            Maybe__Contact _85 = Collision_collide(_81, _84);
-            Maybe__CollisionResult _141;
-            if(_85._tag == Maybe__Contact_Nothing_tag) {
-                Maybe__Contact _85_temp = _85;
+            Volume* _82 = Collidable_volume(c1);
+            Volume* _86 = Collidable_volume(c2);
+            Maybe__ContactSet _87 = Collision_collide(h1, _82, h2, _86);
+            Maybe__CollisionResult _137;
+            if(_87._tag == Maybe__ContactSet_Nothing_tag) {
+                Maybe__ContactSet _87_temp = _87;
                 // Case expr:
-                Maybe__CollisionResult _89 = Maybe_Nothing__CollisionResult();
-                _141 = _89;
+                Maybe__CollisionResult _91 = Maybe_Nothing__CollisionResult();
+                _137 = _91;
             }
-            else if(_85._tag == Maybe__Contact_Just_tag) {
-                Maybe__Contact _85_temp = _85;
-                Contact contact = _85_temp.u.Just.member0;
+            else if(_87._tag == Maybe__ContactSet_Just_tag) {
+                Maybe__ContactSet _87_temp = _87;
+                ContactSet contact_MINUS_set = _87_temp.u.Just.member0;
+                // Case expr:
+                Maybe__CollisionResult _136;
+                bool _112;
+                bool* _100 = Collidable_is_MINUS_trigger(c1);
+                bool _101 = Bool_copy(_100);
+                if (_101) {
+                    bool _104 = true;
+                    _112 = _104;
+                } else {
+                    bool* _109 = Collidable_is_MINUS_trigger(c2);
+                    bool _110 = Bool_copy(_109);
+                    bool _111 = _110;
+                    _112 = _111;
+                }
+                if (_112) {
+                    Handle__void _119 = Handle_copy__void(h1);
+                    Handle__void _122 = Handle_copy__void(h2);
+                    Trigger _123 = Trigger_init(_119, _122);
+                    CollisionResult _124 = CollisionResult_Triggered(_123);
+                    Maybe__CollisionResult _125 = Maybe_Just__CollisionResult(_124);
+                    Maybe__CollisionResult _126 = _125;
+                    ContactSet_delete(contact_MINUS_set);
+                    _136 = _126;
+                } else {
+                    Collision _132 = Collision_init(contact_MINUS_set);
+                    CollisionResult _133 = CollisionResult_Physical(_132);
+                    Maybe__CollisionResult _134 = Maybe_Just__CollisionResult(_133);
+                    Maybe__CollisionResult _135 = _134;
+                    _136 = _135;
+                }
+                _137 = _136;
+            }
+            else UNHANDLED("collision.carp", 297);
+            Maybe__CollisionResult _138 = _137;
+            _139 = _138;
+        }
+        _140 = _139;
+    }
+    return _140;
+}
+
+Maybe__CollisionResult CollisionChecker_check_MINUS_pair_MINUS_swept(Collidable* c1, Vector3__double* vel, double dt, Collidable* c2) {
+    Maybe__CollisionResult _144;
+    /* let */ {
+        Handle__void* _11 = Collidable_handle(c1);
+        Handle__void* h1 = _11;
+        Handle__void* _15 = Collidable_handle(c2);
+        Handle__void* h2 = _15;
+        Maybe__CollisionResult _143;
+        bool _73;
+        bool _22 = Handle_equal_QMARK___void_void(h1, h2);
+        if (_22) {
+            bool _25 = true;
+            _73 = _25;
+        } else {
+            bool _71;
+            Uint32* _33 = Collidable_mask(c1);
+            Uint32 _34 = Uint32_copy(_33);
+            Uint32* _38 = Collidable_layer(c2);
+            Uint32 _39 = Uint32_copy(_38);
+            Uint32 _40 = Uint32_bit_MINUS_and(_34, _39);
+            Uint32 _44 = Uint32_zero();
+            Uint32 _45 = _44; // From the 'the' function.
+            bool _46 = Uint32__EQ_(_40, _45);
+            if (_46) {
+                bool _49 = true;
+                _71 = _49;
+            } else {
+                Uint32* _56 = Collidable_mask(c2);
+                Uint32 _57 = Uint32_copy(_56);
+                Uint32* _61 = Collidable_layer(c1);
+                Uint32 _62 = Uint32_copy(_61);
+                Uint32 _63 = Uint32_bit_MINUS_and(_57, _62);
+                Uint32 _67 = Uint32_zero();
+                Uint32 _68 = _67; // From the 'the' function.
+                bool _69 = Uint32__EQ_(_63, _68);
+                bool _70 = _69;
+                _71 = _70;
+            }
+            bool _72 = _71;
+            _73 = _72;
+        }
+        if (_73) {
+            Maybe__CollisionResult _76 = Maybe_Nothing__CollisionResult();
+            Maybe__CollisionResult _77 = _76;
+            _143 = _77;
+        } else {
+            Volume* _84 = Collidable_volume(c1);
+            Volume* _90 = Collidable_volume(c2);
+            Maybe__ContactSet _91 = Collision_collide_MINUS_swept(h1, _84, vel, dt, h2, _90);
+            Maybe__CollisionResult _141;
+            if(_91._tag == Maybe__ContactSet_Nothing_tag) {
+                Maybe__ContactSet _91_temp = _91;
+                // Case expr:
+                Maybe__CollisionResult _95 = Maybe_Nothing__CollisionResult();
+                _141 = _95;
+            }
+            else if(_91._tag == Maybe__ContactSet_Just_tag) {
+                Maybe__ContactSet _91_temp = _91;
+                ContactSet contact_MINUS_set = _91_temp.u.Just.member0;
                 // Case expr:
                 Maybe__CollisionResult _140;
-                bool _110;
-                bool* _98 = Collidable_is_MINUS_trigger(c1);
-                bool _99 = Bool_copy(_98);
-                if (_99) {
-                    bool _102 = true;
-                    _110 = _102;
+                bool _116;
+                bool* _104 = Collidable_is_MINUS_trigger(c1);
+                bool _105 = Bool_copy(_104);
+                if (_105) {
+                    bool _108 = true;
+                    _116 = _108;
                 } else {
-                    bool* _107 = Collidable_is_MINUS_trigger(c2);
-                    bool _108 = Bool_copy(_107);
-                    bool _109 = _108;
-                    _110 = _109;
+                    bool* _113 = Collidable_is_MINUS_trigger(c2);
+                    bool _114 = Bool_copy(_113);
+                    bool _115 = _114;
+                    _116 = _115;
                 }
-                if (_110) {
-                    Handle__void _117 = Handle_copy__void(h1);
-                    Handle__void _120 = Handle_copy__void(h2);
-                    Trigger _121 = Trigger_init(_117, _120);
-                    CollisionResult _122 = CollisionResult_Triggered(_121);
-                    Maybe__CollisionResult _123 = Maybe_Just__CollisionResult(_122);
-                    Maybe__CollisionResult _124 = _123;
-                    Contact_delete(contact);
-                    _140 = _124;
+                if (_116) {
+                    Handle__void _123 = Handle_copy__void(h1);
+                    Handle__void _126 = Handle_copy__void(h2);
+                    Trigger _127 = Trigger_init(_123, _126);
+                    CollisionResult _128 = CollisionResult_Triggered(_127);
+                    Maybe__CollisionResult _129 = Maybe_Just__CollisionResult(_128);
+                    Maybe__CollisionResult _130 = _129;
+                    ContactSet_delete(contact_MINUS_set);
+                    _140 = _130;
                 } else {
-                    Handle__void _131 = Handle_copy__void(h1);
-                    Handle__void _134 = Handle_copy__void(h2);
-                    Collision _136 = Collision_init(_131, _134, contact);
+                    Collision _136 = Collision_init(contact_MINUS_set);
                     CollisionResult _137 = CollisionResult_Physical(_136);
                     Maybe__CollisionResult _138 = Maybe_Just__CollisionResult(_137);
                     Maybe__CollisionResult _139 = _138;
@@ -12821,7 +15330,7 @@ Maybe__CollisionResult CollisionChecker_check_MINUS_pair(Collidable* c1, Collida
                 }
                 _141 = _140;
             }
-            else UNHANDLED("collision.carp", 91);
+            else UNHANDLED("collision.carp", 312);
             Maybe__CollisionResult _142 = _141;
             _143 = _142;
         }
@@ -12855,9 +15364,9 @@ void CollisionChecker_query_MINUS_and_MINUS_check_MINUS_into_BANG_(SpatialGrid__
             int i = 0;
             Array__Uint64* _34 = &candidates; // ref
             int _35 = Array_length__Uint64(_34);
-            bool _36 = Int__LT_(i, _35);
-            bool _128 = _36;
-            while (_128) {
+            bool _1000008 = Int__LT_(i, _35);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 /* let */ {
                     Array__Uint64* _46 = &candidates; // ref
                     Uint64* _48 = Array_unsafe_MINUS_nth__Uint64(_46, i);
@@ -12900,19 +15409,19 @@ void CollisionChecker_query_MINUS_and_MINUS_check_MINUS_into_BANG_(SpatialGrid__
                                     // Case expr:
                                     /* () */
                                 }
-                                else UNHANDLED("collision.carp", 112);
+                                else UNHANDLED("collision.carp", 332);
                             }
                         }
                     } else {
                         /* () */
                     }
                 }
-                int _125 = Int__PLUS_(i, 1);
-                i = _125;  // Int = Int
+                int _1000025 = Int__PLUS_(i, 1);
+                i = _1000025;  // Int = Int
                 Array__Uint64* _34 = &candidates; // ref
                 int _35 = Array_length__Uint64(_34);
-                bool _36 = Int__LT_(i, _35);
-                _128 = _36;
+                bool _1000008 = Int__LT_(i, _35);
+                _1000006 = _1000008;
             }
         }
         /* () */
@@ -12958,7 +15467,7 @@ Handle__void CollisionResult_a(CollisionResult* res) {
         _28 = _27;
         Trigger_delete(t);
     }
-    else UNHANDLED("collision.carp", 35);
+    else UNHANDLED("collision.carp", 268);
     return _28;
 }
 
@@ -12985,7 +15494,7 @@ Handle__void CollisionResult_b(CollisionResult* res) {
         _28 = _27;
         Trigger_delete(t);
     }
-    else UNHANDLED("collision.carp", 41);
+    else UNHANDLED("collision.carp", 274);
     return _28;
 }
 
@@ -13038,28 +15547,24 @@ String CollisionResult_prn(CollisionResult *p) {
   String bufferPtr = buffer;
 
   if(p->_tag == CollisionResult_Physical_tag) {
-    sprintf(bufferPtr, "(%s ", "Physical");
-    bufferPtr += strlen("Physical") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Physical");
   temp = Collision_prn(&p->u.Physical.member0);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == CollisionResult_Triggered_tag) {
-    sprintf(bufferPtr, "(%s ", "Triggered");
-    bufferPtr += strlen("Triggered") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Triggered");
   temp = Trigger_prn(&p->u.Triggered.member0);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
 
   return buffer;
@@ -13090,28 +15595,24 @@ String CollisionResult_str(CollisionResult *p) {
   String bufferPtr = buffer;
 
   if(p->_tag == CollisionResult_Physical_tag) {
-    sprintf(bufferPtr, "(%s ", "Physical");
-    bufferPtr += strlen("Physical") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Physical");
   temp = Collision_prn(&p->u.Physical.member0);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == CollisionResult_Triggered_tag) {
-    sprintf(bufferPtr, "(%s ", "Triggered");
-    bufferPtr += strlen("Triggered") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Triggered");
   temp = Trigger_prn(&p->u.Triggered.member0);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
 
   return buffer;
@@ -13560,188 +16061,142 @@ String Color_Id_prn(ColorId *p) {
   String bufferPtr = buffer;
 
   if(p->_tag == ColorId_Black_tag) {
-    sprintf(bufferPtr, "(%s ", "Black");
-    bufferPtr += strlen("Black") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Black");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_Red_tag) {
-    sprintf(bufferPtr, "(%s ", "Red");
-    bufferPtr += strlen("Red") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Red");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_Green_tag) {
-    sprintf(bufferPtr, "(%s ", "Green");
-    bufferPtr += strlen("Green") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Green");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_Yellow_tag) {
-    sprintf(bufferPtr, "(%s ", "Yellow");
-    bufferPtr += strlen("Yellow") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Yellow");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_Blue_tag) {
-    sprintf(bufferPtr, "(%s ", "Blue");
-    bufferPtr += strlen("Blue") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Blue");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_Magenta_tag) {
-    sprintf(bufferPtr, "(%s ", "Magenta");
-    bufferPtr += strlen("Magenta") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Magenta");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_Cyan_tag) {
-    sprintf(bufferPtr, "(%s ", "Cyan");
-    bufferPtr += strlen("Cyan") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Cyan");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_White_tag) {
-    sprintf(bufferPtr, "(%s ", "White");
-    bufferPtr += strlen("White") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "White");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_Reset_tag) {
-    sprintf(bufferPtr, "(%s ", "Reset");
-    bufferPtr += strlen("Reset") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Reset");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_None_tag) {
-    sprintf(bufferPtr, "(%s ", "None");
-    bufferPtr += strlen("None") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "None");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_Bold_tag) {
-    sprintf(bufferPtr, "(%s ", "Bold");
-    bufferPtr += strlen("Bold") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Bold");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_Italic_tag) {
-    sprintf(bufferPtr, "(%s ", "Italic");
-    bufferPtr += strlen("Italic") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Italic");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_Underline_tag) {
-    sprintf(bufferPtr, "(%s ", "Underline");
-    bufferPtr += strlen("Underline") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Underline");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_BlinkSlow_tag) {
-    sprintf(bufferPtr, "(%s ", "BlinkSlow");
-    bufferPtr += strlen("BlinkSlow") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "BlinkSlow");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_BlinkRapid_tag) {
-    sprintf(bufferPtr, "(%s ", "BlinkRapid");
-    bufferPtr += strlen("BlinkRapid") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "BlinkRapid");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_BgBlack_tag) {
-    sprintf(bufferPtr, "(%s ", "BgBlack");
-    bufferPtr += strlen("BgBlack") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "BgBlack");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_BgRed_tag) {
-    sprintf(bufferPtr, "(%s ", "BgRed");
-    bufferPtr += strlen("BgRed") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "BgRed");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_BgGreen_tag) {
-    sprintf(bufferPtr, "(%s ", "BgGreen");
-    bufferPtr += strlen("BgGreen") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "BgGreen");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_BgYellow_tag) {
-    sprintf(bufferPtr, "(%s ", "BgYellow");
-    bufferPtr += strlen("BgYellow") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "BgYellow");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_BgBlue_tag) {
-    sprintf(bufferPtr, "(%s ", "BgBlue");
-    bufferPtr += strlen("BgBlue") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "BgBlue");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_BgMagenta_tag) {
-    sprintf(bufferPtr, "(%s ", "BgMagenta");
-    bufferPtr += strlen("BgMagenta") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "BgMagenta");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_BgCyan_tag) {
-    sprintf(bufferPtr, "(%s ", "BgCyan");
-    bufferPtr += strlen("BgCyan") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "BgCyan");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_BgWhite_tag) {
-    sprintf(bufferPtr, "(%s ", "BgWhite");
-    bufferPtr += strlen("BgWhite") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "BgWhite");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
 
   return buffer;
@@ -13850,188 +16305,142 @@ String Color_Id_str(ColorId *p) {
   String bufferPtr = buffer;
 
   if(p->_tag == ColorId_Black_tag) {
-    sprintf(bufferPtr, "(%s ", "Black");
-    bufferPtr += strlen("Black") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Black");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_Red_tag) {
-    sprintf(bufferPtr, "(%s ", "Red");
-    bufferPtr += strlen("Red") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Red");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_Green_tag) {
-    sprintf(bufferPtr, "(%s ", "Green");
-    bufferPtr += strlen("Green") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Green");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_Yellow_tag) {
-    sprintf(bufferPtr, "(%s ", "Yellow");
-    bufferPtr += strlen("Yellow") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Yellow");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_Blue_tag) {
-    sprintf(bufferPtr, "(%s ", "Blue");
-    bufferPtr += strlen("Blue") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Blue");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_Magenta_tag) {
-    sprintf(bufferPtr, "(%s ", "Magenta");
-    bufferPtr += strlen("Magenta") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Magenta");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_Cyan_tag) {
-    sprintf(bufferPtr, "(%s ", "Cyan");
-    bufferPtr += strlen("Cyan") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Cyan");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_White_tag) {
-    sprintf(bufferPtr, "(%s ", "White");
-    bufferPtr += strlen("White") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "White");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_Reset_tag) {
-    sprintf(bufferPtr, "(%s ", "Reset");
-    bufferPtr += strlen("Reset") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Reset");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_None_tag) {
-    sprintf(bufferPtr, "(%s ", "None");
-    bufferPtr += strlen("None") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "None");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_Bold_tag) {
-    sprintf(bufferPtr, "(%s ", "Bold");
-    bufferPtr += strlen("Bold") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Bold");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_Italic_tag) {
-    sprintf(bufferPtr, "(%s ", "Italic");
-    bufferPtr += strlen("Italic") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Italic");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_Underline_tag) {
-    sprintf(bufferPtr, "(%s ", "Underline");
-    bufferPtr += strlen("Underline") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Underline");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_BlinkSlow_tag) {
-    sprintf(bufferPtr, "(%s ", "BlinkSlow");
-    bufferPtr += strlen("BlinkSlow") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "BlinkSlow");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_BlinkRapid_tag) {
-    sprintf(bufferPtr, "(%s ", "BlinkRapid");
-    bufferPtr += strlen("BlinkRapid") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "BlinkRapid");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_BgBlack_tag) {
-    sprintf(bufferPtr, "(%s ", "BgBlack");
-    bufferPtr += strlen("BgBlack") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "BgBlack");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_BgRed_tag) {
-    sprintf(bufferPtr, "(%s ", "BgRed");
-    bufferPtr += strlen("BgRed") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "BgRed");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_BgGreen_tag) {
-    sprintf(bufferPtr, "(%s ", "BgGreen");
-    bufferPtr += strlen("BgGreen") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "BgGreen");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_BgYellow_tag) {
-    sprintf(bufferPtr, "(%s ", "BgYellow");
-    bufferPtr += strlen("BgYellow") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "BgYellow");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_BgBlue_tag) {
-    sprintf(bufferPtr, "(%s ", "BgBlue");
-    bufferPtr += strlen("BgBlue") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "BgBlue");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_BgMagenta_tag) {
-    sprintf(bufferPtr, "(%s ", "BgMagenta");
-    bufferPtr += strlen("BgMagenta") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "BgMagenta");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_BgCyan_tag) {
-    sprintf(bufferPtr, "(%s ", "BgCyan");
-    bufferPtr += strlen("BgCyan") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "BgCyan");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == ColorId_BgWhite_tag) {
-    sprintf(bufferPtr, "(%s ", "BgWhite");
-    bufferPtr += strlen("BgWhite") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "BgWhite");
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
 
   return buffer;
@@ -14130,26 +16539,24 @@ String Contact_prn(Contact *p) {
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
-  sprintf(bufferPtr, "(%s ", "Contact");
-  bufferPtr += strlen("Contact") + 2;
-
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Contact");
   temp = Double_prn(p->depth);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Vector3_prn__double(&p->point);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Vector3_prn__double(&p->normal);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   bufferPtr--;
-  sprintf(bufferPtr, ")");
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   return buffer;
 }
 
@@ -14225,26 +16632,24 @@ String Contact_str(Contact *p) {
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
-  sprintf(bufferPtr, "(%s ", "Contact");
-  bufferPtr += strlen("Contact") + 2;
-
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Contact");
   temp = Double_prn(p->depth);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Vector3_prn__double(&p->point);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Vector3_prn__double(&p->normal);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   bufferPtr--;
-  sprintf(bufferPtr, ")");
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   return buffer;
 }
 
@@ -14262,6 +16667,217 @@ Contact Contact_update_MINUS_normal(Contact p, Lambda *updater) {
 
 Contact Contact_update_MINUS_point(Contact p, Lambda *updater) {
     p.point = (*updater).env ? ((Fn__LambdaEnv_Vector3__double_Vector3__double)(*updater).callback)((*updater).env, p.point) : ((Fn__Vector3__double_Vector3__double)(*updater).callback)(p.point);
+    return p;
+}
+
+
+Handle__void* ContactSet_a(ContactSet* p) { return (&(p->a)); }
+
+Handle__void* ContactSet_b(ContactSet* p) { return (&(p->b)); }
+
+Array__Contact* ContactSet_contacts(ContactSet* p) { return (&(p->contacts)); }
+
+ContactSet ContactSet_copy(ContactSet* pRef) {
+    ContactSet copy = *pRef;
+    copy.a = Handle_copy__void(&(pRef->a));
+    copy.b = Handle_copy__void(&(pRef->b));
+    copy.contacts = Array_copy__Contact(&(pRef->contacts));
+    return copy;
+}
+
+void ContactSet_delete(ContactSet p) {
+    Handle_delete__void(p.a);
+    Handle_delete__void(p.b);
+    Array_delete__Contact(p.contacts);
+}
+
+ContactSet ContactSet_init(Handle__void a, Handle__void b, Array__Contact contacts) {
+    ContactSet instance;
+    instance.a = a;
+    instance.b = b;
+    instance.contacts = contacts;
+    return instance;
+}
+
+ContactSet ContactSet_new(Handle__void a, Handle__void b, Array__Contact contacts) {
+    ContactSet _10 = ContactSet_init(a, b, contacts);
+    return _10;
+}
+
+String ContactSet_prn(ContactSet *p) {
+  // convert members to String here:
+  String temp = NULL;
+  int tempsize = 0;
+  (void)tempsize; // that way we remove the occasional unused warning 
+  int size = snprintf(NULL, 0, "(%s )", "ContactSet");
+  temp = Handle_prn__void(&p->a); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Handle_prn__void(&p->b); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Array_prn__Contact(&p->contacts); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+
+  String buffer = CARP_MALLOC(size);
+  String bufferPtr = buffer;
+
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "ContactSet");
+  temp = Handle_prn__void(&p->a);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Handle_prn__void(&p->b);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Array_prn__Contact(&p->contacts);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  bufferPtr--;
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
+  return buffer;
+}
+
+ContactSet ContactSet_reverse(ContactSet* cs) {
+    ContactSet _60;
+    /* let */ {
+        Array _6 = { .len = 0, .capacity = 0, .data = CARP_MALLOC(sizeof(Contact) * 0) };
+        Array__Contact rev_MINUS_contacts = _6;
+        Array__Contact* _10 = ContactSet_contacts(cs);
+        Array__Contact* orig_MINUS_contacts = _10;
+        /* let */ {
+            int i = 0;
+            int _22 = Array_length__Contact(orig_MINUS_contacts);
+            bool _1000008 = Int__LT_(i, _22);
+            bool _1000006 = _1000008;
+            while (_1000006) {
+                Array__Contact* _28 = &rev_MINUS_contacts; // ref
+                Contact* _33 = Array_unsafe_MINUS_nth__Contact(orig_MINUS_contacts, i);
+                Contact _34 = Contact_reverse(_33);
+                Array_push_MINUS_back_BANG___Contact(_28, _34);
+                int _1000013 = Int__PLUS_(i, 1);
+                i = _1000013;  // Int = Int
+                int _22 = Array_length__Contact(orig_MINUS_contacts);
+                bool _1000008 = Int__LT_(i, _22);
+                _1000006 = _1000008;
+            }
+        }
+        Handle__void* _50 = ContactSet_b(cs);
+        Handle__void _51 = Handle_copy__void(_50);
+        Handle__void* _55 = ContactSet_a(cs);
+        Handle__void _56 = Handle_copy__void(_55);
+        ContactSet _58 = ContactSet_init(_51, _56, rev_MINUS_contacts);
+        ContactSet _59 = _58;
+        _60 = _59;
+    }
+    return _60;
+}
+
+ContactSet ContactSet_set_MINUS_a(ContactSet p, Handle__void newValue) {
+    Handle_delete__void(p.a);
+    p.a = newValue;
+    return p;
+}
+
+
+void ContactSet_set_MINUS_a_BANG_(ContactSet* pRef, Handle__void newValue) {
+    Handle_delete__void(pRef->a);
+    pRef->a = newValue;
+}
+
+
+ContactSet ContactSet_set_MINUS_b(ContactSet p, Handle__void newValue) {
+    Handle_delete__void(p.b);
+    p.b = newValue;
+    return p;
+}
+
+
+void ContactSet_set_MINUS_b_BANG_(ContactSet* pRef, Handle__void newValue) {
+    Handle_delete__void(pRef->b);
+    pRef->b = newValue;
+}
+
+
+ContactSet ContactSet_set_MINUS_contacts(ContactSet p, Array__Contact newValue) {
+    Array_delete__Contact(p.contacts);
+    p.contacts = newValue;
+    return p;
+}
+
+
+void ContactSet_set_MINUS_contacts_BANG_(ContactSet* pRef, Array__Contact newValue) {
+    Array_delete__Contact(pRef->contacts);
+    pRef->contacts = newValue;
+}
+
+
+String ContactSet_str(ContactSet *p) {
+  // convert members to String here:
+  String temp = NULL;
+  int tempsize = 0;
+  (void)tempsize; // that way we remove the occasional unused warning 
+  int size = snprintf(NULL, 0, "(%s )", "ContactSet");
+  temp = Handle_prn__void(&p->a); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Handle_prn__void(&p->b); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Array_prn__Contact(&p->contacts); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+
+  String buffer = CARP_MALLOC(size);
+  String bufferPtr = buffer;
+
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "ContactSet");
+  temp = Handle_prn__void(&p->a);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Handle_prn__void(&p->b);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Array_prn__Contact(&p->contacts);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  bufferPtr--;
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
+  return buffer;
+}
+
+ContactSet ContactSet_update_MINUS_a(ContactSet p, Lambda *updater) {
+    p.a = (*updater).env ? ((Fn__LambdaEnv_Handle__void_Handle__void)(*updater).callback)((*updater).env, p.a) : ((Fn__Handle__void_Handle__void)(*updater).callback)(p.a);
+    return p;
+}
+
+
+ContactSet ContactSet_update_MINUS_b(ContactSet p, Lambda *updater) {
+    p.b = (*updater).env ? ((Fn__LambdaEnv_Handle__void_Handle__void)(*updater).callback)((*updater).env, p.b) : ((Fn__Handle__void_Handle__void)(*updater).callback)(p.b);
+    return p;
+}
+
+
+ContactSet ContactSet_update_MINUS_contacts(ContactSet p, Lambda *updater) {
+    p.contacts = (*updater).env ? ((Fn__LambdaEnv_Array__Contact_Array__Contact)(*updater).callback)((*updater).env, p.contacts) : ((Fn__Array__Contact_Array__Contact)(*updater).callback)(p.contacts);
     return p;
 }
 
@@ -14338,6 +16954,16 @@ double Double_inc(double x) {
     return _7;
 }
 
+bool Double_negative_QMARK_(double a) {
+    bool _7 = Double__LT_(a, 0.0);
+    return _7;
+}
+
+bool Double_positive_QMARK_(double a) {
+    bool _7 = Double__GT_(a, 0.0);
+    return _7;
+}
+
 String Double_prn(double x) {
     String _6 = Double_str(x);
     return _6;
@@ -14360,6 +16986,28 @@ double Double_random_MINUS_between(double lower, double upper) {
         _20 = _19;
     }
     return _20;
+}
+
+double Double_sign(double x) {
+    double _26;
+    bool _8 = Double__GT_(x, 0.0);
+    if (_8) {
+        double _11 = 1.0;
+        _26 = _11;
+    } else {
+        double _24;
+        bool _17 = Double__LT_(x, 0.0);
+        if (_17) {
+            double _20 = -1.0;
+            _24 = _20;
+        } else {
+            double _23 = 0.0;
+            _24 = _23;
+        }
+        double _25 = _24;
+        _26 = _25;
+    }
+    return _26;
 }
 
 double Double_zero() {
@@ -14454,6 +17102,16 @@ float Float_inc(float x) {
     return _7;
 }
 
+bool Float_negative_QMARK_(float a) {
+    bool _7 = Float__LT_(a, 0.0f);
+    return _7;
+}
+
+bool Float_positive_QMARK_(float a) {
+    bool _7 = Float__GT_(a, 0.0f);
+    return _7;
+}
+
 String Float_prn(float x) {
     String _6 = Float_str(x);
     return _6;
@@ -14478,6 +17136,28 @@ float Float_random_MINUS_between(float lower, float upper) {
         _24 = _23;
     }
     return _24;
+}
+
+float Float_sign(float x) {
+    float _26;
+    bool _8 = Float__GT_(x, 0.0f);
+    if (_8) {
+        float _11 = 1.0f;
+        _26 = _11;
+    } else {
+        float _24;
+        bool _17 = Float__LT_(x, 0.0f);
+        if (_17) {
+            float _20 = -1.0f;
+            _24 = _20;
+        } else {
+            float _23 = 0.0f;
+            _24 = _23;
+        }
+        float _25 = _24;
+        _26 = _25;
+    }
+    return _26;
 }
 
 float Float_zero() {
@@ -14980,30 +17660,6 @@ bool Geometry_AABB_contains_QMARK_(AABB* a, Vector3__double* p) {
     return _122;
 }
 
-double Geometry_Plane_distance_MINUS_to_MINUS_point(Plane* plane, Vector3__double* p) {
-    Vector3__double* _9 = Plane_normal(plane);
-    double _11 = Vector3_dot__double(_9, p);
-    double* _15 = Plane_d(plane);
-    double _16 = Double_copy(_15);
-    double _17 = Double__PLUS_(_11, _16);
-    return _17;
-}
-
-Vector3__double Geometry_Plane_project_MINUS_point(Plane* plane, Vector3__double* p) {
-    Vector3__double _23;
-    /* let */ {
-        double _10 = Geometry_Plane_distance_MINUS_to_MINUS_point(plane, p);
-        double dist = _10;
-        Vector3__double* _18 = Plane_normal(plane);
-        Vector3__double _20 = Vector3_mul__double(_18, dist);
-        Vector3__double* _21 = &_20; // ref
-        Vector3__double _22 = Vector3_sub__double(p, _21);
-        _23 = _22;
-        Vector3_delete__double(_20);
-    }
-    return _23;
-}
-
 Vector3__double Geometry_Ray_at(Ray* r, double t) {
     Vector3__double* _8 = Ray_origin(r);
     Vector3__double* _13 = Ray_direction(r);
@@ -15012,6 +17668,58 @@ Vector3__double Geometry_Ray_at(Ray* r, double t) {
     Vector3__double _17 = Vector3_add__double(_8, _16);
     Vector3_delete__double(_15);
     return _17;
+}
+
+Array__Vector3__double Geometry_Ray_fibonacci_MINUS_sphere(int samples) {
+    Array__Vector3__double _106;
+    /* let */ {
+        Array _6 = { .len = 0, .capacity = 0, .data = CARP_MALLOC(sizeof(Vector3__double) * 0) };
+        Array__Vector3__double points = _6;
+        double _14 = Double_sqrt(5.0);
+        double _15 = Double__MINUS_(3.0, _14);
+        double _16 = Double__MUL_(3.141592653589793, _15);
+        double phi = _16;
+        /* let */ {
+            int i = 0;
+            bool _1000008 = Int__LT_(i, samples);
+            bool _1000006 = _1000008;
+            while (_1000006) {
+                /* let */ {
+                    double _37 = Double_from_MINUS_int(i);
+                    int _42 = Int__MINUS_(samples, 1);
+                    double _43 = Double_from_MINUS_int(_42);
+                    double _44 = Double__DIV_(_37, _43);
+                    double _46 = Double__MUL_(_44, 2.0);
+                    double _47 = Double__MINUS_(1.0, _46);
+                    double y = _47;
+                    double _57 = Double__MUL_(y, y);
+                    double _58 = Double__MINUS_(1.0, _57);
+                    double _59 = max__double(0.0, _58);
+                    double _60 = Double_sqrt(_59);
+                    double r_MINUS_at_MINUS_y = _60;
+                    double _66 = Double_from_MINUS_int(i);
+                    double _67 = Double__MUL_(phi, _66);
+                    double theta = _67;
+                    double _72 = Double_cos(theta);
+                    double _74 = Double__MUL_(_72, r_MINUS_at_MINUS_y);
+                    double x = _74;
+                    double _79 = Double_sin(theta);
+                    double _81 = Double__MUL_(_79, r_MINUS_at_MINUS_y);
+                    double z = _81;
+                    Array__Vector3__double* _86 = &points; // ref
+                    Vector3__double _91 = Vector3_init__double(x, y, z);
+                    Array_push_MINUS_back_BANG___Vector3__double(_86, _91);
+                }
+                int _1000014 = Int__PLUS_(i, 1);
+                i = _1000014;  // Int = Int
+                bool _1000008 = Int__LT_(i, samples);
+                _1000006 = _1000008;
+            }
+        }
+        Array__Vector3__double _105 = points;
+        _106 = _105;
+    }
+    return _106;
 }
 
 Maybe__RayHit Geometry_Ray_intersect_MINUS_aabb(Ray* ray, AABB* aabb) {
@@ -15498,11 +18206,113 @@ Maybe__RayHit Geometry_Segment_intersect_MINUS_aabb(Segment* s, AABB* aabb) {
             }
             _62 = _61;
         }
-        else UNHANDLED("geometry.carp", 268);
+        else UNHANDLED("geometry.carp", 438);
         _63 = _62;
         Ray_delete(ray);
     }
     return _63;
+}
+
+Maybe__RayHit Geometry_Segment_intersect_MINUS_sdf(Segment* s, SDF* sdf) {
+    Maybe__RayHit _178;
+    /* let */ {
+        Vector3__double* _9 = Segment_start(s);
+        Vector3__double* start = _9;
+        Vector3__double* _13 = Segment_end(s);
+        Vector3__double* end = _13;
+        Vector3__double _18 = Vector3_sub__double(end, start);
+        Vector3__double diff = _18;
+        Vector3__double* _23 = &diff; // ref
+        double _24 = Vector3_mag__double(_23);
+        double len = _24;
+        Vector3__double _45;
+        bool _30 = Double__LT_(len, 1.0e-4);
+        if (_30) {
+            Vector3__double _36 = Vector3_init__double(0.0, 0.0, 1.0);
+            Vector3__double _37 = _36;
+            _45 = _37;
+        } else {
+            Vector3__double* _42 = &diff; // ref
+            Vector3__double _43 = Vector3_normalize__double(_42);
+            Vector3__double _44 = _43;
+            _45 = _44;
+        }
+        Vector3__double dir = _45;
+        double t = 0.0;
+        bool hit_QMARK_ = false;
+        Vector3__double _55 = Vector3_init__double(0.0, 0.0, 0.0);
+        Vector3__double hit_MINUS_pt = _55;
+        Vector3__double _61 = Vector3_init__double(0.0, 1.0, 0.0);
+        Vector3__double hit_MINUS_norm = _61;
+        /* let */ {
+            int step = 0;
+            bool _1000011 = Int__LT_(step, 10);
+            bool _1000009 = _1000011;
+            while (_1000009) {
+                bool _88;
+                bool _78 = not(hit_QMARK_);
+                if (_78) {
+                    bool _83 = _LT__EQ___double(t, len);
+                    bool _84 = _83;
+                    _88 = _84;
+                } else {
+                    bool _87 = false;
+                    _88 = _87;
+                }
+                if (_88) {
+                    /* let */ {
+                        Vector3__double* _98 = &dir; // ref
+                        Vector3__double _100 = Vector3_mul__double(_98, t);
+                        Vector3__double* _101 = &_100; // ref
+                        Vector3__double _102 = Vector3_add__double(start, _101);
+                        Vector3__double p = _102;
+                        Vector3__double* _108 = &p; // ref
+                        double _109 = SDF_distance_MINUS_world(sdf, _108);
+                        double d = _109;
+                        bool _115 = Double__LT_(d, 1.0e-3);
+                        if (_115) {
+                            hit_QMARK_ = true;  // Bool = Bool
+                            Vector3__double* _127 = &p; // ref
+                            Vector3__double _128 = SDF_normal_MINUS_world(sdf, _127);
+                            Vector3_delete__double(hit_MINUS_norm);
+                            hit_MINUS_norm = _128;  // (Vector3 Double) = (Vector3 Double)
+                            Vector3_delete__double(hit_MINUS_pt);
+                            hit_MINUS_pt = p;  // (Vector3 Double) = (Vector3 Double)
+                        } else {
+                            double _141 = Double__PLUS_(t, d);
+                            t = _141;  // Double = Double
+                            Vector3_delete__double(p);
+                        }
+                        Vector3_delete__double(_100);
+                    }
+                } else {
+                    /* () */
+                }
+                int _1000030 = Int__PLUS_(step, 1);
+                step = _1000030;  // Int = Int
+                bool _1000011 = Int__LT_(step, 10);
+                _1000009 = _1000011;
+            }
+        }
+        Maybe__RayHit _176;
+        if (hit_QMARK_) {
+            RayHit _169 = RayHit_init(t, hit_MINUS_pt, hit_MINUS_norm);
+            Maybe__RayHit _170 = Maybe_Just__RayHit(_169);
+            Maybe__RayHit _171 = _170;
+            _176 = _171;
+        } else {
+            Maybe__RayHit _174 = Maybe_Nothing__RayHit();
+            Maybe__RayHit _175 = _174;
+            Vector3_delete__double(hit_MINUS_norm);
+            Vector3_delete__double(hit_MINUS_pt);
+            _176 = _175;
+        }
+        Maybe__RayHit _177 = _176;
+        _178 = _177;
+        Vector3_delete__double(diff);
+        Vector3_delete__double(dir);
+    }
+    return _178;
 }
 
 Maybe__RayHit Geometry_Segment_intersect_MINUS_sphere(Segment* s, Sphere* sphere) {
@@ -15547,7 +18357,7 @@ Maybe__RayHit Geometry_Segment_intersect_MINUS_sphere(Segment* s, Sphere* sphere
             }
             _62 = _61;
         }
-        else UNHANDLED("geometry.carp", 258);
+        else UNHANDLED("geometry.carp", 428);
         _63 = _62;
         Ray_delete(ray);
     }
@@ -15650,6 +18460,47 @@ Maybe__Contact Geometry_Sphere_collide_MINUS_aabb(Sphere* sphere, AABB* aabb) {
         Vector3_delete__double(diff);
     }
     return _159;
+}
+
+Maybe__Contact Geometry_Sphere_collide_MINUS_sdf(Sphere* sphere, SDF* sdf) {
+    Maybe__Contact _66;
+    /* let */ {
+        Vector3__double* _9 = Sphere_center(sphere);
+        Vector3__double* center = _9;
+        double _14 = SDF_distance(sdf, center);
+        double dist = _14;
+        double* _19 = Sphere_radius(sphere);
+        double _20 = Double_copy(_19);
+        double r = _20;
+        Maybe__Contact _65;
+        bool _26 = Double__LT_(dist, r);
+        if (_26) {
+            Maybe__Contact _59;
+            /* let */ {
+                double _33 = Double__MINUS_(r, dist);
+                double depth = _33;
+                Vector3__double _38 = SDF_normal_MINUS_at(sdf, center);
+                Vector3__double norm = _38;
+                Vector3__double* _46 = &norm; // ref
+                Vector3__double _48 = Vector3_mul__double(_46, dist);
+                Vector3__double* _49 = &_48; // ref
+                Vector3__double _50 = Vector3_sub__double(center, _49);
+                Vector3__double cp = _50;
+                Contact _57 = Contact_init(depth, cp, norm);
+                Maybe__Contact _58 = Maybe_Just__Contact(_57);
+                _59 = _58;
+                Vector3_delete__double(_48);
+            }
+            Maybe__Contact _60 = _59;
+            _65 = _60;
+        } else {
+            Maybe__Contact _63 = Maybe_Nothing__Contact();
+            Maybe__Contact _64 = _63;
+            _65 = _64;
+        }
+        _66 = _65;
+    }
+    return _66;
 }
 
 Maybe__Contact Geometry_Sphere_collide_MINUS_sphere(Sphere* s1, Sphere* s2) {
@@ -15856,21 +18707,19 @@ String Handle_prn__void(Handle__void *p) {
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
-  sprintf(bufferPtr, "(%s ", "Handle");
-  bufferPtr += strlen("Handle") + 2;
-
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Handle");
   temp = Uint64_prn(p->index_MINUS_raw);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Uint32_prn(p->generation_MINUS_raw);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   bufferPtr--;
-  sprintf(bufferPtr, ")");
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   return buffer;
 }
 
@@ -15966,21 +18815,21 @@ Result__bool_String IO_append_MINUS_file(String* content, String* file_MINUS_nam
             String *_29_ref = &_29;
             String _33 = Result_unsafe_MINUS_from_MINUS_error__FILE_MUL__String(fOut_QMARK_);
             String* _34 = &_33; // ref
-            String _35 = String_format(_29_ref, _34);
-            String* _36 = &_35; // ref
+            String _1000010 = String_format(_29_ref, _34);
+            String* _1000008 = &_1000010; // ref
             static String _39 = "%s'";
             String *_39_ref = &_39;
-            String _41 = String_format(_39_ref, file_MINUS_name);
-            String* _42 = &_41; // ref
-            String _43 = String_append(_36, _42);
-            String* _44 = &_43; // ref
-            String _45 = String_copy(_44);
+            String _1000013 = String_format(_39_ref, file_MINUS_name);
+            String* _1000011 = &_1000013; // ref
+            String _1000007 = String_append(_1000008, _1000011);
+            String* _1000005 = &_1000007; // ref
+            String _45 = String_copy(_1000005);
             Result__bool_String _46 = Result_Error__String_bool(_45);
             Result__bool_String _47 = _46;
+            String_delete(_1000007);
+            String_delete(_1000010);
+            String_delete(_1000013);
             String_delete(_33);
-            String_delete(_35);
-            String_delete(_41);
-            String_delete(_43);
             _102 = _47;
         } else {
             Result__bool_String _100;
@@ -15999,20 +18848,20 @@ Result__bool_String IO_append_MINUS_file(String* content, String* file_MINUS_nam
                 } else {
                     static String _83 = "only %d of ";
                     String *_83_ref = &_83;
-                    String _85 = Int_format(_83_ref, bytes_MINUS_written);
-                    String* _86 = &_85; // ref
+                    String _1000025 = Int_format(_83_ref, bytes_MINUS_written);
+                    String* _1000023 = &_1000025; // ref
                     static String _89 = "%d bytes were written";
                     String *_89_ref = &_89;
-                    String _91 = Int_format(_89_ref, bytes2write);
-                    String* _92 = &_91; // ref
-                    String _93 = String_append(_86, _92);
-                    String* _94 = &_93; // ref
-                    String _95 = String_copy(_94);
+                    String _1000028 = Int_format(_89_ref, bytes2write);
+                    String* _1000026 = &_1000028; // ref
+                    String _1000022 = String_append(_1000023, _1000026);
+                    String* _1000020 = &_1000022; // ref
+                    String _95 = String_copy(_1000020);
                     Result__bool_String _96 = Result_Error__String_bool(_95);
                     Result__bool_String _97 = _96;
-                    String_delete(_85);
-                    String_delete(_91);
-                    String_delete(_93);
+                    String_delete(_1000022);
+                    String_delete(_1000025);
+                    String_delete(_1000028);
                     _98 = _97;
                 }
                 Result__bool_String _99 = _98;
@@ -16173,7 +19022,7 @@ Result__String_String IO_read_MINUS__GT_EOF(String* filename) {
             }
             _65 = _64;
         }
-        else UNHANDLED("IO.carp", 255);
+        else UNHANDLED("IO.carp", 273);
         _66 = _65;
     }
     return _66;
@@ -16192,23 +19041,23 @@ Result__String_String IO_read_MINUS_file(String* filename) {
         if (_16) {
             static String _24 = "Failed to open file='%s', error='";
             String *_24_ref = &_24;
-            String _26 = String_format(_24_ref, filename);
-            String* _27 = &_26; // ref
+            String _1000010 = String_format(_24_ref, filename);
+            String* _1000008 = &_1000010; // ref
             static String _30 = "%s'";
             String *_30_ref = &_30;
             String _34 = Result_unsafe_MINUS_from_MINUS_error__FILE_MUL__String(finput_QMARK_);
             String* _35 = &_34; // ref
-            String _36 = String_format(_30_ref, _35);
-            String* _37 = &_36; // ref
-            String _38 = String_append(_27, _37);
-            String* _39 = &_38; // ref
-            String _40 = String_copy(_39);
+            String _1000013 = String_format(_30_ref, _35);
+            String* _1000011 = &_1000013; // ref
+            String _1000007 = String_append(_1000008, _1000011);
+            String* _1000005 = &_1000007; // ref
+            String _40 = String_copy(_1000005);
             Result__String_String _41 = Result_Error__String_String(_40);
             Result__String_String _42 = _41;
-            String_delete(_26);
+            String_delete(_1000007);
+            String_delete(_1000010);
+            String_delete(_1000013);
             String_delete(_34);
-            String_delete(_36);
-            String_delete(_38);
             _175 = _42;
         } else {
             Result__String_String _173;
@@ -16236,20 +19085,20 @@ Result__String_String IO_read_MINUS_file(String* filename) {
                     IO_Raw_fclose_BANG_(finput);
                     static String _94 = "Failed to open buffer with size=%d from file='";
                     String *_94_ref = &_94;
-                    String _96 = Int_format(_94_ref, length);
-                    String* _97 = &_96; // ref
+                    String _1000026 = Int_format(_94_ref, length);
+                    String* _1000024 = &_1000026; // ref
                     static String _100 = "%s'";
                     String *_100_ref = &_100;
-                    String _102 = String_format(_100_ref, filename);
-                    String* _103 = &_102; // ref
-                    String _104 = String_append(_97, _103);
-                    String* _105 = &_104; // ref
-                    String _106 = String_copy(_105);
+                    String _1000029 = String_format(_100_ref, filename);
+                    String* _1000027 = &_1000029; // ref
+                    String _1000023 = String_append(_1000024, _1000027);
+                    String* _1000021 = &_1000023; // ref
+                    String _106 = String_copy(_1000021);
                     Result__String_String _107 = Result_Error__String_String(_106);
                     Result__String_String _108 = _107;
-                    String_delete(_102);
-                    String_delete(_104);
-                    String_delete(_96);
+                    String_delete(_1000023);
+                    String_delete(_1000026);
+                    String_delete(_1000029);
                     String_delete(buffer);
                     _172 = _108;
                 } else {
@@ -16265,28 +19114,28 @@ Result__String_String IO_read_MINUS_file(String* filename) {
                         if (_131) {
                             static String _139 = "Error: file='%s' has length=";
                             String *_139_ref = &_139;
-                            String _141 = String_format(_139_ref, filename);
-                            String* _142 = &_141; // ref
+                            String _1000039 = String_format(_139_ref, filename);
+                            String* _1000037 = &_1000039; // ref
                             static String _147 = "%d but bytes-read=";
                             String *_147_ref = &_147;
-                            String _149 = Int_format(_147_ref, length);
-                            String* _150 = &_149; // ref
+                            String _1000045 = Int_format(_147_ref, length);
+                            String* _1000043 = &_1000045; // ref
                             static String _153 = "%d";
                             String *_153_ref = &_153;
-                            String _155 = Int_format(_153_ref, bytes_MINUS_read);
-                            String* _156 = &_155; // ref
-                            String _157 = String_append(_150, _156);
-                            String* _158 = &_157; // ref
-                            String _159 = String_append(_142, _158);
-                            String* _160 = &_159; // ref
-                            String _161 = String_copy(_160);
+                            String _1000048 = Int_format(_153_ref, bytes_MINUS_read);
+                            String* _1000046 = &_1000048; // ref
+                            String _1000042 = String_append(_1000043, _1000046);
+                            String* _1000040 = &_1000042; // ref
+                            String _1000036 = String_append(_1000037, _1000040);
+                            String* _1000034 = &_1000036; // ref
+                            String _161 = String_copy(_1000034);
                             Result__String_String _162 = Result_Error__String_String(_161);
                             Result__String_String _163 = _162;
-                            String_delete(_141);
-                            String_delete(_149);
-                            String_delete(_155);
-                            String_delete(_157);
-                            String_delete(_159);
+                            String_delete(_1000036);
+                            String_delete(_1000039);
+                            String_delete(_1000042);
+                            String_delete(_1000045);
+                            String_delete(_1000048);
                             String_delete(buffer);
                             _169 = _163;
                         } else {
@@ -16326,21 +19175,21 @@ Result__bool_String IO_write_MINUS_file(String* content, String* file_MINUS_name
             String *_29_ref = &_29;
             String _33 = Result_unsafe_MINUS_from_MINUS_error__FILE_MUL__String(fOut_QMARK_);
             String* _34 = &_33; // ref
-            String _35 = String_format(_29_ref, _34);
-            String* _36 = &_35; // ref
+            String _1000010 = String_format(_29_ref, _34);
+            String* _1000008 = &_1000010; // ref
             static String _39 = "%s'";
             String *_39_ref = &_39;
-            String _41 = String_format(_39_ref, file_MINUS_name);
-            String* _42 = &_41; // ref
-            String _43 = String_append(_36, _42);
-            String* _44 = &_43; // ref
-            String _45 = String_copy(_44);
+            String _1000013 = String_format(_39_ref, file_MINUS_name);
+            String* _1000011 = &_1000013; // ref
+            String _1000007 = String_append(_1000008, _1000011);
+            String* _1000005 = &_1000007; // ref
+            String _45 = String_copy(_1000005);
             Result__bool_String _46 = Result_Error__String_bool(_45);
             Result__bool_String _47 = _46;
+            String_delete(_1000007);
+            String_delete(_1000010);
+            String_delete(_1000013);
             String_delete(_33);
-            String_delete(_35);
-            String_delete(_41);
-            String_delete(_43);
             _102 = _47;
         } else {
             Result__bool_String _100;
@@ -16359,20 +19208,20 @@ Result__bool_String IO_write_MINUS_file(String* content, String* file_MINUS_name
                 } else {
                     static String _83 = "only %d of ";
                     String *_83_ref = &_83;
-                    String _85 = Int_format(_83_ref, bytes_MINUS_written);
-                    String* _86 = &_85; // ref
+                    String _1000025 = Int_format(_83_ref, bytes_MINUS_written);
+                    String* _1000023 = &_1000025; // ref
                     static String _89 = "%d bytes were written";
                     String *_89_ref = &_89;
-                    String _91 = Int_format(_89_ref, bytes2write);
-                    String* _92 = &_91; // ref
-                    String _93 = String_append(_86, _92);
-                    String* _94 = &_93; // ref
-                    String _95 = String_copy(_94);
+                    String _1000028 = Int_format(_89_ref, bytes2write);
+                    String* _1000026 = &_1000028; // ref
+                    String _1000022 = String_append(_1000023, _1000026);
+                    String* _1000020 = &_1000022; // ref
+                    String _95 = String_copy(_1000020);
                     Result__bool_String _96 = Result_Error__String_bool(_95);
                     Result__bool_String _97 = _96;
-                    String_delete(_85);
-                    String_delete(_91);
-                    String_delete(_93);
+                    String_delete(_1000022);
+                    String_delete(_1000025);
+                    String_delete(_1000028);
                     _98 = _97;
                 }
                 Result__bool_String _99 = _98;
@@ -16435,6 +19284,11 @@ int Int_hash(int* k) {
     return _9;
 }
 
+bool Int_negative_QMARK_(int a) {
+    bool _7 = Int__LT_(a, 0);
+    return _7;
+}
+
 bool Int_odd_QMARK_(int a) {
     bool _7 = Int_even_QMARK_(a);
     bool _8 = not(_7);
@@ -16459,6 +19313,11 @@ int Int_positive_MINUS_mod(int k, int n) {
         _27 = _26;
     }
     return _27;
+}
+
+bool Int_positive_QMARK_(int a) {
+    bool _7 = Int__GT_(a, 0);
+    return _7;
 }
 
 int Int_pow(int x, int y) {
@@ -16512,6 +19371,28 @@ int Int_random_MINUS_between(int lower, int upper) {
         _24 = _23;
     }
     return _24;
+}
+
+int Int_sign(int n) {
+    int _26;
+    bool _8 = Int__GT_(n, 0);
+    if (_8) {
+        int _11 = 1;
+        _26 = _11;
+    } else {
+        int _24;
+        bool _17 = Int__LT_(n, 0);
+        if (_17) {
+            int _20 = -1;
+            _24 = _20;
+        } else {
+            int _23 = 0;
+            _24 = _23;
+        }
+        int _25 = _24;
+        _26 = _25;
+    }
+    return _26;
 }
 
 int Int_to_MINUS_int(int a) {
@@ -16725,31 +19606,77 @@ String IntRef_str(int* x) {
     return _8;
 }
 
-void Integrator_integrate_BANG_(Transform* t, Body* b, Vector3__double* accel, double dt) {
+void Integrator_integrate_BANG_(Transform* t, Body* b, Vector3__double* accel, Vector3__double* ang_MINUS_accel, double dt) {
     /* let */ {
-        Vector3__double* _12 = Body_velocity(b);
-        double* _17 = Body_damping(b);
-        double _18 = Double_copy(_17);
-        double _20 = Double_pow(_18, dt);
-        Vector3__double _21 = Vector3_mul__double(_12, _20);
-        Vector3__double damped_MINUS_v = _21;
-        Vector3__double _26 = Vector3_mul__double(accel, dt);
-        Vector3__double dv = _26;
-        Vector3__double* _31 = &damped_MINUS_v; // ref
-        Vector3__double* _34 = &dv; // ref
-        Vector3__double _35 = Vector3_add__double(_31, _34);
-        Vector3__double new_MINUS_v = _35;
-        Vector3__double* _40 = &new_MINUS_v; // ref
-        Vector3__double _42 = Vector3_mul__double(_40, dt);
-        Vector3__double dp = _42;
+        Vector3__double* _13 = Body_velocity(b);
+        double* _18 = Body_damping(b);
+        double _19 = Double_copy(_18);
+        double _21 = Double_pow(_19, dt);
+        Vector3__double _22 = Vector3_mul__double(_13, _21);
+        Vector3__double damped_MINUS_v = _22;
+        Vector3__double* _27 = &damped_MINUS_v; // ref
+        Vector3__double _32 = Vector3_mul__double(accel, dt);
+        Vector3__double* _33 = &_32; // ref
+        Vector3__double _34 = Vector3_add__double(_27, _33);
+        Vector3__double new_MINUS_v = _34;
+        Vector3__double* _39 = Body_angular_MINUS_velocity(b);
+        double* _44 = Body_angular_MINUS_damping(b);
+        double _45 = Double_copy(_44);
+        double _47 = Double_pow(_45, dt);
+        Vector3__double _48 = Vector3_mul__double(_39, _47);
+        Vector3__double damped_MINUS_w = _48;
+        Vector3__double* _53 = &damped_MINUS_w; // ref
+        Vector3__double _58 = Vector3_mul__double(ang_MINUS_accel, dt);
+        Vector3__double* _59 = &_58; // ref
+        Vector3__double _60 = Vector3_add__double(_53, _59);
+        Vector3__double new_MINUS_w = _60;
+        Vector3__double* _65 = &new_MINUS_v; // ref
+        Vector3__double _67 = Vector3_mul__double(_65, dt);
+        Vector3__double dp = _67;
+        Quaternion* _72 = Transform_rotation(t);
+        Quaternion _73 = Quaternion_copy(_72);
+        Quaternion q_MINUS_old = _73;
+        Vector3__double* _80 = &new_MINUS_w; // ref
+        double* _81 = Vector3_x__double(_80);
+        double _82 = Double_copy(_81);
+        Vector3__double* _87 = &new_MINUS_w; // ref
+        double* _88 = Vector3_y__double(_87);
+        double _89 = Double_copy(_88);
+        Vector3__double* _94 = &new_MINUS_w; // ref
+        double* _95 = Vector3_z__double(_94);
+        double _96 = Double_copy(_95);
+        Quaternion _98 = Quaternion_init(_82, _89, _96, 0.0);
+        Quaternion w_MINUS_quat = _98;
+        Quaternion* _103 = &w_MINUS_quat; // ref
+        Quaternion* _106 = &q_MINUS_old; // ref
+        Quaternion _107 = Quaternion_mul_MINUS_raw(_103, _106);
+        Quaternion q_MINUS_dot = _107;
+        Quaternion* _114 = &q_MINUS_old; // ref
+        Quaternion* _119 = &q_MINUS_dot; // ref
+        double _123 = Double__MUL_(0.5, dt);
+        Quaternion _124 = Quaternion_scale(_119, _123);
+        Quaternion* _125 = &_124; // ref
+        Quaternion _126 = Quaternion_add(_114, _125);
+        Quaternion* _127 = &_126; // ref
+        Quaternion _128 = Quaternion_normalize(_127);
+        Quaternion q_MINUS_new = _128;
         Body_set_MINUS_velocity_BANG_(b, new_MINUS_v);
-        Vector3__double* _54 = Transform_position(t);
-        Vector3__double* _57 = &dp; // ref
-        Vector3__double _58 = Vector3_add__double(_54, _57);
-        Transform_set_MINUS_position_BANG_(t, _58);
+        Body_set_MINUS_angular_MINUS_velocity_BANG_(b, new_MINUS_w);
+        Vector3__double* _144 = Transform_position(t);
+        Vector3__double* _147 = &dp; // ref
+        Vector3__double _148 = Vector3_add__double(_144, _147);
+        Transform_set_MINUS_position_BANG_(t, _148);
+        Transform_set_MINUS_rotation_BANG_(t, q_MINUS_new);
+        Quaternion_delete(_124);
+        Quaternion_delete(_126);
+        Quaternion_delete(q_MINUS_dot);
+        Quaternion_delete(q_MINUS_old);
+        Quaternion_delete(w_MINUS_quat);
+        Vector3_delete__double(_32);
+        Vector3_delete__double(_58);
         Vector3_delete__double(damped_MINUS_v);
+        Vector3_delete__double(damped_MINUS_w);
         Vector3_delete__double(dp);
-        Vector3_delete__double(dv);
     }
 }
 
@@ -16775,32 +19702,177 @@ void Integrator_step_MINUS_custom_BANG_(Transform* t, Body* b, double dt, double
                 double _38 = Double_copy(_37);
                 Vector3__double _39 = Vector3_mul__double(_33, _38);
                 Vector3__double accel = _39;
-                bool _47 = Double__GT_(accum, 0.0);
-                bool _73 = _47;
-                while (_73) {
+                Vector3__double* _44 = Body_torque(b);
+                double* _48 = Body_inv_MINUS_inertia(b);
+                double _49 = Double_copy(_48);
+                Vector3__double _50 = Vector3_mul__double(_44, _49);
+                Vector3__double ang_MINUS_accel = _50;
+                bool _58 = Double__GT_(accum, 0.0);
+                bool _87 = _58;
+                while (_87) {
                     /* let */ {
-                        double _53 = min__double(accum, sub_MINUS_step_MINUS_size);
-                        double this_MINUS_dt = _53;
-                        Vector3__double* _61 = &accel; // ref
-                        Integrator_integrate_BANG_(t, b, _61, this_MINUS_dt);
-                        double _69 = Double__MINUS_(accum, this_MINUS_dt);
-                        accum = _69;  // Double = Double
+                        double _64 = min__double(accum, sub_MINUS_step_MINUS_size);
+                        double this_MINUS_dt = _64;
+                        Vector3__double* _72 = &accel; // ref
+                        Vector3__double* _75 = &ang_MINUS_accel; // ref
+                        Integrator_integrate_BANG_(t, b, _72, _75, this_MINUS_dt);
+                        double _83 = Double__MINUS_(accum, this_MINUS_dt);
+                        accum = _83;  // Double = Double
                     }
-                    bool _47 = Double__GT_(accum, 0.0);
-                    _73 = _47;
+                    bool _58 = Double__GT_(accum, 0.0);
+                    _87 = _58;
                 }
-                Vector3__double _80 = Vector3_init__double(0.0, 0.0, 0.0);
-                Body_set_MINUS_force_BANG_(b, _80);
+                Vector3__double _94 = Vector3_init__double(0.0, 0.0, 0.0);
+                Body_set_MINUS_force_BANG_(b, _94);
+                Vector3__double _102 = Vector3_init__double(0.0, 0.0, 0.0);
+                Body_set_MINUS_torque_BANG_(b, _102);
                 Vector3_delete__double(accel);
+                Vector3_delete__double(ang_MINUS_accel);
             }
         }
     }
     else if(true) {
         BodyType* _10_temp = _10;
-        BodyType* wildcard_87 = _10_temp;
+        BodyType* wildcard_109 = _10_temp;
         /* () */
     }
-    else UNHANDLED("dynamics.carp", 84);
+    else UNHANDLED("dynamics.carp", 121);
+}
+
+LocalCrater LocalCrater_copy(LocalCrater* pRef) {
+    LocalCrater copy = *pRef;
+    copy.pos = Vector3_copy__double(&(pRef->pos));
+    /* Ignore non-managed member 'radius' : Double */
+    return copy;
+}
+
+void LocalCrater_delete(LocalCrater p) {
+    Vector3_delete__double(p.pos);
+    /* Ignore non-managed member 'radius' : Double */
+}
+
+LocalCrater LocalCrater_init(Vector3__double pos, double radius) {
+    LocalCrater instance;
+    instance.pos = pos;
+    instance.radius = radius;
+    return instance;
+}
+
+Vector3__double* LocalCrater_pos(LocalCrater* p) { return (&(p->pos)); }
+
+String LocalCrater_prn(LocalCrater *p) {
+  // convert members to String here:
+  String temp = NULL;
+  int tempsize = 0;
+  (void)tempsize; // that way we remove the occasional unused warning 
+  int size = snprintf(NULL, 0, "(%s )", "LocalCrater");
+  temp = Vector3_prn__double(&p->pos); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Double_prn(p->radius); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+
+  String buffer = CARP_MALLOC(size);
+  String bufferPtr = buffer;
+
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "LocalCrater");
+  temp = Vector3_prn__double(&p->pos);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Double_prn(p->radius);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  bufferPtr--;
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
+  return buffer;
+}
+
+double* LocalCrater_radius(LocalCrater* p) { return (&(p->radius)); }
+
+LocalCrater LocalCrater_set_MINUS_pos(LocalCrater p, Vector3__double newValue) {
+    Vector3_delete__double(p.pos);
+    p.pos = newValue;
+    return p;
+}
+
+
+void LocalCrater_set_MINUS_pos_BANG_(LocalCrater* pRef, Vector3__double newValue) {
+    Vector3_delete__double(pRef->pos);
+    pRef->pos = newValue;
+}
+
+
+LocalCrater LocalCrater_set_MINUS_radius(LocalCrater p, double newValue) {
+    /* Ignore non-managed member 'radius' : Double */
+    p.radius = newValue;
+    return p;
+}
+
+
+void LocalCrater_set_MINUS_radius_BANG_(LocalCrater* pRef, double newValue) {
+    /* Ignore non-managed member 'radius' : Double */
+    pRef->radius = newValue;
+}
+
+
+String LocalCrater_str(LocalCrater *p) {
+  // convert members to String here:
+  String temp = NULL;
+  int tempsize = 0;
+  (void)tempsize; // that way we remove the occasional unused warning 
+  int size = snprintf(NULL, 0, "(%s )", "LocalCrater");
+  temp = Vector3_prn__double(&p->pos); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Double_prn(p->radius); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+
+  String buffer = CARP_MALLOC(size);
+  String bufferPtr = buffer;
+
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "LocalCrater");
+  temp = Vector3_prn__double(&p->pos);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Double_prn(p->radius);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  bufferPtr--;
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
+  return buffer;
+}
+
+LocalCrater LocalCrater_update_MINUS_pos(LocalCrater p, Lambda *updater) {
+    p.pos = (*updater).env ? ((Fn__LambdaEnv_Vector3__double_Vector3__double)(*updater).callback)((*updater).env, p.pos) : ((Fn__Vector3__double_Vector3__double)(*updater).callback)(p.pos);
+    return p;
+}
+
+
+LocalCrater LocalCrater_update_MINUS_radius(LocalCrater p, Lambda *updater) {
+    p.radius = (*updater).env ? ((Fn__LambdaEnv_double_double)(*updater).callback)((*updater).env, p.radius) : ((Fn__double_double)(*updater).callback)(p.radius);
+    return p;
+}
+
+
+Long Long_add_MINUS_ref(Long* x, Long* y) {
+    Long _8 = Long_copy(x);
+    Long _11 = Long_copy(y);
+    Long _12 = Long__PLUS_(_8, _11);
+    return _12;
 }
 
 Long Long_blit(Long x) {
@@ -16842,10 +19914,20 @@ int Long_hash(Long* k) {
     return _11;
 }
 
+bool Long_negative_QMARK_(Long a) {
+    bool _7 = Long__LT_(a, 0l);
+    return _7;
+}
+
 bool Long_odd_QMARK_(Long a) {
     bool _7 = Long_even_QMARK_(a);
     bool _8 = not(_7);
     return _8;
+}
+
+bool Long_positive_QMARK_(Long a) {
+    bool _7 = Long__GT_(a, 0l);
+    return _7;
 }
 
 String Long_prn(Long x) {
@@ -16872,6 +19954,28 @@ Long Long_random_MINUS_between(Long lower, Long upper) {
         _24 = _23;
     }
     return _24;
+}
+
+Long Long_sign(Long n) {
+    Long _26;
+    bool _8 = Long__GT_(n, 0l);
+    if (_8) {
+        Long _11 = 1l;
+        _26 = _11;
+    } else {
+        Long _24;
+        bool _17 = Long__LT_(n, 0l);
+        if (_17) {
+            Long _20 = -1l;
+            _24 = _20;
+        } else {
+            Long _23 = 0l;
+            _24 = _23;
+        }
+        Long _25 = _24;
+        _26 = _25;
+    }
+    return _26;
 }
 
 Long Long_zero() {
@@ -16942,9 +20046,9 @@ Map__ColorId_String Map_from_MINUS_array__ColorId_String(Array__Pair__ColorId_St
             int i = 0;
             Array__Pair__ColorId_String* _20 = &a; // ref
             int _21 = Array_length__Pair__ColorId_String(_20);
-            bool _22 = Int__LT_(i, _21);
-            bool _57 = _22;
-            while (_57) {
+            bool _1000008 = Int__LT_(i, _21);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 /* let */ {
                     Array__Pair__ColorId_String* _29 = &a; // ref
                     Pair__ColorId_String* _31 = Array_unsafe_MINUS_nth__Pair__ColorId_String(_29, i);
@@ -16956,12 +20060,12 @@ Map__ColorId_String Map_from_MINUS_array__ColorId_String(Array__Pair__ColorId_St
                     Map__ColorId_String* _44 = &m; // ref
                     Map_put_BANG___ColorId_String(_44, k, v);
                 }
-                int _54 = Int__PLUS_(i, 1);
-                i = _54;  // Int = Int
+                int _1000014 = Int__PLUS_(i, 1);
+                i = _1000014;  // Int = Int
                 Array__Pair__ColorId_String* _20 = &a; // ref
                 int _21 = Array_length__Pair__ColorId_String(_20);
-                bool _22 = Int__LT_(i, _21);
-                _57 = _22;
+                bool _1000008 = Int__LT_(i, _21);
+                _1000006 = _1000008;
             }
         }
         Map__ColorId_String _60 = m;
@@ -17050,6 +20154,13 @@ Maybe__Contact Maybe_Just__Contact(Contact member0) {
     return instance;
 }
 
+Maybe__ContactSet Maybe_Just__ContactSet(ContactSet member0) {
+  Maybe__ContactSet instance;
+    instance.u.Just.member0 = member0;
+    instance._tag = Maybe__ContactSet_Just_tag;
+    return instance;
+}
+
 Maybe__Long Maybe_Just__Long(Long member0) {
   Maybe__Long instance;
     instance.u.Just.member0 = member0;
@@ -17131,6 +20242,13 @@ Maybe__Contact Maybe_Nothing__Contact() {
   Maybe__Contact instance;
 
     instance._tag = Maybe__Contact_Nothing_tag;
+    return instance;
+}
+
+Maybe__ContactSet Maybe_Nothing__ContactSet() {
+  Maybe__ContactSet instance;
+
+    instance._tag = Maybe__ContactSet_Nothing_tag;
     return instance;
 }
 
@@ -17219,6 +20337,16 @@ void Maybe_delete__Contact(Maybe__Contact p) {
     Contact_delete(p.u.Just.member0);
   }
   else if(p._tag == Maybe__Contact_Nothing_tag) {
+
+  }
+
+}
+
+void Maybe_delete__ContactSet(Maybe__ContactSet p) {
+  if(p._tag == Maybe__ContactSet_Just_tag) {
+    ContactSet_delete(p.u.Just.member0);
+  }
+  else if(p._tag == Maybe__ContactSet_Nothing_tag) {
 
   }
 
@@ -17440,10 +20568,10 @@ void Pair_delete__ColorId_String(Pair__ColorId_String p) {
 }
 
 Pair__ColorId_String Pair_init_MINUS_from_MINUS_refs__ColorId_String(ColorId* a_MINUS_val, String* b_MINUS_val) {
-    ColorId _8 = Color_Id_copy(a_MINUS_val);
-    String _11 = String_copy(b_MINUS_val);
-    Pair__ColorId_String _12 = Pair_init__ColorId_String(_8, _11);
-    return _12;
+    ColorId _1000004 = Color_Id_copy(a_MINUS_val);
+    String _1000005 = String_copy(b_MINUS_val);
+    Pair__ColorId_String _1000003 = Pair_init__ColorId_String(_1000004, _1000005);
+    return _1000003;
 }
 
 Pair__Array__Uint16_int Pair_init__Array__Uint16_int(Array__Uint16 a, int b) {
@@ -17508,21 +20636,19 @@ String Pattern_MatchResult_prn(PatternMatchResult *p) {
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
-  sprintf(bufferPtr, "(%s ", "Pattern.MatchResult");
-  bufferPtr += strlen("Pattern.MatchResult") + 2;
-
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Pattern.MatchResult");
   temp = Int_prn(p->start);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Int_prn(p->end);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   bufferPtr--;
-  sprintf(bufferPtr, ")");
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   return buffer;
 }
 
@@ -17530,19 +20656,19 @@ String Pattern_MatchResult_ref_MINUS_str(PatternMatchResult* ref_MINUS_matchres)
     static String _9 = "(MatchResult start=%d end=";
     String *_9_ref = &_9;
     int* _12 = Pattern_MatchResult_start(ref_MINUS_matchres);
-    String _13 = IntRef_format(_9_ref, _12);
-    String* _14 = &_13; // ref
+    String _1000007 = IntRef_format(_9_ref, _12);
+    String* _1000005 = &_1000007; // ref
     static String _17 = "%d)";
     String *_17_ref = &_17;
     int* _20 = Pattern_MatchResult_end(ref_MINUS_matchres);
-    String _21 = IntRef_format(_17_ref, _20);
-    String* _22 = &_21; // ref
-    String _23 = String_append(_14, _22);
-    String* _24 = &_23; // ref
-    String _25 = String_copy(_24);
-    String_delete(_13);
-    String_delete(_21);
-    String_delete(_23);
+    String _1000010 = IntRef_format(_17_ref, _20);
+    String* _1000008 = &_1000010; // ref
+    String _1000004 = String_append(_1000005, _1000008);
+    String* _1000002 = &_1000004; // ref
+    String _25 = String_copy(_1000002);
+    String_delete(_1000004);
+    String_delete(_1000007);
+    String_delete(_1000010);
     return _25;
 }
 
@@ -17708,29 +20834,29 @@ Pattern Pattern_from_MINUS_chars(Array__Char* chars) {
     static String _12 = "[";
     String *_12_ref = &_12;
     String _13 = String_copy(_12_ref);
-    String _14 = StringCopy_str(_13);
-    String* _15 = &_14; // ref
+    String _1000006 = StringCopy_str(_13);
+    String* _1000005 = &_1000006; // ref
     String _22 = String_from_MINUS_chars(chars);
-    String _23 = StringCopy_str(_22);
-    String* _24 = &_23; // ref
+    String _1000010 = StringCopy_str(_22);
+    String* _1000009 = &_1000010; // ref
     static String _28 = "]";
     String *_28_ref = &_28;
     String _29 = String_copy(_28_ref);
-    String _30 = StringCopy_str(_29);
-    String* _31 = &_30; // ref
-    String _32 = String_append(_24, _31);
-    String* _33 = &_32; // ref
-    String _34 = String_append(_15, _33);
-    String* _35 = &_34; // ref
-    String _36 = String_copy(_35);
-    String* _37 = &_36; // ref
+    String _1000012 = StringCopy_str(_29);
+    String* _1000011 = &_1000012; // ref
+    String _1000008 = String_append(_1000009, _1000011);
+    String* _1000007 = &_1000008; // ref
+    String _1000004 = String_append(_1000005, _1000007);
+    String* _1000003 = &_1000004; // ref
+    String _1000002 = String_copy(_1000003);
+    String* _37 = &_1000002; // ref
     Pattern _38 = Pattern_init(_37);
-    String_delete(_14);
-    String_delete(_23);
-    String_delete(_30);
-    String_delete(_32);
-    String_delete(_34);
-    String_delete(_36);
+    String_delete(_1000002);
+    String_delete(_1000004);
+    String_delete(_1000006);
+    String_delete(_1000008);
+    String_delete(_1000010);
+    String_delete(_1000012);
     return _38;
 }
 
@@ -17827,9 +20953,9 @@ Array__String Pattern_split(Pattern* p, String* s) {
             Array__int* _72 = &idx; // ref
             int _73 = Array_length__int(_72);
             int _74 = Int_dec(_73);
-            bool _75 = Int__LT_(i, _74);
-            bool _129 = _75;
-            while (_129) {
+            bool _1000011 = Int__LT_(i, _74);
+            bool _1000009 = _1000011;
+            while (_1000009) {
                 /* let */ {
                     Array__String* _83 = &strs; // ref
                     String* _85 = Array_unsafe_MINUS_nth__String(_83, i);
@@ -17848,13 +20974,13 @@ Array__String Pattern_split(Pattern* p, String* s) {
                     String _118 = String_slice(s, _107, _117);
                     Array_aset_MINUS_uninitialized_BANG___String(_91, _94, _118);
                 }
-                int _126 = Int__PLUS_(i, 1);
-                i = _126;  // Int = Int
+                int _1000017 = Int__PLUS_(i, 1);
+                i = _1000017;  // Int = Int
                 Array__int* _72 = &idx; // ref
                 int _73 = Array_length__int(_72);
                 int _74 = Int_dec(_73);
-                bool _75 = Int__LT_(i, _74);
-                _129 = _75;
+                bool _1000011 = Int__LT_(i, _74);
+                _1000009 = _1000011;
             }
         }
         bool _135 = Int__GT_(lidx, 0);
@@ -17910,6 +21036,15 @@ void Plane_delete(Plane p) {
     /* Ignore non-managed member 'd' : Double */
 }
 
+double Plane_distance_MINUS_to_MINUS_point(Plane* plane, Vector3__double* p) {
+    Vector3__double* _9 = Plane_normal(plane);
+    double _11 = Vector3_dot__double(_9, p);
+    double* _15 = Plane_d(plane);
+    double _16 = Double_copy(_15);
+    double _17 = Double__PLUS_(_11, _16);
+    return _17;
+}
+
 Plane Plane_init(Vector3__double normal, double d) {
     Plane instance;
     instance.normal = normal;
@@ -17937,22 +21072,35 @@ String Plane_prn(Plane *p) {
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
-  sprintf(bufferPtr, "(%s ", "Plane");
-  bufferPtr += strlen("Plane") + 2;
-
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Plane");
   temp = Vector3_prn__double(&p->normal);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Double_prn(p->d);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   bufferPtr--;
-  sprintf(bufferPtr, ")");
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   return buffer;
+}
+
+Vector3__double Plane_project_MINUS_point(Plane* plane, Vector3__double* p) {
+    Vector3__double _23;
+    /* let */ {
+        double _10 = Plane_distance_MINUS_to_MINUS_point(plane, p);
+        double dist = _10;
+        Vector3__double* _18 = Plane_normal(plane);
+        Vector3__double _20 = Vector3_mul__double(_18, dist);
+        Vector3__double* _21 = &_20; // ref
+        Vector3__double _22 = Vector3_sub__double(p, _21);
+        _23 = _22;
+        Vector3_delete__double(_20);
+    }
+    return _23;
 }
 
 Plane Plane_set_MINUS_d(Plane p, double newValue) {
@@ -17999,21 +21147,19 @@ String Plane_str(Plane *p) {
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
-  sprintf(bufferPtr, "(%s ", "Plane");
-  bufferPtr += strlen("Plane") + 2;
-
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Plane");
   temp = Vector3_prn__double(&p->normal);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Double_prn(p->d);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   bufferPtr--;
-  sprintf(bufferPtr, ")");
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   return buffer;
 }
 
@@ -18032,6 +21178,31 @@ Plane Plane_update_MINUS_normal(Plane p, Lambda *updater) {
 int * Pointer_address__int(int * a) { return a; }
  bool Pointer_eq__CChar(CChar *p1, CChar *p2) { return p1 == p2; }
  bool Pointer_eq__FILE(FILE *p1, FILE *p2) { return p1 == p2; }
+Quaternion Quaternion_add(Quaternion* a, Quaternion* b) {
+    double* _10 = Quaternion_x(a);
+    double _11 = Double_copy(_10);
+    double* _15 = Quaternion_x(b);
+    double _16 = Double_copy(_15);
+    double _17 = Double__PLUS_(_11, _16);
+    double* _22 = Quaternion_y(a);
+    double _23 = Double_copy(_22);
+    double* _27 = Quaternion_y(b);
+    double _28 = Double_copy(_27);
+    double _29 = Double__PLUS_(_23, _28);
+    double* _34 = Quaternion_z(a);
+    double _35 = Double_copy(_34);
+    double* _39 = Quaternion_z(b);
+    double _40 = Double_copy(_39);
+    double _41 = Double__PLUS_(_35, _40);
+    double* _46 = Quaternion_w(a);
+    double _47 = Double_copy(_46);
+    double* _51 = Quaternion_w(b);
+    double _52 = Double_copy(_51);
+    double _53 = Double__PLUS_(_47, _52);
+    Quaternion _54 = Quaternion_init(_17, _29, _41, _53);
+    return _54;
+}
+
 Quaternion Quaternion_conjugate(Quaternion* q) {
     double* _10 = Quaternion_x(q);
     double _11 = Double_copy(_10);
@@ -18064,8 +21235,8 @@ void Quaternion_delete(Quaternion p) {
     /* Ignore non-managed member 'w' : Double */
 }
 
-Quaternion Quaternion_from_MINUS_axis_MINUS_angle(Vector3__double* axis, double angle) {
-    Quaternion _52;
+Quaternion Quaternion_from_MINUS_axis_MINUS_angle(Vector3__double axis, double angle) {
+    Quaternion _58;
     /* let */ {
         double _11 = Double__MUL_(angle, 0.5);
         double _12 = Double_sin(_11);
@@ -18073,22 +21244,26 @@ Quaternion Quaternion_from_MINUS_axis_MINUS_angle(Vector3__double* axis, double 
         double _18 = Double__MUL_(angle, 0.5);
         double _19 = Double_cos(_18);
         double c = _19;
-        double* _28 = Vector3_x__double(axis);
-        double _29 = Double_copy(_28);
-        double _31 = Double__MUL_(_29, s);
-        double* _36 = Vector3_y__double(axis);
-        double _37 = Double_copy(_36);
-        double _39 = Double__MUL_(_37, s);
-        double* _44 = Vector3_z__double(axis);
-        double _45 = Double_copy(_44);
-        double _47 = Double__MUL_(_45, s);
-        Quaternion _49 = Quaternion_init(_31, _39, _47, c);
-        Quaternion* _50 = &_49; // ref
-        Quaternion _51 = Quaternion_normalize(_50);
-        _52 = _51;
-        Quaternion_delete(_49);
+        Vector3__double* _29 = &axis; // ref
+        double* _30 = Vector3_x__double(_29);
+        double _31 = Double_copy(_30);
+        double _33 = Double__MUL_(_31, s);
+        Vector3__double* _39 = &axis; // ref
+        double* _40 = Vector3_y__double(_39);
+        double _41 = Double_copy(_40);
+        double _43 = Double__MUL_(_41, s);
+        Vector3__double* _49 = &axis; // ref
+        double* _50 = Vector3_z__double(_49);
+        double _51 = Double_copy(_50);
+        double _53 = Double__MUL_(_51, s);
+        Quaternion _55 = Quaternion_init(_33, _43, _53, c);
+        Quaternion* _56 = &_55; // ref
+        Quaternion _57 = Quaternion_normalize(_56);
+        _58 = _57;
+        Quaternion_delete(_55);
     }
-    return _52;
+    Vector3_delete__double(axis);
+    return _58;
 }
 
 Quaternion Quaternion_from_MINUS_euler(double yaw, double pitch, double roll) {
@@ -18159,8 +21334,21 @@ Quaternion Quaternion_init(double x, double y, double z, double w) {
     return instance;
 }
 
+Quaternion Quaternion_inverse(Quaternion* q) {
+    Quaternion _6 = Quaternion_conjugate(q);
+    return _6;
+}
+
 Quaternion Quaternion_mul(Quaternion* a, Quaternion* b) {
-    Quaternion _151;
+    Quaternion _10 = Quaternion_mul_MINUS_raw(a, b);
+    Quaternion* _11 = &_10; // ref
+    Quaternion _12 = Quaternion_normalize(_11);
+    Quaternion_delete(_10);
+    return _12;
+}
+
+Quaternion Quaternion_mul_MINUS_raw(Quaternion* a, Quaternion* b) {
+    Quaternion _145;
     /* let */ {
         double* _10 = Quaternion_w(a);
         double _11 = Double_copy(_10);
@@ -18187,25 +21375,25 @@ Quaternion Quaternion_mul(Quaternion* a, Quaternion* b) {
         double _53 = Double_copy(_52);
         double bz = _53;
         double _62 = Double__MUL_(aw, bx);
-        double _66 = Double__MUL_(ax, bw);
-        double _67 = Double__PLUS_(_62, _66);
-        double _71 = Double__MUL_(az, by);
-        double _72 = Double__MINUS_(_67, _71);
-        double _76 = Double__MUL_(ay, bz);
+        double _66 = Double__MUL_(az, by);
+        double _67 = Double__MINUS_(_62, _66);
+        double _71 = Double__MUL_(ay, bz);
+        double _72 = Double__PLUS_(_67, _71);
+        double _76 = Double__MUL_(ax, bw);
         double _77 = Double__PLUS_(_72, _76);
         double _84 = Double__MUL_(aw, by);
-        double _88 = Double__MUL_(ay, bw);
+        double _88 = Double__MUL_(ax, bz);
         double _89 = Double__MINUS_(_84, _88);
         double _93 = Double__MUL_(az, bx);
         double _94 = Double__PLUS_(_89, _93);
-        double _98 = Double__MUL_(ax, bz);
+        double _98 = Double__MUL_(ay, bw);
         double _99 = Double__PLUS_(_94, _98);
         double _106 = Double__MUL_(aw, bz);
-        double _110 = Double__MUL_(az, bw);
-        double _111 = Double__PLUS_(_106, _110);
+        double _110 = Double__MUL_(ay, bx);
+        double _111 = Double__MINUS_(_106, _110);
         double _115 = Double__MUL_(ax, by);
-        double _116 = Double__MINUS_(_111, _115);
-        double _120 = Double__MUL_(ay, bx);
+        double _116 = Double__PLUS_(_111, _115);
+        double _120 = Double__MUL_(az, bw);
         double _121 = Double__PLUS_(_116, _120);
         double _128 = Double__MUL_(aw, bw);
         double _132 = Double__MUL_(ax, bx);
@@ -18215,13 +21403,9 @@ Quaternion Quaternion_mul(Quaternion* a, Quaternion* b) {
         double _142 = Double__MUL_(az, bz);
         double _143 = Double__MINUS_(_138, _142);
         Quaternion _144 = Quaternion_init(_77, _99, _121, _143);
-        Quaternion res = _144;
-        Quaternion* _149 = &res; // ref
-        Quaternion _150 = Quaternion_normalize(_149);
-        _151 = _150;
-        Quaternion_delete(res);
+        _145 = _144;
     }
-    return _151;
+    return _145;
 }
 
 Quaternion Quaternion_new(double x, double y, double z, double w) {
@@ -18299,32 +21483,86 @@ String Quaternion_prn(Quaternion *p) {
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
-  sprintf(bufferPtr, "(%s ", "Quaternion");
-  bufferPtr += strlen("Quaternion") + 2;
-
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Quaternion");
   temp = Double_prn(p->x);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Double_prn(p->y);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Double_prn(p->z);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Double_prn(p->w);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   bufferPtr--;
-  sprintf(bufferPtr, ")");
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   return buffer;
+}
+
+Vector3__double Quaternion_rotate(Quaternion* q, Vector3__double* v) {
+    Vector3__double _72;
+    /* let */ {
+        double* _11 = Vector3_x__double(v);
+        double _12 = Double_copy(_11);
+        double* _16 = Vector3_y__double(v);
+        double _17 = Double_copy(_16);
+        double* _21 = Vector3_z__double(v);
+        double _22 = Double_copy(_21);
+        Quaternion _24 = Quaternion_init(_12, _17, _22, 0.0);
+        Quaternion q_MINUS_v = _24;
+        Quaternion _28 = Quaternion_inverse(q);
+        Quaternion q_MINUS_inv = _28;
+        Quaternion* _40 = &q_MINUS_v; // ref
+        Quaternion _41 = Quaternion_mul_MINUS_raw(q, _40);
+        Quaternion* _42 = &_41; // ref
+        Quaternion* _43 = _42; // From the 'the' function.
+        Quaternion* _46 = &q_MINUS_inv; // ref
+        Quaternion _47 = Quaternion_mul_MINUS_raw(_43, _46);
+        Quaternion res = _47;
+        Quaternion* _54 = &res; // ref
+        double* _55 = Quaternion_x(_54);
+        double _56 = Double_copy(_55);
+        Quaternion* _61 = &res; // ref
+        double* _62 = Quaternion_y(_61);
+        double _63 = Double_copy(_62);
+        Quaternion* _68 = &res; // ref
+        double* _69 = Quaternion_z(_68);
+        double _70 = Double_copy(_69);
+        Vector3__double _71 = Vector3_init__double(_56, _63, _70);
+        _72 = _71;
+        Quaternion_delete(_41);
+        Quaternion_delete(q_MINUS_inv);
+        Quaternion_delete(q_MINUS_v);
+        Quaternion_delete(res);
+    }
+    return _72;
+}
+
+Quaternion Quaternion_scale(Quaternion* q, double s) {
+    double* _10 = Quaternion_x(q);
+    double _11 = Double_copy(_10);
+    double _13 = Double__MUL_(_11, s);
+    double* _18 = Quaternion_y(q);
+    double _19 = Double_copy(_18);
+    double _21 = Double__MUL_(_19, s);
+    double* _26 = Quaternion_z(q);
+    double _27 = Double_copy(_26);
+    double _29 = Double__MUL_(_27, s);
+    double* _34 = Quaternion_w(q);
+    double _35 = Double_copy(_34);
+    double _37 = Double__MUL_(_35, s);
+    Quaternion _38 = Quaternion_init(_13, _21, _29, _37);
+    return _38;
 }
 
 Quaternion Quaternion_set_MINUS_w(Quaternion p, double newValue) {
@@ -18405,32 +21643,98 @@ String Quaternion_str(Quaternion *p) {
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
-  sprintf(bufferPtr, "(%s ", "Quaternion");
-  bufferPtr += strlen("Quaternion") + 2;
-
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Quaternion");
   temp = Double_prn(p->x);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Double_prn(p->y);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Double_prn(p->z);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Double_prn(p->w);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   bufferPtr--;
-  sprintf(bufferPtr, ")");
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   return buffer;
+}
+
+Vector3__double Quaternion_to_MINUS_euler(Quaternion* q) {
+    Vector3__double _149;
+    /* let */ {
+        double* _9 = Quaternion_x(q);
+        double _10 = Double_copy(_9);
+        double qx = _10;
+        double* _15 = Quaternion_y(q);
+        double _16 = Double_copy(_15);
+        double qy = _16;
+        double* _21 = Quaternion_z(q);
+        double _22 = Double_copy(_21);
+        double qz = _22;
+        double* _27 = Quaternion_w(q);
+        double _28 = Double_copy(_27);
+        double qw = _28;
+        double _36 = Double__MUL_(qw, qy);
+        double _40 = Double__MUL_(qz, qx);
+        double _41 = Double__MINUS_(_36, _40);
+        double _42 = Double__MUL_(2.0, _41);
+        double sinp = _42;
+        double _70;
+        double _48 = Double_abs(sinp);
+        bool _50 = _GT__EQ___double(_48, 1.0);
+        if (_50) {
+            double _57 = Double_abs(sinp);
+            double _58 = Double__DIV_(sinp, _57);
+            double _62 = Double__DIV_(3.1415926535, 2.0);
+            double _63 = Double__MUL_(_58, _62);
+            double _64 = _63;
+            _70 = _64;
+        } else {
+            double _68 = Double_asin(sinp);
+            double _69 = _68;
+            _70 = _69;
+        }
+        double pitch = _70;
+        double _78 = Double__MUL_(qw, qz);
+        double _82 = Double__MUL_(qx, qy);
+        double _83 = Double__PLUS_(_78, _82);
+        double _84 = Double__MUL_(2.0, _83);
+        double siny_cosp = _84;
+        double _94 = Double__MUL_(qy, qy);
+        double _98 = Double__MUL_(qz, qz);
+        double _99 = Double__PLUS_(_94, _98);
+        double _100 = Double__MUL_(2.0, _99);
+        double _101 = Double__MINUS_(1.0, _100);
+        double cosy_cosp = _101;
+        double _106 = Double_atan2(siny_cosp, cosy_cosp);
+        double yaw = _106;
+        double _114 = Double__MUL_(qw, qx);
+        double _118 = Double__MUL_(qy, qz);
+        double _119 = Double__PLUS_(_114, _118);
+        double _120 = Double__MUL_(2.0, _119);
+        double sinr_cosp = _120;
+        double _130 = Double__MUL_(qx, qx);
+        double _134 = Double__MUL_(qy, qy);
+        double _135 = Double__PLUS_(_130, _134);
+        double _136 = Double__MUL_(2.0, _135);
+        double _137 = Double__MINUS_(1.0, _136);
+        double cosr_cosp = _137;
+        double _142 = Double_atan2(sinr_cosp, cosr_cosp);
+        double roll = _142;
+        Vector3__double _148 = Vector3_init__double(yaw, pitch, roll);
+        _149 = _148;
+    }
+    return _149;
 }
 
 Quaternion Quaternion_update_MINUS_w(Quaternion p, Lambda *updater) {
@@ -18530,21 +21834,19 @@ String Ray_prn(Ray *p) {
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
-  sprintf(bufferPtr, "(%s ", "Ray");
-  bufferPtr += strlen("Ray") + 2;
-
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Ray");
   temp = Vector3_prn__double(&p->origin);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Vector3_prn__double(&p->direction);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   bufferPtr--;
-  sprintf(bufferPtr, ")");
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   return buffer;
 }
 
@@ -18592,21 +21894,19 @@ String Ray_str(Ray *p) {
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
-  sprintf(bufferPtr, "(%s ", "Ray");
-  bufferPtr += strlen("Ray") + 2;
-
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Ray");
   temp = Vector3_prn__double(&p->origin);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Vector3_prn__double(&p->direction);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   bufferPtr--;
-  sprintf(bufferPtr, ")");
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   return buffer;
 }
 
@@ -18670,26 +21970,24 @@ String RayHit_prn(RayHit *p) {
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
-  sprintf(bufferPtr, "(%s ", "RayHit");
-  bufferPtr += strlen("RayHit") + 2;
-
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "RayHit");
   temp = Double_prn(p->t);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Vector3_prn__double(&p->point);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Vector3_prn__double(&p->normal);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   bufferPtr--;
-  sprintf(bufferPtr, ")");
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   return buffer;
 }
 
@@ -18754,26 +22052,24 @@ String RayHit_str(RayHit *p) {
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
-  sprintf(bufferPtr, "(%s ", "RayHit");
-  bufferPtr += strlen("RayHit") + 2;
-
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "RayHit");
   temp = Double_prn(p->t);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Vector3_prn__double(&p->point);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Vector3_prn__double(&p->normal);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   bufferPtr--;
-  sprintf(bufferPtr, ")");
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   return buffer;
 }
 
@@ -19350,6 +22646,11 @@ Uint64 Result_unwrap_MINUS_or_MINUS_zero__Uint64_Array__uint8_t(Result__Uint64_A
     return _15;
 }
 
+void RigidBody_apply_MINUS_angular_MINUS_impulse_BANG_(RigidBody* rb, Vector3__double* impulse) {
+    Body* _8 = RigidBody_body(rb);
+    Body_apply_MINUS_angular_MINUS_impulse_BANG_(_8, impulse);
+}
+
 void RigidBody_apply_MINUS_force_BANG_(RigidBody* rb, Vector3__double* f) {
     Body* _8 = RigidBody_body(rb);
     Body_apply_MINUS_force_BANG_(_8, f);
@@ -19358,6 +22659,11 @@ void RigidBody_apply_MINUS_force_BANG_(RigidBody* rb, Vector3__double* f) {
 void RigidBody_apply_MINUS_impulse_BANG_(RigidBody* rb, Vector3__double* impulse) {
     Body* _8 = RigidBody_body(rb);
     Body_apply_MINUS_impulse_BANG_(_8, impulse);
+}
+
+void RigidBody_apply_MINUS_torque_BANG_(RigidBody* rb, Vector3__double* t) {
+    Body* _8 = RigidBody_body(rb);
+    Body_apply_MINUS_torque_BANG_(_8, t);
 }
 
 Body* RigidBody_body(RigidBody* p) { return (&(p->body)); }
@@ -19389,12 +22695,12 @@ RigidBody RigidBody_kinematic(Vector3__double pos, Quaternion rot, double restit
     return _21;
 }
 
-RigidBody RigidBody_new(Vector3__double pos, Quaternion rot, double mass, double restitution, double friction, double damping) {
-    Vector3__double _17 = Vector3_init__double(1.0, 1.0, 1.0);
-    Transform _18 = Transform_init(pos, rot, _17);
-    Body _24 = Body_new(mass, restitution, friction, damping);
-    RigidBody _25 = RigidBody_init(_18, _24);
-    return _25;
+RigidBody RigidBody_new(Vector3__double pos, Quaternion rot, double mass, double restitution, double friction, double damping, double ang_MINUS_damping, double inertia) {
+    Vector3__double _19 = Vector3_init__double(1.0, 1.0, 1.0);
+    Transform _20 = Transform_init(pos, rot, _19);
+    Body _28 = Body_new(mass, restitution, friction, damping, ang_MINUS_damping, inertia);
+    RigidBody _29 = RigidBody_init(_20, _28);
+    return _29;
 }
 
 Vector3__double* RigidBody_position(RigidBody* rb) {
@@ -19421,21 +22727,19 @@ String RigidBody_prn(RigidBody *p) {
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
-  sprintf(bufferPtr, "(%s ", "RigidBody");
-  bufferPtr += strlen("RigidBody") + 2;
-
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "RigidBody");
   temp = Transform_prn(&p->transform);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Body_prn(&p->body);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   bufferPtr--;
-  sprintf(bufferPtr, ")");
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   return buffer;
 }
 
@@ -19519,21 +22823,19 @@ String RigidBody_str(RigidBody *p) {
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
-  sprintf(bufferPtr, "(%s ", "RigidBody");
-  bufferPtr += strlen("RigidBody") + 2;
-
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "RigidBody");
   temp = Transform_prn(&p->transform);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Body_prn(&p->body);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   bufferPtr--;
-  sprintf(bufferPtr, ")");
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   return buffer;
 }
 
@@ -19547,6 +22849,570 @@ RigidBody RigidBody_update_MINUS_body(RigidBody p, Lambda *updater) {
 
 RigidBody RigidBody_update_MINUS_transform(RigidBody p, Lambda *updater) {
     p.transform = (*updater).env ? ((Fn__LambdaEnv_Transform_Transform)(*updater).callback)((*updater).env, p.transform) : ((Fn__Transform_Transform)(*updater).callback)(p.transform);
+    return p;
+}
+
+
+void SDF_add_MINUS_crater_BANG_(SDF* sdf, LocalCrater c) {
+    Array__LocalCrater* _8 = SDF_craters(sdf);
+    Array_push_MINUS_back_BANG___LocalCrater(_8, c);
+}
+
+double SDF_apply_MINUS_craters(SDF* sdf, Vector3__double* p, double base_MINUS_d) {
+    double _71;
+    /* let */ {
+        double d = base_MINUS_d;
+        Array__LocalCrater* _12 = SDF_craters(sdf);
+        Array__LocalCrater* craters = _12;
+        /* let */ {
+            int i = 0;
+            int _24 = Array_length__LocalCrater(craters);
+            bool _1000008 = Int__LT_(i, _24);
+            bool _1000006 = _1000008;
+            while (_1000006) {
+                /* let */ {
+                    LocalCrater* _32 = Array_unsafe_MINUS_nth__LocalCrater(craters, i);
+                    LocalCrater* crater = _32;
+                    Vector3__double* _39 = LocalCrater_pos(crater);
+                    double _40 = Vector3_dist__double(p, _39);
+                    double* _44 = LocalCrater_radius(crater);
+                    double _45 = Double_copy(_44);
+                    double _46 = Double__MINUS_(_40, _45);
+                    double c_MINUS_dist = _46;
+                    double _55 = Double__MINUS_(0.0, c_MINUS_dist);
+                    double _56 = max__double(d, _55);
+                    d = _56;  // Double = Double
+                }
+                int _1000015 = Int__PLUS_(i, 1);
+                i = _1000015;  // Int = Int
+                int _24 = Array_length__LocalCrater(craters);
+                bool _1000008 = Int__LT_(i, _24);
+                _1000006 = _1000008;
+            }
+        }
+        double _70 = d;
+        _71 = _70;
+    }
+    return _71;
+}
+
+BaseShape* SDF_base(SDF* p) { return (&(p->base)); }
+
+SDF SDF_copy(SDF* pRef) {
+    SDF copy = *pRef;
+    copy.base = BaseShape_copy(&(pRef->base));
+    copy.craters = Array_copy__LocalCrater(&(pRef->craters));
+    copy.position = Vector3_copy__double(&(pRef->position));
+    copy.rotation = Quaternion_copy(&(pRef->rotation));
+    return copy;
+}
+
+Array__LocalCrater* SDF_craters(SDF* p) { return (&(p->craters)); }
+
+void SDF_delete(SDF p) {
+    BaseShape_delete(p.base);
+    Array_delete__LocalCrater(p.craters);
+    Vector3_delete__double(p.position);
+    Quaternion_delete(p.rotation);
+}
+
+double SDF_distance(SDF* sdf, Vector3__double* p_MINUS_world) {
+    double _8 = SDF_distance_MINUS_world(sdf, p_MINUS_world);
+    return _8;
+}
+
+double SDF_distance_MINUS_local(SDF* sdf, Vector3__double* p) {
+    BaseShape* _9 = SDF_base(sdf);
+    BaseShape _10 = BaseShape_copy(_9);
+    double _231;
+    if(_10._tag == BaseShape_Ball_tag) {
+        BaseShape _10_temp = _10;
+        double ball_MINUS_r = _10_temp.u.Ball.member0;
+        // Case expr:
+        double _20 = Vector3_mag__double(p);
+        double _22 = Double__MINUS_(_20, ball_MINUS_r);
+        double _23 = SDF_apply_MINUS_craters(sdf, p, _22);
+        _231 = _23;
+    }
+    else if(_10._tag == BaseShape_Surface_tag) {
+        BaseShape _10_temp = _10;
+        Plane surf_MINUS_pl = _10_temp.u.Surface.member0;
+        // Case expr:
+        Plane* _33 = &surf_MINUS_pl; // ref
+        double _35 = Plane_distance_MINUS_to_MINUS_point(_33, p);
+        double _36 = SDF_apply_MINUS_craters(sdf, p, _35);
+        _231 = _36;
+        Plane_delete(surf_MINUS_pl);
+    }
+    else if(_10._tag == BaseShape_Box_tag) {
+        BaseShape _10_temp = _10;
+        Vector3__double e = _10_temp.u.Box.member0;
+        // Case expr:
+        double _141;
+        /* let */ {
+            double* _46 = Vector3_x__double(p);
+            double _47 = Double_copy(_46);
+            double _48 = Double_abs(_47);
+            double px = _48;
+            double* _54 = Vector3_y__double(p);
+            double _55 = Double_copy(_54);
+            double _56 = Double_abs(_55);
+            double py = _56;
+            double* _62 = Vector3_z__double(p);
+            double _63 = Double_copy(_62);
+            double _64 = Double_abs(_63);
+            double pz = _64;
+            Vector3__double* _72 = &e; // ref
+            double* _73 = Vector3_x__double(_72);
+            double _74 = Double_copy(_73);
+            double _75 = Double__MINUS_(px, _74);
+            double qx = _75;
+            Vector3__double* _83 = &e; // ref
+            double* _84 = Vector3_y__double(_83);
+            double _85 = Double_copy(_84);
+            double _86 = Double__MINUS_(py, _85);
+            double qy = _86;
+            Vector3__double* _94 = &e; // ref
+            double* _95 = Vector3_z__double(_94);
+            double _96 = Double_copy(_95);
+            double _97 = Double__MINUS_(pz, _96);
+            double qz = _97;
+            double _104 = max__double(qy, qz);
+            double _105 = max__double(qx, _104);
+            double max_MINUS_q = _105;
+            double _111 = max__double(qx, 0.0);
+            double _115 = max__double(qy, 0.0);
+            double _119 = max__double(qz, 0.0);
+            Vector3__double _120 = Vector3_init__double(_111, _115, _119);
+            Vector3__double outside = _120;
+            Vector3__double* _125 = &outside; // ref
+            double _126 = Vector3_mag__double(_125);
+            double dist_MINUS_outside = _126;
+            double _131 = min__double(max_MINUS_q, 0.0);
+            double dist_MINUS_inside = _131;
+            double _139 = Double__PLUS_(dist_MINUS_outside, dist_MINUS_inside);
+            double _140 = SDF_apply_MINUS_craters(sdf, p, _139);
+            _141 = _140;
+            Vector3_delete__double(outside);
+        }
+        _231 = _141;
+        Vector3_delete__double(e);
+    }
+    else if(_10._tag == BaseShape_Cylinder_tag) {
+        BaseShape _10_temp = _10;
+        double r = _10_temp.u.Cylinder.member0;
+        double h = _10_temp.u.Cylinder.member1;
+        // Case expr:
+        double _230;
+        /* let */ {
+            double* _155 = Vector3_x__double(p);
+            double _156 = Double_copy(_155);
+            double* _160 = Vector3_x__double(p);
+            double _161 = Double_copy(_160);
+            double _162 = Double__MUL_(_156, _161);
+            double* _167 = Vector3_z__double(p);
+            double _168 = Double_copy(_167);
+            double* _172 = Vector3_z__double(p);
+            double _173 = Double_copy(_172);
+            double _174 = Double__MUL_(_168, _173);
+            double _175 = Double__PLUS_(_162, _174);
+            double _176 = Double_sqrt(_175);
+            double _178 = Double__MINUS_(_176, r);
+            double rad_MINUS_dist = _178;
+            double* _185 = Vector3_y__double(p);
+            double _186 = Double_copy(_185);
+            double _187 = Double_abs(_186);
+            double _189 = Double__MINUS_(_187, h);
+            double ax_MINUS_dist = _189;
+            double _194 = max__double(rad_MINUS_dist, 0.0);
+            double dx = _194;
+            double _199 = max__double(ax_MINUS_dist, 0.0);
+            double dy = _199;
+            double _206 = Double__MUL_(dx, dx);
+            double _210 = Double__MUL_(dy, dy);
+            double _211 = Double__PLUS_(_206, _210);
+            double _212 = Double_sqrt(_211);
+            double dist_MINUS_outside = _212;
+            double _218 = max__double(rad_MINUS_dist, ax_MINUS_dist);
+            double _220 = min__double(_218, 0.0);
+            double dist_MINUS_inside = _220;
+            double _228 = Double__PLUS_(dist_MINUS_outside, dist_MINUS_inside);
+            double _229 = SDF_apply_MINUS_craters(sdf, p, _228);
+            _230 = _229;
+        }
+        _231 = _230;
+    }
+    else UNHANDLED("geometry.carp", 119);
+    return _231;
+}
+
+double SDF_distance_MINUS_world(SDF* sdf, Vector3__double* p_MINUS_world) {
+    BaseShape* _9 = SDF_base(sdf);
+    BaseShape _10 = BaseShape_copy(_9);
+    double _50;
+    if(_10._tag == BaseShape_Surface_tag) {
+        BaseShape _10_temp = _10;
+        Plane pl = _10_temp.u.Surface.member0;
+        // Case expr:
+        double _17 = SDF_distance_MINUS_local(sdf, p_MINUS_world);
+        _50 = _17;
+        Plane_delete(pl);
+    }
+    else if(true) {
+        BaseShape _10_temp = _10;
+        BaseShape wildcard_18 = _10_temp;
+        double _49;
+        /* let */ {
+            Vector3__double* _23 = SDF_position(sdf);
+            Vector3__double* pos = _23;
+            Quaternion* _27 = SDF_rotation(sdf);
+            Quaternion* rot = _27;
+            Quaternion _33 = Quaternion_inverse(rot);
+            Quaternion* _34 = &_33; // ref
+            Vector3__double _39 = Vector3_sub__double(p_MINUS_world, pos);
+            Vector3__double* _40 = &_39; // ref
+            Vector3__double _41 = Quaternion_rotate(_34, _40);
+            Vector3__double local_MINUS_p = _41;
+            Vector3__double* _47 = &local_MINUS_p; // ref
+            double _48 = SDF_distance_MINUS_local(sdf, _47);
+            _49 = _48;
+            Quaternion_delete(_33);
+            Vector3_delete__double(_39);
+            Vector3_delete__double(local_MINUS_p);
+        }
+        _50 = _49;
+        BaseShape_delete(wildcard_18);
+    }
+    else UNHANDLED("geometry.carp", 146);
+    return _50;
+}
+
+SDF SDF_init(BaseShape base, Array__LocalCrater craters, Vector3__double position, Quaternion rotation) {
+    SDF instance;
+    instance.base = base;
+    instance.craters = craters;
+    instance.position = position;
+    instance.rotation = rotation;
+    return instance;
+}
+
+SDF SDF_init_MINUS_box(Vector3__double e, Vector3__double pos, Quaternion rot) {
+    BaseShape _9 = BaseShape_Box(e);
+    Array _10 = { .len = 0, .capacity = 0, .data = CARP_MALLOC(sizeof(LocalCrater) * 0) };
+    SDF _13 = SDF_init(_9, _10, pos, rot);
+    return _13;
+}
+
+SDF SDF_init_MINUS_cylinder(double r, double h, Vector3__double pos, Quaternion rot) {
+    BaseShape _11 = BaseShape_Cylinder(r, h);
+    Array _12 = { .len = 0, .capacity = 0, .data = CARP_MALLOC(sizeof(LocalCrater) * 0) };
+    SDF _15 = SDF_init(_11, _12, pos, rot);
+    return _15;
+}
+
+SDF SDF_init_MINUS_plane(Plane pl, Vector3__double pos, Quaternion rot) {
+    BaseShape _9 = BaseShape_Surface(pl);
+    Array _10 = { .len = 0, .capacity = 0, .data = CARP_MALLOC(sizeof(LocalCrater) * 0) };
+    SDF _13 = SDF_init(_9, _10, pos, rot);
+    return _13;
+}
+
+SDF SDF_init_MINUS_sphere(double r, Vector3__double pos, Quaternion rot) {
+    BaseShape _9 = BaseShape_Ball(r);
+    Array _10 = { .len = 0, .capacity = 0, .data = CARP_MALLOC(sizeof(LocalCrater) * 0) };
+    SDF _13 = SDF_init(_9, _10, pos, rot);
+    return _13;
+}
+
+Vector3__double SDF_normal_MINUS_at(SDF* sdf, Vector3__double* p_MINUS_world) {
+    Vector3__double _8 = SDF_normal_MINUS_world(sdf, p_MINUS_world);
+    return _8;
+}
+
+Vector3__double SDF_normal_MINUS_local(SDF* sdf, Vector3__double* p) {
+    Vector3__double _113;
+    /* let */ {
+        double eps = 1.0e-4;
+        Vector3__double _13 = Vector3_init__double(eps, 0.0, 0.0);
+        Vector3__double eps_MINUS_x = _13;
+        Vector3__double _19 = Vector3_init__double(0.0, eps, 0.0);
+        Vector3__double eps_MINUS_y = _19;
+        Vector3__double _25 = Vector3_init__double(0.0, 0.0, eps);
+        Vector3__double eps_MINUS_z = _25;
+        Vector3__double* _35 = &eps_MINUS_x; // ref
+        Vector3__double _36 = Vector3_add__double(p, _35);
+        Vector3__double* _37 = &_36; // ref
+        double _38 = SDF_distance_MINUS_local(sdf, _37);
+        Vector3__double* _46 = &eps_MINUS_x; // ref
+        Vector3__double _47 = Vector3_sub__double(p, _46);
+        Vector3__double* _48 = &_47; // ref
+        double _49 = SDF_distance_MINUS_local(sdf, _48);
+        double _50 = Double__MINUS_(_38, _49);
+        double dx = _50;
+        Vector3__double* _60 = &eps_MINUS_y; // ref
+        Vector3__double _61 = Vector3_add__double(p, _60);
+        Vector3__double* _62 = &_61; // ref
+        double _63 = SDF_distance_MINUS_local(sdf, _62);
+        Vector3__double* _71 = &eps_MINUS_y; // ref
+        Vector3__double _72 = Vector3_sub__double(p, _71);
+        Vector3__double* _73 = &_72; // ref
+        double _74 = SDF_distance_MINUS_local(sdf, _73);
+        double _75 = Double__MINUS_(_63, _74);
+        double dy = _75;
+        Vector3__double* _85 = &eps_MINUS_z; // ref
+        Vector3__double _86 = Vector3_add__double(p, _85);
+        Vector3__double* _87 = &_86; // ref
+        double _88 = SDF_distance_MINUS_local(sdf, _87);
+        Vector3__double* _96 = &eps_MINUS_z; // ref
+        Vector3__double _97 = Vector3_sub__double(p, _96);
+        Vector3__double* _98 = &_97; // ref
+        double _99 = SDF_distance_MINUS_local(sdf, _98);
+        double _100 = Double__MINUS_(_88, _99);
+        double dz = _100;
+        Vector3__double _106 = Vector3_init__double(dx, dy, dz);
+        Vector3__double grad = _106;
+        Vector3__double* _111 = &grad; // ref
+        Vector3__double _112 = Vector3_normalize__double(_111);
+        _113 = _112;
+        Vector3_delete__double(_36);
+        Vector3_delete__double(_47);
+        Vector3_delete__double(_61);
+        Vector3_delete__double(_72);
+        Vector3_delete__double(_86);
+        Vector3_delete__double(_97);
+        Vector3_delete__double(eps_MINUS_x);
+        Vector3_delete__double(eps_MINUS_y);
+        Vector3_delete__double(eps_MINUS_z);
+        Vector3_delete__double(grad);
+    }
+    return _113;
+}
+
+Vector3__double SDF_normal_MINUS_world(SDF* sdf, Vector3__double* p_MINUS_world) {
+    BaseShape* _9 = SDF_base(sdf);
+    BaseShape _10 = BaseShape_copy(_9);
+    Vector3__double _57;
+    if(_10._tag == BaseShape_Surface_tag) {
+        BaseShape _10_temp = _10;
+        Plane pl = _10_temp.u.Surface.member0;
+        // Case expr:
+        Vector3__double _17 = SDF_normal_MINUS_local(sdf, p_MINUS_world);
+        _57 = _17;
+        Plane_delete(pl);
+    }
+    else if(true) {
+        BaseShape _10_temp = _10;
+        BaseShape wildcard_18 = _10_temp;
+        Vector3__double _56;
+        /* let */ {
+            Vector3__double* _23 = SDF_position(sdf);
+            Vector3__double* pos = _23;
+            Quaternion* _27 = SDF_rotation(sdf);
+            Quaternion* rot = _27;
+            Quaternion _33 = Quaternion_inverse(rot);
+            Quaternion* _34 = &_33; // ref
+            Vector3__double _39 = Vector3_sub__double(p_MINUS_world, pos);
+            Vector3__double* _40 = &_39; // ref
+            Vector3__double _41 = Quaternion_rotate(_34, _40);
+            Vector3__double local_MINUS_p = _41;
+            Vector3__double* _47 = &local_MINUS_p; // ref
+            Vector3__double _48 = SDF_normal_MINUS_local(sdf, _47);
+            Vector3__double local_MINUS_n = _48;
+            Vector3__double* _54 = &local_MINUS_n; // ref
+            Vector3__double _55 = Quaternion_rotate(rot, _54);
+            _56 = _55;
+            Quaternion_delete(_33);
+            Vector3_delete__double(_39);
+            Vector3_delete__double(local_MINUS_n);
+            Vector3_delete__double(local_MINUS_p);
+        }
+        _57 = _56;
+        BaseShape_delete(wildcard_18);
+    }
+    else UNHANDLED("geometry.carp", 170);
+    return _57;
+}
+
+Vector3__double* SDF_position(SDF* p) { return (&(p->position)); }
+
+String SDF_prn(SDF *p) {
+  // convert members to String here:
+  String temp = NULL;
+  int tempsize = 0;
+  (void)tempsize; // that way we remove the occasional unused warning 
+  int size = snprintf(NULL, 0, "(%s )", "SDF");
+  temp = BaseShape_prn(&p->base); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Array_prn__LocalCrater(&p->craters); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Vector3_prn__double(&p->position); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Quaternion_prn(&p->rotation); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+
+  String buffer = CARP_MALLOC(size);
+  String bufferPtr = buffer;
+
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "SDF");
+  temp = BaseShape_prn(&p->base);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Array_prn__LocalCrater(&p->craters);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Vector3_prn__double(&p->position);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Quaternion_prn(&p->rotation);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  bufferPtr--;
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
+  return buffer;
+}
+
+Quaternion* SDF_rotation(SDF* p) { return (&(p->rotation)); }
+
+SDF SDF_set_MINUS_base(SDF p, BaseShape newValue) {
+    BaseShape_delete(p.base);
+    p.base = newValue;
+    return p;
+}
+
+
+void SDF_set_MINUS_base_BANG_(SDF* pRef, BaseShape newValue) {
+    BaseShape_delete(pRef->base);
+    pRef->base = newValue;
+}
+
+
+SDF SDF_set_MINUS_craters(SDF p, Array__LocalCrater newValue) {
+    Array_delete__LocalCrater(p.craters);
+    p.craters = newValue;
+    return p;
+}
+
+
+void SDF_set_MINUS_craters_BANG_(SDF* pRef, Array__LocalCrater newValue) {
+    Array_delete__LocalCrater(pRef->craters);
+    pRef->craters = newValue;
+}
+
+
+SDF SDF_set_MINUS_position(SDF p, Vector3__double newValue) {
+    Vector3_delete__double(p.position);
+    p.position = newValue;
+    return p;
+}
+
+
+void SDF_set_MINUS_position_BANG_(SDF* pRef, Vector3__double newValue) {
+    Vector3_delete__double(pRef->position);
+    pRef->position = newValue;
+}
+
+
+SDF SDF_set_MINUS_rotation(SDF p, Quaternion newValue) {
+    Quaternion_delete(p.rotation);
+    p.rotation = newValue;
+    return p;
+}
+
+
+void SDF_set_MINUS_rotation_BANG_(SDF* pRef, Quaternion newValue) {
+    Quaternion_delete(pRef->rotation);
+    pRef->rotation = newValue;
+}
+
+
+String SDF_str(SDF *p) {
+  // convert members to String here:
+  String temp = NULL;
+  int tempsize = 0;
+  (void)tempsize; // that way we remove the occasional unused warning 
+  int size = snprintf(NULL, 0, "(%s )", "SDF");
+  temp = BaseShape_prn(&p->base); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Array_prn__LocalCrater(&p->craters); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Vector3_prn__double(&p->position); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Quaternion_prn(&p->rotation); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+
+  String buffer = CARP_MALLOC(size);
+  String bufferPtr = buffer;
+
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "SDF");
+  temp = BaseShape_prn(&p->base);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Array_prn__LocalCrater(&p->craters);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Vector3_prn__double(&p->position);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  temp = Quaternion_prn(&p->rotation);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  bufferPtr--;
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
+  return buffer;
+}
+
+SDF SDF_update_MINUS_base(SDF p, Lambda *updater) {
+    p.base = (*updater).env ? ((Fn__LambdaEnv_BaseShape_BaseShape)(*updater).callback)((*updater).env, p.base) : ((Fn__BaseShape_BaseShape)(*updater).callback)(p.base);
+    return p;
+}
+
+
+SDF SDF_update_MINUS_craters(SDF p, Lambda *updater) {
+    p.craters = (*updater).env ? ((Fn__LambdaEnv_Array__LocalCrater_Array__LocalCrater)(*updater).callback)((*updater).env, p.craters) : ((Fn__Array__LocalCrater_Array__LocalCrater)(*updater).callback)(p.craters);
+    return p;
+}
+
+
+SDF SDF_update_MINUS_position(SDF p, Lambda *updater) {
+    p.position = (*updater).env ? ((Fn__LambdaEnv_Vector3__double_Vector3__double)(*updater).callback)((*updater).env, p.position) : ((Fn__Vector3__double_Vector3__double)(*updater).callback)(p.position);
+    return p;
+}
+
+
+SDF SDF_update_MINUS_rotation(SDF p, Lambda *updater) {
+    p.rotation = (*updater).env ? ((Fn__LambdaEnv_Quaternion_Quaternion)(*updater).callback)((*updater).env, p.rotation) : ((Fn__Quaternion_Quaternion)(*updater).callback)(p.rotation);
     return p;
 }
 
@@ -19590,21 +23456,19 @@ String Segment_prn(Segment *p) {
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
-  sprintf(bufferPtr, "(%s ", "Segment");
-  bufferPtr += strlen("Segment") + 2;
-
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Segment");
   temp = Vector3_prn__double(&p->start);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Vector3_prn__double(&p->end);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   bufferPtr--;
-  sprintf(bufferPtr, ")");
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   return buffer;
 }
 
@@ -19654,21 +23518,19 @@ String Segment_str(Segment *p) {
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
-  sprintf(bufferPtr, "(%s ", "Segment");
-  bufferPtr += strlen("Segment") + 2;
-
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Segment");
   temp = Vector3_prn__double(&p->start);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Vector3_prn__double(&p->end);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   bufferPtr--;
-  sprintf(bufferPtr, ")");
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   return buffer;
 }
 
@@ -19684,7 +23546,7 @@ Segment Segment_update_MINUS_start(Segment p, Lambda *updater) {
 }
 
 
-void Solver_solve_BANG_(RigidBody* rb_MINUS_a, RigidBody* rb_MINUS_b, Collision* col) {
+void Solver_solve_BANG_(RigidBody* rb_MINUS_a, RigidBody* rb_MINUS_b, ContactSet* contact_MINUS_set) {
     /* let */ {
         Transform* _10 = RigidBody_transform(rb_MINUS_a);
         Transform* t_MINUS_a = _10;
@@ -19694,152 +23556,306 @@ void Solver_solve_BANG_(RigidBody* rb_MINUS_a, RigidBody* rb_MINUS_b, Collision*
         Transform* t_MINUS_b = _18;
         Body* _22 = RigidBody_body(rb_MINUS_b);
         Body* b_MINUS_b = _22;
-        Contact* _26 = Collision_contact(col);
-        Contact* contact = _26;
-        Vector3__double* _30 = Contact_normal(contact);
-        Vector3__double* normal = _30;
-        double* _35 = Contact_depth(contact);
-        double _36 = Double_copy(_35);
-        double depth = _36;
-        double* _41 = Body_inv_MINUS_mass(b_MINUS_a);
-        double _42 = Double_copy(_41);
-        double inv_MINUS_m_MINUS_a = _42;
-        double* _47 = Body_inv_MINUS_mass(b_MINUS_b);
-        double _48 = Double_copy(_47);
-        double inv_MINUS_m_MINUS_b = _48;
-        double _53 = Double__PLUS_(inv_MINUS_m_MINUS_a, inv_MINUS_m_MINUS_b);
-        double total_MINUS_inv_MINUS_mass = _53;
-        bool _59 = _LT__EQ___double(total_MINUS_inv_MINUS_mass, 0.0);
-        if (_59) {
+        Array__Contact* _26 = ContactSet_contacts(contact_MINUS_set);
+        Array__Contact* contacts = _26;
+        double* _31 = Body_inv_MINUS_mass(b_MINUS_a);
+        double _32 = Double_copy(_31);
+        double inv_MINUS_m_MINUS_a = _32;
+        double* _37 = Body_inv_MINUS_mass(b_MINUS_b);
+        double _38 = Double_copy(_37);
+        double inv_MINUS_m_MINUS_b = _38;
+        double* _43 = Body_inv_MINUS_inertia(b_MINUS_a);
+        double _44 = Double_copy(_43);
+        double inv_MINUS_i_MINUS_a = _44;
+        double* _49 = Body_inv_MINUS_inertia(b_MINUS_b);
+        double _50 = Double_copy(_49);
+        double inv_MINUS_i_MINUS_b = _50;
+        double _55 = Double__PLUS_(inv_MINUS_m_MINUS_a, inv_MINUS_m_MINUS_b);
+        double total_MINUS_inv_MINUS_mass = _55;
+        bool _61 = _LT__EQ___double(total_MINUS_inv_MINUS_mass, 0.0);
+        if (_61) {
             /* () */
         } else {
             /* let */ {
-                Vector3__double* _68 = Body_velocity(b_MINUS_a);
-                Vector3__double* v_MINUS_a = _68;
-                Vector3__double* _72 = Body_velocity(b_MINUS_b);
-                Vector3__double* v_MINUS_b = _72;
-                Vector3__double _77 = Vector3_sub__double(v_MINUS_a, v_MINUS_b);
-                Vector3__double rel_MINUS_v = _77;
-                Vector3__double* _82 = &rel_MINUS_v; // ref
-                double _84 = Vector3_dot__double(_82, normal);
-                double vel_MINUS_along_MINUS_normal = _84;
-                bool _91 = Double__LT_(vel_MINUS_along_MINUS_normal, 0.0);
-                if (_91) {
+                int ci = 0;
+                int _75 = Array_length__Contact(contacts);
+                bool _1000011 = Int__LT_(ci, _75);
+                bool _1000009 = _1000011;
+                while (_1000009) {
                     /* let */ {
-                        double* _99 = Body_restitution(b_MINUS_a);
-                        double _100 = Double_copy(_99);
-                        double* _104 = Body_restitution(b_MINUS_b);
-                        double _105 = Double_copy(_104);
-                        double _106 = min__double(_100, _105);
-                        double e = _106;
-                        double _114 = Double__PLUS_(1.0, e);
-                        double _116 = Double__MUL_(_114, vel_MINUS_along_MINUS_normal);
-                        double _117 = Double__MINUS_(0.0, _116);
-                        double j_MINUS_num = _117;
-                        double _122 = Double__DIV_(j_MINUS_num, total_MINUS_inv_MINUS_mass);
-                        double j = _122;
-                        Vector3__double _127 = Vector3_mul__double(normal, j);
-                        Vector3__double n_MINUS_impulse = _127;
-                        Vector3__double* _134 = &n_MINUS_impulse; // ref
-                        Body_apply_MINUS_impulse_BANG_(b_MINUS_a, _134);
-                        Vector3__double* _142 = &n_MINUS_impulse; // ref
-                        Vector3__double _144 = Vector3_mul__double(_142, -1.0);
-                        Vector3__double* _145 = &_144; // ref
-                        Body_apply_MINUS_impulse_BANG_(b_MINUS_b, _145);
-                        /* let */ {
-                            Vector3__double* _151 = Body_velocity(b_MINUS_a);
-                            Vector3__double* v_MINUS_a2 = _151;
-                            Vector3__double* _155 = Body_velocity(b_MINUS_b);
-                            Vector3__double* v_MINUS_b2 = _155;
-                            Vector3__double _160 = Vector3_sub__double(v_MINUS_a2, v_MINUS_b2);
-                            Vector3__double rel_MINUS_v2 = _160;
-                            Vector3__double* _167 = &rel_MINUS_v2; // ref
-                            double _169 = Vector3_dot__double(_167, normal);
-                            Vector3__double _170 = Vector3_mul__double(normal, _169);
-                            Vector3__double v_MINUS_n2 = _170;
-                            Vector3__double* _175 = &rel_MINUS_v2; // ref
-                            Vector3__double* _178 = &v_MINUS_n2; // ref
-                            Vector3__double _179 = Vector3_sub__double(_175, _178);
-                            Vector3__double v_MINUS_tan = _179;
-                            Vector3__double* _186 = &v_MINUS_tan; // ref
-                            double _187 = Vector3_mag_MINUS_sq__double(_186);
-                            bool _189 = Double__GT_(_187, 1.0e-4);
-                            if (_189) {
+                        Contact* _83 = Array_unsafe_MINUS_nth__Contact(contacts, ci);
+                        Contact* contact = _83;
+                        Vector3__double* _87 = Contact_normal(contact);
+                        Vector3__double* normal = _87;
+                        Vector3__double* _91 = Contact_point(contact);
+                        Vector3__double* cp = _91;
+                        double* _96 = Contact_depth(contact);
+                        double _97 = Double_copy(_96);
+                        double depth = _97;
+                        Vector3__double* _103 = Transform_position(t_MINUS_a);
+                        Vector3__double _104 = Vector3_sub__double(cp, _103);
+                        Vector3__double r_MINUS_a = _104;
+                        Vector3__double* _110 = Transform_position(t_MINUS_b);
+                        Vector3__double _111 = Vector3_sub__double(cp, _110);
+                        Vector3__double r_MINUS_b = _111;
+                        Vector3__double* _115 = Body_velocity(b_MINUS_a);
+                        Vector3__double* v_MINUS_lin_MINUS_a = _115;
+                        Vector3__double* _119 = Body_velocity(b_MINUS_b);
+                        Vector3__double* v_MINUS_lin_MINUS_b = _119;
+                        Vector3__double* _123 = Body_angular_MINUS_velocity(b_MINUS_a);
+                        Vector3__double* w_MINUS_a = _123;
+                        Vector3__double* _127 = Body_angular_MINUS_velocity(b_MINUS_b);
+                        Vector3__double* w_MINUS_b = _127;
+                        Vector3__double* _136 = &r_MINUS_a; // ref
+                        Vector3__double _137 = Vector3_cross__double(w_MINUS_a, _136);
+                        Vector3__double* _138 = &_137; // ref
+                        Vector3__double _139 = Vector3_add__double(v_MINUS_lin_MINUS_a, _138);
+                        Vector3__double v_MINUS_at_MINUS_a = _139;
+                        Vector3__double* _148 = &r_MINUS_b; // ref
+                        Vector3__double _149 = Vector3_cross__double(w_MINUS_b, _148);
+                        Vector3__double* _150 = &_149; // ref
+                        Vector3__double _151 = Vector3_add__double(v_MINUS_lin_MINUS_b, _150);
+                        Vector3__double v_MINUS_at_MINUS_b = _151;
+                        Vector3__double* _156 = &v_MINUS_at_MINUS_a; // ref
+                        Vector3__double* _159 = &v_MINUS_at_MINUS_b; // ref
+                        Vector3__double _160 = Vector3_sub__double(_156, _159);
+                        Vector3__double rel_MINUS_v = _160;
+                        Vector3__double* _165 = &rel_MINUS_v; // ref
+                        double _167 = Vector3_dot__double(_165, normal);
+                        double vel_MINUS_along_MINUS_normal = _167;
+                        bool _174 = Double__LT_(vel_MINUS_along_MINUS_normal, 0.0);
+                        if (_174) {
+                            /* let */ {
+                                double* _182 = Body_restitution(b_MINUS_a);
+                                double _183 = Double_copy(_182);
+                                double* _187 = Body_restitution(b_MINUS_b);
+                                double _188 = Double_copy(_187);
+                                double _189 = min__double(_183, _188);
+                                double e = _189;
+                                Vector3__double* _194 = &r_MINUS_a; // ref
+                                Vector3__double _196 = Vector3_cross__double(_194, normal);
+                                Vector3__double r_MINUS_a_MINUS_cross_MINUS_n = _196;
+                                Vector3__double* _201 = &r_MINUS_b; // ref
+                                Vector3__double _203 = Vector3_cross__double(_201, normal);
+                                Vector3__double r_MINUS_b_MINUS_cross_MINUS_n = _203;
+                                Vector3__double* _208 = &r_MINUS_a_MINUS_cross_MINUS_n; // ref
+                                Vector3__double* _213 = &r_MINUS_a_MINUS_cross_MINUS_n; // ref
+                                Vector3__double _215 = Vector3_mul__double(_213, inv_MINUS_i_MINUS_a);
+                                Vector3__double* _216 = &_215; // ref
+                                double _217 = Vector3_dot__double(_208, _216);
+                                double ang_MINUS_a = _217;
+                                Vector3__double* _222 = &r_MINUS_b_MINUS_cross_MINUS_n; // ref
+                                Vector3__double* _227 = &r_MINUS_b_MINUS_cross_MINUS_n; // ref
+                                Vector3__double _229 = Vector3_mul__double(_227, inv_MINUS_i_MINUS_b);
+                                Vector3__double* _230 = &_229; // ref
+                                double _231 = Vector3_dot__double(_222, _230);
+                                double ang_MINUS_b = _231;
+                                double _239 = Double__PLUS_(1.0, e);
+                                double _241 = Double__MUL_(_239, vel_MINUS_along_MINUS_normal);
+                                double _242 = Double__MINUS_(0.0, _241);
+                                double j_MINUS_num = _242;
+                                double _251 = Double__PLUS_(ang_MINUS_a, ang_MINUS_b);
+                                double _252 = Double__PLUS_(total_MINUS_inv_MINUS_mass, _251);
+                                double _253 = Double__DIV_(j_MINUS_num, _252);
+                                double j = _253;
+                                Vector3__double _258 = Vector3_mul__double(normal, j);
+                                Vector3__double impulse = _258;
+                                Vector3__double* _265 = &impulse; // ref
+                                Body_apply_MINUS_impulse_BANG_(b_MINUS_a, _265);
+                                Vector3__double* _273 = &impulse; // ref
+                                Vector3__double _275 = Vector3_mul__double(_273, -1.0);
+                                Vector3__double* _276 = &_275; // ref
+                                Body_apply_MINUS_impulse_BANG_(b_MINUS_b, _276);
                                 /* let */ {
-                                    Vector3__double* _196 = &v_MINUS_tan; // ref
-                                    Vector3__double _197 = Vector3_normalize__double(_196);
-                                    Vector3__double t_MINUS_norm = _197;
-                                    double* _203 = Body_friction(b_MINUS_a);
-                                    double _204 = Double_copy(_203);
-                                    double* _208 = Body_friction(b_MINUS_b);
-                                    double _209 = Double_copy(_208);
-                                    double _210 = min__double(_204, _209);
-                                    double f_MINUS_mu = _210;
-                                    Vector3__double* _217 = &rel_MINUS_v2; // ref
-                                    Vector3__double* _220 = &t_MINUS_norm; // ref
-                                    double _221 = Vector3_dot__double(_217, _220);
-                                    double _222 = Double__MINUS_(0.0, _221);
-                                    double jt_MINUS_num = _222;
-                                    double _227 = Double__DIV_(jt_MINUS_num, total_MINUS_inv_MINUS_mass);
-                                    double jt = _227;
-                                    double _232 = Double__MUL_(j, f_MINUS_mu);
-                                    double max_MINUS_f = _232;
-                                    double _238 = Double__MINUS_(0.0, max_MINUS_f);
-                                    double _241 = clamp__double(_238, max_MINUS_f, jt);
-                                    double jt_MINUS_clamped = _241;
-                                    Vector3__double* _246 = &t_MINUS_norm; // ref
-                                    Vector3__double _248 = Vector3_mul__double(_246, jt_MINUS_clamped);
-                                    Vector3__double f_MINUS_impulse = _248;
-                                    Vector3__double* _255 = &f_MINUS_impulse; // ref
-                                    Body_apply_MINUS_impulse_BANG_(b_MINUS_a, _255);
-                                    Vector3__double* _263 = &f_MINUS_impulse; // ref
-                                    Vector3__double _265 = Vector3_mul__double(_263, -1.0);
-                                    Vector3__double* _266 = &_265; // ref
-                                    Body_apply_MINUS_impulse_BANG_(b_MINUS_b, _266);
-                                    Vector3_delete__double(_265);
-                                    Vector3_delete__double(f_MINUS_impulse);
-                                    Vector3_delete__double(t_MINUS_norm);
+                                    Vector3__double* _283 = &r_MINUS_a; // ref
+                                    Vector3__double* _286 = &impulse; // ref
+                                    Vector3__double _287 = Vector3_cross__double(_283, _286);
+                                    Vector3__double torque_MINUS_a = _287;
+                                    Vector3__double* _292 = &r_MINUS_b; // ref
+                                    Vector3__double* _297 = &impulse; // ref
+                                    Vector3__double _299 = Vector3_mul__double(_297, -1.0);
+                                    Vector3__double* _300 = &_299; // ref
+                                    Vector3__double _301 = Vector3_cross__double(_292, _300);
+                                    Vector3__double torque_MINUS_b = _301;
+                                    Vector3__double* _308 = &torque_MINUS_a; // ref
+                                    Body_apply_MINUS_angular_MINUS_impulse_BANG_(b_MINUS_a, _308);
+                                    Vector3__double* _314 = &torque_MINUS_b; // ref
+                                    Body_apply_MINUS_angular_MINUS_impulse_BANG_(b_MINUS_b, _314);
+                                    Vector3_delete__double(_299);
+                                    Vector3_delete__double(torque_MINUS_a);
+                                    Vector3_delete__double(torque_MINUS_b);
                                 }
-                            } else {
-                                /* () */
+                                /* let */ {
+                                    Vector3__double* _323 = Body_velocity(b_MINUS_a);
+                                    Vector3__double* _328 = Body_angular_MINUS_velocity(b_MINUS_a);
+                                    Vector3__double* _331 = &r_MINUS_a; // ref
+                                    Vector3__double _332 = Vector3_cross__double(_328, _331);
+                                    Vector3__double* _333 = &_332; // ref
+                                    Vector3__double _334 = Vector3_add__double(_323, _333);
+                                    Vector3__double v_MINUS_at_MINUS_a2 = _334;
+                                    Vector3__double* _339 = Body_velocity(b_MINUS_b);
+                                    Vector3__double* _344 = Body_angular_MINUS_velocity(b_MINUS_b);
+                                    Vector3__double* _347 = &r_MINUS_b; // ref
+                                    Vector3__double _348 = Vector3_cross__double(_344, _347);
+                                    Vector3__double* _349 = &_348; // ref
+                                    Vector3__double _350 = Vector3_add__double(_339, _349);
+                                    Vector3__double v_MINUS_at_MINUS_b2 = _350;
+                                    Vector3__double* _355 = &v_MINUS_at_MINUS_a2; // ref
+                                    Vector3__double* _358 = &v_MINUS_at_MINUS_b2; // ref
+                                    Vector3__double _359 = Vector3_sub__double(_355, _358);
+                                    Vector3__double rel_MINUS_v2 = _359;
+                                    Vector3__double* _366 = &rel_MINUS_v2; // ref
+                                    double _368 = Vector3_dot__double(_366, normal);
+                                    Vector3__double _369 = Vector3_mul__double(normal, _368);
+                                    Vector3__double v_MINUS_n2 = _369;
+                                    Vector3__double* _374 = &rel_MINUS_v2; // ref
+                                    Vector3__double* _377 = &v_MINUS_n2; // ref
+                                    Vector3__double _378 = Vector3_sub__double(_374, _377);
+                                    Vector3__double v_MINUS_tan = _378;
+                                    Vector3__double* _385 = &v_MINUS_tan; // ref
+                                    double _386 = Vector3_mag_MINUS_sq__double(_385);
+                                    bool _388 = Double__GT_(_386, 1.0e-4);
+                                    if (_388) {
+                                        /* let */ {
+                                            Vector3__double* _395 = &v_MINUS_tan; // ref
+                                            Vector3__double _396 = Vector3_normalize__double(_395);
+                                            Vector3__double t_MINUS_norm = _396;
+                                            double* _402 = Body_friction(b_MINUS_a);
+                                            double _403 = Double_copy(_402);
+                                            double* _407 = Body_friction(b_MINUS_b);
+                                            double _408 = Double_copy(_407);
+                                            double _409 = min__double(_403, _408);
+                                            double f_MINUS_mu = _409;
+                                            Vector3__double* _414 = &r_MINUS_a; // ref
+                                            Vector3__double* _417 = &t_MINUS_norm; // ref
+                                            Vector3__double _418 = Vector3_cross__double(_414, _417);
+                                            Vector3__double r_MINUS_a_MINUS_cross_MINUS_t = _418;
+                                            Vector3__double* _423 = &r_MINUS_b; // ref
+                                            Vector3__double* _426 = &t_MINUS_norm; // ref
+                                            Vector3__double _427 = Vector3_cross__double(_423, _426);
+                                            Vector3__double r_MINUS_b_MINUS_cross_MINUS_t = _427;
+                                            Vector3__double* _432 = &r_MINUS_a_MINUS_cross_MINUS_t; // ref
+                                            Vector3__double* _437 = &r_MINUS_a_MINUS_cross_MINUS_t; // ref
+                                            Vector3__double _439 = Vector3_mul__double(_437, inv_MINUS_i_MINUS_a);
+                                            Vector3__double* _440 = &_439; // ref
+                                            double _441 = Vector3_dot__double(_432, _440);
+                                            double ang_MINUS_a_MINUS_t = _441;
+                                            Vector3__double* _446 = &r_MINUS_b_MINUS_cross_MINUS_t; // ref
+                                            Vector3__double* _451 = &r_MINUS_b_MINUS_cross_MINUS_t; // ref
+                                            Vector3__double _453 = Vector3_mul__double(_451, inv_MINUS_i_MINUS_b);
+                                            Vector3__double* _454 = &_453; // ref
+                                            double _455 = Vector3_dot__double(_446, _454);
+                                            double ang_MINUS_b_MINUS_t = _455;
+                                            Vector3__double* _462 = &rel_MINUS_v2; // ref
+                                            Vector3__double* _465 = &t_MINUS_norm; // ref
+                                            double _466 = Vector3_dot__double(_462, _465);
+                                            double _467 = Double__MINUS_(0.0, _466);
+                                            double jt_MINUS_num = _467;
+                                            double _476 = Double__PLUS_(ang_MINUS_a_MINUS_t, ang_MINUS_b_MINUS_t);
+                                            double _477 = Double__PLUS_(total_MINUS_inv_MINUS_mass, _476);
+                                            double _478 = Double__DIV_(jt_MINUS_num, _477);
+                                            double jt = _478;
+                                            double _483 = Double__MUL_(j, f_MINUS_mu);
+                                            double max_MINUS_f = _483;
+                                            double _489 = Double__MINUS_(0.0, max_MINUS_f);
+                                            double _492 = clamp__double(_489, max_MINUS_f, jt);
+                                            double jt_MINUS_clamped = _492;
+                                            Vector3__double* _497 = &t_MINUS_norm; // ref
+                                            Vector3__double _499 = Vector3_mul__double(_497, jt_MINUS_clamped);
+                                            Vector3__double f_MINUS_impulse = _499;
+                                            Vector3__double* _506 = &f_MINUS_impulse; // ref
+                                            Body_apply_MINUS_impulse_BANG_(b_MINUS_a, _506);
+                                            Vector3__double* _514 = &f_MINUS_impulse; // ref
+                                            Vector3__double _516 = Vector3_mul__double(_514, -1.0);
+                                            Vector3__double* _517 = &_516; // ref
+                                            Body_apply_MINUS_impulse_BANG_(b_MINUS_b, _517);
+                                            Vector3__double* _525 = &r_MINUS_a; // ref
+                                            Vector3__double* _528 = &f_MINUS_impulse; // ref
+                                            Vector3__double _529 = Vector3_cross__double(_525, _528);
+                                            Vector3__double* _530 = &_529; // ref
+                                            Body_apply_MINUS_angular_MINUS_impulse_BANG_(b_MINUS_a, _530);
+                                            Vector3__double* _538 = &r_MINUS_b; // ref
+                                            Vector3__double* _543 = &f_MINUS_impulse; // ref
+                                            Vector3__double _545 = Vector3_mul__double(_543, -1.0);
+                                            Vector3__double* _546 = &_545; // ref
+                                            Vector3__double _547 = Vector3_cross__double(_538, _546);
+                                            Vector3__double* _548 = &_547; // ref
+                                            Body_apply_MINUS_angular_MINUS_impulse_BANG_(b_MINUS_b, _548);
+                                            Vector3_delete__double(_439);
+                                            Vector3_delete__double(_453);
+                                            Vector3_delete__double(_516);
+                                            Vector3_delete__double(_529);
+                                            Vector3_delete__double(_545);
+                                            Vector3_delete__double(_547);
+                                            Vector3_delete__double(f_MINUS_impulse);
+                                            Vector3_delete__double(r_MINUS_a_MINUS_cross_MINUS_t);
+                                            Vector3_delete__double(r_MINUS_b_MINUS_cross_MINUS_t);
+                                            Vector3_delete__double(t_MINUS_norm);
+                                        }
+                                    } else {
+                                        /* () */
+                                    }
+                                    Vector3_delete__double(_332);
+                                    Vector3_delete__double(_348);
+                                    Vector3_delete__double(rel_MINUS_v2);
+                                    Vector3_delete__double(v_MINUS_at_MINUS_a2);
+                                    Vector3_delete__double(v_MINUS_at_MINUS_b2);
+                                    Vector3_delete__double(v_MINUS_n2);
+                                    Vector3_delete__double(v_MINUS_tan);
+                                }
+                                Vector3_delete__double(_215);
+                                Vector3_delete__double(_229);
+                                Vector3_delete__double(_275);
+                                Vector3_delete__double(impulse);
+                                Vector3_delete__double(r_MINUS_a_MINUS_cross_MINUS_n);
+                                Vector3_delete__double(r_MINUS_b_MINUS_cross_MINUS_n);
                             }
-                            Vector3_delete__double(rel_MINUS_v2);
-                            Vector3_delete__double(v_MINUS_n2);
-                            Vector3_delete__double(v_MINUS_tan);
+                        } else {
+                            /* () */
                         }
-                        Vector3_delete__double(_144);
-                        Vector3_delete__double(n_MINUS_impulse);
+                        /* let */ {
+                            double percent = 0.4;
+                            double slop = 1.0e-2;
+                            double max_MINUS_corr = 0.1;
+                            double _578 = Double__MINUS_(depth, slop);
+                            double _580 = max__double(_578, 0.0);
+                            double _582 = min__double(_580, max_MINUS_corr);
+                            double depth_MINUS_clamped = _582;
+                            double _588 = Double__DIV_(depth_MINUS_clamped, total_MINUS_inv_MINUS_mass);
+                            double _590 = Double__MUL_(_588, percent);
+                            double corr_MINUS_mag = _590;
+                            Vector3__double _595 = Vector3_mul__double(normal, corr_MINUS_mag);
+                            Vector3__double correction = _595;
+                            Vector3__double* _603 = Transform_position(t_MINUS_a);
+                            Vector3__double* _608 = &correction; // ref
+                            Vector3__double _610 = Vector3_mul__double(_608, inv_MINUS_m_MINUS_a);
+                            Vector3__double* _611 = &_610; // ref
+                            Vector3__double _612 = Vector3_add__double(_603, _611);
+                            Transform_set_MINUS_position_BANG_(t_MINUS_a, _612);
+                            Vector3__double* _619 = Transform_position(t_MINUS_b);
+                            Vector3__double* _624 = &correction; // ref
+                            Vector3__double _626 = Vector3_mul__double(_624, inv_MINUS_m_MINUS_b);
+                            Vector3__double* _627 = &_626; // ref
+                            Vector3__double _628 = Vector3_sub__double(_619, _627);
+                            Transform_set_MINUS_position_BANG_(t_MINUS_b, _628);
+                            Vector3_delete__double(_610);
+                            Vector3_delete__double(_626);
+                            Vector3_delete__double(correction);
+                        }
+                        Vector3_delete__double(_137);
+                        Vector3_delete__double(_149);
+                        Vector3_delete__double(r_MINUS_a);
+                        Vector3_delete__double(r_MINUS_b);
+                        Vector3_delete__double(rel_MINUS_v);
+                        Vector3_delete__double(v_MINUS_at_MINUS_a);
+                        Vector3_delete__double(v_MINUS_at_MINUS_b);
                     }
-                } else {
-                    /* () */
+                    int _1000033 = Int__PLUS_(ci, 1);
+                    ci = _1000033;  // Int = Int
+                    int _75 = Array_length__Contact(contacts);
+                    bool _1000011 = Int__LT_(ci, _75);
+                    _1000009 = _1000011;
                 }
-                /* let */ {
-                    double percent = 0.6;
-                    double slop = 1.0e-2;
-                    double _295 = Double__MINUS_(depth, slop);
-                    double _297 = max__double(_295, 0.0);
-                    double _299 = Double__DIV_(_297, total_MINUS_inv_MINUS_mass);
-                    double _301 = Double__MUL_(_299, percent);
-                    double corr_MINUS_mag = _301;
-                    Vector3__double _306 = Vector3_mul__double(normal, corr_MINUS_mag);
-                    Vector3__double correction = _306;
-                    Vector3__double* _314 = Transform_position(t_MINUS_a);
-                    Vector3__double* _319 = &correction; // ref
-                    Vector3__double _321 = Vector3_mul__double(_319, inv_MINUS_m_MINUS_a);
-                    Vector3__double* _322 = &_321; // ref
-                    Vector3__double _323 = Vector3_add__double(_314, _322);
-                    Transform_set_MINUS_position_BANG_(t_MINUS_a, _323);
-                    Vector3__double* _330 = Transform_position(t_MINUS_b);
-                    Vector3__double* _335 = &correction; // ref
-                    Vector3__double _337 = Vector3_mul__double(_335, inv_MINUS_m_MINUS_b);
-                    Vector3__double* _338 = &_337; // ref
-                    Vector3__double _339 = Vector3_sub__double(_330, _338);
-                    Transform_set_MINUS_position_BANG_(t_MINUS_b, _339);
-                    Vector3_delete__double(_321);
-                    Vector3_delete__double(_337);
-                    Vector3_delete__double(correction);
-                }
-                Vector3_delete__double(rel_MINUS_v);
             }
         }
     }
@@ -19896,30 +23912,43 @@ CellRange SpatialGrid_get_MINUS_range__Uint64(SpatialGrid__Uint64* grid, AABB* a
 
 int* SpatialGrid_layers__Uint64(SpatialGrid__Uint64* p) { return (&(p->layers)); }
 
+Vector3__double* SpatialGrid_origin__Uint64(SpatialGrid__Uint64* p) { return (&(p->origin)); }
+
 Array__Uint64* SpatialGrid_overflow__Uint64(SpatialGrid__Uint64* p) { return (&(p->overflow)); }
 
 Vector3__double SpatialGrid_pos_MINUS_to_MINUS_coord__Uint64(SpatialGrid__Uint64* grid, Vector3__double* p) {
-    Vector3__double _45;
+    Vector3__double _70;
     /* let */ {
         double* _10 = SpatialGrid_cell_MINUS_size__Uint64(grid);
         double _11 = Double_copy(_10);
         double cs = _11;
-        double* _19 = Vector3_x__double(p);
-        double _20 = Double_copy(_19);
-        double _22 = Double__DIV_(_20, cs);
-        double _23 = Double_floor(_22);
-        double* _29 = Vector3_y__double(p);
+        Vector3__double* _15 = SpatialGrid_origin__Uint64(grid);
+        Vector3__double* o = _15;
+        double* _24 = Vector3_x__double(p);
+        double _25 = Double_copy(_24);
+        double* _29 = Vector3_x__double(o);
         double _30 = Double_copy(_29);
-        double _32 = Double__DIV_(_30, cs);
-        double _33 = Double_floor(_32);
-        double* _39 = Vector3_z__double(p);
-        double _40 = Double_copy(_39);
-        double _42 = Double__DIV_(_40, cs);
-        double _43 = Double_floor(_42);
-        Vector3__double _44 = Vector3_init__double(_23, _33, _43);
-        _45 = _44;
+        double _31 = Double__MINUS_(_25, _30);
+        double _33 = Double__DIV_(_31, cs);
+        double _34 = Double_floor(_33);
+        double* _41 = Vector3_y__double(p);
+        double _42 = Double_copy(_41);
+        double* _46 = Vector3_y__double(o);
+        double _47 = Double_copy(_46);
+        double _48 = Double__MINUS_(_42, _47);
+        double _50 = Double__DIV_(_48, cs);
+        double _51 = Double_floor(_50);
+        double* _58 = Vector3_z__double(p);
+        double _59 = Double_copy(_58);
+        double* _63 = Vector3_z__double(o);
+        double _64 = Double_copy(_63);
+        double _65 = Double__MINUS_(_59, _64);
+        double _67 = Double__DIV_(_65, cs);
+        double _68 = Double_floor(_67);
+        Vector3__double _69 = Vector3_init__double(_34, _51, _68);
+        _70 = _69;
     }
-    return _45;
+    return _70;
 }
 
 Array__Uint64 SpatialGrid_query_MINUS_unique__Uint64(SpatialGrid__Uint64* grid, AABB* aabb) {
@@ -20045,18 +24074,18 @@ Array__Uint64 SpatialGrid_query__Uint64(SpatialGrid__Uint64* grid, AABB* aabb) {
                                     /* let */ {
                                         int i = 0;
                                         int _210 = Array_length__Uint64(bucket);
-                                        bool _211 = Int__LT_(i, _210);
-                                        bool _232 = _211;
-                                        while (_232) {
+                                        bool _1000034 = Int__LT_(i, _210);
+                                        bool _1000032 = _1000034;
+                                        while (_1000032) {
                                             Array__Uint64* _216 = &results; // ref
                                             Uint64* _221 = Array_unsafe_MINUS_nth__Uint64(bucket, i);
                                             Uint64 _222 = Uint64_copy(_221);
                                             Array_push_MINUS_back_BANG___Uint64(_216, _222);
-                                            int _229 = Int__PLUS_(i, 1);
-                                            i = _229;  // Int = Int
+                                            int _1000039 = Int__PLUS_(i, 1);
+                                            i = _1000039;  // Int = Int
                                             int _210 = Array_length__Uint64(bucket);
-                                            bool _211 = Int__LT_(i, _210);
-                                            _232 = _211;
+                                            bool _1000034 = Int__LT_(i, _210);
+                                            _1000032 = _1000034;
                                         }
                                     }
                                 }
@@ -20083,18 +24112,18 @@ Array__Uint64 SpatialGrid_query__Uint64(SpatialGrid__Uint64* grid, AABB* aabb) {
         /* let */ {
             int i = 0;
             int _275 = Array_length__Uint64(ov);
-            bool _276 = Int__LT_(i, _275);
-            bool _297 = _276;
-            while (_297) {
+            bool _1000048 = Int__LT_(i, _275);
+            bool _1000046 = _1000048;
+            while (_1000046) {
                 Array__Uint64* _281 = &results; // ref
                 Uint64* _286 = Array_unsafe_MINUS_nth__Uint64(ov, i);
                 Uint64 _287 = Uint64_copy(_286);
                 Array_push_MINUS_back_BANG___Uint64(_281, _287);
-                int _294 = Int__PLUS_(i, 1);
-                i = _294;  // Int = Int
+                int _1000053 = Int__PLUS_(i, 1);
+                i = _1000053;  // Int = Int
                 int _275 = Array_length__Uint64(ov);
-                bool _276 = Int__LT_(i, _275);
-                _297 = _276;
+                bool _1000048 = Int__LT_(i, _275);
+                _1000046 = _1000048;
             }
         }
         Array__Uint64 _300 = results;
@@ -20115,9 +24144,9 @@ Array__Uint64 SpatialGrid_unique_MINUS_results__Uint64(Array__Uint64 ids) {
             int i = 0;
             Array__Uint64* _19 = &ids; // ref
             int _20 = Array_length__Uint64(_19);
-            bool _21 = Int__LT_(i, _20);
-            bool _62 = _21;
-            while (_62) {
+            bool _1000008 = Int__LT_(i, _20);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 /* let */ {
                     Array__Uint64* _28 = &ids; // ref
                     Uint64* _30 = Array_unsafe_MINUS_nth__Uint64(_28, i);
@@ -20132,12 +24161,12 @@ Array__Uint64 SpatialGrid_unique_MINUS_results__Uint64(Array__Uint64 ids) {
                         Array_push_MINUS_back_BANG___Uint64(_46, _49);
                     }
                 }
-                int _59 = Int__PLUS_(i, 1);
-                i = _59;  // Int = Int
+                int _1000017 = Int__PLUS_(i, 1);
+                i = _1000017;  // Int = Int
                 Array__Uint64* _19 = &ids; // ref
                 int _20 = Array_length__Uint64(_19);
-                bool _21 = Int__LT_(i, _20);
-                _62 = _21;
+                bool _1000008 = Int__LT_(i, _20);
+                _1000006 = _1000008;
             }
         }
         Array__Uint64 _65 = res;
@@ -20186,21 +24215,19 @@ String Sphere_prn(Sphere *p) {
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
-  sprintf(bufferPtr, "(%s ", "Sphere");
-  bufferPtr += strlen("Sphere") + 2;
-
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Sphere");
   temp = Vector3_prn__double(&p->center);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Double_prn(p->radius);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   bufferPtr--;
-  sprintf(bufferPtr, ")");
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   return buffer;
 }
 
@@ -20250,21 +24277,19 @@ String Sphere_str(Sphere *p) {
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
-  sprintf(bufferPtr, "(%s ", "Sphere");
-  bufferPtr += strlen("Sphere") + 2;
-
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Sphere");
   temp = Vector3_prn__double(&p->center);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Double_prn(p->radius);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   bufferPtr--;
-  sprintf(bufferPtr, ")");
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   return buffer;
 }
 
@@ -20389,9 +24414,9 @@ String String_concat(Array__String* strings) {
         String result = _17;
         /* let */ {
             int i = 0;
-            bool _28 = Int__LT_(i, lstrings);
-            bool _66 = _28;
-            while (_66) {
+            bool _1000008 = Int__LT_(i, lstrings);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 /* let */ {
                     String* _35 = Array_unsafe_MINUS_nth__String(strings, i);
                     String* str = _35;
@@ -20402,10 +24427,10 @@ String String_concat(Array__String* strings) {
                     int _54 = Int__PLUS_(j, len);
                     j = _54;  // Int = Int
                 }
-                int _63 = Int__PLUS_(i, 1);
-                i = _63;  // Int = Int
-                bool _28 = Int__LT_(i, lstrings);
-                _66 = _28;
+                int _1000016 = Int__PLUS_(i, 1);
+                i = _1000016;  // Int = Int
+                bool _1000008 = Int__LT_(i, lstrings);
+                _1000006 = _1000008;
             }
         }
         String _69 = result;
@@ -20433,9 +24458,9 @@ int String_count_MINUS_char(String* s, Char c) {
         /* let */ {
             int i = 0;
             int _19 = String_length(s);
-            bool _20 = Int__LT_(i, _19);
-            bool _50 = _20;
-            while (_50) {
+            bool _1000008 = Int__LT_(i, _19);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 Char _28 = String_char_MINUS_at(s, i);
                 bool _29 = Char__EQ_(c, _28);
                 if (_29) {
@@ -20444,11 +24469,11 @@ int String_count_MINUS_char(String* s, Char c) {
                 } else {
                     /* () */
                 }
-                int _47 = Int__PLUS_(i, 1);
-                i = _47;  // Int = Int
+                int _1000017 = Int__PLUS_(i, 1);
+                i = _1000017;  // Int = Int
                 int _19 = String_length(s);
-                bool _20 = Int__LT_(i, _19);
-                _50 = _20;
+                bool _1000008 = Int__LT_(i, _19);
+                _1000006 = _1000008;
             }
         }
         int _53 = n;
@@ -20496,19 +24521,19 @@ int String_hash(String* k) {
         /* let */ {
             int x = 0;
             int _18 = String_length(k);
-            bool _19 = Int__LT_(x, _18);
-            bool _44 = _19;
-            while (_44) {
+            bool _1000008 = Int__LT_(x, _18);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 int _27 = Int__MUL_(h, 33);
                 Char _32 = String_char_MINUS_at(k, x);
                 int _33 = Char_to_MINUS_int(_32);
                 int _34 = Int__PLUS_(_27, _33);
                 h = _34;  // Int = Int
-                int _41 = Int__PLUS_(x, 1);
-                x = _41;  // Int = Int
+                int _1000014 = Int__PLUS_(x, 1);
+                x = _1000014;  // Int = Int
                 int _18 = String_length(k);
-                bool _19 = Int__LT_(x, _18);
-                _44 = _19;
+                bool _1000008 = Int__LT_(x, _18);
+                _1000006 = _1000008;
             }
         }
         int _48 = Int_abs(h);
@@ -20538,6 +24563,24 @@ bool String_in_QMARK_(String* s, String* sub) {
     return _12;
 }
 
+int String_index_MINUS_of(String* s, Char c) {
+    Array _9 = { .len = 1, .capacity = 1, .data = CARP_MALLOC(sizeof(Char) * 1) };
+    ((Char*)_9.data)[0] = c;
+    Array__Char* _10 = &_9; // ref
+    int _12 = String_index_MINUS_of_MINUS_any_MINUS_from(s, _10, -1);
+    Array_delete__Char(_9);
+    return _12;
+}
+
+int String_index_MINUS_of_MINUS_from(String* s, Char c, int i) {
+    Array _10 = { .len = 1, .capacity = 1, .data = CARP_MALLOC(sizeof(Char) * 1) };
+    ((Char*)_10.data)[0] = c;
+    Array__Char* _11 = &_10; // ref
+    int _13 = String_index_MINUS_of_MINUS_any_MINUS_from(s, _11, i);
+    Array_delete__Char(_10);
+    return _13;
+}
+
 String String_join(String* sep, Array__String* strings) {
     String _116;
     /* let */ {
@@ -20557,9 +24600,9 @@ String String_join(String* sep, Array__String* strings) {
         String result = _38;
         /* let */ {
             int i = 0;
-            bool _49 = Int__LT_(i, lstrings);
-            bool _112 = _49;
-            while (_112) {
+            bool _1000008 = Int__LT_(i, lstrings);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 /* let */ {
                     String* _56 = Array_unsafe_MINUS_nth__String(strings, i);
                     String* str = _56;
@@ -20579,10 +24622,10 @@ String String_join(String* sep, Array__String* strings) {
                     int _100 = Int__PLUS_(j, len);
                     j = _100;  // Int = Int
                 }
-                int _109 = Int__PLUS_(i, 1);
-                i = _109;  // Int = Int
-                bool _49 = Int__LT_(i, lstrings);
-                _112 = _49;
+                int _1000020 = Int__PLUS_(i, 1);
+                i = _1000020;  // Int = Int
+                bool _1000008 = Int__LT_(i, lstrings);
+                _1000006 = _1000008;
             }
         }
         String _115 = result;
@@ -20606,9 +24649,9 @@ String String_join_MINUS_with_MINUS_char(Char sep, Array__String* strings) {
         String result = _29;
         /* let */ {
             int i = 0;
-            bool _40 = Int__LT_(i, lstrings);
-            bool _103 = _40;
-            while (_103) {
+            bool _1000008 = Int__LT_(i, lstrings);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 /* let */ {
                     String* _47 = Array_unsafe_MINUS_nth__String(strings, i);
                     String* str = _47;
@@ -20628,10 +24671,10 @@ String String_join_MINUS_with_MINUS_char(Char sep, Array__String* strings) {
                     int _91 = Int__PLUS_(j, len);
                     j = _91;  // Int = Int
                 }
-                int _100 = Int__PLUS_(i, 1);
-                i = _100;  // Int = Int
-                bool _40 = Int__LT_(i, lstrings);
-                _103 = _40;
+                int _1000020 = Int__PLUS_(i, 1);
+                i = _1000020;  // Int = Int
+                bool _1000008 = Int__LT_(i, lstrings);
+                _1000006 = _1000008;
             }
         }
         String _106 = result;
@@ -20734,16 +24777,16 @@ String String_repeat(int n, String* inpt) {
         String str = _17;
         /* let */ {
             int i = 0;
-            bool _28 = Int__LT_(i, n);
-            bool _48 = _28;
-            while (_48) {
+            bool _1000008 = Int__LT_(i, n);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 String* _33 = &str; // ref
                 int _37 = Int__MUL_(i, l);
                 String_string_MINUS_set_MINUS_at_BANG_(_33, _37, inpt);
-                int _45 = Int__PLUS_(i, 1);
-                i = _45;  // Int = Int
-                bool _28 = Int__LT_(i, n);
-                _48 = _28;
+                int _1000013 = Int__PLUS_(i, 1);
+                i = _1000013;  // Int = Int
+                bool _1000008 = Int__LT_(i, n);
+                _1000006 = _1000008;
             }
         }
         String _51 = str;
@@ -20773,83 +24816,33 @@ String String_slice(String* s, int a, int b) {
 }
 
 Array__String String_split_MINUS_by(String* s, Array__Char* separators) {
-    Array__String _153;
+    Array__String _62;
     /* let */ {
-        Pattern _9 = Pattern_from_MINUS_chars(separators);
-        Pattern pat = _9;
-        Pattern* _14 = &pat; // ref
-        Array__int _16 = Pattern_find_MINUS_all(_14, s);
-        Array__int idx = _16;
-        Array__int* _21 = &idx; // ref
-        int _22 = Array_length__int(_21);
-        int lidx = _22;
-        int _27 = Int_inc(lidx);
-        Array__String _28 = Array_allocate__String(_27);
-        Array__String result = _28;
-        Array__String* _34 = &result; // ref
-        int _59;
-        bool _43 = Int__GT_(lidx, 0);
-        if (_43) {
-            Array__int* _49 = &idx; // ref
-            int* _51 = Array_unsafe_MINUS_nth__int(_49, 0);
-            int _52 = Int_copy(_51);
-            int _53 = _52;
-            _59 = _53;
-        } else {
-            int _57 = String_length(s);
-            int _58 = _57;
-            _59 = _58;
+        Array _7 = { .len = 0, .capacity = 0, .data = CARP_MALLOC(sizeof(String) * 0) };
+        Array__String result = _7;
+        int start = 0;
+        int _15 = String_index_MINUS_of_MINUS_any_MINUS_from(s, separators, -1);
+        int idx = _15;
+        bool _22 = _DIV__EQ___int(idx, -1);
+        bool _50 = _22;
+        while (_50) {
+            String _32 = String_byte_MINUS_slice(s, start, idx);
+            Array__String _33 = Array_push_MINUS_back__String(result, _32);
+            result = _33;  // (Array String) = (Array String)
+            int _39 = Int_inc(idx);
+            start = _39;  // Int = Int
+            int _47 = String_index_MINUS_of_MINUS_any_MINUS_from(s, separators, idx);
+            idx = _47;  // Int = Int
+            bool _22 = _DIV__EQ___int(idx, -1);
+            _50 = _22;
         }
-        String _60 = String_slice(s, 0, _59);
-        Array_aset_MINUS_uninitialized_BANG___String(_34, 0, _60);
-        /* let */ {
-            int i = 0;
-            Array__int* _73 = &idx; // ref
-            int _74 = Array_length__int(_73);
-            int _75 = Int_dec(_74);
-            bool _76 = Int__LT_(i, _75);
-            bool _117 = _76;
-            while (_117) {
-                Array__String* _81 = &result; // ref
-                int _84 = Int_inc(i);
-                Array__int* _92 = &idx; // ref
-                int* _94 = Array_unsafe_MINUS_nth__int(_92, i);
-                int _95 = Int_copy(_94);
-                int _96 = Int_inc(_95);
-                Array__int* _101 = &idx; // ref
-                int _104 = Int_inc(i);
-                int* _105 = Array_unsafe_MINUS_nth__int(_101, _104);
-                int _106 = Int_copy(_105);
-                String _107 = String_slice(s, _96, _106);
-                Array_aset_MINUS_uninitialized_BANG___String(_81, _84, _107);
-                int _114 = Int__PLUS_(i, 1);
-                i = _114;  // Int = Int
-                Array__int* _73 = &idx; // ref
-                int _74 = Array_length__int(_73);
-                int _75 = Int_dec(_74);
-                bool _76 = Int__LT_(i, _75);
-                _117 = _76;
-            }
-        }
-        bool _123 = Int__GT_(lidx, 0);
-        if (_123) {
-            Array__String* _128 = &result; // ref
-            Array__int* _137 = &idx; // ref
-            int _140 = Int_dec(lidx);
-            int* _141 = Array_unsafe_MINUS_nth__int(_137, _140);
-            int _142 = Int_copy(_141);
-            int _143 = Int_inc(_142);
-            String _144 = String_suffix(s, _143);
-            Array_aset_MINUS_uninitialized_BANG___String(_128, lidx, _144);
-        } else {
-            /* () */
-        }
-        Array__String _152 = result;
-        _153 = _152;
-        Array_delete__int(idx);
-        Pattern_delete(pat);
+        int _58 = String_length(s);
+        String _59 = String_byte_MINUS_slice(s, start, _58);
+        Array__String _60 = Array_push_MINUS_back__String(result, _59);
+        Array__String _61 = _60;
+        _62 = _61;
     }
-    return _153;
+    return _62;
 }
 
 bool String_starts_MINUS_with_QMARK_(String* s, String* sub) {
@@ -20895,17 +24888,17 @@ int String_sum_MINUS_length(Array__String* strings) {
         int lstrings = _10;
         /* let */ {
             int i = 0;
-            bool _21 = Int__LT_(i, lstrings);
-            bool _43 = _21;
-            while (_43) {
+            bool _1000008 = Int__LT_(i, lstrings);
+            bool _1000006 = _1000008;
+            while (_1000006) {
                 String* _31 = Array_unsafe_MINUS_nth__String(strings, i);
                 int _32 = String_length(_31);
                 int _33 = Int__PLUS_(sum, _32);
                 sum = _33;  // Int = Int
-                int _40 = Int__PLUS_(i, 1);
-                i = _40;  // Int = Int
-                bool _21 = Int__LT_(i, lstrings);
-                _43 = _21;
+                int _1000014 = Int__PLUS_(i, 1);
+                i = _1000014;  // Int = Int
+                bool _1000008 = Int__LT_(i, lstrings);
+                _1000006 = _1000008;
             }
         }
         int _46 = sum;
@@ -21071,21 +25064,19 @@ String Test_State_prn(TestState *p) {
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
-  sprintf(bufferPtr, "(%s ", "Test.State");
-  bufferPtr += strlen("Test.State") + 2;
-
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Test.State");
   temp = Int_prn(p->passed);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Int_prn(p->failed);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   bufferPtr--;
-  sprintf(bufferPtr, ")");
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   return buffer;
 }
 
@@ -21133,21 +25124,19 @@ String Test_State_str(TestState *p) {
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
-  sprintf(bufferPtr, "(%s ", "Test.State");
-  bufferPtr += strlen("Test.State") + 2;
-
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Test.State");
   temp = Int_prn(p->passed);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Int_prn(p->failed);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   bufferPtr--;
-  sprintf(bufferPtr, ")");
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   return buffer;
 }
 
@@ -21183,34 +25172,34 @@ TestState Test_display_MINUS_test__bool_bool_String_String(TestState* state, boo
         static String _22 = "Test '";
         String *_22_ref = &_22;
         String _23 = String_copy(_22_ref);
-        String _24 = StringCopy_str(_23);
-        String* _25 = &_24; // ref
+        String _1000008 = StringCopy_str(_23);
+        String* _1000007 = &_1000008; // ref
         String _32 = String_copy(descr);
-        String _33 = StringCopy_str(_32);
-        String* _34 = &_33; // ref
+        String _1000012 = StringCopy_str(_32);
+        String* _1000011 = &_1000012; // ref
         static String _38 = "' passed\n";
         String *_38_ref = &_38;
         String _39 = String_copy(_38_ref);
-        String _40 = StringCopy_str(_39);
-        String* _41 = &_40; // ref
-        String _42 = String_append(_34, _41);
-        String* _43 = &_42; // ref
-        String _44 = String_append(_25, _43);
-        String* _45 = &_44; // ref
-        String _46 = String_copy(_45);
-        String* _47 = &_46; // ref
+        String _1000014 = StringCopy_str(_39);
+        String* _1000013 = &_1000014; // ref
+        String _1000010 = String_append(_1000011, _1000013);
+        String* _1000009 = &_1000010; // ref
+        String _1000006 = String_append(_1000007, _1000009);
+        String* _1000005 = &_1000006; // ref
+        String _1000004 = String_copy(_1000005);
+        String* _47 = &_1000004; // ref
         IO_colorize(_14, _47);
         TestState _52 = Test_State_copy(state);
         Lambda _54 = { .callback = (void*)Int_inc, .env = NULL, .delete = NULL, .copy = NULL }; //Sym Int.inc (LookupGlobal ExternalCode AFunction)
         Lambda* _55 = &_54; // ref
         TestState _56 = Test_State_update_MINUS_passed(_52, _55);
         TestState _57 = _56;
-        String_delete(_24);
-        String_delete(_33);
-        String_delete(_40);
-        String_delete(_42);
-        String_delete(_44);
-        String_delete(_46);
+        String_delete(_1000004);
+        String_delete(_1000006);
+        String_delete(_1000008);
+        String_delete(_1000010);
+        String_delete(_1000012);
+        String_delete(_1000014);
         _188 = _57;
     } else {
         ColorId _61 = Color_Id_Red();
@@ -21218,42 +25207,42 @@ TestState Test_display_MINUS_test__bool_bool_String_String(TestState* state, boo
         static String _71 = "Test '";
         String *_71_ref = &_71;
         String _72 = String_copy(_71_ref);
-        String _73 = StringCopy_str(_72);
-        String* _74 = &_73; // ref
+        String _1000020 = StringCopy_str(_72);
+        String* _1000019 = &_1000020; // ref
         String _81 = String_copy(descr);
-        String _82 = StringCopy_str(_81);
-        String* _83 = &_82; // ref
+        String _1000024 = StringCopy_str(_81);
+        String* _1000023 = &_1000024; // ref
         static String _87 = "' failed:";
         String *_87_ref = &_87;
         String _88 = String_copy(_87_ref);
-        String _89 = StringCopy_str(_88);
-        String* _90 = &_89; // ref
-        String _91 = String_append(_83, _90);
-        String* _92 = &_91; // ref
-        String _93 = String_append(_74, _92);
-        String* _94 = &_93; // ref
-        String _95 = String_copy(_94);
-        String* _96 = &_95; // ref
+        String _1000026 = StringCopy_str(_88);
+        String* _1000025 = &_1000026; // ref
+        String _1000022 = String_append(_1000023, _1000025);
+        String* _1000021 = &_1000022; // ref
+        String _1000018 = String_append(_1000019, _1000021);
+        String* _1000017 = &_1000018; // ref
+        String _1000016 = String_copy(_1000017);
+        String* _96 = &_1000016; // ref
         IO_println(_96);
         static String _106 = "\tExpected ";
         String *_106_ref = &_106;
         String _107 = String_copy(_106_ref);
-        String _108 = StringCopy_str(_107);
-        String* _109 = &_108; // ref
+        String _1000031 = StringCopy_str(_107);
+        String* _1000030 = &_1000031; // ref
         String _116 = String_copy(what);
-        String _117 = StringCopy_str(_116);
-        String* _118 = &_117; // ref
+        String _1000035 = StringCopy_str(_116);
+        String* _1000034 = &_1000035; // ref
         static String _122 = ": '";
         String *_122_ref = &_122;
         String _123 = String_copy(_122_ref);
-        String _124 = StringCopy_str(_123);
-        String* _125 = &_124; // ref
-        String _126 = String_append(_118, _125);
-        String* _127 = &_126; // ref
-        String _128 = String_append(_109, _127);
-        String* _129 = &_128; // ref
-        String _130 = String_copy(_129);
-        String* _131 = &_130; // ref
+        String _1000037 = StringCopy_str(_123);
+        String* _1000036 = &_1000037; // ref
+        String _1000033 = String_append(_1000034, _1000036);
+        String* _1000032 = &_1000033; // ref
+        String _1000029 = String_append(_1000030, _1000032);
+        String* _1000028 = &_1000029; // ref
+        String _1000027 = String_copy(_1000028);
+        String* _131 = &_1000027; // ref
         IO_print(_131);
         String _137 = Bool_str(expected);
         String* _138 = &_137; // ref
@@ -21261,22 +25250,22 @@ TestState Test_display_MINUS_test__bool_bool_String_String(TestState* state, boo
         static String _148 = "', actual value: '";
         String *_148_ref = &_148;
         String _149 = String_copy(_148_ref);
-        String _150 = StringCopy_str(_149);
-        String* _151 = &_150; // ref
+        String _1000042 = StringCopy_str(_149);
+        String* _1000041 = &_1000042; // ref
         String _158 = Bool_str(actual);
-        String _159 = StringCopy_str(_158);
-        String* _160 = &_159; // ref
+        String _1000046 = StringCopy_str(_158);
+        String* _1000045 = &_1000046; // ref
         static String _164 = "'";
         String *_164_ref = &_164;
         String _165 = String_copy(_164_ref);
-        String _166 = StringCopy_str(_165);
-        String* _167 = &_166; // ref
-        String _168 = String_append(_160, _167);
-        String* _169 = &_168; // ref
-        String _170 = String_append(_151, _169);
-        String* _171 = &_170; // ref
-        String _172 = String_copy(_171);
-        String* _173 = &_172; // ref
+        String _1000048 = StringCopy_str(_165);
+        String* _1000047 = &_1000048; // ref
+        String _1000044 = String_append(_1000045, _1000047);
+        String* _1000043 = &_1000044; // ref
+        String _1000040 = String_append(_1000041, _1000043);
+        String* _1000039 = &_1000040; // ref
+        String _1000038 = String_copy(_1000039);
+        String* _173 = &_1000038; // ref
         IO_println(_173);
         ColorId _177 = Color_Id_Reset();
         IO_color(_177);
@@ -21285,25 +25274,25 @@ TestState Test_display_MINUS_test__bool_bool_String_String(TestState* state, boo
         Lambda* _185 = &_184; // ref
         TestState _186 = Test_State_update_MINUS_failed(_182, _185);
         TestState _187 = _186;
-        String_delete(_108);
-        String_delete(_117);
-        String_delete(_124);
-        String_delete(_126);
-        String_delete(_128);
-        String_delete(_130);
+        String_delete(_1000016);
+        String_delete(_1000018);
+        String_delete(_1000020);
+        String_delete(_1000022);
+        String_delete(_1000024);
+        String_delete(_1000026);
+        String_delete(_1000027);
+        String_delete(_1000029);
+        String_delete(_1000031);
+        String_delete(_1000033);
+        String_delete(_1000035);
+        String_delete(_1000037);
+        String_delete(_1000038);
+        String_delete(_1000040);
+        String_delete(_1000042);
+        String_delete(_1000044);
+        String_delete(_1000046);
+        String_delete(_1000048);
         String_delete(_137);
-        String_delete(_150);
-        String_delete(_159);
-        String_delete(_166);
-        String_delete(_168);
-        String_delete(_170);
-        String_delete(_172);
-        String_delete(_73);
-        String_delete(_82);
-        String_delete(_89);
-        String_delete(_91);
-        String_delete(_93);
-        String_delete(_95);
         _188 = _187;
     }
     return _188;
@@ -21509,6 +25498,20 @@ Vector3__double Transform_forward(Transform* t) {
     return _11;
 }
 
+Vector3__double Transform_forward_MINUS_quat(Quaternion* q) {
+    Vector3__double _12 = Vector3_init__double(0.0, 0.0, 0.0);
+    Vector3__double* _13 = &_12; // ref
+    Vector3__double _20 = Vector3_init__double(1.0, 1.0, 1.0);
+    Vector3__double* _21 = &_20; // ref
+    TransformMat4 _22 = TransformMat4_from_MINUS_trs(_13, q, _21);
+    TransformMat4* _23 = &_22; // ref
+    Vector3__double _25 = TransformMat4_get_MINUS_column(_23, 2);
+    TransformMat4_delete(_22);
+    Vector3_delete__double(_12);
+    Vector3_delete__double(_20);
+    return _25;
+}
+
 Transform Transform_identity() {
     Vector3__double _8 = Vector3_init__double(0.0, 0.0, 0.0);
     Quaternion _10 = Quaternion_identity();
@@ -21554,26 +25557,24 @@ String Transform_prn(Transform *p) {
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
-  sprintf(bufferPtr, "(%s ", "Transform");
-  bufferPtr += strlen("Transform") + 2;
-
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Transform");
   temp = Vector3_prn__double(&p->position);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Quaternion_prn(&p->rotation);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Vector3_prn__double(&p->scale);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   bufferPtr--;
-  sprintf(bufferPtr, ")");
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   return buffer;
 }
 
@@ -21583,6 +25584,20 @@ Vector3__double Transform_right(Transform* t) {
     Vector3__double _11 = TransformMat4_get_MINUS_column(_9, 0);
     TransformMat4_delete(_8);
     return _11;
+}
+
+Vector3__double Transform_right_MINUS_quat(Quaternion* q) {
+    Vector3__double _12 = Vector3_init__double(0.0, 0.0, 0.0);
+    Vector3__double* _13 = &_12; // ref
+    Vector3__double _20 = Vector3_init__double(1.0, 1.0, 1.0);
+    Vector3__double* _21 = &_20; // ref
+    TransformMat4 _22 = TransformMat4_from_MINUS_trs(_13, q, _21);
+    TransformMat4* _23 = &_22; // ref
+    Vector3__double _25 = TransformMat4_get_MINUS_column(_23, 0);
+    TransformMat4_delete(_22);
+    Vector3_delete__double(_12);
+    Vector3_delete__double(_20);
+    return _25;
 }
 
 Quaternion* Transform_rotation(Transform* p) { return (&(p->rotation)); }
@@ -21614,6 +25629,11 @@ void Transform_set_MINUS_rotation_BANG_(Transform* pRef, Quaternion newValue) {
     pRef->rotation = newValue;
 }
 
+
+Transform Transform_set_MINUS_rotation_MINUS_val_BANG_(Transform t, Quaternion r) {
+    Transform _8 = Transform_set_MINUS_rotation(t, r);
+    return _8;
+}
 
 Transform Transform_set_MINUS_scale(Transform p, Vector3__double newValue) {
     Vector3_delete__double(p.scale);
@@ -21650,26 +25670,24 @@ String Transform_str(Transform *p) {
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
-  sprintf(bufferPtr, "(%s ", "Transform");
-  bufferPtr += strlen("Transform") + 2;
-
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Transform");
   temp = Vector3_prn__double(&p->position);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Quaternion_prn(&p->rotation);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Vector3_prn__double(&p->scale);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   bufferPtr--;
-  sprintf(bufferPtr, ")");
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   return buffer;
 }
 
@@ -21991,6 +26009,20 @@ Vector3__double Transform_up(Transform* t) {
     return _11;
 }
 
+Vector3__double Transform_up_MINUS_quat(Quaternion* q) {
+    Vector3__double _12 = Vector3_init__double(0.0, 0.0, 0.0);
+    Vector3__double* _13 = &_12; // ref
+    Vector3__double _20 = Vector3_init__double(1.0, 1.0, 1.0);
+    Vector3__double* _21 = &_20; // ref
+    TransformMat4 _22 = TransformMat4_from_MINUS_trs(_13, q, _21);
+    TransformMat4* _23 = &_22; // ref
+    Vector3__double _25 = TransformMat4_get_MINUS_column(_23, 1);
+    TransformMat4_delete(_22);
+    Vector3_delete__double(_12);
+    Vector3_delete__double(_20);
+    return _25;
+}
+
 Transform Transform_update_MINUS_position(Transform p, Lambda *updater) {
     p.position = (*updater).env ? ((Fn__LambdaEnv_Vector3__double_Vector3__double)(*updater).callback)((*updater).env, p.position) : ((Fn__Vector3__double_Vector3__double)(*updater).callback)(p.position);
     return p;
@@ -22238,16 +26270,14 @@ String TransformMat4_prn(TransformMat4 *p) {
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
-  sprintf(bufferPtr, "(%s ", "TransformMat4");
-  bufferPtr += strlen("TransformMat4") + 2;
-
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "TransformMat4");
   temp = Array_prn__float(&p->data);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   bufferPtr--;
-  sprintf(bufferPtr, ")");
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   return buffer;
 }
 
@@ -22278,16 +26308,14 @@ String TransformMat4_str(TransformMat4 *p) {
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
-  sprintf(bufferPtr, "(%s ", "TransformMat4");
-  bufferPtr += strlen("TransformMat4") + 2;
-
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "TransformMat4");
   temp = Array_prn__float(&p->data);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   bufferPtr--;
-  sprintf(bufferPtr, ")");
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   return buffer;
 }
 
@@ -22338,21 +26366,19 @@ String Trigger_prn(Trigger *p) {
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
-  sprintf(bufferPtr, "(%s ", "Trigger");
-  bufferPtr += strlen("Trigger") + 2;
-
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Trigger");
   temp = Handle_prn__void(&p->a);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Handle_prn__void(&p->b);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   bufferPtr--;
-  sprintf(bufferPtr, ")");
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   return buffer;
 }
 
@@ -22400,21 +26426,19 @@ String Trigger_str(Trigger *p) {
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
-  sprintf(bufferPtr, "(%s ", "Trigger");
-  bufferPtr += strlen("Trigger") + 2;
-
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Trigger");
   temp = Handle_prn__void(&p->a);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Handle_prn__void(&p->b);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   bufferPtr--;
-  sprintf(bufferPtr, ")");
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   return buffer;
 }
 
@@ -22685,6 +26709,44 @@ Vector3__double Vector3_copy__double(Vector3__double* pRef) {
     return copy;
 }
 
+Vector3__double Vector3_cross__double(Vector3__double* a, Vector3__double* b) {
+    double* _11 = Vector3_y__double(a);
+    double _12 = Double_copy(_11);
+    double* _16 = Vector3_z__double(b);
+    double _17 = Double_copy(_16);
+    double _18 = Double__MUL_(_12, _17);
+    double* _23 = Vector3_z__double(a);
+    double _24 = Double_copy(_23);
+    double* _28 = Vector3_y__double(b);
+    double _29 = Double_copy(_28);
+    double _30 = Double__MUL_(_24, _29);
+    double _31 = Double__MINUS_(_18, _30);
+    double* _37 = Vector3_z__double(a);
+    double _38 = Double_copy(_37);
+    double* _42 = Vector3_x__double(b);
+    double _43 = Double_copy(_42);
+    double _44 = Double__MUL_(_38, _43);
+    double* _49 = Vector3_x__double(a);
+    double _50 = Double_copy(_49);
+    double* _54 = Vector3_z__double(b);
+    double _55 = Double_copy(_54);
+    double _56 = Double__MUL_(_50, _55);
+    double _57 = Double__MINUS_(_44, _56);
+    double* _63 = Vector3_x__double(a);
+    double _64 = Double_copy(_63);
+    double* _68 = Vector3_y__double(b);
+    double _69 = Double_copy(_68);
+    double _70 = Double__MUL_(_64, _69);
+    double* _75 = Vector3_y__double(a);
+    double _76 = Double_copy(_75);
+    double* _80 = Vector3_x__double(b);
+    double _81 = Double_copy(_80);
+    double _82 = Double__MUL_(_76, _81);
+    double _83 = Double__MINUS_(_70, _82);
+    Vector3__double _84 = Vector3_init__double(_31, _57, _83);
+    return _84;
+}
+
 void Vector3_delete__bool(Vector3__bool p) {
     /* Ignore non-managed member 'x' : Bool */
     /* Ignore non-managed member 'y' : Bool */
@@ -22825,26 +26887,24 @@ String Vector3_prn__double(Vector3__double *p) {
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
-  sprintf(bufferPtr, "(%s ", "Vector3");
-  bufferPtr += strlen("Vector3") + 2;
-
+  bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Vector3");
   temp = Double_prn(p->x);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Double_prn(p->y);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   temp = Double_prn(p->z);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   bufferPtr--;
-  sprintf(bufferPtr, ")");
+  snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   return buffer;
 }
 
@@ -22958,6 +27018,20 @@ Volume Volume_Box(AABB member0) {
     return instance;
 }
 
+Volume Volume_Sdf(SDF member0) {
+  Volume instance;
+    instance.u.Sdf.member0 = member0;
+    instance._tag = Volume_Sdf_tag;
+    return instance;
+}
+
+Volume Volume_Surface(Plane member0) {
+  Volume instance;
+    instance.u.Surface.member0 = member0;
+    instance._tag = Volume_Surface_tag;
+    return instance;
+}
+
 Volume Volume_copy(Volume* pRef) {
     Volume copy = *pRef;
     if(pRef->_tag == Volume_Box_tag) {
@@ -22966,6 +27040,14 @@ Volume Volume_copy(Volume* pRef) {
 
     else if(pRef->_tag == Volume_Ball_tag) {
     copy.u.Ball.member0 = Sphere_copy(&(pRef->u.Ball.member0));
+    }
+
+    else if(pRef->_tag == Volume_Surface_tag) {
+    copy.u.Surface.member0 = Plane_copy(&(pRef->u.Surface.member0));
+    }
+
+    else if(pRef->_tag == Volume_Sdf_tag) {
+    copy.u.Sdf.member0 = SDF_copy(&(pRef->u.Sdf.member0));
     }
 
     return copy;
@@ -22977,6 +27059,12 @@ void Volume_delete(Volume p) {
   }
   else if(p._tag == Volume_Ball_tag) {
     Sphere_delete(p.u.Ball.member0);
+  }
+  else if(p._tag == Volume_Surface_tag) {
+    Plane_delete(p.u.Surface.member0);
+  }
+  else if(p._tag == Volume_Sdf_tag) {
+    SDF_delete(p.u.Sdf.member0);
   }
 
 }
@@ -23002,33 +27090,63 @@ String Volume_prn(Volume *p) {
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   }
+  if(p->_tag == Volume_Surface_tag) {
+    size += snprintf(NULL, 0, "(%s ", "Surface");
+  temp = Plane_prn(&p->u.Surface.member0); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  }
+  if(p->_tag == Volume_Sdf_tag) {
+    size += snprintf(NULL, 0, "(%s ", "Sdf");
+  temp = SDF_prn(&p->u.Sdf.member0); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  }
 
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
   if(p->_tag == Volume_Box_tag) {
-    sprintf(bufferPtr, "(%s ", "Box");
-    bufferPtr += strlen("Box") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Box");
   temp = AABB_prn(&p->u.Box.member0);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == Volume_Ball_tag) {
-    sprintf(bufferPtr, "(%s ", "Ball");
-    bufferPtr += strlen("Ball") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Ball");
   temp = Sphere_prn(&p->u.Ball.member0);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
+  }
+  if(p->_tag == Volume_Surface_tag) {
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Surface");
+  temp = Plane_prn(&p->u.Surface.member0);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+    bufferPtr--;
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
+  }
+  if(p->_tag == Volume_Sdf_tag) {
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Sdf");
+  temp = SDF_prn(&p->u.Sdf.member0);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+    bufferPtr--;
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
 
   return buffer;
@@ -23054,33 +27172,63 @@ String Volume_str(Volume *p) {
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
   }
+  if(p->_tag == Volume_Surface_tag) {
+    size += snprintf(NULL, 0, "(%s ", "Surface");
+  temp = Plane_prn(&p->u.Surface.member0); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  }
+  if(p->_tag == Volume_Sdf_tag) {
+    size += snprintf(NULL, 0, "(%s ", "Sdf");
+  temp = SDF_prn(&p->u.Sdf.member0); 
+  size += snprintf(NULL, 0, "%s ", temp);
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+  }
 
   String buffer = CARP_MALLOC(size);
   String bufferPtr = buffer;
 
   if(p->_tag == Volume_Box_tag) {
-    sprintf(bufferPtr, "(%s ", "Box");
-    bufferPtr += strlen("Box") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Box");
   temp = AABB_prn(&p->u.Box.member0);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
   if(p->_tag == Volume_Ball_tag) {
-    sprintf(bufferPtr, "(%s ", "Ball");
-    bufferPtr += strlen("Ball") + 2;
-
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Ball");
   temp = Sphere_prn(&p->u.Ball.member0);
-  sprintf(bufferPtr, "%s ", temp);
-  bufferPtr += strlen(temp) + 1;
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
   if(temp) { CARP_FREE(temp); temp = NULL; }
 
     bufferPtr--;
-    sprintf(bufferPtr, ")");
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
+  }
+  if(p->_tag == Volume_Surface_tag) {
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Surface");
+  temp = Plane_prn(&p->u.Surface.member0);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+    bufferPtr--;
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
+  }
+  if(p->_tag == Volume_Sdf_tag) {
+    bufferPtr += snprintf(bufferPtr, size - (bufferPtr - buffer), "(%s ", "Sdf");
+  temp = SDF_prn(&p->u.Sdf.member0);
+  tempsize = snprintf(bufferPtr, size - (bufferPtr - buffer), "%s ", temp);
+  bufferPtr += tempsize;
+  if(temp) { CARP_FREE(temp); temp = NULL; }
+
+    bufferPtr--;
+    snprintf(bufferPtr, size - (bufferPtr - buffer), ")");
   }
 
   return buffer;
@@ -23136,123 +27284,175 @@ int id__int(int x) {
 
 int main(int argc, char** argv) {
     carp_init_globals(argc, argv);
-    int _261;
+    int _1000003;
     /* let */ {
-        TestState _9 = Test_State_init(0, 0);
-        TestState* _10 = &_9; // ref
-        TestState* physics_MINUS_test = _10;
-        TestState _249;
+        TestState _1000006 = Test_State_init(0, 0);
+        TestState* _1000005 = &_1000006; // ref
+        TestState* physics_MINUS_test = _1000005;
+        TestState _370;
         /* let */ {
             TestState _21 = Test_State_init(0, 0);
             TestState state = _21;
             /* let */ {
                 Vector3__double _31 = Vector3_init__double(0.0, 0.0, 0.0);
                 Quaternion _33 = Quaternion_identity();
-                RigidBody _38 = RigidBody_new(_31, _33, 1.0, 1.0, 0.0, 1.0);
-                RigidBody rb_MINUS_a = _38;
-                RigidBody* _44 = &rb_MINUS_a; // ref
-                Body* _45 = RigidBody_body(_44);
-                Vector3__double _50 = Vector3_init__double(10.0, 0.0, 0.0);
-                Body_set_MINUS_velocity_BANG_(_45, _50);
-                Vector3__double _58 = Vector3_init__double(1.0, 0.0, 0.0);
-                Quaternion _60 = Quaternion_identity();
-                RigidBody _63 = RigidBody__STATIC_(_58, _60, 1.0, 0.0);
-                RigidBody rb_MINUS_b = _63;
-                Uint64 _68 = Uint64_from_MINUS_long(0l);
-                Uint32 _71 = Uint32_from_MINUS_long(1l);
-                Handle__void _72 = Handle_init__void(_68, _71);
-                Handle__void h_MINUS_a = _72;
-                Uint64 _77 = Uint64_from_MINUS_long(1l);
-                Uint32 _80 = Uint32_from_MINUS_long(1l);
-                Handle__void _81 = Handle_init__void(_77, _80);
-                Handle__void h_MINUS_b = _81;
-                Vector3__double _89 = Vector3_init__double(0.5, 0.0, 0.0);
-                Vector3__double _94 = Vector3_init__double(-1.0, 0.0, 0.0);
-                Contact _95 = Contact_init(0.5, _89, _94);
-                Contact cont = _95;
-                Collision _101 = Collision_init(h_MINUS_a, h_MINUS_b, cont);
-                Collision col = _101;
-                RigidBody* _107 = &rb_MINUS_a; // ref
-                RigidBody* _110 = &rb_MINUS_b; // ref
-                Collision* _113 = &col; // ref
-                Solver_solve_BANG_(_107, _110, _113);
-                TestState* _120 = &state; // ref
-                RigidBody* _128 = &rb_MINUS_a; // ref
-                Body* _129 = RigidBody_body(_128);
-                Vector3__double* _130 = Body_velocity(_129);
-                double* _131 = Vector3_x__double(_130);
-                double _132 = Double_copy(_131);
-                bool _134 = Double__LT_(_132, -9.0);
-                static String _135 = "Bounce reverses velocity";
-                String *_135_ref = &_135;
-                TestState _136 = Test_assert_MINUS_true__String(_120, _134, _135_ref);
+                RigidBody _40 = RigidBody_new(_31, _33, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0);
+                RigidBody rb_MINUS_a = _40;
+                RigidBody* _46 = &rb_MINUS_a; // ref
+                Body* _47 = RigidBody_body(_46);
+                Vector3__double _52 = Vector3_init__double(10.0, 0.0, 0.0);
+                Body_set_MINUS_velocity_BANG_(_47, _52);
+                Vector3__double _60 = Vector3_init__double(1.0, 0.0, 0.0);
+                Quaternion _62 = Quaternion_identity();
+                RigidBody _65 = RigidBody__STATIC_(_60, _62, 1.0, 0.0);
+                RigidBody rb_MINUS_b = _65;
+                Uint64 _70 = Uint64_from_MINUS_long(0l);
+                Uint32 _73 = Uint32_from_MINUS_long(1l);
+                Handle__void _74 = Handle_init__void(_70, _73);
+                Handle__void h_MINUS_a = _74;
+                Uint64 _79 = Uint64_from_MINUS_long(1l);
+                Uint32 _82 = Uint32_from_MINUS_long(1l);
+                Handle__void _83 = Handle_init__void(_79, _82);
+                Handle__void h_MINUS_b = _83;
+                Vector3__double _91 = Vector3_init__double(0.5, 0.0, 0.0);
+                Vector3__double _96 = Vector3_init__double(-1.0, 0.0, 0.0);
+                Contact _97 = Contact_init(0.5, _91, _96);
+                Contact cont = _97;
+                Array _103 = { .len = 1, .capacity = 1, .data = CARP_MALLOC(sizeof(Contact) * 1) };
+                ((Contact*)_103.data)[0] = cont;
+                ContactSet _104 = ContactSet_init(h_MINUS_a, h_MINUS_b, _103);
+                ContactSet cs = _104;
+                RigidBody* _110 = &rb_MINUS_a; // ref
+                RigidBody* _113 = &rb_MINUS_b; // ref
+                ContactSet* _116 = &cs; // ref
+                Solver_solve_BANG_(_110, _113, _116);
+                TestState* _123 = &state; // ref
+                RigidBody* _131 = &rb_MINUS_a; // ref
+                Body* _132 = RigidBody_body(_131);
+                Vector3__double* _133 = Body_velocity(_132);
+                double* _134 = Vector3_x__double(_133);
+                double _135 = Double_copy(_134);
+                bool _137 = Double__LT_(_135, -9.0);
+                static String _138 = "Bounce reverses velocity";
+                String *_138_ref = &_138;
+                TestState _139 = Test_assert_MINUS_true__String(_123, _137, _138_ref);
                 Test_State_delete(state);
-                state = _136;  // Test.State = Test.State
-                TestState* _143 = &state; // ref
-                RigidBody* _151 = &rb_MINUS_a; // ref
-                Transform* _152 = RigidBody_transform(_151);
-                Vector3__double* _153 = Transform_position(_152);
-                double* _154 = Vector3_x__double(_153);
-                double _155 = Double_copy(_154);
-                bool _157 = Double__LT_(_155, 0.0);
-                static String _158 = "Positional correction pushes A back";
-                String *_158_ref = &_158;
-                TestState _159 = Test_assert_MINUS_true__String(_143, _157, _158_ref);
+                state = _139;  // Test.State = Test.State
+                TestState* _146 = &state; // ref
+                RigidBody* _154 = &rb_MINUS_a; // ref
+                Transform* _155 = RigidBody_transform(_154);
+                Vector3__double* _156 = Transform_position(_155);
+                double* _157 = Vector3_x__double(_156);
+                double _158 = Double_copy(_157);
+                bool _160 = Double__LT_(_158, 0.0);
+                static String _161 = "Positional correction pushes A back";
+                String *_161_ref = &_161;
+                TestState _162 = Test_assert_MINUS_true__String(_146, _160, _161_ref);
                 Test_State_delete(state);
-                state = _159;  // Test.State = Test.State
-                Collision_delete(col);
+                state = _162;  // Test.State = Test.State
+                ContactSet_delete(cs);
                 RigidBody_delete(rb_MINUS_a);
                 RigidBody_delete(rb_MINUS_b);
             }
             /* let */ {
-                Vector3__double _170 = Vector3_init__double(0.0, 0.0, 0.0);
-                Quaternion _172 = Quaternion_identity();
-                RigidBody _175 = RigidBody__STATIC_(_170, _172, 0.0, 0.0);
-                RigidBody rb_MINUS_s1 = _175;
-                Vector3__double _182 = Vector3_init__double(0.0, 0.0, 0.0);
-                Quaternion _184 = Quaternion_identity();
-                RigidBody _187 = RigidBody__STATIC_(_182, _184, 0.0, 0.0);
-                RigidBody rb_MINUS_s2 = _187;
-                Vector3__double _195 = Vector3_init__double(0.0, 0.0, 0.0);
-                Vector3__double _200 = Vector3_init__double(1.0, 0.0, 0.0);
-                Contact _201 = Contact_init(0.5, _195, _200);
-                Contact cont = _201;
-                Uint64 _207 = Uint64_from_MINUS_long(0l);
-                Uint32 _210 = Uint32_from_MINUS_long(1l);
-                Handle__void _211 = Handle_init__void(_207, _210);
-                Uint64 _215 = Uint64_from_MINUS_long(1l);
-                Uint32 _218 = Uint32_from_MINUS_long(1l);
-                Handle__void _219 = Handle_init__void(_215, _218);
-                Collision _221 = Collision_init(_211, _219, cont);
-                Collision col = _221;
-                RigidBody* _227 = &rb_MINUS_s1; // ref
-                RigidBody* _230 = &rb_MINUS_s2; // ref
-                Collision* _233 = &col; // ref
-                Solver_solve_BANG_(_227, _230, _233);
-                TestState* _240 = &state; // ref
-                static String _242 = "Solver handles static-static without error";
-                String *_242_ref = &_242;
-                TestState _243 = Test_assert_MINUS_true__String(_240, true, _242_ref);
+                Vector3__double _173 = Vector3_init__double(0.0, 0.0, 0.0);
+                Quaternion _175 = Quaternion_identity();
+                RigidBody _182 = RigidBody_new(_173, _175, 1.0, 1.0, 0.0, 1.0, 1.0, 1.0);
+                RigidBody rb_MINUS_c = _182;
+                RigidBody* _188 = &rb_MINUS_c; // ref
+                Body* _189 = RigidBody_body(_188);
+                Vector3__double _194 = Vector3_init__double(0.0, 0.0, 10.0);
+                Body_set_MINUS_velocity_BANG_(_189, _194);
+                Vector3__double _202 = Vector3_init__double(0.0, 0.0, 1.0);
+                Quaternion _204 = Quaternion_identity();
+                RigidBody _207 = RigidBody__STATIC_(_202, _204, 1.0, 0.0);
+                RigidBody rb_MINUS_d = _207;
+                Vector3__double _215 = Vector3_init__double(0.0, 0.5, 0.5);
+                Vector3__double _220 = Vector3_init__double(0.0, 0.0, -1.0);
+                Contact _221 = Contact_init(0.5, _215, _220);
+                Contact cont = _221;
+                Uint64 _227 = Uint64_from_MINUS_long(0l);
+                Uint32 _230 = Uint32_from_MINUS_long(1l);
+                Handle__void _231 = Handle_init__void(_227, _230);
+                Uint64 _235 = Uint64_from_MINUS_long(1l);
+                Uint32 _238 = Uint32_from_MINUS_long(1l);
+                Handle__void _239 = Handle_init__void(_235, _238);
+                Array _241 = { .len = 1, .capacity = 1, .data = CARP_MALLOC(sizeof(Contact) * 1) };
+                ((Contact*)_241.data)[0] = cont;
+                ContactSet _242 = ContactSet_init(_231, _239, _241);
+                ContactSet cs = _242;
+                RigidBody* _248 = &rb_MINUS_c; // ref
+                RigidBody* _251 = &rb_MINUS_d; // ref
+                ContactSet* _254 = &cs; // ref
+                Solver_solve_BANG_(_248, _251, _254);
+                TestState* _261 = &state; // ref
+                RigidBody* _270 = &rb_MINUS_c; // ref
+                Body* _271 = RigidBody_body(_270);
+                Vector3__double* _272 = Body_angular_MINUS_velocity(_271);
+                double* _273 = Vector3_x__double(_272);
+                double _274 = Double_copy(_273);
+                double _275 = Double_abs(_274);
+                bool _277 = Double__GT_(_275, 0.1);
+                static String _278 = "Off-center hit generates angular velocity";
+                String *_278_ref = &_278;
+                TestState _279 = Test_assert_MINUS_true__String(_261, _277, _278_ref);
                 Test_State_delete(state);
-                state = _243;  // Test.State = Test.State
-                Collision_delete(col);
+                state = _279;  // Test.State = Test.State
+                ContactSet_delete(cs);
+                RigidBody_delete(rb_MINUS_c);
+                RigidBody_delete(rb_MINUS_d);
+            }
+            /* let */ {
+                Vector3__double _290 = Vector3_init__double(0.0, 0.0, 0.0);
+                Quaternion _292 = Quaternion_identity();
+                RigidBody _295 = RigidBody__STATIC_(_290, _292, 0.0, 0.0);
+                RigidBody rb_MINUS_s1 = _295;
+                Vector3__double _302 = Vector3_init__double(0.0, 0.0, 0.0);
+                Quaternion _304 = Quaternion_identity();
+                RigidBody _307 = RigidBody__STATIC_(_302, _304, 0.0, 0.0);
+                RigidBody rb_MINUS_s2 = _307;
+                Vector3__double _315 = Vector3_init__double(0.0, 0.0, 0.0);
+                Vector3__double _320 = Vector3_init__double(1.0, 0.0, 0.0);
+                Contact _321 = Contact_init(0.5, _315, _320);
+                Contact cont = _321;
+                Uint64 _327 = Uint64_from_MINUS_long(0l);
+                Uint32 _330 = Uint32_from_MINUS_long(1l);
+                Handle__void _331 = Handle_init__void(_327, _330);
+                Uint64 _335 = Uint64_from_MINUS_long(1l);
+                Uint32 _338 = Uint32_from_MINUS_long(1l);
+                Handle__void _339 = Handle_init__void(_335, _338);
+                Array _341 = { .len = 1, .capacity = 1, .data = CARP_MALLOC(sizeof(Contact) * 1) };
+                ((Contact*)_341.data)[0] = cont;
+                ContactSet _342 = ContactSet_init(_331, _339, _341);
+                ContactSet cs = _342;
+                RigidBody* _348 = &rb_MINUS_s1; // ref
+                RigidBody* _351 = &rb_MINUS_s2; // ref
+                ContactSet* _354 = &cs; // ref
+                Solver_solve_BANG_(_348, _351, _354);
+                TestState* _361 = &state; // ref
+                static String _363 = "Solver handles static-static without error";
+                String *_363_ref = &_363;
+                TestState _364 = Test_assert_MINUS_true__String(_361, true, _363_ref);
+                Test_State_delete(state);
+                state = _364;  // Test.State = Test.State
+                ContactSet_delete(cs);
                 RigidBody_delete(rb_MINUS_s1);
                 RigidBody_delete(rb_MINUS_s2);
             }
-            TestState _248 = state;
-            _249 = _248;
+            TestState _369 = state;
+            _370 = _369;
         }
-        TestState* _250 = &_249; // ref
-        physics_MINUS_test = _250;  // (Ref Test.State r182) = (Ref Test.State r182)
+        TestState* _1000011 = &_370; // ref
+        physics_MINUS_test = _1000011;  // (Ref Test.State r276) = (Ref Test.State r276)
         Test_print_MINUS_test_MINUS_results(physics_MINUS_test);
-        int* _258 = Test_State_failed(physics_MINUS_test);
-        int _259 = Int_copy(_258);
-        int _260 = _259;
-        _261 = _260;
-        Test_State_delete(_249);
-        Test_State_delete(_9);
+        int* _1000026 = Test_State_failed(physics_MINUS_test);
+        int _1000025 = Int_copy(_1000026);
+        int _1000007 = _1000025;
+        _1000003 = _1000007;
+        Test_State_delete(_1000006);
+        Test_State_delete(_370);
     }
-    return _261;
+    return _1000003;
 }
 
 double max__double(double a, double b) {
