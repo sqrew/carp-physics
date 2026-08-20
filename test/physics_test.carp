@@ -25,7 +25,8 @@
             cont (Contact.init 0.5 (Vector3.init 0.5 0.0 0.0) (Vector3.init -1.0 0.0 0.0))
             cs (ContactSet.init h-a h-b [cont])]
         (do
-          (Solver.solve! &rb-a &rb-b &cs)
+          (Solver.solve! &rb-a &rb-b &cs 0.016)
+          (RigidBody.step! &rb-a 0.016)
           ;; Normal is -X. A is moving +X into B.
           ;; rel-v = vA - vB = (10,0,0) - (0,0,0) = (10,0,0)
           ;; dot(rel-v, normal) = 10 * -1 = -10 (Moving towards each other! Resolve!)
@@ -45,7 +46,7 @@
             cont (Contact.init 0.5 (Vector3.init 0.0 0.5 0.5) (Vector3.init 0.0 0.0 -1.0))
             cs (ContactSet.init (Handle.init (Uint64.from-long 0l) (Uint32.from-long 1l)) (Handle.init (Uint64.from-long 1l) (Uint32.from-long 1l)) [cont])]
         (do
-          (Solver.solve! &rb-c &rb-d &cs)
+          (Solver.solve! &rb-c &rb-d &cs 0.016)
           ;; Hit was above center, should generate torque around X axis
           (set! state (Test.assert-true &state (> (abs @(Vector3.x (Body.angular-velocity (RigidBody.body &rb-c)))) 0.1) "Off-center hit generates angular velocity"))))
       
@@ -55,7 +56,7 @@
             cont (Contact.init 0.5 (Vector3.init 0.0 0.0 0.0) (Vector3.init 1.0 0.0 0.0))
             cs (ContactSet.init (Handle.init (Uint64.from-long 0l) (Uint32.from-long 1l)) (Handle.init (Uint64.from-long 1l) (Uint32.from-long 1l)) [cont])]
         (do
-          (Solver.solve! &rb-s1 &rb-s2 &cs)
+          (Solver.solve! &rb-s1 &rb-s2 &cs 0.016)
           (set! state (Test.assert-true &state true "Solver handles static-static without error"))))
       
       state)))
