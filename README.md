@@ -16,19 +16,10 @@ This library is the "Verb of Interaction" in the modular physics stack. It takes
 (load "https://github.com/sqrew/carp-physics@master")
 ```
 
-## Usage
-```clojure
-(use Solver)
-(use Transform)
-(use Body)
-(use Collision)
 
-;; In your solver loop:
-(match (check-pair &col-a &col-b)
-  (Maybe.Just col) (Solver.solve! &trans-a &body-a &trans-b &body-b &col)
-  (Maybe.Nothing) ())
-```
+## Examples
 
+See [examples.md](examples.md) for usage examples.
 ## The Modular Stack
 `carp-physics` is designed to be the consumer of the following libraries:
 1. **`carp-transform`**: Authoritative spatial state.
